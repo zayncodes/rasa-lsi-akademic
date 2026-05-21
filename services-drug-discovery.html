@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In-Silico Drug Discovery Services | RASA Life Science Informatics</title>
+  <meta name="description" content="Scalable virtual screening, molecular dynamics simulations, target validation, ADMET profiling, and generative chemistry pipelines for pharma R&D.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body class="rasa">
+  <!--
+================================================================
+  RASA LSI — IN-SILICO DRUG DISCOVERY SERVICES
+  WordPress Custom HTML block. Self-contained.
+  Design system: "Academic Precision" — cream + ink + forest leaf
+================================================================
+-->
+
+
+
+
+
+
+
+<!-- =============== HEADER =============== -->
+<div class="rasa-top-bar"><span>📧 info@rasalsi.com | 📞 +91-20-2563-3456</span><span><a href="contact.html" style="color:#ffffff; text-decoration:underline;">Client Portal</a> | <a href="contact.html" style="color:#ffffff; text-decoration:underline;">Support</a></span></div><header class="rasa rasa-header">
+  <div class="rasa-header__inner">
+    <div class="rasa-header__group">
+      <a href="index.html" class="rasa-brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 38px; width: auto; display: block; object-fit: contain; margin: 0;"></a>
+      <nav class="rasa-nav" aria-label="Primary Nav">
+        <a href="services-ngs.html">NGS Analysis</a>
+        <a href="services-drug-discovery.html" class="is-active">Drug Discovery</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+    <a href="contact.html" class="rasa-cta-btn">
+      Partner with us
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- =============== MAIN =============== -->
+<main class="rasa rasa-page">
+
+  <!-- PAGE HERO -->
+  <section class="rasa-pagehero">
+    <div class="rasa-grid-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="rasa-reveal">
+        <span class="rasa-eyebrow">[ 02 // Molecular Design ] <span class="rasa-eyebrow__rule"></span></span>
+      </div>
+      <h1 class="rasa-pagehero__h rasa-reveal" data-delay="1">
+        AI-driven discovery from target to <span class="serif italic leaf">lead</span>.
+      </h1>
+      <p class="rasa-pagehero__lede rasa-reveal" data-delay="2">
+        We provide modular, cloud-enabled computational drug design solutions. Our approach integrates structure-based design, high-throughput virtual screening, machine learning predictive profiling, and molecular dynamics to fast-track novel therapeutics.
+      </p>
+
+      <!-- Interactive Pipeline tracker -->
+      <div class="rasa-pipeline-tracker rasa-reveal" data-delay="2">
+        <span class="rasa-side__lbl">Discovery Roadmap</span>
+        <div class="rasa-pipeline-steps">
+          <div class="rasa-pipeline-step is-active" data-section="target-id" data-progress="20%">
+            <span class="rasa-pipeline-step__num">Step 01</span>
+            <div class="rasa-pipeline-step__title">Target ID</div>
+          </div>
+          <div class="rasa-pipeline-step" data-section="hit-discovery" data-progress="40%">
+            <span class="rasa-pipeline-step__num">Step 02</span>
+            <div class="rasa-pipeline-step__title">Virtual Screen</div>
+          </div>
+          <div class="rasa-pipeline-step" data-section="lead-opt" data-progress="60%">
+            <span class="rasa-pipeline-step__num">Step 03</span>
+            <div class="rasa-pipeline-step__title">Lead Opt</div>
+          </div>
+          <div class="rasa-pipeline-step" data-section="de-novo" data-progress="80%">
+            <span class="rasa-pipeline-step__num">Step 04</span>
+            <div class="rasa-pipeline-step__title">De Novo Design</div>
+          </div>
+          <div class="rasa-pipeline-step" data-section="multi-target" data-progress="100%">
+            <span class="rasa-pipeline-step__num">Step 05</span>
+            <div class="rasa-pipeline-step__title">Network Pharma</div>
+          </div>
+        </div>
+        <div class="rasa-pipeline-bar">
+          <div class="rasa-pipeline-progress" id="progress-bar"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STICKY ANCHOR NAV -->
+  <nav class="rasa-anchor-nav" aria-label="Sections navigation">
+    <div class="container rasa-anchor-nav__inner">
+      <a href="#target-id" class="is-active">Target ID</a>
+      <a href="#hit-discovery">Virtual Screen</a>
+      <a href="#lead-opt">Lead Opt</a>
+      <a href="#de-novo">De Novo</a>
+      <a href="#multi-target">Network Pharma</a>
+    </div>
+  </nav>
+
+  <!-- DEEP: TARGET ID -->
+  <section class="rasa-deep rasa-reveal" id="target-id">
+    <div class="container">
+      <div class="rasa-deep__head">
+        <span class="rasa-deep__index">[ 01 ] Target ID &amp; Validation</span>
+        <div>
+          <h2 class="rasa-h2 rasa-deep__h">Laying the foundation for smarter drug discovery.</h2>
+          <p class="rasa-deep__lede">
+            Our framework integrates multi-omics (genomics, transcriptomics, proteomics), structural bioinformatics, and literature NLP to identify and validate high-confidence disease targets.
+          </p>
+        </div>
+      </div>
+      <div class="rasa-deep__body">
+        <div>
+          <div class="rasa-feat-list">
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">Multi-omics integration</div>
+                <div class="rasa-feat__b">Uncover target candidates using cancer genomes, patient tissue databases, and CRISPR knockout models.</div>
+              </div>
+            </div>
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">High-accuracy structure prediction</div>
+                <div class="rasa-feat__b">Model uncharted target domains using AlphaFold2 and I-TASSER to score binding pocket accessibility.</div>
+              </div>
+            </div>
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">Interactome &amp; pathway validation</div>
+                <div class="rasa-feat__b">Map protein interaction topologies using STRING, Reactome, and KEGG models.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rasa-tool-cloud">
+            <span class="rasa-tool">AlphaFold2<span class="rasa-tooltip">Google DeepMind's state-of-the-art 3D structure predictor.</span></span>
+            <span class="rasa-tool">I-TASSER<span class="rasa-tooltip">Iterative threading assembly for structure prediction.</span></span>
+            <span class="rasa-tool">STRING<span class="rasa-tooltip">Protein-protein physical and functional interaction network.</span></span>
+            <span class="rasa-tool">Open Targets<span class="rasa-tooltip">Comprehensive target validation platform.</span></span>
+            <span class="rasa-tool">DisGeNET<span class="rasa-tooltip">Database of gene-disease associations.</span></span>
+          </div>
+        </div>
+
+        <aside class="rasa-side">
+          <span class="rasa-side__lbl">Workflow outputs</span>
+          <h3 class="rasa-side__h">Target assessment.</h3>
+          <div class="rasa-deliv">
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Druggability score card</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>AlphaFold 3D model files</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Pathway specificity report</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Disfavour/Toxicity alerts</div>
+          </div>
+          <div style="margin-top: 0.5rem;">
+            <div class="rasa-side__row"><span>Databases</span><span>TCGA · GTEx · OpenTargets</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEEP: HIT DISCOVERY -->
+  <section class="rasa-deep rasa-reveal" id="hit-discovery" style="background:var(--surface);">
+    <div class="container">
+      <div class="rasa-deep__head">
+        <span class="rasa-deep__index">[ 02 ] Hit Discovery</span>
+        <div>
+          <h2 class="rasa-h2 rasa-deep__h">Identify high-potential chemical entities at scale.</h2>
+          <p class="rasa-deep__lede">
+            Screen millions of compounds via structure-based and ligand-based filters against GPCRs, kinases, and enzymes.
+          </p>
+        </div>
+      </div>
+      <div class="rasa-deep__body">
+        <div>
+          <div class="rasa-feat-list">
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">Structure-based screening (SBVS)</div>
+                <div class="rasa-feat__b">Massive parallelized GPU docking (QuickVina, AutoDock) against target active sites.</div>
+              </div>
+            </div>
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">Ligand-based similarity &amp; pharmacophores</div>
+                <div class="rasa-feat__b">Model shape features and 2D/3D fingerprints to expand hits using ChEMBL and ZINC.</div>
+              </div>
+            </div>
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">Drug-likeness &amp; filter screening</div>
+                <div class="rasa-feat__b">Filter out reactive and non-drug candidates using Lipinski's Rule of 5 and PAINS parameters.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rasa-tool-cloud">
+            <span class="rasa-tool">AutoDock Vina<span class="rasa-tooltip">Gold-standard molecular docking simulation program.</span></span>
+            <span class="rasa-tool">Smina<span class="rasa-tooltip">AutoDock fork optimized for scoring function customizability.</span></span>
+            <span class="rasa-tool">CB-Dock2<span class="rasa-tooltip">Cavity-detection-guided blind docking server.</span></span>
+            <span class="rasa-tool">ZINC20<span class="rasa-tooltip">Database of millions of commercially available compounds.</span></span>
+            <span class="rasa-tool">ChEMBL<span class="rasa-tooltip">Curated bioactivity database of drug-like molecules.</span></span>
+          </div>
+        </div>
+
+        <aside class="rasa-side">
+          <span class="rasa-side__lbl">Applications</span>
+          <h3 class="rasa-side__h">Screening campaigns.</h3>
+          <div class="rasa-deliv">
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Novel hit identification</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>FDA drug repurposing</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Fragment docking</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Interaction mapping</div>
+          </div>
+          <div style="margin-top: 0.5rem;">
+            <div class="rasa-side__row"><span>Libraries</span><span>ZINC · Enamine · ChEMBL</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEEP: LEAD OPT -->
+  <section class="rasa-deep rasa-reveal" id="lead-opt">
+    <div class="container">
+      <div class="rasa-deep__head">
+        <span class="rasa-deep__index">[ 03 ] Lead Optimization</span>
+        <div>
+          <h2 class="rasa-h2 rasa-deep__h">Refine hit compounds into selective, drug-like leads.</h2>
+          <p class="rasa-deep__lede">
+            Improve target selectivity, binding affinity, and metabolic stability while minimizing off-target toxicity.
+          </p>
+        </div>
+      </div>
+      <div class="rasa-deep__body">
+        <div>
+          <div class="rasa-feat-list">
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">Molecular dynamics (MD) simulations</div>
+                <div class="rasa-feat__b">Verify binding stability and structural flexibility over time using GROMACS and AMBER.</div>
+              </div>
+            </div>
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">Free energy calculations</div>
+                <div class="rasa-feat__b">Refine docking predictions with MM-GBSA and Free Energy Perturbation (FEP) scoring.</div>
+              </div>
+            </div>
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">ADMET predictive modeling</div>
+                <div class="rasa-feat__b">Assess bioavailability, hepatic clearance, BBB permeation, and hERG toxicity using pkCSM and SwissADME.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rasa-tool-cloud">
+            <span class="rasa-tool">GROMACS<span class="rasa-tooltip">High-performance molecular dynamics simulator.</span></span>
+            <span class="rasa-tool">AMBER<span class="rasa-tooltip">Assisted Model Building with Energy Refinement suite.</span></span>
+            <span class="rasa-tool">SwissADME<span class="rasa-tooltip">Predicts ADME parameters, drug-likeness, and medicinal chemistry friendliness.</span></span>
+            <span class="rasa-tool">pkCSM<span class="rasa-tooltip">Predicts small-molecule pharmacokinetics using graph signatures.</span></span>
+            <span class="rasa-tool">MM-GBSA<span class="rasa-tooltip">Molecular Mechanics Generalized Born Surface Area calculations.</span></span>
+          </div>
+        </div>
+
+        <aside class="rasa-side">
+          <span class="rasa-side__lbl">Refinement statistics</span>
+          <h3 class="rasa-side__h">Optimal properties.</h3>
+          <div class="rasa-deliv">
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>RMSD stability charts</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Free binding energy score</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>ADMET radar charts</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Synthetic accessibility index</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEEP: DE NOVO -->
+  <section class="rasa-deep rasa-reveal" id="de-novo" style="background:var(--surface);">
+    <div class="container">
+      <div class="rasa-deep__head">
+        <span class="rasa-deep__index">[ 04 ] De Novo Drug Design</span>
+        <div>
+          <h2 class="rasa-h2 rasa-deep__h">Generative AI molecules designed for novel targets.</h2>
+          <p class="rasa-deep__lede">
+            Explore uncharted chemical space. Generate novel molecular scaffolds from scratch, optimized for specific target configurations.
+          </p>
+        </div>
+      </div>
+      <div class="rasa-deep__body">
+        <div>
+          <div class="rasa-feat-list">
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">AI molecule generation</div>
+                <div class="rasa-feat__b">Deploy GANs, VAEs, and reinforcement learning (REINVENT) to design novel, drug-like structures.</div>
+              </div>
+            </div>
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">Scaffold hopping &amp; bioisosteres</div>
+                <div class="rasa-feat__b">Replace core rings to bypass patent restrictions or improve physical parameters.</div>
+              </div>
+            </div>
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">Retrosynthetic feasibility</div>
+                <div class="rasa-feat__b">Filter generated structures using synthetic accessibility algorithms to ensure real-world synthesis.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rasa-tool-cloud">
+            <span class="rasa-tool">REINVENT<span class="rasa-tooltip">Generative AI reinforcement learning framework for chemistry.</span></span>
+            <span class="rasa-tool">MolGAN<span class="rasa-tooltip">Generative adversarial network for molecular graph structures.</span></span>
+            <span class="rasa-tool">RDKit<span class="rasa-tooltip">Open-source informatics software suite for chemistry.</span></span>
+            <span class="rasa-tool">ProTox-II<span class="rasa-tooltip">Toxicity endpoint prediction server.</span></span>
+          </div>
+        </div>
+
+        <aside class="rasa-side">
+          <span class="rasa-side__lbl">Applications</span>
+          <h3 class="rasa-side__h">Novel chemotypes.</h3>
+          <div class="rasa-deliv">
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Uncharted chemical space</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Novel patent generation</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Orphan target ligands</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Retrosynthesis pathway maps</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEEP: NETWORK PHARMA -->
+  <section class="rasa-deep rasa-reveal" id="multi-target">
+    <div class="container">
+      <div class="rasa-deep__head">
+        <span class="rasa-deep__index">[ 05 ] Network Pharmacology</span>
+        <div>
+          <h2 class="rasa-h2 rasa-deep__h">Systems-level drug design for complex diseases.</h2>
+          <p class="rasa-deep__lede">
+            Model drug effects across multiple network pathways to address complex diseases like cancer, neurodegeneration, and autoimmune disorders.
+          </p>
+        </div>
+      </div>
+      <div class="rasa-deep__body">
+        <div>
+          <div class="rasa-feat-list">
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">Polypharmacology prediction</div>
+                <div class="rasa-feat__b">Identify compounds that modulate multiple biological nodes to prevent pathway bypass resistance.</div>
+              </div>
+            </div>
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">AI-assisted drug repurposing</div>
+                <div class="rasa-feat__b">Map FDA-approved drug libraries to target networks for novel indications.</div>
+              </div>
+            </div>
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">Off-target liability screening</div>
+                <div class="rasa-feat__b">Filter out toxicity risks by docking against off-target human protein panels.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rasa-tool-cloud">
+            <span class="rasa-tool">Cytoscape<span class="rasa-tooltip">Network analysis and network layout software tool.</span></span>
+            <span class="rasa-tool">STITCH<span class="rasa-tooltip">Database of physical and functional compound-protein interactions.</span></span>
+            <span class="rasa-tool">DrugBank<span class="rasa-tooltip">Comprehensive resource on drug structure, targets, and mechanisms.</span></span>
+            <span class="rasa-tool">Reactome<span class="rasa-tooltip">Curated biological pathway database.</span></span>
+          </div>
+        </div>
+
+        <aside class="rasa-side">
+          <span class="rasa-side__lbl">Deliverables</span>
+          <h3 class="rasa-side__h">Systems biology.</h3>
+          <div class="rasa-deliv">
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Pathway intersection maps</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Repurposing target hits</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Synergy score matrix</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Off-target safety reports</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK & THERAPEUTIC -->
+  <section class="rasa-section rasa-section--lg">
+    <div class="container">
+      <div style="display:grid; gap:4rem; grid-template-columns: 1fr;">
+        
+        <!-- Stack Grid -->
+        <div class="rasa-reveal">
+          <span class="rasa-eyebrow">[ 06 // Tech Stack ]</span>
+          <h2 class="rasa-h2" style="margin: 1.5rem 0 2.5rem;">Validated computational platforms.</h2>
+          <div class="rasa-stack-grid">
+            <div class="rasa-stack-cell">
+              <span class="rasa-stack-cell__lbl">Docking</span>
+              <span class="rasa-stack-cell__val">AutoDock</span>
+              <span class="rasa-tooltip">Flexible ligand binding simulation engine.</span>
+            </div>
+            <div class="rasa-stack-cell">
+              <span class="rasa-stack-cell__lbl">Modelling</span>
+              <span class="rasa-stack-cell__val">Rosetta</span>
+              <span class="rasa-tooltip">Protein structure refinement suite.</span>
+            </div>
+            <div class="rasa-stack-cell">
+              <span class="rasa-stack-cell__lbl">Structure</span>
+              <span class="rasa-stack-cell__val">AlphaFold2</span>
+              <span class="rasa-tooltip">Google DeepMind target folding predictor.</span>
+            </div>
+            <div class="rasa-stack-cell">
+              <span class="rasa-stack-cell__lbl">AI / ML</span>
+              <span class="rasa-stack-cell__val">DeepChem</span>
+              <span class="rasa-tooltip">Deep learning library for drug discovery.</span>
+            </div>
+            <div class="rasa-stack-cell">
+              <span class="rasa-stack-cell__lbl">Dynamics</span>
+              <span class="rasa-stack-cell__val">GROMACS</span>
+              <span class="rasa-tooltip">Classical molecular dynamics simulation engine.</span>
+            </div>
+            <div class="rasa-stack-cell">
+              <span class="rasa-stack-cell__lbl">ADME</span>
+              <span class="rasa-stack-cell__val">SwissADME</span>
+              <span class="rasa-tooltip">ADME and drug-likeness profiler.</span>
+            </div>
+            <div class="rasa-stack-cell">
+              <span class="rasa-stack-cell__lbl">ADME</span>
+              <span class="rasa-stack-cell__val">pkCSM</span>
+              <span class="rasa-tooltip">Graph-based pharmacokinetics modeler.</span>
+            </div>
+            <div class="rasa-stack-cell">
+              <span class="rasa-stack-cell__lbl">Pipeline</span>
+              <span class="rasa-stack-cell__val">Nextflow</span>
+              <span class="rasa-tooltip">Data-driven scalable workflow manager.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Therapeutic -->
+        <div class="rasa-reveal" data-delay="1" style="margin-top: 3.5rem;">
+          <span class="rasa-eyebrow">[ 07 // Indication Space ]</span>
+          <h2 class="rasa-h2" style="margin: 1.5rem 0 2.5rem;">Supporting discovery across high-impact disease areas.</h2>
+          <div class="rasa-therapeutic">
+            <div class="rasa-therapeutic__item">
+              <span class="rasa-therapeutic__name">Oncology</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </div>
+            <div class="rasa-therapeutic__item">
+              <span class="rasa-therapeutic__name">Neuroscience &amp; CNS</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </div>
+            <div class="rasa-therapeutic__item">
+              <span class="rasa-therapeutic__name">Infectious Diseases</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </div>
+            <div class="rasa-therapeutic__item">
+              <span class="rasa-therapeutic__name">Autoimmune Disorders</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </div>
+            <div class="rasa-therapeutic__item">
+              <span class="rasa-therapeutic__name">Rare Diseases</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="rasa-section rasa-section--ink" style="padding:6rem 0; text-align:center;">
+    <div class="container" style="max-width:720px;">
+      <h2 class="rasa-h2" style="color:var(--cream); margin-bottom:1.25rem; max-width:24ch; margin-left:auto; margin-right:auto;">Accelerate therapeutic discovery with RASA.</h2>
+      <p style="color:rgba(248,249,250,0.7); max-width:56ch; margin:0 auto 2rem;">
+        Get in touch with our Pune-based computational drug design experts to coordinate target screens or dynamics calculations.
+      </p>
+      <a href="contact.html" class="rasa-btn rasa-btn--primary">
+        Start a Project
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- =============== FOOTER =============== -->
+<footer class="rasa rasa-footer">
+  <div class="container">
+    <div class="rasa-footer__grid">
+      <div>
+        <div class="rasa-footer__brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 42px; width: auto; display: block; object-fit: contain;"></div>
+      <div>
+        <h4>Services</h4>
+        <a href="services-ngs.html">NGS Data Analysis</a>
+        <a href="services-drug-discovery.html">In-Silico Drug Discovery</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div>
+        <h4>Headquarters</h4>
+        <p style="font-size: 0.875rem; color: var(--foreground-70); line-height: 1.65; margin: 0 0 1rem;">
+          Pashan-Sus Road<br>
+          Pune, Maharashtra 411021<br>
+          India
+        </p>
+        <a href="contact.html" style="font-weight: 500; color: var(--leaf);">Get in touch →</a>
+      </div>
+    </div>
+    <div class="rasa-footer__bottom">
+      <span>© <span id="rasa-year">2026</span> Rasa Life Science Informatics. Engineered in Pune.</span>
+      <span><a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/terms">Terms</a></span>
+    </div>
+  </div>
+</footer>
+  <script>
+
+(function () {
+  var y = document.getElementById('rasa-year');
+  if (y) y.textContent = new Date().getFullYear();
+
+    // Active navigation link detection
+  try {
+    var path = window.location.pathname;
+    var page = path.split('/').pop();
+    if (!page || page === '') page = 'index.html';
+    document.querySelectorAll('.rasa-nav a').forEach(function (a) {
+      a.classList.remove('is-active');
+      var href = a.getAttribute('href').split('#')[0].split('/').pop();
+      if (href === page) a.classList.add('is-active');
+    });
+  } catch (e) {}
+
+  // Reveal animations on scroll
+  var reveals = document.querySelectorAll('.rasa-reveal');
+  var ioReveal = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        ioReveal.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(function (el) { ioReveal.observe(el); });
+
+  // Interactive Pipeline tracker
+  var steps = document.querySelectorAll('.rasa-pipeline-step');
+  var progressBar = document.getElementById('progress-bar');
+  steps.forEach(function (step) {
+    step.addEventListener('click', function () {
+      steps.forEach(function (s) { s.classList.remove('is-active'); });
+      step.classList.add('is-active');
+      var progress = step.getAttribute('data-progress');
+      progressBar.style.width = progress;
+
+      var id = step.getAttribute('data-section');
+      var target = document.getElementById(id);
+      if (target) {
+        var headerOffset = 120;
+        var elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        var offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+  // Sticky sub-nav Intersection Observer active highlighting
+  var sections = document.querySelectorAll('.rasa-deep');
+  var navLinks = document.querySelectorAll('.rasa-anchor-nav a');
+
+  var ioOptions = {
+    root: null,
+    rootMargin: '-25% 0px -55% 0px',
+    threshold: 0
+  };
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var id = entry.target.getAttribute('id');
+        navLinks.forEach(function (link) {
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('is-active');
+          } else {
+            link.classList.remove('is-active');
+          }
+        });
+        // Sync with pipeline steps
+        steps.forEach(function (step) {
+          if (step.getAttribute('data-section') === id) {
+            steps.forEach(function (s) { s.classList.remove('is-active'); });
+            step.classList.add('is-active');
+            var progress = step.getAttribute('data-progress');
+            progressBar.style.width = progress;
+          }
+        });
+      }
+    });
+  }, ioOptions);
+
+  sections.forEach(function (section) {
+    observer.observe(section);
+  });
+
+  // Smooth scroll to sections with offset
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var id = link.getAttribute('href');
+      var target = document.querySelector(id);
+      if (target) {
+        var headerOffset = 120;
+        var elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        var offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+})();
+
+</script>
+</body>
+</html>
