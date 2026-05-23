@@ -866,7 +866,22 @@
       var id = link.getAttribute('href');
       var target = document.querySelector(id);
       if (target) {
-        var headerOffset = 120; // 64px header + subnav padding + buffer
+        var headerOffset = 0;
+        var topBar = document.querySelector('.rasa-top-bar');
+        var header = document.querySelector('.rasa-header');
+        var subNav = document.querySelector('.rasa-anchor-nav');
+        if (topBar && window.getComputedStyle(topBar).position === 'fixed') {
+          headerOffset += topBar.offsetHeight;
+        }
+        if (header && window.getComputedStyle(header).position === 'fixed') {
+          headerOffset += header.offsetHeight;
+        }
+        if (subNav && (window.getComputedStyle(subNav).position === 'sticky' || window.getComputedStyle(subNav).position === 'fixed')) {
+          headerOffset += subNav.offsetHeight;
+        }
+        if (headerOffset === 0) headerOffset = 120;
+        else headerOffset += 8; // buffer
+
         var elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
         var offsetPosition = elementPosition - headerOffset;
 

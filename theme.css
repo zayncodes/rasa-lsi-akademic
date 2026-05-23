@@ -815,7 +815,7 @@ to {
 
 /* Deep details section */
 .rasa-deep {
-  padding: 6.5rem 0; border-top: 1px solid var(--border);
+  padding: 6.5rem 0; border-top: 1px solid var(--border); scroll-margin-top: 123px;
 }
 
 .rasa-deep__head {
@@ -1180,7 +1180,12 @@ to {
 .rasa-timeline-years {
   display: flex; justify-content: space-between; position: relative;
   border-bottom: 2px solid rgba(0,0,0,0.05); padding-bottom: 1rem;
-  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.rasa-timeline-years::-webkit-scrollbar {
+  display: none;
 }
 
 .rasa-timeline-year-btn {
@@ -1831,3 +1836,5 @@ body.rasa {
 .rasa-modalities { border-radius: 0.5rem; background: rgba(15, 23, 42, 0.06); }
 .rasa-modality { background: #ffffff; }
 .rasa-modality:hover { background: var(--leaf-tint); }
+.rasa-anchor-nav { top: 96px !important; }
+.rasa-deep { scroll-margin-top: 155px !important; }
