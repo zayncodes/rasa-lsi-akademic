@@ -12,6 +12,14 @@
   <link rel="stylesheet" href="theme.css">
 </head>
 <body class="rasa">
+  <script>
+    (function () {
+      var t = localStorage.getItem('rasa-theme');
+      if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.body.classList.add('dark-mode');
+      }
+    })();
+  </script>
   <!--
 ================================================================
   RASA LSI — NGS DATA ANALYSIS SERVICES
@@ -39,10 +47,16 @@
         <a href="faq.html">FAQ</a>
       </nav>
     </div>
-    <a href="contact.html" class="rasa-cta-btn">
-      Partner with us
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-    </a>
+    <div class="rasa-header__actions" style="display: flex; align-items: center; gap: 1rem;">
+      <button id="rasa-theme-toggle" class="rasa-theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; display: none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; display: block;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <a href="contact.html" class="rasa-cta-btn">
+        Partner with us
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
   </div>
 </header>
 
@@ -895,6 +909,18 @@
 
 })();
 
+  // Dark Mode Theme Toggle Click Listener
+  try {
+    var themeToggleBtn = document.getElementById('rasa-theme-toggle');
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', function () {
+        var isDark = document.body.classList.toggle('dark-mode');
+        localStorage.setItem('rasa-theme', isDark ? 'dark' : 'light');
+      });
+    }
+  } catch (e) {
+    console.error('Theme toggle error:', e);
+  }
 </script>
 </body>
 </html>

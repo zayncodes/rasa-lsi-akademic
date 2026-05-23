@@ -307,7 +307,7 @@ html, body {
 
 /* Hero */
 .rasa-hero {
-  padding: 7rem 0 6rem; position: relative; overflow: hidden;
+  padding: 9rem 0 6rem; position: relative; overflow: hidden;
 }
 
 .rasa-hero__grid {
@@ -624,6 +624,97 @@ to {
   font-size: 0.75rem; color: var(--foreground-40); margin: 0; display: inline;
 }
 
+/* Theme Toggle Button */
+.rasa-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  padding: 0;
+  outline: none;
+}
+
+.rasa-theme-toggle:hover {
+  background: var(--foreground-05);
+  transform: scale(1.05);
+}
+
+.rasa-theme-toggle:focus-visible {
+  outline: 2px solid var(--leaf);
+  outline-offset: 2px;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+  --cream: #090d16;
+  --background: var(--cream);
+  --ink: #f8fafc;
+  --foreground: #e2e8f0;
+  --foreground-70: rgba(226, 232, 240, 0.70);
+  --foreground-60: rgba(226, 232, 240, 0.60);
+  --foreground-50: rgba(226, 232, 240, 0.50);
+  --foreground-40: rgba(226, 232, 240, 0.40);
+  --foreground-10: rgba(226, 232, 240, 0.10);
+  --foreground-05: rgba(226, 232, 240, 0.05);
+  --surface: #131b2e;
+  --border: rgba(255, 255, 255, 0.1);
+  --leaf-soft: rgba(74, 222, 128, 0.12);
+  --leaf-tint: rgba(74, 222, 128, 0.06);
+  --leaf: #4ade80;
+  --leaf-hover: #22c55e;
+  background: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+body.dark-mode .rasa-header {
+  background: rgba(9, 13, 22, 0.85) !important;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .rasa-value-card,
+body.dark-mode .rasa-principle,
+body.dark-mode .rasa-side,
+body.dark-mode .rasa-timeline-card,
+body.dark-mode .rasa-tech-panel {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-mode .rasa-modality {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-mode .rasa-modality:hover {
+  background: var(--leaf-tint) !important;
+}
+
+body.dark-mode .rasa-toast {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--foreground) !important;
+}
+
+body.dark-mode .rasa-anchor-nav {
+  background: rgba(9, 13, 22, 0.85) !important;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .sun-icon {
+  display: block !important;
+}
+
+body.dark-mode .moon-icon {
+  display: none !important;
+}
+
 .rasa {
   /* Brand palette */
   --cream: #f8fafc;
@@ -663,7 +754,7 @@ to {
 
 /* Page Hero */
 .rasa-pagehero {
-  position: relative; padding: 7.5rem 0 4.5rem; overflow: hidden;
+  position: relative; padding: 9.5rem 0 4.5rem; overflow: hidden;
 }
 
 .rasa-grid-bg {
@@ -1838,3 +1929,27 @@ body.rasa {
 .rasa-modality:hover { background: var(--leaf-tint); }
 .rasa-anchor-nav { top: 96px !important; }
 .rasa-deep { scroll-margin-top: 155px !important; }
+
+/* Dark Mode Theme 1 Overrides */
+body.dark-mode {
+  --cream: #090d16;
+  --background: var(--cream);
+  --ink: #f8fafc;
+  --foreground: #e2e8f0;
+  --foreground-70: rgba(226, 232, 240, 0.70);
+  --foreground-60: rgba(226, 232, 240, 0.60);
+  --foreground-50: rgba(226, 232, 240, 0.50);
+  --foreground-40: rgba(226, 232, 240, 0.40);
+  --foreground-10: rgba(226, 232, 240, 0.10);
+  --foreground-05: rgba(226, 232, 240, 0.05);
+  --surface: #1e293b;
+  --border: rgba(255, 255, 255, 0.1);
+  --leaf-soft: rgba(37, 99, 235, 0.12);
+  --leaf-tint: rgba(37, 99, 235, 0.06);
+  --leaf: #3b82f6;
+  --leaf-hover: #60a5fa;
+}
+body.dark-mode .rasa-top-bar {
+  background: #090d16;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
