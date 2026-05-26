@@ -12,14 +12,7 @@
   <link rel="stylesheet" href="theme.css">
 </head>
 <body class="rasa">
-  <script>
-    (function () {
-      var t = localStorage.getItem('rasa-theme');
-      if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.body.classList.add('dark-mode');
-      }
-    })();
-  </script>
+  
   <!--
 ================================================================
   RASA LSI — ABOUT PAGE
@@ -48,10 +41,7 @@
       </nav>
     </div>
     <div class="rasa-header__actions" style="display: flex; align-items: center; gap: 1rem;">
-      <button id="rasa-theme-toggle" class="rasa-theme-toggle" aria-label="Toggle theme">
-        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; display: none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; display: block;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-      </button>
+      
       <a href="contact.html" class="rasa-cta-btn">
         Partner with us
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -68,7 +58,7 @@
     <div class="rasa-grid-bg" aria-hidden="true"></div>
     <div class="container">
       <div class="rasa-reveal">
-        <span class="rasa-eyebrow">[ 00 // Corporate Identity ] <span class="rasa-eyebrow__rule"></span></span>
+        <span class="rasa-eyebrow">Corporate Identity<span class="rasa-eyebrow__rule"></span></span>
       </div>
       <h1 class="rasa-pagehero__h rasa-reveal" data-delay="1">
         A bioinformatics partner engineered in <span class="serif italic leaf">Pune</span>.
@@ -83,7 +73,7 @@
   <section class="rasa-section" style="padding: 5rem 0 6.5rem; border-top: 1px solid var(--border);">
     <div class="container rasa-mandate">
       <div class="rasa-reveal">
-        <span class="rasa-eyebrow">[ 01 // Mission ]</span>
+        <span class="rasa-eyebrow">Mission</span>
         <h2 class="rasa-h2" style="margin: 1.5rem 0 2rem; max-width: 20ch;">Converting raw biological sequences into actionable R&amp;D insights.</h2>
         <p>Headquartered in Pune, India, RASA serves a global client base spanning pharmaceutical R&amp;D, biotech startups, clinical labs, and academic research institutions. Our computational biology workflows are designed for the realities of modern drug discovery: high data volume, strict validation requirements, and aggressive timelines.</p>
         <p>We have processed multi-terabyte sequencing workflows, analyzed 500+ transcriptomics samples, and supported research across oncology, neuroscience, infectious disease, rare disease, and precision medicine.</p>
@@ -92,22 +82,22 @@
 
       <div class="rasa-principles rasa-reveal" data-delay="1">
         <div class="rasa-principle">
-          <span class="rasa-principle__n">01 // Reproducibility</span>
+          <span class="rasa-principle__n">Reproducibility</span>
           <h3 class="rasa-principle__t">Auditable workflows</h3>
           <p class="rasa-principle__b">Containerized Nextflow and Snakemake execution ensures that every computation can be verified and repeated globally.</p>
         </div>
         <div class="rasa-principle">
-          <span class="rasa-principle__n">02 // Rigorous Science</span>
+          <span class="rasa-principle__n">Rigorous Science</span>
           <h3 class="rasa-principle__t">Embedded experts</h3>
           <p class="rasa-principle__b">Our teams consist of PhD level bioinformaticians, computational chemists, and ML engineers actively consulting on your data.</p>
         </div>
         <div class="rasa-principle">
-          <span class="rasa-principle__n">03 // Controlled Access</span>
+          <span class="rasa-principle__n">Controlled Access</span>
           <h3 class="rasa-principle__t">Strict data isolation</h3>
           <p class="rasa-principle__b">Customer sequences and target compound configurations are locked down using secure workspace architectures.</p>
         </div>
         <div class="rasa-principle">
-          <span class="rasa-principle__n">04 // Collaborators</span>
+          <span class="rasa-principle__n">Collaborators</span>
           <h3 class="rasa-principle__t">Embedded partnerships</h3>
           <p class="rasa-principle__b">We don't offer black-box software blocks. We act as an integrated computational extension of your laboratory team.</p>
         </div>
@@ -120,10 +110,10 @@
     <div class="container">
       <div class="rasa-reveal" style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 3.5rem;">
         <div>
-          <span class="rasa-eyebrow">[ 02 // Performance Snap ]</span>
+          <span class="rasa-eyebrow">Performance Snap</span>
           <h2 class="rasa-h2" style="margin-top: 1.5rem; max-width: 24ch;">Proven computational depth, validated in active discovery workloads.</h2>
         </div>
-        <span class="mono" style="font-size: 0.75rem; color: var(--foreground-50);">SCALE // VALIDATED</span>
+        <span class="mono" style="font-size: 0.75rem; color: var(--foreground-50);">SCALE | VALIDATED</span>
       </div>
       <div class="rasa-expertise rasa-reveal" data-delay="1">
         <div>
@@ -154,7 +144,7 @@
   <section class="rasa-timeline-section">
     <div class="container">
       <div class="rasa-reveal">
-        <span class="rasa-eyebrow">[ 03 // Evolution ]</span>
+        <span class="rasa-eyebrow">Evolution</span>
         <h2 class="rasa-h2" style="margin: 1.5rem 0 3.5rem;">Our R&amp;D capability journey.</h2>
       </div>
 
@@ -169,7 +159,7 @@
 
         <!-- Details Card -->
         <div class="rasa-timeline-card" id="timeline-card">
-          <span class="rasa-timeline-card__phase" id="card-phase">Phase 01 // Foundation</span>
+          <span class="rasa-timeline-card__phase" id="card-phase">Phase 01: Foundation</span>
           <h3 class="rasa-timeline-card__title" id="card-title">Target &amp; Biomarker Discovery</h3>
           <p class="rasa-timeline-card__desc" id="card-desc">
             RASA initiates its core target mining protocols, combining transcriptomics screening and annotation pipelines. We establish structure prediction pathways using homology modeling engines to screen potential target structures.
@@ -183,7 +173,7 @@
   <section class="rasa-section" style="border-top: 1px solid var(--border);">
     <div class="container">
       <div class="rasa-reveal">
-        <span class="rasa-eyebrow">[ 04 // Segments ]</span>
+        <span class="rasa-eyebrow">Segments</span>
         <h2 class="rasa-h2" style="margin: 1.5rem 0 3rem; max-width: 22ch;">Working as an integrated extension of research teams.</h2>
       </div>
       <div class="rasa-sectors rasa-reveal" data-delay="1">
@@ -235,6 +225,7 @@
     <div class="rasa-footer__grid">
       <div>
         <div class="rasa-footer__brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 42px; width: auto; display: block; object-fit: contain;"></div>
+      </div>
       <div>
         <h4>Services</h4>
         <a href="services-ngs.html">NGS Data Analysis</a>
@@ -291,22 +282,22 @@
   // Interactive Capability Timeline data
   var timelineData = {
     "01": {
-      phase: "Phase 01 // Foundation",
+      phase: "Phase 01: Foundation",
       title: "Target &amp; Biomarker Discovery",
       desc: "RASA initiates its core target mining protocols, combining transcriptomics screening and annotation pipelines. We establish structure prediction pathways using homology modeling engines to screen potential target structures."
     },
     "02": {
-      phase: "Phase 02 // High-Throughput Scaling",
+      phase: "Phase 02: High-Throughput Scaling",
       title: "Containerized Workflows",
       desc: "We migrate core workflows to Nextflow and Snakemake pipelines. This containerization (Docker &amp; Singularity) allows us to run large cohort-scale WGS and RNA-seq campaigns with complete computational reproducibility."
     },
     "03": {
-      phase: "Phase 03 // AI-Driven Chemistry",
+      phase: "Phase 03: AI-Driven Chemistry",
       title: "Generative De Novo Design",
       desc: "Integration of generative models (GANs, VAEs, and reinforcement learning) to automate molecular design. We launch structure-guided fragment hopping pipelines to design patentable first-in-class assets from scratch."
     },
     "04": {
-      phase: "Phase 04 // Single-Cell &amp; Spatial Precision",
+      phase: "Phase 04: Single-Cell &amp; Spatial Precision",
       title: "Tissue &amp; Multimodal Integration",
       desc: "Establish high-resolution spatial transcriptomics and single-cell cellular profiling. We deconvolve tissue domain patterns and map ligand-receptor communication networks to profile the tumor microenvironment."
     }
@@ -348,18 +339,7 @@
 
 })();
 
-  // Dark Mode Theme Toggle Click Listener
-  try {
-    var themeToggleBtn = document.getElementById('rasa-theme-toggle');
-    if (themeToggleBtn) {
-      themeToggleBtn.addEventListener('click', function () {
-        var isDark = document.body.classList.toggle('dark-mode');
-        localStorage.setItem('rasa-theme', isDark ? 'dark' : 'light');
-      });
-    }
-  } catch (e) {
-    console.error('Theme toggle error:', e);
-  }
+  
 </script>
 </body>
 </html>
