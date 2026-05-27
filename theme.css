@@ -483,7 +483,7 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
 }
 
 /* Navigation Dropdowns & Links Expansion */
-.rasa-nav { display: none; gap: 1.5rem; font-size: 0.875rem; font-weight: 500; align-items: center; }
+.rasa-nav { align-items: center; }
 
 .rasa-nav__item { position: relative; display: inline-flex; align-items: center; }
 
