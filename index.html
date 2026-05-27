@@ -33,12 +33,29 @@
   <div class="rasa-header__inner">
     <div class="rasa-header__group">
       <a href="index.html" class="rasa-brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 38px; width: auto; display: block; object-fit: contain; margin: 0;"></a>
-      <nav class="rasa-nav" aria-label="Primary Nav">
-        <a href="services-ngs.html">NGS Analysis</a>
-        <a href="services-drug-discovery.html">Drug Discovery</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="about.html">About</a>
-        <a href="faq.html">FAQ</a>
+                              <nav class="rasa-nav" aria-label="Primary Nav">
+        <div class="rasa-nav__item">
+          <a href="services-ngs.html">NGS Analysis <span class="rasa-nav__arrow">▼</span></a>
+          <div class="rasa-nav__dropdown">
+            <a href="services-ngs.html">Overview</a>
+            <a href="services-ngs-transcriptomics.html">Transcriptomics (RNA-Seq)</a>
+            <a href="services-ngs-wgs-wes.html">WGS &amp; Exome (WES)</a>
+            <a href="services-ngs-spatial.html">Spatial Transcriptomics</a>
+            <a href="services-ngs-metagenomics.html">Metagenomics</a>
+          </div>
+        </div>
+        <div class="rasa-nav__item">
+          <a href="services-drug-discovery.html">Drug Discovery <span class="rasa-nav__arrow">▼</span></a>
+          <div class="rasa-nav__dropdown">
+            <a href="services-drug-discovery.html">Overview</a>
+            <a href="services-dd-target-id.html">Target ID &amp; Structure</a>
+            <a href="services-dd-virtual-screening.html">Virtual Screening</a>
+            <a href="services-dd-lead-optimization.html">Lead Optimization</a>
+          </div>
+        </div>
+        <div class="rasa-nav__item"><a href="case-studies.html">Case Studies</a></div>
+        <div class="rasa-nav__item"><a href="about.html">About</a></div>
+        <div class="rasa-nav__item"><a href="faq.html">FAQ</a></div>
       </nav>
     </div>
     <div class="rasa-header__actions" style="display: flex; align-items: center; gap: 1rem;">
@@ -142,103 +159,103 @@
 
       <!-- NGS Content Panel -->
       <div class="rasa-tab-panel is-active" id="panel-ngs" role="tabpanel" aria-labelledby="tab-ngs">
-        <div class="rasa-services-grid">
-          <div class="rasa-card zoom-parent">
-            <div class="rasa-card__img-wrap"><img src="images/dna_sequencing_flow.png" alt="Transcriptomics"></div>
-            <div class="rasa-card__icon-wrap">
-              <svg viewBox="0 0 24 24"><path d="M4 4c4 0 4 4 8 4s4-4 8-4M4 12c4 0 4 4 8 4s4-4 8-4M4 20c4 0 4-4 8-4s4 4 8 4"/></svg>
-            </div>
-            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.7rem; font-weight: 600;">
+         <div class="rasa-services-grid">
+           <div class="rasa-card zoom-parent">
+             <div class="rasa-card__img-wrap"><img src="images/dna_sequencing_flow.png" alt="Transcriptomics"></div>
+             <div class="rasa-card__icon-wrap">
+               <svg viewBox="0 0 24 24"><path d="M4 4c4 0 4 4 8 4s4-4 8-4M4 12c4 0 4 4 8 4s4-4 8-4M4 20c4 0 4-4 8-4s4 4 8 4"/></svg>
+             </div>
+             <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.7rem; font-weight: 600;">
           <span style="background: rgba(37, 99, 235, 0.1); color: #2563eb; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">★ 4.9 (32 Projects)</span>
           <span style="background: #f1f5f9; color: #475569; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Nextflow / Seurat</span>
           <span style="background: #f1f5f9; color: #475569; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">2-4 Wks</span>
         </div>
         <h3 class="rasa-card__title">Transcriptomics (RNA-seq)</h3>
-            <p class="rasa-card__body">End-to-end bulk and single-cell RNA-seq (scRNA-seq) pipelines for differential expression, clustering, trajectory analysis, and biomarker discovery.</p>
-            <a href="services-ngs.html#transcriptomics" class="rasa-card__more">View Pipeline <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-          </div>
-
-          <div class="rasa-card zoom-parent">
-            <div class="rasa-card__img-wrap"><img src="images/computational_biologist_cluster.png" alt="WGS &amp; Exome"></div>
-            <div class="rasa-card__icon-wrap">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9" stroke-dasharray="3 3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
-            </div>
-            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.7rem; font-weight: 600;">
+             <p class="rasa-card__body">End-to-end bulk and single-cell RNA-seq (scRNA-seq) pipelines for differential expression, clustering, trajectory analysis, and biomarker discovery.</p>
+             <a href="services-ngs-transcriptomics.html" class="rasa-card__more">View Pipeline <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+           </div>
+ 
+           <div class="rasa-card zoom-parent">
+             <div class="rasa-card__img-wrap"><img src="images/computational_biologist_cluster.png" alt="WGS &amp; Exome"></div>
+             <div class="rasa-card__icon-wrap">
+               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9" stroke-dasharray="3 3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+             </div>
+             <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.7rem; font-weight: 600;">
           <span style="background: rgba(37, 99, 235, 0.1); color: #2563eb; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">★ 5.0 (18 Projects)</span>
           <span style="background: #f1f5f9; color: #475569; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">GATK / ClinVar</span>
           <span style="background: #f1f5f9; color: #475569; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">3 Wks</span>
         </div>
         <h3 class="rasa-card__title">WGS &amp; Exome (WES)</h3>
-            <p class="rasa-card__body">High-fidelity variant calling (SNVs, Indels, CNVs, structural variants) annotated via ClinVar and gnomAD databases for cancer and rare diseases.</p>
-            <a href="services-ngs.html#wgs-wes" class="rasa-card__more">View Pipeline <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-          </div>
-
-          <div class="rasa-card zoom-parent">
-            <div class="rasa-card__img-wrap"><img src="images/spatial_cell_mapping.png" alt="Spatial Transcriptomics"></div>
-            <div class="rasa-card__icon-wrap">
-              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
-            </div>
-            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.7rem; font-weight: 600;">
+             <p class="rasa-card__body">High-fidelity variant calling (SNVs, Indels, CNVs, structural variants) annotated via ClinVar and gnomAD databases for cancer and rare diseases.</p>
+             <a href="services-ngs-wgs-wes.html" class="rasa-card__more">View Pipeline <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+           </div>
+ 
+           <div class="rasa-card zoom-parent">
+             <div class="rasa-card__img-wrap"><img src="images/spatial_cell_mapping.png" alt="Spatial Transcriptomics"></div>
+             <div class="rasa-card__icon-wrap">
+               <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+             </div>
+             <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.7rem; font-weight: 600;">
           <span style="background: rgba(37, 99, 235, 0.1); color: #2563eb; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">★ 4.8 (12 Projects)</span>
           <span style="background: #f1f5f9; color: #475569; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">Seurat / 10x</span>
           <span style="background: #f1f5f9; color: #475569; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">4 Wks</span>
         </div>
         <h3 class="rasa-card__title">Spatial Transcriptomics</h3>
-            <p class="rasa-card__body">Map gene expression profiles within intact tissue slices using 10x Genomics Visium, Slide-seq, and MERFISH data analytics pipelines.</p>
-            <a href="services-ngs.html#spatial" class="rasa-card__more">View Pipeline <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Drug Discovery Panel -->
-      <div class="rasa-tab-panel" id="panel-dd" role="tabpanel" aria-labelledby="tab-dd">
-        <div class="rasa-services-grid">
-          <div class="rasa-card zoom-parent">
-            <div class="rasa-card__img-wrap"><img src="images/molecular_docking_3d.png" alt="Target ID &amp; Structure"></div>
-            <div class="rasa-card__icon-wrap">
-              <svg viewBox="0 0 24 24"><path d="M6 2v6a6 6 0 0 0 12 0V2M6 22v-6a6 6 0 0 1 12 0v6M6 2h12M6 22h12"/></svg>
-            </div>
-            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.7rem; font-weight: 600;">
+             <p class="rasa-card__body">Map gene expression profiles within intact tissue slices using 10x Genomics Visium, Slide-seq, and MERFISH data analytics pipelines.</p>
+             <a href="services-ngs-spatial.html" class="rasa-card__more">View Pipeline <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+           </div>
+         </div>
+       </div>
+ 
+       <!-- Drug Discovery Panel -->
+       <div class="rasa-tab-panel" id="panel-dd" role="tabpanel" aria-labelledby="tab-dd">
+         <div class="rasa-services-grid">
+           <div class="rasa-card zoom-parent">
+             <div class="rasa-card__img-wrap"><img src="images/molecular_docking_3d.png" alt="Target ID &amp; Structure"></div>
+             <div class="rasa-card__icon-wrap">
+               <svg viewBox="0 0 24 24"><path d="M6 2v6a6 6 0 0 0 12 0V2M6 22v-6a6 6 0 0 1 12 0v6M6 2h12M6 22h12"/></svg>
+             </div>
+             <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.7rem; font-weight: 600;">
           <span style="background: rgba(37, 99, 235, 0.1); color: #2563eb; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">★ 5.0 (15 Projects)</span>
           <span style="background: #f1f5f9; color: #475569; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">AlphaFold2</span>
           <span style="background: #f1f5f9; color: #475569; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">2 Wks</span>
         </div>
         <h3 class="rasa-card__title">Target ID &amp; Structure</h3>
-            <p class="rasa-card__body">Integrative mining of transcriptomic &amp; clinical data paired with high-accuracy 3D structural prediction utilizing AlphaFold2 models.</p>
-            <a href="services-drug-discovery.html#target" class="rasa-card__more">Explore Target ID <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-          </div>
-
-          <div class="rasa-card zoom-parent">
-            <div class="rasa-card__img-wrap"><img src="images/lab_collaboration_science.png" alt="Virtual Screening"></div>
-            <div class="rasa-card__icon-wrap">
-              <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="12" r="3"/><path d="M9 6c6 0 6 6 6 6M9 18c6 0 6-6 6-6"/></svg>
-            </div>
-            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.7rem; font-weight: 600;">
+             <p class="rasa-card__body">Integrative mining of transcriptomic &amp; clinical data paired with high-accuracy 3D structural prediction utilizing AlphaFold2 models.</p>
+             <a href="services-dd-target-id.html" class="rasa-card__more">Explore Target ID <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+           </div>
+ 
+           <div class="rasa-card zoom-parent">
+             <div class="rasa-card__img-wrap"><img src="images/lab_collaboration_science.png" alt="Virtual Screening"></div>
+             <div class="rasa-card__icon-wrap">
+               <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="12" r="3"/><path d="M9 6c6 0 6 6 6 6M9 18c6 0 6-6 6-6"/></svg>
+             </div>
+             <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.7rem; font-weight: 600;">
           <span style="background: rgba(37, 99, 235, 0.1); color: #2563eb; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">★ 4.9 (27 Projects)</span>
           <span style="background: #f1f5f9; color: #475569; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">AutoDock Vina</span>
           <span style="background: #f1f5f9; color: #475569; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">3 Wks</span>
         </div>
         <h3 class="rasa-card__title">Virtual Screening</h3>
-            <p class="rasa-card__body">High-throughput structure-based virtual screening and shape-based pharmacophore docking of commercial compound databases.</p>
-            <a href="services-drug-discovery.html#virtual-screening" class="rasa-card__more">Explore Screening <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-          </div>
-
-          <div class="rasa-card zoom-parent">
-            <div class="rasa-card__img-wrap"><img src="images/computational_biologist_cluster.png" alt="Lead Optimization"></div>
-            <div class="rasa-card__icon-wrap">
-              <svg viewBox="0 0 24 24"><path d="M12 2 4 5v7c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>
-            </div>
-            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.7rem; font-weight: 600;">
+             <p class="rasa-card__body">High-throughput structure-based virtual screening and shape-based pharmacophore docking of commercial compound databases.</p>
+             <a href="services-dd-virtual-screening.html" class="rasa-card__more">Explore Screening <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+           </div>
+ 
+           <div class="rasa-card zoom-parent">
+             <div class="rasa-card__img-wrap"><img src="images/computational_biologist_cluster.png" alt="Lead Optimization"></div>
+             <div class="rasa-card__icon-wrap">
+               <svg viewBox="0 0 24 24"><path d="M12 2 4 5v7c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>
+             </div>
+             <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.7rem; font-weight: 600;">
           <span style="background: rgba(37, 99, 235, 0.1); color: #2563eb; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">★ 5.0 (21 Projects)</span>
           <span style="background: #f1f5f9; color: #475569; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">GROMACS MD</span>
           <span style="background: #f1f5f9; color: #475569; padding: 0.15rem 0.4rem; border-radius: 0.25rem;">4-6 Wks</span>
         </div>
         <h3 class="rasa-card__title">Lead Optimization</h3>
-            <p class="rasa-card__body">Refine hit binding affinities with GROMACS molecular dynamics, ML QSAR modeling, SwissADME profiling, and toxicity filters.</p>
-            <a href="services-drug-discovery.html#lead-optimization" class="rasa-card__more">Explore Optimization <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-          </div>
-        </div>
-      </div>
+             <p class="rasa-card__body">Refine hit binding affinities with GROMACS molecular dynamics, ML QSAR modeling, SwissADME profiling, and toxicity filters.</p>
+             <a href="services-dd-lead-optimization.html" class="rasa-card__more">Explore Optimization <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+           </div>
+         </div>
+       </div>
     </div>
   </section>
 
@@ -385,11 +402,26 @@
         <div class="rasa-footer__brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 42px; width: auto; display: block; object-fit: contain;"></div>
       </div>
       <div>
-        <h4>Services</h4>
-        <a href="services-ngs.html">NGS Data Analysis</a>
-        <a href="services-drug-discovery.html">In-Silico Drug Discovery</a>
+        <h4>Computational Genomics</h4>
+        <a href="services-ngs.html">NGS Overview</a>
+        <a href="services-ngs-transcriptomics.html">Transcriptomics (RNA-Seq)</a>
+        <a href="services-ngs-wgs-wes.html">WGS &amp; Exome (WES)</a>
+        <a href="services-ngs-spatial.html">Spatial Transcriptomics</a>
+        <a href="services-ngs-metagenomics.html">Metagenomics Community</a>
+      </div>
+      <div>
+        <h4>In-Silico Drug Discovery</h4>
+        <a href="services-drug-discovery.html">Discovery Overview</a>
+        <a href="services-dd-target-id.html">Target ID &amp; Structure</a>
+        <a href="services-dd-virtual-screening.html">Virtual Screening Sim</a>
+        <a href="services-dd-lead-optimization.html">Lead Optimization Dynamics</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
         <a href="case-studies.html">Case Studies</a>
-        <a href="faq.html">FAQ</a>
+        <a href="about.html">About Corporate</a>
+        <a href="faq.html">Technical FAQ</a>
+        <a href="contact.html">Partner Contact</a>
       </div>
       <div>
         <h4>Headquarters</h4>

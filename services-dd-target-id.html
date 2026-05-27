@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Target Identification & 3D Structure Prediction | RASA LSI</title>
+  <meta name="description" content="Computational target identification and validation using multi-omics mining, AlphaFold2 structural models, and protein-protein interaction networks.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body class="rasa">
+  
+  <!--
+================================================================
+  RASA LSI — IN-SILICO DRUG DISCOVERY SERVICES
+  WordPress Custom HTML block. Self-contained.
+  Design system: "Academic Precision" — cream + ink + forest leaf
+================================================================
+-->
+
+
+
+
+
+
+
+<!-- =============== HEADER =============== -->
+<div class="rasa-top-bar"><span>📧 info@rasalsi.com | 📞 +91-20-2563-3456</span><span><a href="contact.html" style="color:#ffffff; text-decoration:underline;">Client Portal</a> | <a href="contact.html" style="color:#ffffff; text-decoration:underline;">Support</a></span></div><header class="rasa rasa-header">
+  <div class="rasa-header__inner">
+    <div class="rasa-header__group">
+      <a href="index.html" class="rasa-brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 38px; width: auto; display: block; object-fit: contain; margin: 0;"></a>
+                                    <nav class="rasa-nav" aria-label="Primary Nav">
+        <div class="rasa-nav__item">
+          <a href="services-ngs.html">NGS Analysis <span class="rasa-nav__arrow">▼</span></a>
+          <div class="rasa-nav__dropdown">
+            <a href="services-ngs.html">Overview</a>
+            <a href="services-ngs-transcriptomics.html">Transcriptomics (RNA-Seq)</a>
+            <a href="services-ngs-wgs-wes.html">WGS &amp; Exome (WES)</a>
+            <a href="services-ngs-spatial.html">Spatial Transcriptomics</a>
+            <a href="services-ngs-metagenomics.html">Metagenomics</a>
+          </div>
+        </div>
+        <div class="rasa-nav__item">
+          <a href="services-drug-discovery.html">Drug Discovery <span class="rasa-nav__arrow">▼</span></a>
+          <div class="rasa-nav__dropdown">
+            <a href="services-drug-discovery.html">Overview</a>
+            <a href="services-dd-target-id.html">Target ID &amp; Structure</a>
+            <a href="services-dd-virtual-screening.html">Virtual Screening</a>
+            <a href="services-dd-lead-optimization.html">Lead Optimization</a>
+          </div>
+        </div>
+        <div class="rasa-nav__item"><a href="case-studies.html">Case Studies</a></div>
+        <div class="rasa-nav__item"><a href="about.html">About</a></div>
+        <div class="rasa-nav__item"><a href="faq.html">FAQ</a></div>
+      </nav>
+    </div>
+    <div class="rasa-header__actions" style="display: flex; align-items: center; gap: 1rem;">
+      
+      <a href="contact.html" class="rasa-cta-btn">
+        Partner with us
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- =============== MAIN =============== -->
+<main class="rasa rasa-page">
+
+  <!-- PAGE HERO -->
+  <section class="rasa-pagehero">
+    <div class="rasa-grid-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="rasa-pagehero__grid">
+        <div class="rasa-pagehero__copy">
+          <div class="rasa-reveal">
+            <span class="rasa-eyebrow">Molecular Design<span class="rasa-eyebrow__rule"></span></span>
+          </div>
+          <h1 class="rasa-pagehero__h rasa-reveal" data-delay="1">
+          Discover and validate therapeutic <span class="serif italic leaf">targets</span>.
+        </h1>
+          <p class="rasa-pagehero__lede rasa-reveal" data-delay="2">
+          Pair target mining with high-accuracy 3D structural predictions. Model protein structures, active sites, and mutational effects to validate target druggability.
+        </p>
+        </div>
+        <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2">
+          <img src="images/molecular_docking_3d.png" alt="Discover and validate therapeutic targets.">
+        </div>
+      </div>
+
+      <!-- Interactive Pipeline tracker -->
+      <div class="rasa-pipeline-tracker rasa-reveal" data-delay="2">
+        <span class="rasa-side__lbl">Discovery Roadmap</span>
+        <div class="rasa-pipeline-steps">
+          <a href="services-dd-target-id.html" class="rasa-pipeline-step is-active" data-section="target-id" data-progress="20%" style="text-decoration: none; color: inherit;">
+            <span class="rasa-pipeline-step__num">Step 01</span>
+            <div class="rasa-pipeline-step__title">Target ID</div>
+          </a>
+          <a href="services-dd-virtual-screening.html" class="rasa-pipeline-step" data-section="hit-discovery" data-progress="40%" style="text-decoration: none; color: inherit;">
+            <span class="rasa-pipeline-step__num">Step 02</span>
+            <div class="rasa-pipeline-step__title">Virtual Screen</div>
+          </a>
+          <a href="services-dd-lead-optimization.html" class="rasa-pipeline-step" data-section="lead-opt" data-progress="60%" style="text-decoration: none; color: inherit;">
+            <span class="rasa-pipeline-step__num">Step 03</span>
+            <div class="rasa-pipeline-step__title">Lead Opt</div>
+          </a>
+          <a href="services-drug-discovery.html#de-novo" class="rasa-pipeline-step" data-section="de-novo" data-progress="80%" style="text-decoration: none; color: inherit;">
+            <span class="rasa-pipeline-step__num">Step 04</span>
+            <div class="rasa-pipeline-step__title">De Novo Design</div>
+          </a>
+          <a href="services-drug-discovery.html#multi-target" class="rasa-pipeline-step" data-section="multi-target" data-progress="100%" style="text-decoration: none; color: inherit;">
+            <span class="rasa-pipeline-step__num">Step 05</span>
+            <div class="rasa-pipeline-step__title">Network Pharma</div>
+          </a>
+        </div>
+        <div class="rasa-pipeline-bar">
+          <div class="rasa-pipeline-progress" id="progress-bar"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+
+  <!-- DEEP: TARGET ID -->
+  <section class="rasa-deep rasa-reveal" id="target-id">
+    <div class="container">
+      <div class="rasa-deep__head">
+        <span class="rasa-deep__index">[ 01 ] Target ID &amp; Validation</span>
+        <div>
+          <h2 class="rasa-h2 rasa-deep__h">Laying the foundation for smarter drug discovery.</h2>
+          <p class="rasa-deep__lede">
+            Our framework integrates multi-omics (genomics, transcriptomics, proteomics), structural bioinformatics, and literature NLP to identify and validate high-confidence disease targets.
+          </p>
+        </div>
+      </div>
+      <div class="rasa-deep__body">
+        <div>
+          <div class="rasa-feat-list">
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">Multi-omics integration</div>
+                <div class="rasa-feat__b">Uncover target candidates using cancer genomes, patient tissue databases, and CRISPR knockout models.</div>
+              </div>
+            </div>
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">High-accuracy structure prediction</div>
+                <div class="rasa-feat__b">Model uncharted target domains using AlphaFold2 and I-TASSER to score binding pocket accessibility.</div>
+              </div>
+            </div>
+            <div class="rasa-feat">
+              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div>
+                <div class="rasa-feat__t">Interactome &amp; pathway validation</div>
+                <div class="rasa-feat__b">Map protein interaction topologies using STRING, Reactome, and KEGG models.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rasa-tool-cloud">
+            <span class="rasa-tool">AlphaFold2<span class="rasa-tooltip">Google DeepMind's state-of-the-art 3D structure predictor.</span></span>
+            <span class="rasa-tool">I-TASSER<span class="rasa-tooltip">Iterative threading assembly for structure prediction.</span></span>
+            <span class="rasa-tool">STRING<span class="rasa-tooltip">Protein-protein physical and functional interaction network.</span></span>
+            <span class="rasa-tool">Open Targets<span class="rasa-tooltip">Comprehensive target validation platform.</span></span>
+            <span class="rasa-tool">DisGeNET<span class="rasa-tooltip">Database of gene-disease associations.</span></span>
+          </div>
+        </div>
+
+        <aside class="rasa-side">
+          <span class="rasa-side__lbl">Workflow outputs</span>
+          <h3 class="rasa-side__h">Target assessment.</h3>
+          <div class="rasa-deliv">
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Druggability score card</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>AlphaFold 3D model files</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Pathway specificity report</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Disfavour/Toxicity alerts</div>
+          </div>
+          <div style="margin-top: 0.5rem;">
+            <div class="rasa-side__row"><span>Databases</span><span>TCGA · GTEx · OpenTargets</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- CTA -->
+  <section class="rasa-section rasa-section--ink" style="padding:6rem 0; text-align:center;">
+    <div class="container" style="max-width:720px;">
+      <h2 class="rasa-h2" style="color:var(--cream); margin-bottom:1.25rem; max-width:24ch; margin-left:auto; margin-right:auto;">Accelerate therapeutic discovery with RASA.</h2>
+      <p style="color:rgba(248,249,250,0.7); max-width:56ch; margin:0 auto 2rem;">
+        Get in touch with our Pune-based computational drug design experts to coordinate target screens or dynamics calculations.
+      </p>
+      <a href="contact.html" class="rasa-btn rasa-btn--primary">
+        Start a Project
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- =============== FOOTER =============== -->
+<footer class="rasa rasa-footer">
+  <div class="container">
+    <div class="rasa-footer__grid">
+      <div>
+        <div class="rasa-footer__brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 42px; width: auto; display: block; object-fit: contain;"></div>
+      </div>
+      <div>
+        <h4>Computational Genomics</h4>
+        <a href="services-ngs.html">NGS Overview</a>
+        <a href="services-ngs-transcriptomics.html">Transcriptomics (RNA-Seq)</a>
+        <a href="services-ngs-wgs-wes.html">WGS &amp; Exome (WES)</a>
+        <a href="services-ngs-spatial.html">Spatial Transcriptomics</a>
+        <a href="services-ngs-metagenomics.html">Metagenomics Community</a>
+      </div>
+      <div>
+        <h4>In-Silico Drug Discovery</h4>
+        <a href="services-drug-discovery.html">Discovery Overview</a>
+        <a href="services-dd-target-id.html">Target ID &amp; Structure</a>
+        <a href="services-dd-virtual-screening.html">Virtual Screening Sim</a>
+        <a href="services-dd-lead-optimization.html">Lead Optimization Dynamics</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about.html">About Corporate</a>
+        <a href="faq.html">Technical FAQ</a>
+        <a href="contact.html">Partner Contact</a>
+      </div>
+      <div>
+        <h4>Headquarters</h4>
+        <p style="font-size: 0.875rem; color: var(--foreground-70); line-height: 1.65; margin: 0 0 1rem;">
+          Pashan-Sus Road<br>
+          Pune, Maharashtra 411021<br>
+          India
+        </p>
+        <a href="contact.html" style="font-weight: 500; color: var(--leaf);">Get in touch →</a>
+      </div>
+    </div>
+    <div class="rasa-footer__bottom">
+      <span>© <span id="rasa-year">2026</span> Rasa Life Science Informatics. Engineered in Pune.</span>
+      <span><a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/terms">Terms</a></span>
+    </div>
+  </div>
+</footer>
+  <script>
+
+(function () {
+  var y = document.getElementById('rasa-year');
+  if (y) y.textContent = new Date().getFullYear();
+
+    // Active navigation link detection
+  try {
+    var path = window.location.pathname;
+    var page = path.split('/').pop();
+    if (!page || page === '') page = 'index.html';
+    document.querySelectorAll('.rasa-nav a').forEach(function (a) {
+      a.classList.remove('is-active');
+      var href = a.getAttribute('href').split('#')[0].split('/').pop();
+      if (href === page) a.classList.add('is-active');
+    });
+  } catch (e) {}
+
+  // Reveal animations on scroll
+  var reveals = document.querySelectorAll('.rasa-reveal');
+  var ioReveal = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        ioReveal.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(function (el) { ioReveal.observe(el); });
+
+  // Interactive Pipeline tracker
+  var steps = document.querySelectorAll('.rasa-pipeline-step');
+  var progressBar = document.getElementById('progress-bar');
+  steps.forEach(function (step) {
+    step.addEventListener('click', function () {
+      steps.forEach(function (s) { s.classList.remove('is-active'); });
+      step.classList.add('is-active');
+      var progress = step.getAttribute('data-progress');
+      progressBar.style.width = progress;
+
+      var id = step.getAttribute('data-section');
+      var target = document.getElementById(id);
+      if (target) {
+        var headerOffset = 0;
+        var topBar = document.querySelector('.rasa-top-bar');
+        var header = document.querySelector('.rasa-header');
+        var subNav = document.querySelector('.rasa-anchor-nav');
+        if (topBar && window.getComputedStyle(topBar).position === 'fixed') {
+          headerOffset += topBar.offsetHeight;
+        }
+        if (header && window.getComputedStyle(header).position === 'fixed') {
+          headerOffset += header.offsetHeight;
+        }
+        if (subNav && (window.getComputedStyle(subNav).position === 'sticky' || window.getComputedStyle(subNav).position === 'fixed')) {
+          headerOffset += subNav.offsetHeight;
+        }
+        if (headerOffset === 0) headerOffset = 120;
+        else headerOffset += 8; // buffer
+
+        var elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        var offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+  // Sticky sub-nav Intersection Observer active highlighting
+  var sections = document.querySelectorAll('.rasa-deep');
+  var navLinks = document.querySelectorAll('.rasa-anchor-nav a');
+
+  var ioOptions = {
+    root: null,
+    rootMargin: '-25% 0px -55% 0px',
+    threshold: 0
+  };
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var id = entry.target.getAttribute('id');
+        navLinks.forEach(function (link) {
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('is-active');
+          } else {
+            link.classList.remove('is-active');
+          }
+        });
+        // Sync with pipeline steps
+        steps.forEach(function (step) {
+          if (step.getAttribute('data-section') === id) {
+            steps.forEach(function (s) { s.classList.remove('is-active'); });
+            step.classList.add('is-active');
+            var progress = step.getAttribute('data-progress');
+            progressBar.style.width = progress;
+          }
+        });
+      }
+    });
+  }, ioOptions);
+
+  sections.forEach(function (section) {
+    observer.observe(section);
+  });
+
+  // Smooth scroll to sections with offset
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var id = link.getAttribute('href');
+      var target = document.querySelector(id);
+      if (target) {
+        var headerOffset = 0;
+        var topBar = document.querySelector('.rasa-top-bar');
+        var header = document.querySelector('.rasa-header');
+        var subNav = document.querySelector('.rasa-anchor-nav');
+        if (topBar && window.getComputedStyle(topBar).position === 'fixed') {
+          headerOffset += topBar.offsetHeight;
+        }
+        if (header && window.getComputedStyle(header).position === 'fixed') {
+          headerOffset += header.offsetHeight;
+        }
+        if (subNav && (window.getComputedStyle(subNav).position === 'sticky' || window.getComputedStyle(subNav).position === 'fixed')) {
+          headerOffset += subNav.offsetHeight;
+        }
+        if (headerOffset === 0) headerOffset = 120;
+        else headerOffset += 8; // buffer
+
+        var elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        var offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+})();
+
+  
+</script>
+</body>
+</html>

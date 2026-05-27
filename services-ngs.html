@@ -32,12 +32,29 @@
   <div class="rasa-header__inner">
     <div class="rasa-header__group">
       <a href="index.html" class="rasa-brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 38px; width: auto; display: block; object-fit: contain; margin: 0;"></a>
-      <nav class="rasa-nav" aria-label="Primary Nav">
-        <a href="services-ngs.html" class="is-active">NGS Analysis</a>
-        <a href="services-drug-discovery.html">Drug Discovery</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="about.html">About</a>
-        <a href="faq.html">FAQ</a>
+                              <nav class="rasa-nav" aria-label="Primary Nav">
+        <div class="rasa-nav__item">
+          <a href="services-ngs.html">NGS Analysis <span class="rasa-nav__arrow">▼</span></a>
+          <div class="rasa-nav__dropdown">
+            <a href="services-ngs.html">Overview</a>
+            <a href="services-ngs-transcriptomics.html">Transcriptomics (RNA-Seq)</a>
+            <a href="services-ngs-wgs-wes.html">WGS &amp; Exome (WES)</a>
+            <a href="services-ngs-spatial.html">Spatial Transcriptomics</a>
+            <a href="services-ngs-metagenomics.html">Metagenomics</a>
+          </div>
+        </div>
+        <div class="rasa-nav__item">
+          <a href="services-drug-discovery.html">Drug Discovery <span class="rasa-nav__arrow">▼</span></a>
+          <div class="rasa-nav__dropdown">
+            <a href="services-drug-discovery.html">Overview</a>
+            <a href="services-dd-target-id.html">Target ID &amp; Structure</a>
+            <a href="services-dd-virtual-screening.html">Virtual Screening</a>
+            <a href="services-dd-lead-optimization.html">Lead Optimization</a>
+          </div>
+        </div>
+        <div class="rasa-nav__item"><a href="case-studies.html">Case Studies</a></div>
+        <div class="rasa-nav__item"><a href="about.html">About</a></div>
+        <div class="rasa-nav__item"><a href="faq.html">FAQ</a></div>
       </nav>
     </div>
     <div class="rasa-header__actions" style="display: flex; align-items: center; gap: 1rem;">
@@ -122,42 +139,42 @@
 
       <!-- Modalities Overview Grid -->
       <div class="rasa-modalities rasa-reveal" data-delay="2">
-        <a href="#wgs-wes" class="rasa-modality">
+        <a href="services-ngs-wgs-wes.html" class="rasa-modality">
           <span class="rasa-modality__idx">01 //</span>
           <span class="rasa-modality__h">WGS &amp; WES Discovery</span>
           <span class="rasa-modality__b">Deep variant discovery (SNVs, Indels, CNVs) annotated via ClinVar &amp; gnomAD.</span>
         </a>
-        <a href="#rnaseq" class="rasa-modality">
+        <a href="services-ngs-transcriptomics.html#rnaseq" class="rasa-modality">
           <span class="rasa-modality__idx">02 //</span>
           <span class="rasa-modality__h">RNA-Seq (Bulk)</span>
           <span class="rasa-modality__b">Transcriptome expression profiling, DE analyses, and pathway enrichment.</span>
         </a>
-        <a href="#scrnaseq" class="rasa-modality">
+        <a href="services-ngs-transcriptomics.html#scrnaseq" class="rasa-modality">
           <span class="rasa-modality__idx">03 //</span>
           <span class="rasa-modality__h">Single-Cell RNA-Seq</span>
           <span class="rasa-modality__b">Cellular heterogeneity profile, cell typing, and lineage trajectory.</span>
         </a>
-        <a href="#spatial" class="rasa-modality">
+        <a href="services-ngs-spatial.html" class="rasa-modality">
           <span class="rasa-modality__idx">04 //</span>
           <span class="rasa-modality__h">Spatial Transcriptomics</span>
           <span class="rasa-modality__b">Gene expression mapped directly within intact tissue architectural slides.</span>
         </a>
-        <a href="#longread" class="rasa-modality">
+        <a href="services-ngs.html#longread" class="rasa-modality">
           <span class="rasa-modality__idx">05 //</span>
           <span class="rasa-modality__h">Long-Read Sequencing</span>
           <span class="rasa-modality__b">Oxford Nanopore &amp; PacBio assemblies, structural variants &amp; direct methylation.</span>
         </a>
-        <a href="#meta" class="rasa-modality">
+        <a href="services-ngs-metagenomics.html" class="rasa-modality">
           <span class="rasa-modality__idx">06 //</span>
           <span class="rasa-modality__h">Metagenomics &amp; Assembly</span>
           <span class="rasa-modality__b">Taxonomic profiling, MAG reconstruction, hybrid assembly, and AMR mapping.</span>
         </a>
-        <a href="#epi" class="rasa-modality">
+        <a href="services-ngs.html#epi" class="rasa-modality">
           <span class="rasa-modality__idx">07 //</span>
           <span class="rasa-modality__h">Epigenomics (ATAC/ChIP)</span>
           <span class="rasa-modality__b">Chromatin accessibility, histone marks, and transcription factor footprints.</span>
         </a>
-        <a href="#multiomics" class="rasa-modality">
+        <a href="services-ngs.html#multiomics" class="rasa-modality">
           <span class="rasa-modality__idx">08 //</span>
           <span class="rasa-modality__h">Multi-Omics Integration</span>
           <span class="rasa-modality__b">Joint embeddings combining transcriptomics, epigenomics, and network maps.</span>
@@ -771,11 +788,26 @@
         <div class="rasa-footer__brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 42px; width: auto; display: block; object-fit: contain;"></div>
       </div>
       <div>
-        <h4>Services</h4>
-        <a href="services-ngs.html">NGS Data Analysis</a>
-        <a href="services-drug-discovery.html">In-Silico Drug Discovery</a>
+        <h4>Computational Genomics</h4>
+        <a href="services-ngs.html">NGS Overview</a>
+        <a href="services-ngs-transcriptomics.html">Transcriptomics (RNA-Seq)</a>
+        <a href="services-ngs-wgs-wes.html">WGS &amp; Exome (WES)</a>
+        <a href="services-ngs-spatial.html">Spatial Transcriptomics</a>
+        <a href="services-ngs-metagenomics.html">Metagenomics Community</a>
+      </div>
+      <div>
+        <h4>In-Silico Drug Discovery</h4>
+        <a href="services-drug-discovery.html">Discovery Overview</a>
+        <a href="services-dd-target-id.html">Target ID &amp; Structure</a>
+        <a href="services-dd-virtual-screening.html">Virtual Screening Sim</a>
+        <a href="services-dd-lead-optimization.html">Lead Optimization Dynamics</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
         <a href="case-studies.html">Case Studies</a>
-        <a href="faq.html">FAQ</a>
+        <a href="about.html">About Corporate</a>
+        <a href="faq.html">Technical FAQ</a>
+        <a href="contact.html">Partner Contact</a>
       </div>
       <div>
         <h4>Headquarters</h4>
