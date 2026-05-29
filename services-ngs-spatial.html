@@ -32,7 +32,7 @@
   <div class="rasa-header__inner">
     <div class="rasa-header__group">
       <a href="index.html" class="rasa-brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 38px; width: auto; display: block; object-fit: contain; margin: 0;"></a>
-                                                <nav class="rasa-nav" aria-label="Primary Nav">
+                                                      <nav class="rasa-nav" aria-label="Primary Nav">
         <div class="rasa-nav__item">
           <a href="services-ngs.html">NGS Analysis <span class="rasa-nav__arrow">▼</span></a>
           <div class="rasa-nav__dropdown">
@@ -50,7 +50,16 @@
             <a href="services-dd-lead-optimization.html">Lead Optimization</a>
           </div>
         </div>
-        <div class="rasa-nav__item"><a href="case-studies.html">Case Studies</a></div>
+        <div class="rasa-nav__item">
+          <a href="case-studies.html">Case Studies <span class="rasa-nav__arrow">▼</span></a>
+          <div class="rasa-nav__dropdown">
+            <a href="case-study-tumor-microenvironment.html">Tumor Microenvironment</a>
+            <a href="case-study-population-wgs.html">Population WGS Scaling</a>
+            <a href="case-study-somatic-mutation.html">AI Mutation Prioritization</a>
+            <a href="case-study-metagenomic-profiling.html">Metagenomic Profiling</a>
+            <a href="case-study-spatial-transcriptomics.html">Spatial Transcriptomics</a>
+          </div>
+        </div>
         <div class="rasa-nav__item"><a href="about.html">About</a></div>
         <div class="rasa-nav__item"><a href="faq.html">FAQ</a></div>
       </nav>
@@ -325,6 +334,9 @@
       a.classList.remove('is-active');
       var href = a.getAttribute('href').split('#')[0].split('/').pop();
       if (href === page) a.classList.add('is-active');
+      if (page.indexOf('services-ngs-') === 0 && href === 'services-ngs.html') a.classList.add('is-active');
+      if (page.indexOf('services-dd-') === 0 && href === 'services-drug-discovery.html') a.classList.add('is-active');
+      if (page.indexOf('case-study-') === 0 && href === 'case-studies.html') a.classList.add('is-active');
     });
   } catch (e) {}
 
