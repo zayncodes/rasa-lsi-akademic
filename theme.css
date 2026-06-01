@@ -660,6 +660,154 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
   color: var(--leaf);
 }
 
+/* Hero Carousel/Slider Styles */
+.rasa-hero-slider {
+  position: relative;
+  width: 100%;
+}
+
+.rasa-hero-slides {
+  position: relative;
+  min-height: 520px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 900px) {
+  .rasa-hero-slides {
+    min-height: 600px;
+  }
+}
+
+.rasa-hero-slide {
+  grid-area: 1 / 1 / 2 / 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.rasa-hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.rasa-hero-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--leaf-soft);
+  color: var(--leaf);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.rasa-hero-nav svg {
+  width: 20px;
+  height: 20px;
+}
+
+.rasa-hero-nav:hover {
+  background: var(--leaf);
+  color: var(--cream);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.rasa-hero-nav--prev {
+  left: 10px;
+}
+
+.rasa-hero-nav--next {
+  right: 10px;
+}
+
+@media (max-width: 1240px) {
+  .rasa-hero-nav--prev { left: -10px; }
+  .rasa-hero-nav--next { right: -10px; }
+}
+
+@media (max-width: 1000px) {
+  .rasa-hero-nav { display: none !important; }
+}
+
+.rasa-hero-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.rasa-hero-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--foreground-10);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s, transform 0.2s, width 0.2s;
+}
+
+.rasa-hero-dot:hover {
+  background: var(--leaf);
+}
+
+.rasa-hero-dot.is-active {
+  background: var(--leaf);
+  transform: scale(1.1);
+  width: 20px;
+  border-radius: 4px;
+}
+
+.rasa-hero__circle-frame {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--leaf);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  .rasa-hero__circle-frame {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 900px) {
+  .rasa-hero__circle-frame {
+    width: 200px;
+    height: 200px;
+    margin: 1.5rem auto 0;
+  }
+}
+
+.rasa-hero__circle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
 .rasa {
   /* Brand palette */
   --cream: #f8fafc;
