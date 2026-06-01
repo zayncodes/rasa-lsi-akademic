@@ -874,11 +874,11 @@
       startAutoPlay();
     }
     
-    var sliderContainer = document.querySelector('.rasa-hero');
-    if (sliderContainer) {
-      sliderContainer.addEventListener('mouseenter', stopAutoPlay);
-      sliderContainer.addEventListener('mouseleave', startAutoPlay);
-    }
+    var hoverControls = document.querySelectorAll('.rasa-hero-nav, .rasa-hero-dot');
+    hoverControls.forEach(function(ctrl) {
+      ctrl.addEventListener('mouseenter', stopAutoPlay);
+      ctrl.addEventListener('mouseleave', startAutoPlay);
+    });
     
     startAutoPlay();
   })();
