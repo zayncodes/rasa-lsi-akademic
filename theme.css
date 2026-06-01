@@ -482,6 +482,22 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
   box-shadow: 0 20px 40px -15px rgba(0,0,0,0.08);
 }
 
+/* Sticky footer and layout robustness */
+body.rasa {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+}
+
+.rasa-page {
+  flex: 1 0 auto !important;
+  padding-bottom: 5rem !important; /* Ensure content never touches the footer */
+}
+
+.rasa-footer {
+  flex-shrink: 0 !important;
+}
+
 /* Navigation Dropdowns & Links Expansion */
 .rasa-nav { align-items: center; }
 
@@ -1663,7 +1679,20 @@ body.rasa {
 .rasa-anchor-nav { top: 96px !important; }
 .rasa-deep { scroll-margin-top: 155px !important; }
 
-/* Dark Mode Theme 1 Overrides */
+/* Sticky footer and layout robustness */
+body.rasa {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+}
+.rasa-page {
+  flex: 1 0 auto !important;
+  padding-bottom: 5rem !important; /* Ensure content never touches the footer */
+}
+.rasa-footer {
+  flex-shrink: 0 !important;
+}
+
 body.dark-mode,
 .dark-mode .rasa {
   --cream: #090d16;
