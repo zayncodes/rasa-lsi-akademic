@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Whole Genome & Exome Sequencing (WGS/WES) | RASA LSI</title>
-  <meta name="description" content="Secure, high-fidelity variant calling pipelines (SNVs, Indels, CNVs, SVs) annotated with gnomAD and ClinVar for oncology and clinical genetics.">
+  <title>Epigenomics (ChIP/ATAC-Seq) Analysis Services | RASA LSI</title>
+  <meta name="description" content="Professional ChIP-Seq, ATAC-Seq, and Cut&Run data analysis services for chromatin accessibility profiling and epigenetic regulation studies.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,14 +91,14 @@
             <span class="rasa-eyebrow">Computational Genomics<span class="rasa-eyebrow__rule"></span></span>
           </div>
           <h1 class="rasa-pagehero__h rasa-reveal" data-delay="1">
-          High-fidelity variant discovery at genome <span class="serif italic leaf">scale</span>.
+          Uncover epigenetic regulation at high <span class="serif italic leaf">resolution</span>.
         </h1>
           <p class="rasa-pagehero__lede rasa-reveal" data-delay="2">
-          Identify structural variations, copy number variations, and single nucleotide variants with gold-standard pipelines (GATK, DeepVariant) optimized for speed and accuracy.
+          From chromatin accessibility to transcription factor mapping. Get expert ChIP-Seq and ATAC-Seq pipelines for regulatory network visualization.
         </p>
         </div>
         <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2">
-          <img src="images/computational_biologist_cluster.png" alt="High-fidelity variant discovery at genome scale.">
+          <img src="images/dna_sequencing_flow.png" alt="Uncover epigenetic regulation at high resolution.">
         </div>
       </div>
 
@@ -197,15 +197,14 @@
   
 
   <!-- ======= DEEP SECTION 01: WGS/WES ======= -->
-  <section class="rasa-deep rasa-reveal" id="wgs-wes">
+  <section class="rasa-deep rasa-reveal" id="epi">
     <div class="container">
       <div class="rasa-deep__head">
-        <span class="rasa-deep__index">Variant Discovery</span>
+        <span class="rasa-deep__index">Epigenomics</span>
         <div>
-          <h2 class="rasa-h2 rasa-deep__h">Whole Genome &amp; Whole Exome Sequencing analysis.</h2>
+          <h2 class="rasa-h2 rasa-deep__h">Methylome, ATAC-seq &amp; ChIP-seq analytics.</h2>
           <p class="rasa-deep__lede">
-            Advanced genomic variant discovery for precision medicine and clinical oncology research.
-            Accurate detection, annotation, and functional interpretation of mutations associated with genetic disorders.
+            Map chromatin accessibility, locate transcription factor binding sites, profile histone modifications, and assess global DNA methylation dynamics.
           </p>
         </div>
       </div>
@@ -215,55 +214,47 @@
             <div class="rasa-feat">
               <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
               <div>
-                <div class="rasa-feat__t">Comprehensive variant calling</div>
-                <div class="rasa-feat__b">Detection of SNVs, short Indels, Copy Number Variations (CNVs), and large structural rearrangements.</div>
+                <div class="rasa-feat__t">Chromatin accessibility (ATAC-seq)</div>
+                <div class="rasa-feat__b">Identify open chromatin regions, call peak loci with MACS2, and model TF footprints using TOBIAS.</div>
               </div>
             </div>
             <div class="rasa-feat">
               <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
               <div>
-                <div class="rasa-feat__t">AI-assisted variant prioritization</div>
-                <div class="rasa-feat__b">Functional pathogenicity prediction modeling utilizing CADD, SIFT, and PolyPhen-2 scores.</div>
+                <div class="rasa-feat__t">DNA binding (ChIP-seq)</div>
+                <div class="rasa-feat__b">Map protein-DNA interaction loci, identify active enhancers/promoters, and perform peak annotation.</div>
               </div>
             </div>
             <div class="rasa-feat">
               <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
               <div>
-                <div class="rasa-feat__t">Trio and cohort-scale genomics</div>
-                <div class="rasa-feat__b">Germline mutation screening, somatic variant discovery, and tumor-normal comparative genomics.</div>
-              </div>
-            </div>
-            <div class="rasa-feat">
-              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <div>
-                <div class="rasa-feat__t">Multi-database annotation</div>
-                <div class="rasa-feat__b">Clinical-grade annotation mapping using ClinVar, dbSNP, gnomAD, OMIM, and Ensembl VEP.</div>
+                <div class="rasa-feat__t">DNA methylation profiling</div>
+                <div class="rasa-feat__b">Differentially Methylated Regions (DMR) detection using Bismark, DSS, or methylKit workflows.</div>
               </div>
             </div>
           </div>
 
           <div class="rasa-tool-cloud">
-            <span class="rasa-tool">GATK4<span class="rasa-tooltip">Genome Analysis Toolkit - standard variant discovery pipeline.</span></span>
-            <span class="rasa-tool">DeepVariant<span class="rasa-tooltip">NVIDIA deep learning variant caller.</span></span>
-            <span class="rasa-tool">FreeBayes<span class="rasa-tooltip">Haplotype-based variant detector.</span></span>
-            <span class="rasa-tool">BCFtools<span class="rasa-tooltip">VCF/BCF file processing utility.</span></span>
-            <span class="rasa-tool">ANNOVAR<span class="rasa-tooltip">Functional annotation tool for genomic variants.</span></span>
-            <span class="rasa-tool">Ensembl VEP<span class="rasa-tooltip">Variant Effect Predictor by Ensembl.</span></span>
+            <span class="rasa-tool">Bismark<span class="rasa-tooltip">Bisulfite mapping and methylation calling tool.</span></span>
+            <span class="rasa-tool">MACS2<span class="rasa-tooltip">Model-based Analysis of ChIP-Seq peak caller.</span></span>
+            <span class="rasa-tool">TOBIAS<span class="rasa-tooltip">Transcription factor footprinting from ATAC-seq.</span></span>
+            <span class="rasa-tool">DeepTools<span class="rasa-tooltip">User-friendly tools for deep sequencing data normalization.</span></span>
+            <span class="rasa-tool">methylKit<span class="rasa-tooltip">R package for DNA methylation analysis.</span></span>
           </div>
         </div>
 
         <aside class="rasa-side">
           <span class="rasa-side__lbl">Deliverables</span>
-          <h3 class="rasa-side__h">Clinic-ready variants.</h3>
+          <h3 class="rasa-side__h">Epigenetic footprints.</h3>
           <div class="rasa-deliv">
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Annotated VCF files</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Variant annotation report</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Mutational summary dashboard</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Quality control report</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Annotated peak lists</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>DMR annotation reports</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Binding footprint profiles</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Signal track files (BigWig)</div>
           </div>
           <div style="margin-top: 0.5rem;">
-            <div class="rasa-side__row"><span>Platforms</span><span>Illumina · ONT · PacBio</span></div>
-            <div class="rasa-side__row"><span>Use Cases</span><span>Rare Disease · Oncology</span></div>
+            <div class="rasa-side__row"><span>Platforms</span><span>Illumina · ONT</span></div>
+            <div class="rasa-side__row"><span>Use Cases</span><span>Gene Regulation · Epigenetics</span></div>
           </div>
         </aside>
       </div>

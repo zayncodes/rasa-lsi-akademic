@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Whole Genome & Exome Sequencing (WGS/WES) | RASA LSI</title>
-  <meta name="description" content="Secure, high-fidelity variant calling pipelines (SNVs, Indels, CNVs, SVs) annotated with gnomAD and ClinVar for oncology and clinical genetics.">
+  <title>Network Pharmacology & Multi-Target Therapeutics | RASA LSI</title>
+  <meta name="description" content="Network-based pharmacology and multi-target drug discovery. Model protein-protein interactions, pathway network perturbations, and drug-target interactions.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
   
   <!--
 ================================================================
-  RASA LSI — NGS DATA ANALYSIS SERVICES
+  RASA LSI — IN-SILICO DRUG DISCOVERY SERVICES
   WordPress Custom HTML block. Self-contained.
   Design system: "Academic Precision" — cream + ink + forest leaf
 ================================================================
@@ -88,124 +88,64 @@
       <div class="rasa-pagehero__grid">
         <div class="rasa-pagehero__copy">
           <div class="rasa-reveal">
-            <span class="rasa-eyebrow">Computational Genomics<span class="rasa-eyebrow__rule"></span></span>
+            <span class="rasa-eyebrow">Molecular Design<span class="rasa-eyebrow__rule"></span></span>
           </div>
           <h1 class="rasa-pagehero__h rasa-reveal" data-delay="1">
-          High-fidelity variant discovery at genome <span class="serif italic leaf">scale</span>.
+          Model complex disease pathways via <span class="serif italic leaf">networks</span>.
         </h1>
           <p class="rasa-pagehero__lede rasa-reveal" data-delay="2">
-          Identify structural variations, copy number variations, and single nucleotide variants with gold-standard pipelines (GATK, DeepVariant) optimized for speed and accuracy.
+          Understand drug-target-disease interactions. Apply network pharmacology to map multi-target therapeutics, pathway perturbations, and synergetic drug effects.
         </p>
         </div>
         <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2">
-          <img src="images/computational_biologist_cluster.png" alt="High-fidelity variant discovery at genome scale.">
+          <img src="images/lab_collaboration_science.png" alt="Model complex disease pathways via networks.">
         </div>
       </div>
 
-      <!-- Interactive Technology Comparison -->
-      <div class="rasa-reveal" data-delay="2" style="margin-top: 3.5rem; text-align: center;">
-        <div class="rasa-tabs-nav" role="tablist">
-          <button class="rasa-tab-btn is-active" id="tab-short" role="tab" aria-selected="true" aria-controls="panel-short">Short-Read Technology (Illumina)</button>
-          <button class="rasa-tab-btn" id="tab-long" role="tab" aria-selected="false" aria-controls="panel-long">Long-Read Technology (ONT/PacBio)</button>
+      <!-- Interactive Pipeline tracker -->
+      <div class="rasa-pipeline-tracker rasa-reveal" data-delay="2">
+        <span class="rasa-side__lbl">Discovery Roadmap</span>
+        <div class="rasa-pipeline-steps">
+          <a href="services-dd-target-id.html" class="rasa-pipeline-step is-active" data-section="target-id" data-progress="20%" style="text-decoration: none; color: inherit;">
+            <span class="rasa-pipeline-step__num">Step 01</span>
+            <div class="rasa-pipeline-step__title">Target ID</div>
+          </a>
+          <a href="services-dd-virtual-screening.html" class="rasa-pipeline-step" data-section="hit-discovery" data-progress="40%" style="text-decoration: none; color: inherit;">
+            <span class="rasa-pipeline-step__num">Step 02</span>
+            <div class="rasa-pipeline-step__title">Virtual Screen</div>
+          </a>
+          <a href="services-dd-lead-optimization.html" class="rasa-pipeline-step" data-section="lead-opt" data-progress="60%" style="text-decoration: none; color: inherit;">
+            <span class="rasa-pipeline-step__num">Step 03</span>
+            <div class="rasa-pipeline-step__title">Lead Opt</div>
+          </a>
+          <a href="services-drug-discovery.html#de-novo" class="rasa-pipeline-step" data-section="de-novo" data-progress="80%" style="text-decoration: none; color: inherit;">
+            <span class="rasa-pipeline-step__num">Step 04</span>
+            <div class="rasa-pipeline-step__title">De Novo Design</div>
+          </a>
+          <a href="services-drug-discovery.html#multi-target" class="rasa-pipeline-step" data-section="multi-target" data-progress="100%" style="text-decoration: none; color: inherit;">
+            <span class="rasa-pipeline-step__num">Step 05</span>
+            <div class="rasa-pipeline-step__title">Network Pharma</div>
+          </a>
         </div>
-
-        <div class="rasa-tech-panel is-active" id="panel-short" role="tabpanel" aria-labelledby="tab-short">
-          <div class="rasa-tech-grid">
-            <div class="rasa-tech-feature">
-              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <div class="rasa-tech-feature__title">High Base Accuracy (>99.9%)</div>
-                <div class="rasa-tech-feature__desc">Ideal for short-variant detection (SNVs, Indels) and high-throughput transcript profiling.</div>
-              </div>
-            </div>
-            <div class="rasa-tech-feature">
-              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <div class="rasa-tech-feature__title">Massive Parallel Throughput</div>
-                <div class="rasa-tech-feature__desc">Supports large-scale transcriptomics cohorts, deep exome sequencing, and single-cell counting.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="rasa-tech-panel" id="panel-long" role="tabpanel" aria-labelledby="tab-long">
-          <div class="rasa-tech-grid">
-            <div class="rasa-tech-feature">
-              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <div class="rasa-tech-feature__title">Structural Variant Resolution</div>
-                <div class="rasa-tech-feature__desc">Spans repetitive areas, resolving complex insertions, deletions, duplications, and translocations.</div>
-              </div>
-            </div>
-            <div class="rasa-tech-feature">
-              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <div class="rasa-tech-feature__title">Direct Methylation Detection</div>
-                <div class="rasa-tech-feature__desc">Detects 5mC, 5hmC, and 6mA modifications directly on native DNA/RNA without bisulfite conversion.</div>
-              </div>
-            </div>
-          </div>
+        <div class="rasa-pipeline-bar">
+          <div class="rasa-pipeline-progress" id="progress-bar"></div>
         </div>
       </div>
 
-      <!-- Modalities Overview Grid -->
-      <div class="rasa-modalities rasa-reveal" data-delay="2">
-        <a href="services-ngs-wgs-wes.html" class="rasa-modality">
-          <span class="rasa-modality__idx">01 //</span>
-          <span class="rasa-modality__h">WGS &amp; WES Discovery</span>
-          <span class="rasa-modality__b">Deep variant discovery (SNVs, Indels, CNVs) annotated via ClinVar &amp; gnomAD.</span>
-        </a>
-        <a href="services-ngs-transcriptomics.html#rnaseq" class="rasa-modality">
-          <span class="rasa-modality__idx">02 //</span>
-          <span class="rasa-modality__h">RNA-Seq (Bulk)</span>
-          <span class="rasa-modality__b">Transcriptome expression profiling, DE analyses, and pathway enrichment.</span>
-        </a>
-        <a href="services-ngs-transcriptomics.html#scrnaseq" class="rasa-modality">
-          <span class="rasa-modality__idx">03 //</span>
-          <span class="rasa-modality__h">Single-Cell RNA-Seq</span>
-          <span class="rasa-modality__b">Cellular heterogeneity profile, cell typing, and lineage trajectory.</span>
-        </a>
-        <a href="services-ngs-spatial.html" class="rasa-modality">
-          <span class="rasa-modality__idx">04 //</span>
-          <span class="rasa-modality__h">Spatial Transcriptomics</span>
-          <span class="rasa-modality__b">Gene expression mapped directly within intact tissue architectural slides.</span>
-        </a>
-        <a href="services-ngs.html#longread" class="rasa-modality">
-          <span class="rasa-modality__idx">05 //</span>
-          <span class="rasa-modality__h">Long-Read Sequencing</span>
-          <span class="rasa-modality__b">Oxford Nanopore &amp; PacBio assemblies, structural variants &amp; direct methylation.</span>
-        </a>
-        <a href="services-ngs-metagenomics.html" class="rasa-modality">
-          <span class="rasa-modality__idx">06 //</span>
-          <span class="rasa-modality__h">Metagenomics &amp; Assembly</span>
-          <span class="rasa-modality__b">Taxonomic profiling, MAG reconstruction, hybrid assembly, and AMR mapping.</span>
-        </a>
-        <a href="services-ngs.html#epi" class="rasa-modality">
-          <span class="rasa-modality__idx">07 //</span>
-          <span class="rasa-modality__h">Epigenomics (ATAC/ChIP)</span>
-          <span class="rasa-modality__b">Chromatin accessibility, histone marks, and transcription factor footprints.</span>
-        </a>
-        <a href="services-ngs.html#multiomics" class="rasa-modality">
-          <span class="rasa-modality__idx">08 //</span>
-          <span class="rasa-modality__h">Multi-Omics Integration</span>
-          <span class="rasa-modality__b">Joint embeddings combining transcriptomics, epigenomics, and network maps.</span>
-        </a>
-      </div>
     </div>
   </section>
 
   
 
-  <!-- ======= DEEP SECTION 01: WGS/WES ======= -->
-  <section class="rasa-deep rasa-reveal" id="wgs-wes">
+  <!-- DEEP: TARGET ID -->
+  <section class="rasa-deep rasa-reveal" id="multi-target">
     <div class="container">
       <div class="rasa-deep__head">
-        <span class="rasa-deep__index">Variant Discovery</span>
+        <span class="rasa-deep__index">Network Pharmacology</span>
         <div>
-          <h2 class="rasa-h2 rasa-deep__h">Whole Genome &amp; Whole Exome Sequencing analysis.</h2>
+          <h2 class="rasa-h2 rasa-deep__h">Systems-level drug design for complex diseases.</h2>
           <p class="rasa-deep__lede">
-            Advanced genomic variant discovery for precision medicine and clinical oncology research.
-            Accurate detection, annotation, and functional interpretation of mutations associated with genetic disorders.
+            Model drug effects across multiple network pathways to address complex diseases like cancer, neurodegeneration, and autoimmune disorders.
           </p>
         </div>
       </div>
@@ -215,55 +155,42 @@
             <div class="rasa-feat">
               <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
               <div>
-                <div class="rasa-feat__t">Comprehensive variant calling</div>
-                <div class="rasa-feat__b">Detection of SNVs, short Indels, Copy Number Variations (CNVs), and large structural rearrangements.</div>
+                <div class="rasa-feat__t">Polypharmacology prediction</div>
+                <div class="rasa-feat__b">Identify compounds that modulate multiple biological nodes to prevent pathway bypass resistance.</div>
               </div>
             </div>
             <div class="rasa-feat">
               <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
               <div>
-                <div class="rasa-feat__t">AI-assisted variant prioritization</div>
-                <div class="rasa-feat__b">Functional pathogenicity prediction modeling utilizing CADD, SIFT, and PolyPhen-2 scores.</div>
+                <div class="rasa-feat__t">AI-assisted drug repurposing</div>
+                <div class="rasa-feat__b">Map FDA-approved drug libraries to target networks for novel indications.</div>
               </div>
             </div>
             <div class="rasa-feat">
               <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
               <div>
-                <div class="rasa-feat__t">Trio and cohort-scale genomics</div>
-                <div class="rasa-feat__b">Germline mutation screening, somatic variant discovery, and tumor-normal comparative genomics.</div>
-              </div>
-            </div>
-            <div class="rasa-feat">
-              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <div>
-                <div class="rasa-feat__t">Multi-database annotation</div>
-                <div class="rasa-feat__b">Clinical-grade annotation mapping using ClinVar, dbSNP, gnomAD, OMIM, and Ensembl VEP.</div>
+                <div class="rasa-feat__t">Off-target liability screening</div>
+                <div class="rasa-feat__b">Filter out toxicity risks by docking against off-target human protein panels.</div>
               </div>
             </div>
           </div>
 
           <div class="rasa-tool-cloud">
-            <span class="rasa-tool">GATK4<span class="rasa-tooltip">Genome Analysis Toolkit - standard variant discovery pipeline.</span></span>
-            <span class="rasa-tool">DeepVariant<span class="rasa-tooltip">NVIDIA deep learning variant caller.</span></span>
-            <span class="rasa-tool">FreeBayes<span class="rasa-tooltip">Haplotype-based variant detector.</span></span>
-            <span class="rasa-tool">BCFtools<span class="rasa-tooltip">VCF/BCF file processing utility.</span></span>
-            <span class="rasa-tool">ANNOVAR<span class="rasa-tooltip">Functional annotation tool for genomic variants.</span></span>
-            <span class="rasa-tool">Ensembl VEP<span class="rasa-tooltip">Variant Effect Predictor by Ensembl.</span></span>
+            <span class="rasa-tool">Cytoscape<span class="rasa-tooltip">Network analysis and network layout software tool.</span></span>
+            <span class="rasa-tool">STITCH<span class="rasa-tooltip">Database of physical and functional compound-protein interactions.</span></span>
+            <span class="rasa-tool">DrugBank<span class="rasa-tooltip">Comprehensive resource on drug structure, targets, and mechanisms.</span></span>
+            <span class="rasa-tool">Reactome<span class="rasa-tooltip">Curated biological pathway database.</span></span>
           </div>
         </div>
 
         <aside class="rasa-side">
           <span class="rasa-side__lbl">Deliverables</span>
-          <h3 class="rasa-side__h">Clinic-ready variants.</h3>
+          <h3 class="rasa-side__h">Systems biology.</h3>
           <div class="rasa-deliv">
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Annotated VCF files</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Variant annotation report</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Mutational summary dashboard</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Quality control report</div>
-          </div>
-          <div style="margin-top: 0.5rem;">
-            <div class="rasa-side__row"><span>Platforms</span><span>Illumina · ONT · PacBio</span></div>
-            <div class="rasa-side__row"><span>Use Cases</span><span>Rare Disease · Oncology</span></div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Pathway intersection maps</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Repurposing target hits</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Synergy score matrix</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Off-target safety reports</div>
           </div>
         </aside>
       </div>
@@ -275,9 +202,9 @@
   <!-- CTA -->
   <section class="rasa-section rasa-section--ink" style="padding:6rem 0; text-align:center;">
     <div class="container" style="max-width:720px;">
-      <h2 class="rasa-h2" style="color:var(--cream); margin-bottom:1.25rem; max-width:24ch; margin-left:auto; margin-right:auto;">Ready to analyze your sequencing data?</h2>
+      <h2 class="rasa-h2" style="color:var(--cream); margin-bottom:1.25rem; max-width:24ch; margin-left:auto; margin-right:auto;">Accelerate therapeutic discovery with RASA.</h2>
       <p style="color:rgba(248,249,250,0.7); max-width:56ch; margin:0 auto 2rem;">
-        Get in touch with our team in Pune to discuss sample sizes, platform details, and custom bioinformatics pipeline configurations.
+        Get in touch with our Pune-based computational drug design experts to coordinate target screens or dynamics calculations.
       </p>
       <a href="contact.html" class="rasa-btn rasa-btn--primary">
         Start a Project
@@ -369,22 +296,43 @@
   }, { threshold: 0.1 });
   reveals.forEach(function (el) { ioReveal.observe(el); });
 
-  // Interactive Tech Switcher
-  var tabButtons = document.querySelectorAll('.rasa-tab-btn');
-  var tabPanels = document.querySelectorAll('.rasa-tech-panel');
-  tabButtons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      tabButtons.forEach(function (b) {
-        b.classList.remove('is-active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      tabPanels.forEach(function (p) { p.classList.remove('is-active'); });
+  // Interactive Pipeline tracker
+  var steps = document.querySelectorAll('.rasa-pipeline-step');
+  var progressBar = document.getElementById('progress-bar');
+  steps.forEach(function (step) {
+    step.addEventListener('click', function () {
+      steps.forEach(function (s) { s.classList.remove('is-active'); });
+      step.classList.add('is-active');
+      var progress = step.getAttribute('data-progress');
+      progressBar.style.width = progress;
 
-      btn.classList.add('is-active');
-      btn.setAttribute('aria-selected', 'true');
-      var controls = btn.getAttribute('aria-controls');
-      var targetPanel = document.getElementById(controls);
-      if (targetPanel) targetPanel.classList.add('is-active');
+      var id = step.getAttribute('data-section');
+      var target = document.getElementById(id);
+      if (target) {
+        var headerOffset = 0;
+        var topBar = document.querySelector('.rasa-top-bar');
+        var header = document.querySelector('.rasa-header');
+        var subNav = document.querySelector('.rasa-anchor-nav');
+        if (topBar && window.getComputedStyle(topBar).position === 'fixed') {
+          headerOffset += topBar.offsetHeight;
+        }
+        if (header && window.getComputedStyle(header).position === 'fixed') {
+          headerOffset += header.offsetHeight;
+        }
+        if (subNav && (window.getComputedStyle(subNav).position === 'sticky' || window.getComputedStyle(subNav).position === 'fixed')) {
+          headerOffset += subNav.offsetHeight;
+        }
+        if (headerOffset === 0) headerOffset = 120;
+        else headerOffset += 8; // buffer
+
+        var elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        var offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
     });
   });
 
@@ -407,6 +355,15 @@
             link.classList.add('is-active');
           } else {
             link.classList.remove('is-active');
+          }
+        });
+        // Sync with pipeline steps
+        steps.forEach(function (step) {
+          if (step.getAttribute('data-section') === id) {
+            steps.forEach(function (s) { s.classList.remove('is-active'); });
+            step.classList.add('is-active');
+            var progress = step.getAttribute('data-progress');
+            progressBar.style.width = progress;
           }
         });
       }

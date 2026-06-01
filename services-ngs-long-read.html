@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Whole Genome & Exome Sequencing (WGS/WES) | RASA LSI</title>
-  <meta name="description" content="Secure, high-fidelity variant calling pipelines (SNVs, Indels, CNVs, SVs) annotated with gnomAD and ClinVar for oncology and clinical genetics.">
+  <title>Long-Read Sequencing Analysis Services | RASA LSI</title>
+  <meta name="description" content="High-fidelity PacBio & Oxford Nanopore data analysis for structural variants, isoform sequencing, and de novo genome assembly.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,14 +91,14 @@
             <span class="rasa-eyebrow">Computational Genomics<span class="rasa-eyebrow__rule"></span></span>
           </div>
           <h1 class="rasa-pagehero__h rasa-reveal" data-delay="1">
-          High-fidelity variant discovery at genome <span class="serif italic leaf">scale</span>.
+          Resolve complex genomic structures with <span class="serif italic leaf">long-reads</span>.
         </h1>
           <p class="rasa-pagehero__lede rasa-reveal" data-delay="2">
-          Identify structural variations, copy number variations, and single nucleotide variants with gold-standard pipelines (GATK, DeepVariant) optimized for speed and accuracy.
+          Analyze structural variants and full-length transcript isoforms. High-accuracy long-read sequencing analysis using PacBio and Oxford Nanopore data.
         </p>
         </div>
         <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2">
-          <img src="images/computational_biologist_cluster.png" alt="High-fidelity variant discovery at genome scale.">
+          <img src="images/computational_biologist_cluster.png" alt="Resolve complex genomic structures with long-reads.">
         </div>
       </div>
 
@@ -197,15 +197,14 @@
   
 
   <!-- ======= DEEP SECTION 01: WGS/WES ======= -->
-  <section class="rasa-deep rasa-reveal" id="wgs-wes">
+  <section class="rasa-deep rasa-reveal" id="longread">
     <div class="container">
       <div class="rasa-deep__head">
-        <span class="rasa-deep__index">Variant Discovery</span>
+        <span class="rasa-deep__index">Long-Read</span>
         <div>
-          <h2 class="rasa-h2 rasa-deep__h">Whole Genome &amp; Whole Exome Sequencing analysis.</h2>
+          <h2 class="rasa-h2 rasa-deep__h">Long-read sequencing — structural variants &amp; modifications.</h2>
           <p class="rasa-deep__lede">
-            Advanced genomic variant discovery for precision medicine and clinical oncology research.
-            Accurate detection, annotation, and functional interpretation of mutations associated with genetic disorders.
+            Leverage Oxford Nanopore and PacBio platforms to resolve complex repeat regions, detect structural variants, reconstruct full-length transcript isoforms, and profile direct methylation.
           </p>
         </div>
       </div>
@@ -215,55 +214,47 @@
             <div class="rasa-feat">
               <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
               <div>
-                <div class="rasa-feat__t">Comprehensive variant calling</div>
-                <div class="rasa-feat__b">Detection of SNVs, short Indels, Copy Number Variations (CNVs), and large structural rearrangements.</div>
+                <div class="rasa-feat__t">Structural variant mapping</div>
+                <div class="rasa-feat__b">Accurate detection of insertions, deletions, translocations, and duplications.</div>
               </div>
             </div>
             <div class="rasa-feat">
               <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
               <div>
-                <div class="rasa-feat__t">AI-assisted variant prioritization</div>
-                <div class="rasa-feat__b">Functional pathogenicity prediction modeling utilizing CADD, SIFT, and PolyPhen-2 scores.</div>
+                <div class="rasa-feat__t">Full-length isoform transcriptomics</div>
+                <div class="rasa-feat__b">Reconstruct alternative splicing events and identify novel gene fusion isoforms.</div>
               </div>
             </div>
             <div class="rasa-feat">
               <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
               <div>
-                <div class="rasa-feat__t">Trio and cohort-scale genomics</div>
-                <div class="rasa-feat__b">Germline mutation screening, somatic variant discovery, and tumor-normal comparative genomics.</div>
-              </div>
-            </div>
-            <div class="rasa-feat">
-              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <div>
-                <div class="rasa-feat__t">Multi-database annotation</div>
-                <div class="rasa-feat__b">Clinical-grade annotation mapping using ClinVar, dbSNP, gnomAD, OMIM, and Ensembl VEP.</div>
+                <div class="rasa-feat__t">Native DNA/RNA base modification</div>
+                <div class="rasa-feat__b">Direct sequencing detection of active DNA/RNA methylation modifications.</div>
               </div>
             </div>
           </div>
 
           <div class="rasa-tool-cloud">
-            <span class="rasa-tool">GATK4<span class="rasa-tooltip">Genome Analysis Toolkit - standard variant discovery pipeline.</span></span>
-            <span class="rasa-tool">DeepVariant<span class="rasa-tooltip">NVIDIA deep learning variant caller.</span></span>
-            <span class="rasa-tool">FreeBayes<span class="rasa-tooltip">Haplotype-based variant detector.</span></span>
-            <span class="rasa-tool">BCFtools<span class="rasa-tooltip">VCF/BCF file processing utility.</span></span>
-            <span class="rasa-tool">ANNOVAR<span class="rasa-tooltip">Functional annotation tool for genomic variants.</span></span>
-            <span class="rasa-tool">Ensembl VEP<span class="rasa-tooltip">Variant Effect Predictor by Ensembl.</span></span>
+            <span class="rasa-tool">Sniffles<span class="rasa-tooltip">Structural variant caller for long reads.</span></span>
+            <span class="rasa-tool">cuteSV<span class="rasa-tooltip">Signature-based structural variant detector.</span></span>
+            <span class="rasa-tool">FLAIR<span class="rasa-tooltip">Isoform identification and quantification tool.</span></span>
+            <span class="rasa-tool">Nanopolish<span class="rasa-tooltip">Signal-level algorithms for Oxford Nanopore data.</span></span>
+            <span class="rasa-tool">Megalodon<span class="rasa-tooltip">Direct methylation caller by Oxford Nanopore.</span></span>
           </div>
         </div>
 
         <aside class="rasa-side">
-          <span class="rasa-side__lbl">Deliverables</span>
-          <h3 class="rasa-side__h">Clinic-ready variants.</h3>
+          <span class="rasa-side__lbl">Capabilities</span>
+          <h3 class="rasa-side__h">Contiguous genomics.</h3>
           <div class="rasa-deliv">
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Annotated VCF files</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Variant annotation report</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Mutational summary dashboard</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Quality control report</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>High-contiguity assemblies</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Structural variant calls (VCF)</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Isoform quantification profiles</div>
+            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Direct base modification reports</div>
           </div>
           <div style="margin-top: 0.5rem;">
-            <div class="rasa-side__row"><span>Platforms</span><span>Illumina · ONT · PacBio</span></div>
-            <div class="rasa-side__row"><span>Use Cases</span><span>Rare Disease · Oncology</span></div>
+            <div class="rasa-side__row"><span>Platforms</span><span>ONT PromethION · PacBio Revio</span></div>
+            <div class="rasa-side__row"><span>Use Cases</span><span>De Novo Assembly · Iso-Seq</span></div>
           </div>
         </aside>
       </div>
