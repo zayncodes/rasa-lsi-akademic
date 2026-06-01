@@ -33,7 +33,7 @@
   <div class="rasa-header__inner">
     <div class="rasa-header__group">
       <a href="index.html" class="rasa-brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 38px; width: auto; display: block; object-fit: contain; margin: 0;"></a>
-                                                                  <nav class="rasa-nav" aria-label="Primary Nav">
+                                                                        <nav class="rasa-nav" aria-label="Primary Nav">
         <div class="rasa-nav__item">
           <a href="services-ngs.html">NGS Analysis <span class="rasa-nav__arrow">▼</span></a>
           <div class="rasa-nav__dropdown">
@@ -83,33 +83,178 @@
 <main class="rasa rasa-page">
 
   <!-- HERO -->
-  <section class="rasa-hero" style="position: relative; overflow: hidden; padding-bottom: 3.5rem;">
+  <!-- HERO -->
+  <section class="rasa-hero" style="position: relative; overflow: hidden; padding-bottom: 5.5rem; min-height: 640px;">
     <div class="rasa-grid-bg" aria-hidden="true"></div>
     
     <div class="container" style="position: relative; z-index: 3;">
+      
+      <!-- The sliding panel grid -->
       <div class="rasa-hero-slider">
         <div class="rasa-hero-slides">
           
           <!-- Slide 1: Primary Overview -->
           <div class="rasa-hero-slide active" data-slide="0">
-            <div class="rasa-hero__grid">
-              <div class="rasa-hero__copy">
+            <div class="rasa-hero__grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+              <div class="rasa-hero__copy" style="min-height: 250px;">
                 <div class="rasa-reveal">
                   <span class="rasa-eyebrow">
                     <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
                     Bioinformatics &amp; In-Silico Discovery
                   </span>
                 </div>
-                <h1 class="rasa-h1 rasa-reveal" data-delay="1">
+                <h1 class="rasa-h1 rasa-reveal" data-delay="1" style="margin-top: 1rem; margin-bottom: 1rem;">
                   Computational precision for molecular
                   <span class="serif italic leaf">discovery</span>.
                 </h1>
-                <p class="rasa-lede rasa-reveal" data-delay="2">
+                <p class="rasa-lede rasa-reveal" data-delay="2" style="margin-bottom: 0;">
                   RASA Life Science Informatics delivers AI-powered 
                   <span class="rasa-tooltip-target">NGS data analysis services India<span class="rasa-tooltip">High-throughput DNA and RNA sequencing workflows.</span></span> 
                   and in-silico drug discovery, transforming raw sequence data into therapeutic insights for pharmaceutical, biotechnology, and clinical R&amp;D.
                 </p>
-                
+              </div>
+              <div class="rasa-hero__art rasa-reveal" data-delay="2">
+                <svg id="rasa-hero-network" class="rasa-network-canvas" viewBox="0 0 400 400" aria-label="Interactive molecular network diagram"></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Next-Gen Sequencing (NGS) -->
+          <div class="rasa-hero-slide" data-slide="1">
+            <div class="rasa-hero__grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+              <div class="rasa-hero__copy" style="min-height: 250px;">
+                <div>
+                  <span class="rasa-eyebrow">
+                    <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
+                    High-Throughput Genomics
+                  </span>
+                </div>
+                <h1 class="rasa-h1" style="margin-top: 1rem; margin-bottom: 1rem;">
+                  Automated NGS pipeline development at
+                  <span class="serif italic leaf">scale</span>.
+                </h1>
+                <p class="rasa-lede" style="margin-bottom: 0;">
+                  Process whole-exome (WES), whole-genome (WGS), and RNA-seq datasets. Secure, containerized pipelines (Nextflow, Snakemake) deployable on AWS Batch spot instances.
+                </p>
+              </div>
+              <div class="rasa-hero__art" style="display: flex; align-items: center; justify-content: center;">
+                <div class="rasa-hero__circle-frame">
+                  <img src="images/dna_sequencing_flow.png" alt="DNA Sequencing Flow Diagram" class="rasa-hero__circle-img">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: In-Silico Drug Discovery -->
+          <div class="rasa-hero-slide" data-slide="2">
+            <div class="rasa-hero__grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+              <div class="rasa-hero__copy" style="min-height: 250px;">
+                <div>
+                  <span class="rasa-eyebrow">
+                    <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
+                    Structure-Based Drug Design
+                  </span>
+                </div>
+                <h1 class="rasa-h1" style="margin-top: 1rem; margin-bottom: 1rem;">
+                  Accelerate target validation and virtual
+                  <span class="serif italic leaf">screening</span>.
+                </h1>
+                <p class="rasa-lede" style="margin-bottom: 0;">
+                  Leverage AlphaFold2 structural models, GPU-accelerated molecular docking, and GROMACS molecular dynamics simulations to optimize leads and filter toxicity.
+                </p>
+              </div>
+              <div class="rasa-hero__art" style="display: flex; align-items: center; justify-content: center;">
+                <div class="rasa-hero__circle-frame">
+                  <img src="images/molecular_docking_3d.png" alt="Molecular Docking" class="rasa-hero__circle-img">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Spatial Transcriptomics -->
+          <div class="rasa-hero-slide" data-slide="3">
+            <div class="rasa-hero__grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+              <div class="rasa-hero__copy" style="min-height: 250px;">
+                <div>
+                  <span class="rasa-eyebrow">
+                    <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
+                    High-Resolution Tissue Architecture
+                  </span>
+                </div>
+                <h1 class="rasa-h1" style="margin-top: 1rem; margin-bottom: 1rem;">
+                  Map cellular transcriptomics in spatial
+                  <span class="serif italic leaf">context</span>.
+                </h1>
+                <p class="rasa-lede" style="margin-bottom: 0;">
+                  Resolve cellular heterogeneity and tumor microenvironments using 10x Genomics Visium, Slide-seq, and MERFISH data analytics pipelines.
+                </p>
+              </div>
+              <div class="rasa-hero__art" style="display: flex; align-items: center; justify-content: center;">
+                <div class="rasa-hero__circle-frame">
+                  <img src="images/spatial_cell_mapping.png" alt="Spatial Cell Mapping" class="rasa-hero__circle-img">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5: Metagenomics & Microbiome -->
+          <div class="rasa-hero-slide" data-slide="4">
+            <div class="rasa-hero__grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+              <div class="rasa-hero__copy" style="min-height: 250px;">
+                <div>
+                  <span class="rasa-eyebrow">
+                    <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
+                    Microbial Community Profiling
+                  </span>
+                </div>
+                <h1 class="rasa-h1" style="margin-top: 1rem; margin-bottom: 1rem;">
+                  Deconvolve complex microbial
+                  <span class="serif italic leaf">populations</span>.
+                </h1>
+                <p class="rasa-lede" style="margin-bottom: 0;">
+                  Analyze taxonomic composition and functional pathways from gut microbiome sequencing. Shotgun metagenomics pipelines (Kraken2, HUMAnN3).
+                </p>
+              </div>
+              <div class="rasa-hero__art" style="display: flex; align-items: center; justify-content: center;">
+                <div class="rasa-hero__circle-frame">
+                  <img src="images/lab_collaboration_science.png" alt="Lab Collaboration" class="rasa-hero__circle-img">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 6: Proven R&D Success -->
+          <div class="rasa-hero-slide" data-slide="5">
+            <div class="rasa-hero__grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+              <div class="rasa-hero__copy" style="min-height: 250px;">
+                <div>
+                  <span class="rasa-eyebrow">
+                    <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
+                    Validated R&amp;D Success
+                  </span>
+                </div>
+                <h1 class="rasa-h1" style="margin-top: 1rem; margin-bottom: 1rem;">
+                  Proven biological insights for clinical
+                  <span class="serif italic leaf">success</span>.
+                </h1>
+                <p class="rasa-lede" style="margin-bottom: 0;">
+                  Discover how our PhD-level computational biologists helped validate novel CD8+ T-cell exhausted targets, saving 65% in target validation costs.
+                </p>
+              </div>
+              <div class="rasa-hero__art" style="display: flex; align-items: center; justify-content: center;">
+                <div class="rasa-hero__circle-frame">
+                  <img src="images/spatial_cell_mapping.png" alt="Validated R&D Success" class="rasa-hero__circle-img">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- Static Universal Search Bar (Always visible below the sliding panel) -->
+      <div class="rasa-hero-search-container" style="margin-top: 1.5rem; width: 100%; max-width: 55%; position: relative; z-index: 5;">
+        
           <div class="rasa-hero-search-wrap rasa-reveal" data-delay="3" style="margin-top: 1rem; width: 100%; max-width: 500px;">
             <div style="position: relative; display: flex; align-items: center;">
               <input type="text" placeholder="Search biological services..." style="width: 100%; padding: 0.85rem 1rem 0.85rem 2.5rem; border-radius: 0.375rem; border: 1px solid rgba(15, 23, 42, 0.15); font-family: inherit; font-size: 0.9rem; background: #ffffff;" disabled>
@@ -122,188 +267,16 @@
               <a href="services-ngs.html#wgs-wes" style="color: #2563eb; text-decoration: underline;">10x Genomics</a>
             </div>
           </div>
-              </div>
-              <div class="rasa-hero__art rasa-reveal" data-delay="2">
-                <svg id="rasa-hero-network" class="rasa-network-canvas" viewBox="0 0 400 400" aria-label="Interactive molecular network diagram"></svg>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2: Next-Gen Sequencing (NGS) -->
-          <div class="rasa-hero-slide" data-slide="1">
-            <div class="rasa-hero__grid">
-              <div class="rasa-hero__copy">
-                <div>
-                  <span class="rasa-eyebrow">
-                    <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
-                    High-Throughput Genomics
-                  </span>
-                </div>
-                <h1 class="rasa-h1">
-                  Automated NGS pipeline development at
-                  <span class="serif italic leaf">scale</span>.
-                </h1>
-                <p class="rasa-lede">
-                  Process whole-exome (WES), whole-genome (WGS), and RNA-seq datasets. Secure, containerized pipelines (Nextflow, Snakemake) deployable on AWS Batch spot instances.
-                </p>
-                <div style="display:flex; gap:1rem; padding-top:0.5rem;">
-                  <a href="services-ngs.html" class="rasa-btn rasa-btn--primary">
-                    Explore NGS Services
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                  </a>
-                  <a href="case-study-population-wgs.html" class="rasa-btn rasa-btn--ghost">Read WGS Case Study</a>
-                </div>
-              </div>
-              <div class="rasa-hero__art" style="display: flex; align-items: center; justify-content: center;">
-                <div class="rasa-hero__circle-frame">
-                  <img src="images/dna_sequencing_flow.png" alt="DNA Sequencing Flow Diagram" class="rasa-hero__circle-img">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3: In-Silico Drug Discovery -->
-          <div class="rasa-hero-slide" data-slide="2">
-            <div class="rasa-hero__grid">
-              <div class="rasa-hero__copy">
-                <div>
-                  <span class="rasa-eyebrow">
-                    <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
-                    Structure-Based Drug Design
-                  </span>
-                </div>
-                <h1 class="rasa-h1">
-                  Accelerate target validation and virtual
-                  <span class="serif italic leaf">screening</span>.
-                </h1>
-                <p class="rasa-lede">
-                  Leverage AlphaFold2 structural models, GPU-accelerated molecular docking, and GROMACS molecular dynamics simulations to optimize leads and filter toxicity.
-                </p>
-                <div style="display:flex; gap:1rem; padding-top:0.5rem;">
-                  <a href="services-drug-discovery.html" class="rasa-btn rasa-btn--primary">
-                    Explore Drug Discovery
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                  </a>
-                  <a href="case-study-somatic-mutation.html" class="rasa-btn rasa-btn--ghost">Read ML Case Study</a>
-                </div>
-              </div>
-              <div class="rasa-hero__art" style="display: flex; align-items: center; justify-content: center;">
-                <div class="rasa-hero__circle-frame">
-                  <img src="images/molecular_docking_3d.png" alt="Molecular Docking" class="rasa-hero__circle-img">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 4: Spatial Transcriptomics -->
-          <div class="rasa-hero-slide" data-slide="3">
-            <div class="rasa-hero__grid">
-              <div class="rasa-hero__copy">
-                <div>
-                  <span class="rasa-eyebrow">
-                    <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
-                    High-Resolution Tissue Architecture
-                  </span>
-                </div>
-                <h1 class="rasa-h1">
-                  Map cellular transcriptomics in spatial
-                  <span class="serif italic leaf">context</span>.
-                </h1>
-                <p class="rasa-lede">
-                  Resolve cellular heterogeneity and tumor microenvironments using 10x Genomics Visium, Slide-seq, and MERFISH data analytics pipelines.
-                </p>
-                <div style="display:flex; gap:1rem; padding-top:0.5rem;">
-                  <a href="services-ngs-spatial.html" class="rasa-btn rasa-btn--primary">
-                    Explore Spatial Services
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                  </a>
-                  <a href="case-study-spatial-transcriptomics.html" class="rasa-btn rasa-btn--ghost">Read Spatial Case Study</a>
-                </div>
-              </div>
-              <div class="rasa-hero__art" style="display: flex; align-items: center; justify-content: center;">
-                <div class="rasa-hero__circle-frame">
-                  <img src="images/spatial_cell_mapping.png" alt="Spatial Cell Mapping" class="rasa-hero__circle-img">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 5: Metagenomics & Microbiome -->
-          <div class="rasa-hero-slide" data-slide="4">
-            <div class="rasa-hero__grid">
-              <div class="rasa-hero__copy">
-                <div>
-                  <span class="rasa-eyebrow">
-                    <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
-                    Microbial Community Profiling
-                  </span>
-                </div>
-                <h1 class="rasa-h1">
-                  Deconvolve complex microbial
-                  <span class="serif italic leaf">populations</span>.
-                </h1>
-                <p class="rasa-lede">
-                  Analyze taxonomic composition and functional pathways from gut microbiome sequencing. Shotgun metagenomics pipelines (Kraken2, HUMAnN3).
-                </p>
-                <div style="display:flex; gap:1rem; padding-top:0.5rem;">
-                  <a href="services-ngs-metagenomics.html" class="rasa-btn rasa-btn--primary">
-                    Explore Metagenomics
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                  </a>
-                  <a href="case-study-metagenomic-profiling.html" class="rasa-btn rasa-btn--ghost">Read Microbiome Case Study</a>
-                </div>
-              </div>
-              <div class="rasa-hero__art" style="display: flex; align-items: center; justify-content: center;">
-                <div class="rasa-hero__circle-frame">
-                  <img src="images/lab_collaboration_science.png" alt="Lab Collaboration" class="rasa-hero__circle-img">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 6: Proven R&D Success -->
-          <div class="rasa-hero-slide" data-slide="5">
-            <div class="rasa-hero__grid">
-              <div class="rasa-hero__copy">
-                <div>
-                  <span class="rasa-eyebrow">
-                    <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
-                    Validated R&amp;D Success
-                  </span>
-                </div>
-                <h1 class="rasa-h1">
-                  Proven biological insights for clinical
-                  <span class="serif italic leaf">success</span>.
-                </h1>
-                <p class="rasa-lede">
-                  Discover how our PhD-level computational biologists helped validate novel CD8+ T-cell exhausted targets, saving 65% in target validation costs.
-                </p>
-                <div style="display:flex; gap:1rem; padding-top:0.5rem;">
-                  <a href="case-studies.html" class="rasa-btn rasa-btn--primary">
-                    View Case Studies
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                  </a>
-                  <a href="contact.html" class="rasa-btn rasa-btn--ghost">Contact RASA Expert</a>
-                </div>
-              </div>
-              <div class="rasa-hero__art" style="display: flex; align-items: center; justify-content: center;">
-                <div class="rasa-hero__circle-frame">
-                  <img src="images/spatial_cell_mapping.png" alt="Validated R&D Success" class="rasa-hero__circle-img">
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </div>
+      
     </div>
 
-    <!-- Left & Right Arrow Buttons (Excelra-style) -->
+    <!-- Left & Right Arrow Buttons (Unique, modern, high-tech glow design) -->
     <button class="rasa-hero-nav rasa-hero-nav--prev" aria-label="Previous slide">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
     </button>
     <button class="rasa-hero-nav rasa-hero-nav--next" aria-label="Next slide">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6" transform="rotate(180 12 12)"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
     </button>
 
     <!-- Indicator Dots -->

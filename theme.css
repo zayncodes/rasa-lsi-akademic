@@ -668,14 +668,14 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
 
 .rasa-hero-slides {
   position: relative;
-  min-height: 520px;
+  min-height: 480px;
   display: grid;
   grid-template-columns: 1fr;
 }
 
 @media (max-width: 900px) {
   .rasa-hero-slides {
-    min-height: 600px;
+    min-height: 580px;
   }
 }
 
@@ -697,43 +697,58 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: var(--leaf-soft);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: var(--leaf);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 10;
-  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0;
 }
 
 .rasa-hero-nav svg {
   width: 20px;
   height: 20px;
+  stroke-width: 2.5;
+  transition: transform 0.3s ease;
 }
 
 .rasa-hero-nav:hover {
   background: var(--leaf);
   color: var(--cream);
-  transform: translateY(-50%) scale(1.05);
+  border-color: var(--leaf);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .rasa-hero-nav--prev {
-  left: 10px;
+  left: 20px;
 }
 
 .rasa-hero-nav--next {
-  right: 10px;
+  right: 20px;
 }
 
-@media (max-width: 1240px) {
-  .rasa-hero-nav--prev { left: -10px; }
-  .rasa-hero-nav--next { right: -10px; }
+.rasa-hero-nav--prev:hover svg {
+  transform: translateX(-4px);
+}
+
+.rasa-hero-nav--next:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1200px) {
+  .rasa-hero-nav--prev { left: 10px; }
+  .rasa-hero-nav--next { right: 10px; }
 }
 
 @media (max-width: 1000px) {
@@ -806,6 +821,12 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
+}
+
+@media (max-width: 900px) {
+  .rasa-hero-search-container {
+    max-width: 100% !important;
+  }
 }
 
 .rasa {
