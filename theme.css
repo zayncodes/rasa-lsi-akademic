@@ -201,7 +201,7 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
 .rasa-reveal[data-delay="4"] { transition-delay: 0.4s; }
 
 /* Hero */
-.rasa-hero { padding: 10.5rem 0 6rem; position: relative; overflow: hidden; }
+.rasa-hero { padding: 4.5rem 0 6rem; position: relative; overflow: hidden; }
 
 .rasa-hero__grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
 
@@ -962,7 +962,7 @@ body.rasa {
   flex-direction: column !important;
   min-height: 100vh !important;
   padding-top: 96px !important; /* Offset fixed header (64px) + top bar (32px) */
-  padding-bottom: 120px !important; /* Allow footer to scroll completely above screen on short windows */
+  padding-bottom: 0 !important;
 }
 
 /* Snaking Timeline styling */
@@ -1602,7 +1602,7 @@ body.rasa {
 .rasa .mono { font-family: 'JetBrains Mono', monospace; }
 
 /* Page Hero */
-.rasa-pagehero { position: relative; padding: 11rem 0 4.5rem; overflow: hidden; }
+.rasa-pagehero { position: relative; padding: 3rem 0 4.5rem; overflow: hidden; }
 
 .rasa-grid-bg {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
@@ -1982,7 +1982,7 @@ body.rasa {
 }
 
 /* Page Hero */
-.rasa-pagehero { position: relative; padding: 11rem 0 4.5rem; overflow: hidden; }
+.rasa-pagehero { position: relative; padding: 3rem 0 4.5rem; overflow: hidden; }
 
 .rasa-grid-bg {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
@@ -2942,7 +2942,7 @@ body.rasa {
 }
 body.rasa {
   padding-top: 96px !important;
-  padding-bottom: 120px !important;
+  padding-bottom: 0 !important;
 }
 .rasa-btn { font-weight: 600; letter-spacing: -0.01em; }
 .rasa-cta-btn { border-radius: 0.375rem; box-shadow: none; }
@@ -2959,7 +2959,7 @@ body.rasa {
   flex-direction: column !important;
   min-height: 100vh !important;
   padding-top: 96px !important;
-  padding-bottom: 120px !important;
+  padding-bottom: 0 !important;
 }
 .rasa-page {
   flex: 1 0 auto !important;
