@@ -32,7 +32,7 @@
   <div class="rasa-header__inner">
     <div class="rasa-header__group">
       <a href="index.html" class="rasa-brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 38px; width: auto; display: block; object-fit: contain; margin: 0;"></a>
-                                                                                                                              <nav class="rasa-nav" aria-label="Primary Nav">
+                                                                                                                                    <nav class="rasa-nav" aria-label="Primary Nav">
         <div class="rasa-nav__item">
           <a href="services-ngs.html">Genomics &amp; NGS <span class="rasa-nav__arrow">▼</span></a>
           <div class="rasa-nav__dropdown">
@@ -4004,6 +4004,77 @@
   var y = document.getElementById('rasa-year');
   if (y) y.textContent = new Date().getFullYear();
 
+  
+  // FAQ Search & Filter switch logic
+  (function() {
+    var searchInput = document.getElementById('faq-search');
+    var chipButtons = document.querySelectorAll('.rasa-chip-btn');
+    var faqGroups = document.querySelectorAll('.rasa-faq-group');
+    var activeGroup = 'all';
+
+    function filterFAQ() {
+      var query = searchInput.value.toLowerCase().trim();
+      faqGroups.forEach(function(group) {
+        var cat = group.getAttribute('data-category');
+        var items = group.querySelectorAll('.rasa-faq__item');
+        var groupVisible = false;
+
+        // Check if group matches filter category
+        var catMatch = (activeGroup === 'all' || cat === activeGroup);
+
+        items.forEach(function(item) {
+          var qText = item.querySelector('.rasa-faq__q-text').textContent.toLowerCase();
+          var aText = item.querySelector('.rasa-faq__a p').textContent.toLowerCase();
+          var matchQuery = (!query || qText.indexOf(query) !== -1 || aText.indexOf(query) !== -1);
+
+          if (catMatch && matchQuery) {
+            item.style.display = 'block';
+            groupVisible = true;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        if (groupVisible) {
+          group.style.display = 'block';
+        } else {
+          group.style.display = 'none';
+        }
+      });
+    }
+
+    if (searchInput) searchInput.addEventListener('input', filterFAQ);
+
+    chipButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        chipButtons.forEach(function(b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        activeGroup = btn.getAttribute('data-group');
+        filterFAQ();
+      });
+    });
+
+    // Toggle accordion
+    var faqs = document.querySelectorAll('.rasa-faq__q');
+    faqs.forEach(function(faq) {
+      faq.addEventListener('click', function() {
+        var item = faq.parentNode;
+        var wasActive = item.classList.contains('active');
+        
+        // Close all
+        document.querySelectorAll('.rasa-faq__item').forEach(function(el) {
+          el.classList.remove('active');
+          el.querySelector('.rasa-faq__q').setAttribute('aria-expanded', 'false');
+        });
+
+        if (!wasActive) {
+          item.classList.add('active');
+          faq.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  })();
+  
   
   // FAQ Search & Filter switch logic
   (function() {

@@ -33,7 +33,7 @@
   <div class="rasa-header__inner">
     <div class="rasa-header__group">
       <a href="index.html" class="rasa-brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 38px; width: auto; display: block; object-fit: contain; margin: 0;"></a>
-                                                                                                                              <nav class="rasa-nav" aria-label="Primary Nav">
+                                                                                                                                    <nav class="rasa-nav" aria-label="Primary Nav">
         <div class="rasa-nav__item">
           <a href="services-ngs.html">Genomics &amp; NGS <span class="rasa-nav__arrow">▼</span></a>
           <div class="rasa-nav__dropdown">
@@ -446,10 +446,109 @@
   </section>
 
   <!-- PIPELINE -->
-  <section class="rasa-section" style="padding: 5.5rem 0; border-top: 1px solid var(--border);">
+  <section class="rasa-section rasa-section--lg">
+    <div class="container rasa-pipe-grid">
+      <div class="rasa-reveal">
+        <span class="rasa-eyebrow">Core Workflow</span>
+        <h2 class="rasa-h2" style="margin: 1.5rem 0;">From raw FASTQ sequencing reads to validated insights.</h2>
+        <p class="rasa-lede">
+          Our containerized, reproducible bioinformatics workflows ensure that raw sequencing datasets 
+          are quality controlled, mapped, and mathematically modeled with full scientific rigor.
+        </p>
+        <div class="rasa-pipe-list">
+          <div class="rasa-pipe-row">
+            <span class="rasa-pipe-row__num">01</span>
+            <div>
+              <div class="rasa-pipe-row__title">Ingestion &amp; Quality Inspection</div>
+              <div class="rasa-pipe-row__body">Adapter removal, fastp trimming, and automated multi-sample quality control reporting via MultiQC.</div>
+            </div>
+          </div>
+          <div class="rasa-pipe-row">
+            <span class="rasa-pipe-row__num">02</span>
+            <div>
+              <div class="rasa-pipe-row__title">Alignment &amp; Expression Counting</div>
+              <div class="rasa-pipe-row__body">Ultra-fast genomic mapping using 
+                <span class="rasa-tooltip-target">STAR<span class="rasa-tooltip">Spliced Transcripts Alignment to a Reference - high speed RNA-seq aligner.</span></span>, 
+                HISAT2, or de novo transcripts quantification using Salmon.
+              </div>
+            </div>
+          </div>
+          <div class="rasa-pipe-row">
+            <span class="rasa-pipe-row__num">03</span>
+            <div>
+              <div class="rasa-pipe-row__title">Signal Modeling &amp; Statistics</div>
+              <div class="rasa-pipe-row__body">Differential expression modeling (DESeq2), cell clustering (Seurat/Scanpy), or variant detection (GATK4).</div>
+            </div>
+          </div>
+          <div class="rasa-pipe-row">
+            <span class="rasa-pipe-row__num">04</span>
+            <div>
+              <div class="rasa-pipe-row__title">Reporting &amp; Visual Dashboards</div>
+              <div class="rasa-pipe-row__body">Clean, publication-ready figures, annotated tables, interactive browser dashboards, and Nextflow pipeline logs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dynamic SVG Schematic -->
+      <div class="rasa-reveal" data-delay="2" style="position: relative;">
+        <div style="position: absolute; inset: -2rem; background: rgba(22,101,52,0.04); filter: blur(80px); border-radius: 50%; z-index: 0;"></div>
+        <svg viewBox="0 0 500 500" style="width: 100%; position: relative; z-index: 1;" aria-hidden="true" role="img">
+          <defs>
+            <linearGradient id="rasa-pipe-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#166534" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#166534" stop-opacity="0.05"/>
+            </linearGradient>
+          </defs>
+          <!-- Grid connections -->
+          <g stroke="rgba(22,101,52,0.25)" stroke-width="1.5" fill="none">
+            <path d="M80,100 Q150,140 220,180"/>
+            <path d="M220,180 Q290,150 360,120"/>
+            <path d="M220,180 Q185,250 150,320"/>
+            <path d="M360,120 Q395,210 430,300"/>
+            <path d="M150,320 Q225,350 300,380"/>
+            <path d="M300,380 Q365,340 430,300"/>
+            <path d="M80,100 Q115,210 150,320"/>
+          </g>
+          <!-- Nodes -->
+          <g fill="var(--cream)">
+            <circle cx="80" cy="100" r="32" stroke="#166534" stroke-width="2"/>
+            <circle cx="220" cy="180" r="32" stroke="#166534" stroke-width="2"/>
+            <circle cx="360" cy="120" r="32" stroke="#166534" stroke-width="2"/>
+            <circle cx="150" cy="320" r="32" stroke="#166534" stroke-width="2"/>
+            <circle cx="300" cy="380" r="32" stroke="#166534" stroke-width="2"/>
+            <circle cx="430" cy="300" r="32" stroke="#166534" stroke-width="2"/>
+          </g>
+          <!-- Node Texts -->
+          <g font-family="JetBrains Mono, monospace" font-size="9" fill="#0c1a16" text-anchor="middle" font-weight="500">
+            <text x="80" y="103">FASTQ</text>
+            <text x="220" y="183">QC</text>
+            <text x="360" y="123">ALIGN</text>
+            <text x="150" y="323">VARIANT</text>
+            <text x="300" y="383">EXPR</text>
+            <text x="430" y="303">REPORT</text>
+          </g>
+          <!-- Ticks -->
+          <g stroke="rgba(12,26,22,0.08)" stroke-width="1">
+            <line x1="20" y1="20" x2="60" y2="20"/><line x1="20" y1="20" x2="20" y2="60"/>
+            <line x1="480" y1="20" x2="440" y2="20"/><line x1="480" y1="20" x2="480" y2="60"/>
+            <line x1="20" y1="480" x2="60" y2="480"/><line x1="20" y1="480" x2="20" y2="440"/>
+            <line x1="480" y1="480" x2="440" y2="480"/><line x1="480" y1="480" x2="480" y2="440"/>
+          </g>
+          <g font-family="JetBrains Mono, monospace" font-size="8" fill="#0c1a16" opacity="0.35">
+            <text x="30" y="490">RASA / AUTOMATED PIPELINES</text>
+            <text x="390" y="490">Nextflow v25</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14-STEP OPERATIONS FLOWCHART -->
+  <section class="rasa-section" style="padding: 5.5rem 0; border-top: 1px solid var(--border); background: var(--surface);">
     <div class="container">
       <div class="rasa-reveal" style="margin-bottom: 3.5rem; text-align: center;">
-        <span class="rasa-eyebrow">Execution System</span>
+        <span class="rasa-eyebrow">Operational Execution System</span>
         <h2 class="rasa-h2" style="margin-top: 1.5rem;">Scientific Workflow Pipeline</h2>
         <p class="rasa-lede" style="margin-top: 1rem; font-size: 1.025rem; line-height: 1.65; max-width: 80ch; margin-left: auto; margin-right: auto; color: var(--foreground-70); text-align: center;">
           Our end-to-end operational workflow spans high-throughput genomics data analysis, structural modeling, computational drug discovery, and regulatory compliance.
