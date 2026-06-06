@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Whole Genome & Exome Sequencing (WGS/WES) | RASA LSI</title>
-  <meta name="description" content="Secure, high-fidelity variant calling pipelines (SNVs, Indels, CNVs, SVs) annotated with gnomAD and ClinVar for oncology and clinical genetics.">
+  <title>WGS & WES Analysis Services | Whole Genome & Whole Exome Sequencing Bioinformatics</title>
+  <meta name="description" content="Professional bioinformatics services">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,36 +32,45 @@
   <div class="rasa-header__inner">
     <div class="rasa-header__group">
       <a href="index.html" class="rasa-brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 38px; width: auto; display: block; object-fit: contain; margin: 0;"></a>
-                                                                                          <nav class="rasa-nav" aria-label="Primary Nav">
+                                                                                                            <nav class="rasa-nav" aria-label="Primary Nav">
         <div class="rasa-nav__item">
-          <a href="services-ngs.html">NGS Analysis <span class="rasa-nav__arrow">▼</span></a>
+          <a href="services-ngs.html">Genomics &amp; NGS <span class="rasa-nav__arrow">▼</span></a>
           <div class="rasa-nav__dropdown">
+            <a href="services-ngs.html">NGS Overview</a>
             <a href="services-ngs-transcriptomics.html">Transcriptomics (RNA-Seq)</a>
+            <a href="services-ngs-single-cell.html">Single-Cell Omics</a>
             <a href="services-ngs-wgs-wes.html">WGS &amp; Exome (WES)</a>
             <a href="services-ngs-spatial.html">Spatial Transcriptomics</a>
-            <a href="services-ngs-metagenomics.html">Metagenomics</a>
-            <a href="services-ngs-epigenomics.html">Epigenomics (ChIP/ATAC-Seq)</a>
+            <a href="services-ngs-metagenomics.html">Metagenomics &amp; Microbiome</a>
+            <a href="services-ngs-epigenomics.html">Epigenomics</a>
             <a href="services-ngs-long-read.html">Long-Read Sequencing</a>
+            <a href="services-ngs-multi-omics.html">Multi-Omics Integration</a>
+            <a href="services-ngs-clinical.html">Clinical Genomics</a>
+            <a href="services-ngs-biomarker.html">Biomarker Discovery</a>
           </div>
         </div>
         <div class="rasa-nav__item">
           <a href="services-drug-discovery.html">Drug Discovery <span class="rasa-nav__arrow">▼</span></a>
           <div class="rasa-nav__dropdown">
+            <a href="services-drug-discovery.html">Discovery Overview</a>
             <a href="services-dd-target-id.html">Target ID &amp; Structure</a>
-            <a href="services-dd-virtual-screening.html">Virtual Screening</a>
-            <a href="services-dd-lead-optimization.html">Lead Optimization</a>
-            <a href="services-dd-de-novo.html">De Novo Drug Design</a>
-            <a href="services-dd-multi-target.html">Network Pharmacology</a>
+            <a href="services-dd-virtual-screening.html">Virtual Screening &amp; Docking</a>
+            <a href="services-dd-molecular-dynamics.html">Molecular Dynamics Simulation</a>
+            <a href="services-dd-protein-modeling.html">Protein Structure Modeling</a>
+            <a href="services-dd-de-novo.html">AI &amp; De Novo Drug Design</a>
+            <a href="services-dd-multi-target.html">Network Pharmacology &amp; Systems Biology</a>
           </div>
+        </div>
+        <div class="rasa-nav__item">
+          <a href="services-qsar-toxicology.html" style="font-weight: 600;">QSAR &amp; Regulatory Toxicology</a>
         </div>
         <div class="rasa-nav__item">
           <a href="case-studies.html">Case Studies <span class="rasa-nav__arrow">▼</span></a>
           <div class="rasa-nav__dropdown">
-            <a href="case-study-tumor-microenvironment.html">Tumor Microenvironment</a>
-            <a href="case-study-population-wgs.html">Population WGS Scaling</a>
-            <a href="case-study-somatic-mutation.html">AI Mutation Prioritization</a>
-            <a href="case-study-metagenomic-profiling.html">Metagenomic Profiling</a>
-            <a href="case-study-spatial-transcriptomics.html">Spatial Transcriptomics</a>
+            <a href="case-study-qsar-toxicology.html">QSAR Toxicology Study</a>
+            <a href="case-study-rna-seq-transcriptomics.html">RNA-Seq Fungal Study</a>
+            <a href="case-study-wgs-wes-genomics.html">WGS Bacterial Study</a>
+            <a href="case-studies.html">All Case Studies</a>
           </div>
         </div>
         <div class="rasa-nav__item"><a href="about.html">About</a></div>
@@ -80,206 +89,757 @@
 
 <!-- =============== MAIN =============== -->
 <main class="rasa rasa-page">
-
-  <!-- PAGE HERO -->
   <section class="rasa-pagehero">
     <div class="rasa-grid-bg" aria-hidden="true"></div>
     <div class="container">
       <div class="rasa-pagehero__grid">
         <div class="rasa-pagehero__copy">
           <div class="rasa-reveal">
-            <span class="rasa-eyebrow">Computational Genomics<span class="rasa-eyebrow__rule"></span></span>
+            <span class="rasa-eyebrow">Computational Genomics &amp; NGS<span class="rasa-eyebrow__rule"></span></span>
           </div>
-          <h1 class="rasa-pagehero__h rasa-reveal" data-delay="1">
-          High-fidelity variant discovery at genome <span class="serif italic leaf">scale</span>.
-        </h1>
-          <p class="rasa-pagehero__lede rasa-reveal" data-delay="2">
-          Identify structural variations, copy number variations, and single nucleotide variants with gold-standard pipelines (GATK, DeepVariant) optimized for speed and accuracy.
-        </p>
-        </div>
-        <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2">
-          <img src="images/wgs_alignment.png" alt="High-fidelity variant discovery at genome scale.">
-        </div>
-      </div>
-
-      <!-- Interactive Technology Comparison -->
-      <div class="rasa-reveal" data-delay="2" style="margin-top: 3.5rem; text-align: center;">
-        <div class="rasa-tabs-nav" role="tablist">
-          <button class="rasa-tab-btn is-active" id="tab-short" role="tab" aria-selected="true" aria-controls="panel-short">Short-Read Technology (Illumina)</button>
-          <button class="rasa-tab-btn" id="tab-long" role="tab" aria-selected="false" aria-controls="panel-long">Long-Read Technology (ONT/PacBio)</button>
-        </div>
-
-        <div class="rasa-tech-panel is-active" id="panel-short" role="tabpanel" aria-labelledby="tab-short">
-          <div class="rasa-tech-grid">
-            <div class="rasa-tech-feature">
-              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <div class="rasa-tech-feature__title">High Base Accuracy (>99.9%)</div>
-                <div class="rasa-tech-feature__desc">Ideal for short-variant detection (SNVs, Indels) and high-throughput transcript profiling.</div>
-              </div>
-            </div>
-            <div class="rasa-tech-feature">
-              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <div class="rasa-tech-feature__title">Massive Parallel Throughput</div>
-                <div class="rasa-tech-feature__desc">Supports large-scale transcriptomics cohorts, deep exome sequencing, and single-cell counting.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="rasa-tech-panel" id="panel-long" role="tabpanel" aria-labelledby="tab-long">
-          <div class="rasa-tech-grid">
-            <div class="rasa-tech-feature">
-              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <div class="rasa-tech-feature__title">Structural Variant Resolution</div>
-                <div class="rasa-tech-feature__desc">Spans repetitive areas, resolving complex insertions, deletions, duplications, and translocations.</div>
-              </div>
-            </div>
-            <div class="rasa-tech-feature">
-              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <div class="rasa-tech-feature__title">Direct Methylation Detection</div>
-                <div class="rasa-tech-feature__desc">Detects 5mC, 5hmC, and 6mA modifications directly on native DNA/RNA without bisulfite conversion.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modalities Overview Grid -->
-      <div class="rasa-modalities rasa-reveal" data-delay="2">
-        <a href="services-ngs-wgs-wes.html" class="rasa-modality">
-          <span class="rasa-modality__idx">01 //</span>
-          <span class="rasa-modality__h">WGS &amp; WES Discovery</span>
-          <span class="rasa-modality__b">Deep variant discovery (SNVs, Indels, CNVs) annotated via ClinVar &amp; gnomAD.</span>
-        </a>
-        <a href="services-ngs-transcriptomics.html#rnaseq" class="rasa-modality">
-          <span class="rasa-modality__idx">02 //</span>
-          <span class="rasa-modality__h">RNA-Seq (Bulk)</span>
-          <span class="rasa-modality__b">Transcriptome expression profiling, DE analyses, and pathway enrichment.</span>
-        </a>
-        <a href="services-ngs-transcriptomics.html#scrnaseq" class="rasa-modality">
-          <span class="rasa-modality__idx">03 //</span>
-          <span class="rasa-modality__h">Single-Cell RNA-Seq</span>
-          <span class="rasa-modality__b">Cellular heterogeneity profile, cell typing, and lineage trajectory.</span>
-        </a>
-        <a href="services-ngs-spatial.html" class="rasa-modality">
-          <span class="rasa-modality__idx">04 //</span>
-          <span class="rasa-modality__h">Spatial Transcriptomics</span>
-          <span class="rasa-modality__b">Gene expression mapped directly within intact tissue architectural slides.</span>
-        </a>
-        <a href="services-ngs.html#longread" class="rasa-modality">
-          <span class="rasa-modality__idx">05 //</span>
-          <span class="rasa-modality__h">Long-Read Sequencing</span>
-          <span class="rasa-modality__b">Oxford Nanopore &amp; PacBio assemblies, structural variants &amp; direct methylation.</span>
-        </a>
-        <a href="services-ngs-metagenomics.html" class="rasa-modality">
-          <span class="rasa-modality__idx">06 //</span>
-          <span class="rasa-modality__h">Metagenomics &amp; Assembly</span>
-          <span class="rasa-modality__b">Taxonomic profiling, MAG reconstruction, hybrid assembly, and AMR mapping.</span>
-        </a>
-        <a href="services-ngs.html#epi" class="rasa-modality">
-          <span class="rasa-modality__idx">07 //</span>
-          <span class="rasa-modality__h">Epigenomics (ATAC/ChIP)</span>
-          <span class="rasa-modality__b">Chromatin accessibility, histone marks, and transcription factor footprints.</span>
-        </a>
-        <a href="services-ngs.html#multiomics" class="rasa-modality">
-          <span class="rasa-modality__idx">08 //</span>
-          <span class="rasa-modality__h">Multi-Omics Integration</span>
-          <span class="rasa-modality__b">Joint embeddings combining transcriptomics, epigenomics, and network maps.</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  
-
-  <!-- ======= DEEP SECTION 01: WGS/WES ======= -->
-  <section class="rasa-deep rasa-reveal" id="wgs-wes">
-    <div class="container">
-      <div class="rasa-deep__head">
-        <span class="rasa-deep__index">Variant Discovery</span>
-        <div>
-          <h2 class="rasa-h2 rasa-deep__h">Whole Genome &amp; Whole Exome Sequencing analysis.</h2>
-          <p class="rasa-deep__lede">
-            Advanced genomic variant discovery for precision medicine and clinical oncology research.
-            Accurate detection, annotation, and functional interpretation of mutations associated with genetic disorders.
+          <h1 class="rasa-pagehero__h rasa-reveal" data-delay="1" style="font-size: clamp(2rem, 4.5vw, 3.25rem); font-weight: 500; line-height: 1.1; margin: 1.5rem 0 1.5rem;">
+            Whole Genome Sequencing (WGS)
+          </h1>
+          <p class="rasa-pagehero__lede rasa-reveal" data-delay="2" style="font-size: 1.05rem; line-height: 1.6; color: var(--foreground-70);">
+            Comprehensive analysis of coding and non-coding regions across the entire genome.
           </p>
         </div>
-      </div>
-      <div class="rasa-deep__body">
-        <div>
-          <div class="rasa-feat-list">
-            <div class="rasa-feat">
-              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <div>
-                <div class="rasa-feat__t">Comprehensive variant calling</div>
-                <div class="rasa-feat__b">Detection of SNVs, short Indels, Copy Number Variations (CNVs), and large structural rearrangements.</div>
-              </div>
-            </div>
-            <div class="rasa-feat">
-              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <div>
-                <div class="rasa-feat__t">AI-assisted variant prioritization</div>
-                <div class="rasa-feat__b">Functional pathogenicity prediction modeling utilizing CADD, SIFT, and PolyPhen-2 scores.</div>
-              </div>
-            </div>
-            <div class="rasa-feat">
-              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <div>
-                <div class="rasa-feat__t">Trio and cohort-scale genomics</div>
-                <div class="rasa-feat__b">Germline mutation screening, somatic variant discovery, and tumor-normal comparative genomics.</div>
-              </div>
-            </div>
-            <div class="rasa-feat">
-              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <div>
-                <div class="rasa-feat__t">Multi-database annotation</div>
-                <div class="rasa-feat__b">Clinical-grade annotation mapping using ClinVar, dbSNP, gnomAD, OMIM, and Ensembl VEP.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="rasa-tool-cloud">
-            <span class="rasa-tool">GATK4<span class="rasa-tooltip">Genome Analysis Toolkit - standard variant discovery pipeline.</span></span>
-            <span class="rasa-tool">DeepVariant<span class="rasa-tooltip">NVIDIA deep learning variant caller.</span></span>
-            <span class="rasa-tool">FreeBayes<span class="rasa-tooltip">Haplotype-based variant detector.</span></span>
-            <span class="rasa-tool">BCFtools<span class="rasa-tooltip">VCF/BCF file processing utility.</span></span>
-            <span class="rasa-tool">ANNOVAR<span class="rasa-tooltip">Functional annotation tool for genomic variants.</span></span>
-            <span class="rasa-tool">Ensembl VEP<span class="rasa-tooltip">Variant Effect Predictor by Ensembl.</span></span>
-          </div>
+        <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2">
+          <img src="images/wgs_alignment.png" alt="Whole Genome Sequencing (WGS)">
         </div>
-
-        <aside class="rasa-side">
-          <span class="rasa-side__lbl">Deliverables</span>
-          <h3 class="rasa-side__h">Clinic-ready variants.</h3>
-          <div class="rasa-deliv">
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Annotated VCF files</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Variant annotation report</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Mutational summary dashboard</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Quality control report</div>
-          </div>
-          <div style="margin-top: 0.5rem;">
-            <div class="rasa-side__row"><span>Platforms</span><span>Illumina · ONT · PacBio</span></div>
-            <div class="rasa-side__row"><span>Use Cases</span><span>Rare Disease · Oncology</span></div>
-          </div>
-        </aside>
       </div>
     </div>
   </section>
-
-
-
-  <!-- CTA -->
-  <section class="rasa-section rasa-section--ink" style="padding:6rem 0; text-align:center;">
+<section class="rasa-section" style="padding: 5rem 0; border-top: 1px solid var(--border);">
+        <div class="container">
+          <div class="rasa-reveal" style="margin-bottom: 3rem;">
+            <span class="rasa-eyebrow">Service Offerings</span>
+            <h2 class="rasa-h2" style="margin-top: 1.5rem;">What We Offer</h2>
+          </div>
+          <div class="rasa-capabilities">
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Services Include</h3>
+              <p class="rasa-capability__b">Genome-wide variant discovery SNP and InDel identification Structural variant analysis Copy Number Variation (CNV) analysis Mobile element insertion detection Population genomics analysis Whole Exome Sequencing (WES) Focused analysis of protein-coding regions associated with disease and clinical phenotypes.</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Services Include</h3>
+              <p class="rasa-capability__b">Exonic variant detection Rare disease variant discovery Candidate gene prioritization Mendelian disease analysis Trio and family-based analysis Clinical variant interpretation Variant Annotation & Interpretation Comprehensive biological and clinical interpretation of genomic variants.</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Services Include</h3>
+              <p class="rasa-capability__b">Functional annotation Pathogenicity prediction ACMG-guided variant classification Clinical significance assessment Population frequency analysis Literature-based evidence review</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Cancer Genomics Analysis</h3>
+              <p class="rasa-capability__b">Advanced somatic variant detection and tumor profiling workflows.</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Services Include</h3>
+              <p class="rasa-capability__b">Somatic mutation analysis Tumor-normal comparison Driver mutation identification Tumor mutational burden (TMB) Mutational signature analysis Precision oncology support</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Rare Disease Genomics</h3>
+              <p class="rasa-capability__b">Identification and prioritization of disease-causing genetic variants.</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Services Include</h3>
+              <p class="rasa-capability__b">Rare variant discovery Family-based analysis Candidate gene prioritization Phenotype-driven interpretation Clinical reporting support Variant Calling</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">GATK</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">DeepVariant</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">FreeBayes</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">bcftools</h3>
+              <p class="rasa-capability__b">Annotation & Interpretation</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">ANNOVAR</h3>
+              <p class="rasa-capability__b">Ensembl VEP</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">ClinVar</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">OMIM</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">gnomAD</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Structural Variant Analysis</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Manta</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Delly</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">LUMPY</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">GRIDSS</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Copy Number Analysis</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">CNVkit</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Control-FREEC</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">ExomeDepth</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Infrastructure</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Nextflow</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Snakemake</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Docker</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">AWS</h3>
+              <p class="rasa-capability__b">Google Cloud HPC Clusters</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">📈 Representative Analysis Outputs</h3>
+              <p class="rasa-capability__b">Variant Discovery Identification of SNPs, InDels, structural variants, and CNVs. Rare Disease Investigation Prioritization of clinically relevant disease-causing variants.</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Cancer Genomics Profiling</h3>
+              <p class="rasa-capability__b">Detection of somatic mutations and actionable genomic alterations. Precision Medicine Support Genomic insights supporting personalized treatment decisions. Biomarker Discovery Identification of predictive and prognostic genomic markers.</p>
+            </div>
+            
+          </div>
+        </div>
+      </section><section class="rasa-section" style="padding: 5rem 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="container">
+          <div class="rasa-reveal" style="margin-bottom: 3rem;">
+            <span class="rasa-eyebrow">Key Strengths</span>
+            <h2 class="rasa-h2" style="margin-top: 1.5rem;">Core Features &amp; Advantages</h2>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Whole Genome & Whole Exome Expertise</div>
+            </div>
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">AI-Assisted Variant Prioritization</div>
+            </div>
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Clinical & Research Genomics Support</div>
+            </div>
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Structural Variant & CNV Analysis</div>
+            </div>
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Rare Disease & Cancer Genomics</div>
+            </div>
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Cloud-Ready Reproducible Pipelines</div>
+            </div>
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Publication-Ready Reports & Visualizations</div>
+            </div>
+            
+          </div>
+        </div>
+      </section><section class="rasa-section" style="padding: 5rem 0;">
+        <div class="container" style="max-width: 900px;">
+          <div class="rasa-reveal" style="margin-bottom: 3.5rem; text-align: center;">
+            <span class="rasa-eyebrow">Execution System</span>
+            <h2 class="rasa-h2" style="margin-top: 1.5rem;">Scientific Workflow Pipeline</h2>
+          </div>
+          <div style="position: relative; display: flex; flex-direction: column; gap: 2rem;">
+            <!-- Vertical Line -->
+            <div style="position: absolute; left: 24px; top: 0; bottom: 0; width: 2px; background: var(--leaf-soft); z-index: 1;"></div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                01
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Raw FASTQ Data</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                02
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Quality Control & Preprocessing</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                03
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Read Alignment</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                04
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Variant Calling</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                05
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Variant Annotation</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                06
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Variant Prioritization</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                07
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Clinical & Biological Interpretation</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                08
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Scientific Reporting</div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section><section class="rasa-section" style="padding: 5rem 0;">
+        <div class="container">
+          <div class="rasa-reveal" style="margin-bottom: 3rem;">
+            <span class="rasa-eyebrow">Scientific Deliverables</span>
+            <h2 class="rasa-h2" style="margin-top: 1.5rem;">Project Outputs &amp; Visualizations</h2>
+          </div>
+          <div class="rasa-deliv">
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Variant Analysis Reports</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>SNP & InDel Reports</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Structural Variant Reports</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>CNV Analysis Reports</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Annotated VCF Files</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Candidate Variant Lists</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Clinical Interpretation Outputs</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>ACMG Classification Reports</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Pathogenicity Assessments</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Disease Association Reports</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Clinical Variant Summaries</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Visualization & Reporting</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Genome-Wide Variant Summaries</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Mutation Distribution Plots</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>CNV Visualizations</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Publication-Ready Figures</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Comprehensive Scientific Reports</span>
+            </div>
+            
+          </div>
+        </div>
+      </section><section class="rasa-section" style="padding: 5rem 0; border-top: 1px solid var(--border);">
+        <div class="container">
+          <div class="rasa-reveal" style="margin-bottom: 3.5rem;">
+            <span class="rasa-eyebrow">Value Proposition</span>
+            <h2 class="rasa-h2" style="margin-top: 1.5rem;">Why Choose RASA Life Science Informatics?</h2>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">Expertise in WGS & WES Bioinformatics</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">AI-Assisted Variant Interpretation</h3>
+              <p class="rasa-capability__b" style="margin:0;">Clinical & Research Genomics Experience</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">Rare Disease & Oncology Genomics Expertise</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Secure Cloud & HPC Infrastructure</h3>
+              <p class="rasa-capability__b" style="margin:0;">Publication-Ready Scientific Deliverables</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">Support for Pharma, Biotech, CROs, Hospitals & Academic Research</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">Customized Analysis Pipelines for Clinical & Research Projects</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Unlock the Power of Genomic Data</h3>
+              <p class="rasa-capability__b" style="margin:0;">Accelerate genomic discovery through advanced Whole Genome Sequencing and Whole Exome Sequencing analysis powered by AI-driven bioinformatics and precision medicine workflows.</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">📧 support@rasalifesciences.com</h3>
+              <p class="rasa-capability__b" style="margin:0;">🌐 www.rasalifesciences.com</p>
+            </div>
+            
+          </div>
+        </div>
+      </section><section class="rasa-section" style="padding: 5rem 0; background: var(--surface); border-top: 1px solid var(--border);">
+        <div class="container" style="max-width: 800px;">
+          <div class="rasa-reveal" style="margin-bottom: 3.5rem; text-align: center;">
+            <span class="rasa-eyebrow">Service FAQ</span>
+            <h2 class="rasa-h2" style="margin-top: 1.5rem;">Frequently Asked Questions</h2>
+          </div>
+          <div class="rasa-faq" style="display: flex; flex-direction: column; gap: 1rem;">
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What is the difference between Whole Genome Sequencing (WGS) and Whole Exome Sequencing (WES)?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Whole Genome Sequencing (WGS) analyzes the complete DNA sequence of an organism, including both coding and non-coding regions of the genome. In contrast, Whole Exome Sequencing (WES) focuses only on protein-coding regions (exons), which represent approximately 1–2% of the genome but contain the majority of known disease-causing mutations.<br>WGS provides a more comprehensive view of genomic variation, while WES offers a cost-effective approach for identifying clinically relevant variants associated with inherited disorders, rare diseases, and cancer.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What WGS and WES analysis services does RASA provide?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">RASA Life Science Informatics offers comprehensive WGS and WES bioinformatics services including:<br>Quality Control & Data Processing<br>Read Alignment & Mapping<br>Variant Calling<br>Variant Annotation<br>Clinical Variant Interpretation<br>Structural Variant Analysis<br>Copy Number Variation (CNV) Analysis<br>Rare Disease Genomics<br>Cancer Genomics<br>Pharmacogenomics<br>Precision Medicine Analytics<br>Biomarker Discovery<br>Our workflows support research, clinical genomics, and translational medicine projects.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What genomic variants can be detected using WGS and WES?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Our analysis pipelines can identify a wide range of genomic alterations, including:<br>Single Nucleotide Polymorphisms (SNPs)<br>Single Nucleotide Variants (SNVs)<br>Insertions and Deletions (InDels)<br>Copy Number Variations (CNVs)<br>Structural Variants (SVs)<br>Gene Fusions<br>Mobile Element Insertions<br>Regulatory Variants<br>Loss-of-Function Variants<br>Rare Disease-Causing Mutations<br>The specific variants detected depend on sequencing depth, platform, and study design.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Do you provide clinical variant interpretation?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Yes. We perform comprehensive clinical variant interpretation using internationally recognized guidelines and databases. Variants are evaluated based on pathogenicity, population frequency, disease association, inheritance patterns, and published scientific evidence.<br>Our interpretation workflows support rare disease research, clinical genomics studies, cancer genomics projects, and precision medicine applications.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Do you follow ACMG guidelines for variant classification?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Yes. Variant interpretation follows the recommendations of the American College of Medical Genetics and Genomics (ACMG) whenever appropriate. Variants may be classified as:<br>Pathogenic<br>Likely Pathogenic<br>Variant of Uncertain Significance (VUS)<br>Likely Benign<br>Benign<br>This classification framework helps prioritize clinically relevant variants for downstream investigation.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Which databases are used for variant annotation and interpretation?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Our annotation workflows integrate information from leading genomic and clinical databases, including:<br>ClinVar<br>OMIM<br>gnomAD<br>HGMD<br>Ensembl VEP<br>ANNOVAR<br>dbSNP<br>COSMIC<br>OncoKB<br>PharmGKB<br>These resources help improve variant prioritization and biological interpretation.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Can WGS and WES be used for rare disease research?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Yes. Whole Genome Sequencing and Whole Exome Sequencing are widely used to identify disease-causing mutations associated with inherited and rare genetic disorders. Our workflows support:<br>Trio Analysis<br>Family-Based Sequencing Studies<br>Mendelian Disease Analysis<br>Candidate Gene Prioritization<br>Phenotype-Driven Variant Interpretation</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>How are WGS and WES used in cancer genomics?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">WGS and WES are commonly used in oncology research to identify:<br>Somatic Mutations<br>Driver Mutations<br>Tumor-Specific Variants<br>Actionable Biomarkers<br>Tumor Mutational Burden (TMB)<br>Mutational Signatures<br>These analyses support precision oncology and translational cancer research programs.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Can WGS identify variants that WES may miss?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Yes. Because WGS covers the entire genome, it can identify variants located in non-coding regions, regulatory elements, structural variants, and complex genomic rearrangements that may not be captured by WES.<br>For comprehensive genomic characterization, WGS is often considered the most informative sequencing approach.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What file formats are required for WGS and WES analysis?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">We commonly support:<br>FASTQ Files<br>BAM Files<br>CRAM Files<br>VCF Files<br>gVCF Files<br>Phenotype Data<br>Clinical Metadata<br>Our team can also accommodate custom project-specific formats.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Which bioinformatics tools are used for WGS and WES analysis?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Our workflows utilize industry-standard tools including:<br>Alignment & Processing<br>BWA-MEM<br>Bowtie2<br>SAMtools<br>Picard<br>Variant Calling<br>GATK<br>DeepVariant<br>FreeBayes<br>bcftools<br>Structural Variant Analysis<br>Manta<br>Delly<br>LUMPY<br>GRIDSS<br>Annotation & Interpretation<br>ANNOVAR<br>Ensembl VEP<br>ClinVar<br>OMIM<br>Workflow Infrastructure<br>Nextflow<br>Snakemake<br>Docker<br>AWS<br>Google Cloud</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What deliverables are included in WGS and WES projects?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Typical project deliverables include:<br>Quality Control Reports<br>Variant Calling Reports<br>Annotated VCF Files<br>Candidate Variant Lists<br>Clinical Interpretation Reports<br>CNV Analysis Reports<br>Structural Variant Reports<br>Pathway Analysis Results<br>Publication-Ready Figures<br>Comprehensive Scientific Reports<br>Deliverables can be customized according to research objectives and regulatory requirements.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Can WGS and WES data be integrated with other omics datasets?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Yes. We routinely integrate genomic data with:<br>RNA-Seq<br>Single-Cell Omics<br>Spatial Transcriptomics<br>Epigenomics<br>Proteomics<br>Metabolomics<br>Clinical Data<br>Multi-omics integration provides a more comprehensive understanding of disease biology and therapeutic response.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What are the advantages of WGS compared to targeted sequencing panels?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">While targeted sequencing panels focus on predefined genes, WGS provides an unbiased view of the entire genome. This enables the discovery of novel disease-associated variants, structural rearrangements, and regulatory mutations that may not be included in targeted panels.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Why choose RASA for WGS and WES analysis?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">RASA combines expertise in genomics, bioinformatics, clinical interpretation, and precision medicine to deliver high-quality WGS and WES analysis solutions. Our reproducible workflows, AI-assisted analytics, scalable cloud infrastructure, and publication-ready reporting help researchers and organizations maximize the value of genomic sequencing data.<br>📧 support@rasalifesciences.com<br>🌐 www.rasalifesciences.com</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>  <!-- CTA -->
+  <section class="rasa-section rasa-section--ink" style="padding:6rem 0; text-align:center; background: var(--ink); border-top: 1px solid var(--border);">
     <div class="container" style="max-width:720px;">
-      <h2 class="rasa-h2" style="color:var(--cream); margin-bottom:1.25rem; max-width:24ch; margin-left:auto; margin-right:auto;">Ready to analyze your sequencing data?</h2>
-      <p style="color:rgba(248,249,250,0.7); max-width:56ch; margin:0 auto 2rem;">
-        Get in touch with our team in Pune to discuss sample sizes, platform details, and custom bioinformatics pipeline configurations.
+      <h2 class="rasa-h2" style="color:var(--cream); margin-bottom:1.25rem; max-width:28ch; margin-left:auto; margin-right:auto;">Ready to partner with a trusted bioinformatics company in India?</h2>
+      <p style="color:rgba(248,249,250,0.7); max-width:56ch; margin:0 auto 2rem; font-size:0.95rem; line-height:1.6;">
+        Get in touch with our team in Pune, India, to discuss sample sizes, platform details, and custom bioinformatics pipeline configurations for genomics, transcriptomics, or drug discovery campaigns.
       </p>
-      <a href="contact.html" class="rasa-btn rasa-btn--primary">
+      <a href="contact.html" class="rasa-btn rasa-btn--primary" style="background:var(--leaf); color:var(--cream);">
         Start a Project
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
@@ -293,46 +853,55 @@
     <div class="rasa-footer__grid">
       <div>
         <div class="rasa-footer__brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 42px; width: auto; display: block; object-fit: contain;"></div>
+        <p class="rasa-footer__desc" style="font-size: 0.825rem; color: var(--foreground-60); line-height: 1.6; margin-top: 1rem;">
+          RASA Life Science Informatics is a leading bioinformatics company and CRO in India providing AI-powered NGS data analysis services, RNA-seq analysis, genomics consulting, transcriptomics, epigenomics, metagenomics, and precision medicine bioinformatics solutions for pharmaceutical, biotechnology, and academic research organizations globally.
+        </p>
       </div>
       <div>
-        <h4>Computational Genomics</h4>
+        <h4>Computational Genomics &amp; NGS</h4>
         <a href="services-ngs.html">NGS Overview</a>
         <a href="services-ngs-transcriptomics.html">Transcriptomics (RNA-Seq)</a>
+        <a href="services-ngs-single-cell.html">Single-Cell Omics</a>
         <a href="services-ngs-wgs-wes.html">WGS &amp; Exome (WES)</a>
         <a href="services-ngs-spatial.html">Spatial Transcriptomics</a>
-        <a href="services-ngs-metagenomics.html">Metagenomics Community</a>
-        <a href="services-ngs-epigenomics.html">Epigenomics (ChIP/ATAC-Seq)</a>
+        <a href="services-ngs-metagenomics.html">Metagenomics &amp; Microbiome</a>
+        <a href="services-ngs-epigenomics.html">Epigenomics</a>
         <a href="services-ngs-long-read.html">Long-Read Sequencing</a>
+        <a href="services-ngs-multi-omics.html">Multi-Omics Integration</a>
+        <a href="services-ngs-clinical.html">Clinical Genomics</a>
+        <a href="services-ngs-biomarker.html">Biomarker Discovery</a>
       </div>
       <div>
         <h4>In-Silico Drug Discovery</h4>
         <a href="services-drug-discovery.html">Discovery Overview</a>
         <a href="services-dd-target-id.html">Target ID &amp; Structure</a>
-        <a href="services-dd-virtual-screening.html">Virtual Screening Sim</a>
-        <a href="services-dd-lead-optimization.html">Lead Optimization Dynamics</a>
-        <a href="services-dd-de-novo.html">De Novo Drug Design</a>
-        <a href="services-dd-multi-target.html">Network Pharmacology</a>
+        <a href="services-dd-virtual-screening.html">Virtual Screening &amp; Docking</a>
+        <a href="services-dd-molecular-dynamics.html">Molecular Dynamics Simulation</a>
+        <a href="services-dd-protein-modeling.html">Protein Structure Modeling</a>
+        <a href="services-dd-de-novo.html">AI &amp; De Novo Drug Design</a>
+        <a href="services-dd-multi-target.html">Network Pharmacology &amp; Systems Biology</a>
       </div>
       <div>
-        <h4>Resources</h4>
+        <h4>QSAR &amp; Regulatory Toxicology</h4>
+        <a href="services-qsar-toxicology.html">QSAR Toxicology Overview</a>
+        <a href="services-qsar-toxicology.html">ICH M7 Impurity Assessment</a>
+      </div>
+      <div>
+        <h4>Resources &amp; Contact</h4>
         <a href="case-studies.html">Case Studies</a>
         <a href="about.html">About Corporate</a>
         <a href="faq.html">Technical FAQ</a>
+        <a href="industries-we-serve.html">Industries We Serve</a>
         <a href="contact.html">Partner Contact</a>
-      </div>
-      <div>
-        <h4>Headquarters</h4>
-        <p style="font-size: 0.875rem; color: var(--foreground-70); line-height: 1.65; margin: 0 0 1rem;">
-          Pashan-Sus Road<br>
-          Pune, Maharashtra 411021<br>
-          India
+        <p style="font-size: 0.8rem; color: var(--foreground-50); line-height: 1.5; margin-top: 1rem;">
+          <strong>Pune Office:</strong> Pashan-Sus Road, Pune, Maharashtra 411021, India<br>
+          <strong>Email:</strong> support@rasalifesciences.com
         </p>
-        <a href="contact.html" style="font-weight: 500; color: var(--leaf);">Get in touch →</a>
       </div>
     </div>
     <div class="rasa-footer__bottom">
       <span>© <span id="rasa-year">2026</span> Rasa Life Science Informatics. Engineered in Pune.</span>
-      <span><a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/terms">Terms</a></span>
+      <span><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></span>
     </div>
   </div>
 </footer>

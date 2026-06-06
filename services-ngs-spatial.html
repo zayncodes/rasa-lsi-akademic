@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spatial Transcriptomics Data Analysis | RASA LSI</title>
-  <meta name="description" content="Map gene expression profiles within intact tissue slices using 10x Genomics Visium, Slide-seq, and MERFISH data analytics pipelines.">
+  <title>Spatial Transcriptomics Analysis Services | 10x Visium, MERFISH & Spatial Omics Bioinformatics</title>
+  <meta name="description" content="Professional bioinformatics services">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,36 +32,45 @@
   <div class="rasa-header__inner">
     <div class="rasa-header__group">
       <a href="index.html" class="rasa-brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 38px; width: auto; display: block; object-fit: contain; margin: 0;"></a>
-                                                                                          <nav class="rasa-nav" aria-label="Primary Nav">
+                                                                                                            <nav class="rasa-nav" aria-label="Primary Nav">
         <div class="rasa-nav__item">
-          <a href="services-ngs.html">NGS Analysis <span class="rasa-nav__arrow">▼</span></a>
+          <a href="services-ngs.html">Genomics &amp; NGS <span class="rasa-nav__arrow">▼</span></a>
           <div class="rasa-nav__dropdown">
+            <a href="services-ngs.html">NGS Overview</a>
             <a href="services-ngs-transcriptomics.html">Transcriptomics (RNA-Seq)</a>
+            <a href="services-ngs-single-cell.html">Single-Cell Omics</a>
             <a href="services-ngs-wgs-wes.html">WGS &amp; Exome (WES)</a>
             <a href="services-ngs-spatial.html">Spatial Transcriptomics</a>
-            <a href="services-ngs-metagenomics.html">Metagenomics</a>
-            <a href="services-ngs-epigenomics.html">Epigenomics (ChIP/ATAC-Seq)</a>
+            <a href="services-ngs-metagenomics.html">Metagenomics &amp; Microbiome</a>
+            <a href="services-ngs-epigenomics.html">Epigenomics</a>
             <a href="services-ngs-long-read.html">Long-Read Sequencing</a>
+            <a href="services-ngs-multi-omics.html">Multi-Omics Integration</a>
+            <a href="services-ngs-clinical.html">Clinical Genomics</a>
+            <a href="services-ngs-biomarker.html">Biomarker Discovery</a>
           </div>
         </div>
         <div class="rasa-nav__item">
           <a href="services-drug-discovery.html">Drug Discovery <span class="rasa-nav__arrow">▼</span></a>
           <div class="rasa-nav__dropdown">
+            <a href="services-drug-discovery.html">Discovery Overview</a>
             <a href="services-dd-target-id.html">Target ID &amp; Structure</a>
-            <a href="services-dd-virtual-screening.html">Virtual Screening</a>
-            <a href="services-dd-lead-optimization.html">Lead Optimization</a>
-            <a href="services-dd-de-novo.html">De Novo Drug Design</a>
-            <a href="services-dd-multi-target.html">Network Pharmacology</a>
+            <a href="services-dd-virtual-screening.html">Virtual Screening &amp; Docking</a>
+            <a href="services-dd-molecular-dynamics.html">Molecular Dynamics Simulation</a>
+            <a href="services-dd-protein-modeling.html">Protein Structure Modeling</a>
+            <a href="services-dd-de-novo.html">AI &amp; De Novo Drug Design</a>
+            <a href="services-dd-multi-target.html">Network Pharmacology &amp; Systems Biology</a>
           </div>
+        </div>
+        <div class="rasa-nav__item">
+          <a href="services-qsar-toxicology.html" style="font-weight: 600;">QSAR &amp; Regulatory Toxicology</a>
         </div>
         <div class="rasa-nav__item">
           <a href="case-studies.html">Case Studies <span class="rasa-nav__arrow">▼</span></a>
           <div class="rasa-nav__dropdown">
-            <a href="case-study-tumor-microenvironment.html">Tumor Microenvironment</a>
-            <a href="case-study-population-wgs.html">Population WGS Scaling</a>
-            <a href="case-study-somatic-mutation.html">AI Mutation Prioritization</a>
-            <a href="case-study-metagenomic-profiling.html">Metagenomic Profiling</a>
-            <a href="case-study-spatial-transcriptomics.html">Spatial Transcriptomics</a>
+            <a href="case-study-qsar-toxicology.html">QSAR Toxicology Study</a>
+            <a href="case-study-rna-seq-transcriptomics.html">RNA-Seq Fungal Study</a>
+            <a href="case-study-wgs-wes-genomics.html">WGS Bacterial Study</a>
+            <a href="case-studies.html">All Case Studies</a>
           </div>
         </div>
         <div class="rasa-nav__item"><a href="about.html">About</a></div>
@@ -80,197 +89,784 @@
 
 <!-- =============== MAIN =============== -->
 <main class="rasa rasa-page">
-
-  <!-- PAGE HERO -->
   <section class="rasa-pagehero">
     <div class="rasa-grid-bg" aria-hidden="true"></div>
     <div class="container">
       <div class="rasa-pagehero__grid">
         <div class="rasa-pagehero__copy">
           <div class="rasa-reveal">
-            <span class="rasa-eyebrow">Computational Genomics<span class="rasa-eyebrow__rule"></span></span>
+            <span class="rasa-eyebrow">Computational Genomics &amp; NGS<span class="rasa-eyebrow__rule"></span></span>
           </div>
-          <h1 class="rasa-pagehero__h rasa-reveal" data-delay="1">
-          Map cellular transcripts in architectural <span class="serif italic leaf">context</span>.
-        </h1>
-          <p class="rasa-pagehero__lede rasa-reveal" data-delay="2">
-          Resolve the spatial coordinates of gene expression. Deconvolve cell-type mixture patterns and visualize tumor microenvironments with intact tissue architecture.
-        </p>
-        </div>
-        <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2">
-          <img src="images/spatial_mapping.png" alt="Map cellular transcripts in architectural context.">
-        </div>
-      </div>
-
-      <!-- Interactive Technology Comparison -->
-      <div class="rasa-reveal" data-delay="2" style="margin-top: 3.5rem; text-align: center;">
-        <div class="rasa-tabs-nav" role="tablist">
-          <button class="rasa-tab-btn is-active" id="tab-short" role="tab" aria-selected="true" aria-controls="panel-short">Short-Read Technology (Illumina)</button>
-          <button class="rasa-tab-btn" id="tab-long" role="tab" aria-selected="false" aria-controls="panel-long">Long-Read Technology (ONT/PacBio)</button>
-        </div>
-
-        <div class="rasa-tech-panel is-active" id="panel-short" role="tabpanel" aria-labelledby="tab-short">
-          <div class="rasa-tech-grid">
-            <div class="rasa-tech-feature">
-              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <div class="rasa-tech-feature__title">High Base Accuracy (>99.9%)</div>
-                <div class="rasa-tech-feature__desc">Ideal for short-variant detection (SNVs, Indels) and high-throughput transcript profiling.</div>
-              </div>
-            </div>
-            <div class="rasa-tech-feature">
-              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <div class="rasa-tech-feature__title">Massive Parallel Throughput</div>
-                <div class="rasa-tech-feature__desc">Supports large-scale transcriptomics cohorts, deep exome sequencing, and single-cell counting.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="rasa-tech-panel" id="panel-long" role="tabpanel" aria-labelledby="tab-long">
-          <div class="rasa-tech-grid">
-            <div class="rasa-tech-feature">
-              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <div class="rasa-tech-feature__title">Structural Variant Resolution</div>
-                <div class="rasa-tech-feature__desc">Spans repetitive areas, resolving complex insertions, deletions, duplications, and translocations.</div>
-              </div>
-            </div>
-            <div class="rasa-tech-feature">
-              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <div class="rasa-tech-feature__title">Direct Methylation Detection</div>
-                <div class="rasa-tech-feature__desc">Detects 5mC, 5hmC, and 6mA modifications directly on native DNA/RNA without bisulfite conversion.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modalities Overview Grid -->
-      <div class="rasa-modalities rasa-reveal" data-delay="2">
-        <a href="services-ngs-wgs-wes.html" class="rasa-modality">
-          <span class="rasa-modality__idx">01 //</span>
-          <span class="rasa-modality__h">WGS &amp; WES Discovery</span>
-          <span class="rasa-modality__b">Deep variant discovery (SNVs, Indels, CNVs) annotated via ClinVar &amp; gnomAD.</span>
-        </a>
-        <a href="services-ngs-transcriptomics.html#rnaseq" class="rasa-modality">
-          <span class="rasa-modality__idx">02 //</span>
-          <span class="rasa-modality__h">RNA-Seq (Bulk)</span>
-          <span class="rasa-modality__b">Transcriptome expression profiling, DE analyses, and pathway enrichment.</span>
-        </a>
-        <a href="services-ngs-transcriptomics.html#scrnaseq" class="rasa-modality">
-          <span class="rasa-modality__idx">03 //</span>
-          <span class="rasa-modality__h">Single-Cell RNA-Seq</span>
-          <span class="rasa-modality__b">Cellular heterogeneity profile, cell typing, and lineage trajectory.</span>
-        </a>
-        <a href="services-ngs-spatial.html" class="rasa-modality">
-          <span class="rasa-modality__idx">04 //</span>
-          <span class="rasa-modality__h">Spatial Transcriptomics</span>
-          <span class="rasa-modality__b">Gene expression mapped directly within intact tissue architectural slides.</span>
-        </a>
-        <a href="services-ngs.html#longread" class="rasa-modality">
-          <span class="rasa-modality__idx">05 //</span>
-          <span class="rasa-modality__h">Long-Read Sequencing</span>
-          <span class="rasa-modality__b">Oxford Nanopore &amp; PacBio assemblies, structural variants &amp; direct methylation.</span>
-        </a>
-        <a href="services-ngs-metagenomics.html" class="rasa-modality">
-          <span class="rasa-modality__idx">06 //</span>
-          <span class="rasa-modality__h">Metagenomics &amp; Assembly</span>
-          <span class="rasa-modality__b">Taxonomic profiling, MAG reconstruction, hybrid assembly, and AMR mapping.</span>
-        </a>
-        <a href="services-ngs.html#epi" class="rasa-modality">
-          <span class="rasa-modality__idx">07 //</span>
-          <span class="rasa-modality__h">Epigenomics (ATAC/ChIP)</span>
-          <span class="rasa-modality__b">Chromatin accessibility, histone marks, and transcription factor footprints.</span>
-        </a>
-        <a href="services-ngs.html#multiomics" class="rasa-modality">
-          <span class="rasa-modality__idx">08 //</span>
-          <span class="rasa-modality__h">Multi-Omics Integration</span>
-          <span class="rasa-modality__b">Joint embeddings combining transcriptomics, epigenomics, and network maps.</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  
-
-  <!-- ======= DEEP SECTION 01: WGS/WES ======= -->
-  <section class="rasa-deep rasa-reveal" id="spatial" style="background:var(--surface);">
-    <div class="container">
-      <div class="rasa-deep__head">
-        <span class="rasa-deep__index">Spatial Genomics</span>
-        <div>
-          <h2 class="rasa-h2 rasa-deep__h">Spatial transcriptomics — genes in architectural context.</h2>
-          <p class="rasa-deep__lede">
-            Map gene expression profiles back onto intact histological tissue slices, resolving complex microenvironmental architectures and cell-to-cell interaction dynamics.
+          <h1 class="rasa-pagehero__h rasa-reveal" data-delay="1" style="font-size: clamp(2rem, 4.5vw, 3.25rem); font-weight: 500; line-height: 1.1; margin: 1.5rem 0 1.5rem;">
+            Spatial Gene Expression Analysis
+          </h1>
+          <p class="rasa-pagehero__lede rasa-reveal" data-delay="2" style="font-size: 1.05rem; line-height: 1.6; color: var(--foreground-70);">
+            Characterize gene expression patterns across tissues while preserving spatial organization.
           </p>
         </div>
-      </div>
-      <div class="rasa-deep__body">
-        <div>
-          <div class="rasa-feat-list">
-            <div class="rasa-feat">
-              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <div>
-                <div class="rasa-feat__t">Spatial domain &amp; pattern recognition</div>
-                <div class="rasa-feat__b">Histology-aware clustering and identification of spatially variable genes (SVGs).</div>
-              </div>
-            </div>
-            <div class="rasa-feat">
-              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <div>
-                <div class="rasa-feat__t">Single-cell deconvolution</div>
-                <div class="rasa-feat__b">Deconvolute spatial sequencing spots using paired scRNA-seq reference profiles.</div>
-              </div>
-            </div>
-            <div class="rasa-feat">
-              <span class="rasa-feat__chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <div>
-                <div class="rasa-feat__t">Ligand-receptor spatial networks</div>
-                <div class="rasa-feat__b">Characterize cell-cell communication networks across tissue boundaries.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="rasa-tool-cloud">
-            <span class="rasa-tool">10x Visium<span class="rasa-tooltip">Spatial profiling technology with histology overlay.</span></span>
-            <span class="rasa-tool">MERFISH<span class="rasa-tooltip">Multiplexed error-robust fluorescence in situ hybridization.</span></span>
-            <span class="rasa-tool">Squidpy<span class="rasa-tooltip">Spatial analysis toolkit in Python.</span></span>
-            <span class="rasa-tool">Giotto<span class="rasa-tooltip">Comprehensive spatial analysis pipeline.</span></span>
-            <span class="rasa-tool">NicheNet<span class="rasa-tooltip">Predicts intercellular communication from target genes.</span></span>
-          </div>
+        <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2">
+          <img src="images/spatial_mapping.png" alt="Spatial Gene Expression Analysis">
         </div>
-
-        <aside class="rasa-side">
-          <span class="rasa-side__lbl">Applications</span>
-          <h3 class="rasa-side__h">Spatial mapping.</h3>
-          <div class="rasa-deliv">
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Tumor microenvironment plots</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Cell-type deconvolution maps</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Ligand-receptor spatial maps</div>
-            <div class="rasa-deliv__item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Tissue domain segmentations</div>
-          </div>
-          <div style="margin-top: 0.5rem;">
-            <div class="rasa-side__row"><span>Platforms</span><span>Visium · Slide-seq · MERFISH</span></div>
-            <div class="rasa-side__row"><span>Use Cases</span><span>Brain Mapping · Immunology</span></div>
-          </div>
-        </aside>
       </div>
     </div>
   </section>
-
-
-
-  <!-- CTA -->
-  <section class="rasa-section rasa-section--ink" style="padding:6rem 0; text-align:center;">
+<section class="rasa-section" style="padding: 5rem 0; border-top: 1px solid var(--border);">
+        <div class="container">
+          <div class="rasa-reveal" style="margin-bottom: 3rem;">
+            <span class="rasa-eyebrow">Service Offerings</span>
+            <h2 class="rasa-h2" style="margin-top: 1.5rem;">What We Offer</h2>
+          </div>
+          <div class="rasa-capabilities">
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Services Include</h3>
+              <p class="rasa-capability__b">Spatial gene expression profiling Tissue region characterization Spatially variable gene identification Spatial clustering analysis Differential spatial expression analysis Cell Type Mapping & Deconvolution Identify and localize cell populations within complex tissues.</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Services Include</h3>
+              <p class="rasa-capability__b">Cell type annotation Spatial cell mapping Cell deconvolution analysis Integration with single-cell RNA-seq Cellular composition analysis</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Tissue Microenvironment Analysis</h3>
+              <p class="rasa-capability__b">Explore cellular interactions and biological processes within tissue ecosystems.</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Services Include</h3>
+              <p class="rasa-capability__b">Tumor microenvironment characterization Immune cell infiltration analysis Stromal cell profiling Spatial neighborhood analysis Cellular niche identification</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Cell–Cell Communication Analysis</h3>
+              <p class="rasa-capability__b">Investigate signaling interactions between neighboring cells.</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Services Include</h3>
+              <p class="rasa-capability__b">Ligand–receptor interaction analysis Spatial signaling networks Cell interaction mapping Pathway activity inference Communication hotspot identification Multi-Omics Spatial Integration Combine spatial transcriptomics with other omics technologies.</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Services Include</h3>
+              <p class="rasa-capability__b">Spatial + scRNA-seq integration Spatial proteomics integration Multi-modal tissue analysis Systems biology interpretation Biomarker discovery Spatial Transcriptomics Platforms</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">10x Genomics Visium</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Slide-seq</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">MERFISH</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">SeqFISH</h3>
+              <p class="rasa-capability__b">NanoString GeoMx DSP CosMx SMI</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Analysis Tools</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Seurat</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Scanpy</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Giotto</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Squidpy</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">STUtility</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Cell2location</h3>
+              <p class="rasa-capability__b">Cell Communication Tools</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">CellChat</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">NicheNet</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">CellPhoneDB</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">LIANA</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Infrastructure</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Nextflow</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Snakemake</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Docker</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">AWS</h3>
+              <p class="rasa-capability__b">Google Cloud HPC Clusters</p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">📈 Representative Analysis Outputs</h3>
+              <p class="rasa-capability__b"></p>
+            </div>
+            
+            <div class="rasa-capability zoom-parent">
+              <span class="rasa-capability__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3 class="rasa-capability__h" style="font-weight:600; font-size:1.35rem; color:var(--leaf);">Tissue Architecture Analysis</h3>
+              <p class="rasa-capability__b">Identification of spatially distinct biological regions and tissue compartments. Tumor Microenvironment Profiling Mapping of cancer, immune, and stromal cell interactions. Spatial Biomarker Discovery Identification of location-specific biomarkers and therapeutic targets. Cell Communication Networks Visualization of intercellular signaling pathways within tissues. Multi-Omics Integration Integration of spatial transcriptomics with single-cell and proteomics datasets.</p>
+            </div>
+            
+          </div>
+        </div>
+      </section><section class="rasa-section" style="padding: 5rem 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="container">
+          <div class="rasa-reveal" style="margin-bottom: 3rem;">
+            <span class="rasa-eyebrow">Key Strengths</span>
+            <h2 class="rasa-h2" style="margin-top: 1.5rem;">Core Features &amp; Advantages</h2>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Spatially Resolved Gene Expression Analysis</div>
+            </div>
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Tissue Architecture Characterization</div>
+            </div>
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Cell Type Mapping & Annotation</div>
+            </div>
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Tumor Microenvironment Profiling</div>
+            </div>
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Cell–Cell Communication Analysis</div>
+            </div>
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Single-Cell & Spatial Omics Integration</div>
+            </div>
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Cloud-Ready Reproducible Pipelines</div>
+            </div>
+            
+            <div style="background:#ffffff; border: 1px solid var(--border); padding: 1.75rem; border-radius: 0.75rem; display:flex; gap: 1rem; align-items:flex-start;">
+              <span style="color:var(--leaf); flex-shrink: 0; font-size:1.25rem;">✔</span>
+              <div style="font-size:0.95rem; font-weight: 500; color:var(--foreground-70); line-height: 1.5;">Publication-Ready Visualizations</div>
+            </div>
+            
+          </div>
+        </div>
+      </section><section class="rasa-section" style="padding: 5rem 0;">
+        <div class="container" style="max-width: 900px;">
+          <div class="rasa-reveal" style="margin-bottom: 3.5rem; text-align: center;">
+            <span class="rasa-eyebrow">Execution System</span>
+            <h2 class="rasa-h2" style="margin-top: 1.5rem;">Scientific Workflow Pipeline</h2>
+          </div>
+          <div style="position: relative; display: flex; flex-direction: column; gap: 2rem;">
+            <!-- Vertical Line -->
+            <div style="position: absolute; left: 24px; top: 0; bottom: 0; width: 2px; background: var(--leaf-soft); z-index: 1;"></div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                01
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Raw Spatial Sequencing Data</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                02
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Quality Control & Preprocessing</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                03
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Tissue Image Processing</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                04
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Spatial Mapping & Alignment</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                05
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Gene Expression Quantification</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                06
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Spatial Clustering Analysis</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                07
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Cell Type Annotation</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                08
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Cell–Cell Communication Analysis</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                09
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Biological Interpretation</div>
+              </div>
+            </div>
+            
+            <div class="rasa-reveal" style="display: flex; gap: 2rem; align-items: center; position: relative; z-index: 2;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--leaf); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22,101,52,0.15);">
+                10
+              </div>
+              <div style="background: var(--background); border: 1px solid var(--border); padding: 1.25rem 1.75rem; border-radius: 0.5rem; flex-grow: 1;">
+                <div style="font-size: 1.05rem; font-weight: 600; color: var(--foreground);">Scientific Reporting</div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section><section class="rasa-section" style="padding: 5rem 0;">
+        <div class="container">
+          <div class="rasa-reveal" style="margin-bottom: 3rem;">
+            <span class="rasa-eyebrow">Scientific Deliverables</span>
+            <h2 class="rasa-h2" style="margin-top: 1.5rem;">Project Outputs &amp; Visualizations</h2>
+          </div>
+          <div class="rasa-deliv">
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Spatial Analysis Outputs</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Spatial Gene Expression Maps</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Tissue Region Identification</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Spatial Clustering Results</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Cell Type Distribution Maps</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Differential Spatial Expression Reports</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Advanced Analytics</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Cell–Cell Communication Networks</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Spatial Neighborhood Analysis</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Tumor Microenvironment Reports</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Immune Landscape Characterization</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Biomarker Discovery Reports</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Visualization & Reporting</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Tissue Overlay Visualizations</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Spatial Heatmaps</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>UMAP & Dimensionality Reduction Plots</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Publication-Ready Figures</span>
+            </div>
+            
+            <div class="rasa-deliv__item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Comprehensive Scientific Reports</span>
+            </div>
+            
+          </div>
+        </div>
+      </section><section class="rasa-section" style="padding: 5rem 0; border-top: 1px solid var(--border);">
+        <div class="container">
+          <div class="rasa-reveal" style="margin-bottom: 3.5rem;">
+            <span class="rasa-eyebrow">Value Proposition</span>
+            <h2 class="rasa-h2" style="margin-top: 1.5rem;">Why Choose RASA Life Science Informatics?</h2>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">Expertise in Spatial Transcriptomics & Spatial Omics</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">Advanced Tissue Microenvironment Analysis</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">Single-Cell & Spatial Data Integration</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">AI-Assisted Biological Interpretation</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">Scalable Cloud & HPC Infrastructure</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">Publication-Ready Scientific Deliverables</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">Support for Pharma, Biotech, CROs, Hospitals & Academic Research</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">Customized Analysis Pipelines for Research & Clinical Projects</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">Discover Biology in Its Spatial Context</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">Core Advantage</h3>
+              <p class="rasa-capability__b" style="margin:0;">Unlock deeper biological insights through advanced spatial transcriptomics, tissue architecture analysis, and AI-powered spatial omics workflows.</p>
+            </div>
+            
+            <div class="rasa-capability">
+              <h3 class="rasa-capability__h" style="font-weight:600; color:var(--leaf); font-size: 1.25rem;">📧 support@rasalifesciences.com</h3>
+              <p class="rasa-capability__b" style="margin:0;">🌐 www.rasalifesciences.com</p>
+            </div>
+            
+          </div>
+        </div>
+      </section><section class="rasa-section" style="padding: 5rem 0; background: var(--surface); border-top: 1px solid var(--border);">
+        <div class="container" style="max-width: 800px;">
+          <div class="rasa-reveal" style="margin-bottom: 3.5rem; text-align: center;">
+            <span class="rasa-eyebrow">Service FAQ</span>
+            <h2 class="rasa-h2" style="margin-top: 1.5rem;">Frequently Asked Questions</h2>
+          </div>
+          <div class="rasa-faq" style="display: flex; flex-direction: column; gap: 1rem;">
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What is Spatial Transcriptomics?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Spatial Transcriptomics is an advanced genomics technology that measures gene expression while preserving the spatial location of cells within intact tissues. Unlike conventional RNA-Seq, which loses spatial information during sample processing, spatial transcriptomics enables researchers to understand where genes are expressed within tissue architecture. This approach provides valuable insights into cell–cell interactions, tissue organization, disease microenvironments, and molecular mechanisms underlying health and disease.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Why is Spatial Transcriptomics important for biomedical research?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Spatial Transcriptomics bridges the gap between molecular biology and tissue histology by linking gene expression patterns to physical tissue locations. This technology helps researchers investigate tumor microenvironments, immune cell infiltration, tissue heterogeneity, developmental processes, and disease progression. It has become a powerful tool for cancer research, neuroscience, immunology, regenerative medicine, and precision medicine applications.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What Spatial Transcriptomics services does RASA provide?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">RASA Life Science Informatics offers comprehensive Spatial Transcriptomics analysis services including:<br>Spatial Gene Expression Analysis<br>Tissue Region Identification<br>Spatial Clustering<br>Differential Spatial Expression Analysis<br>Cell-Type Mapping<br>Cell–Cell Interaction Analysis<br>Spatial Pathway Analysis<br>Single-Cell Integration<br>Biomarker Discovery<br>Disease Microenvironment Characterization<br>Multi-Omics Integration<br>Our workflows support pharmaceutical research, biotechnology innovation, translational medicine, and academic discovery programs.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Which Spatial Transcriptomics platforms do you support?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Our bioinformatics pipelines support data generated from leading spatial omics technologies including:<br>10x Genomics Visium<br>NanoString GeoMx DSP<br>NanoString CosMx SMI<br>MERFISH<br>Slide-seq<br>Slide-seqV2<br>Stereo-seq<br>Seq-Scope<br>DBiT-seq<br>We continuously update our workflows to support emerging spatial biology technologies.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Can Spatial Transcriptomics data be integrated with single-cell datasets?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Yes. We routinely integrate Spatial Transcriptomics with Single-Cell RNA Sequencing (scRNA-seq) datasets to accurately map cell types and cellular states back to their tissue locations. This integrated approach provides deeper biological insights into tissue organization, cellular communication, and disease-associated microenvironments.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What analyses are included in a typical Spatial Transcriptomics project?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">A standard spatial transcriptomics workflow may include:<br>Data Quality Control<br>Tissue Image Processing<br>Spatial Clustering<br>Cell-Type Deconvolution<br>Differential Spatial Expression Analysis<br>Spatial Domain Identification<br>Cell–Cell Interaction Analysis<br>Pathway Enrichment Analysis<br>Single-Cell Integration<br>Biomarker Discovery<br>Biological Interpretation<br>Scientific Reporting<br>Workflows are customized according to project goals and platform specifications.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What is spatial clustering?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Spatial clustering identifies regions within a tissue that share similar gene expression profiles. This analysis helps researchers uncover biologically distinct tissue compartments, tumor niches, immune cell infiltration zones, and disease-associated spatial patterns.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What is cell-type deconvolution in Spatial Transcriptomics?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Cell-type deconvolution uses computational algorithms and reference single-cell datasets to estimate the cellular composition of each spatial location. This allows researchers to determine which cell populations contribute to observed spatial gene expression patterns within tissues.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What is spatial differential expression analysis?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Spatial differential expression analysis identifies genes that are enriched or depleted in specific tissue regions. This approach helps reveal region-specific biological processes, disease-associated molecular signatures, and potential therapeutic targets.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Can Spatial Transcriptomics be used for cancer research?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Yes. Spatial Transcriptomics has become a transformative technology in oncology research. It enables detailed characterization of:<br>Tumor Microenvironments<br>Immune Cell Infiltration<br>Tumor Heterogeneity<br>Cancer Biomarkers<br>Drug Resistance Mechanisms<br>Tumor–Stroma Interactions<br>These insights support precision oncology and therapeutic development.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What role does Spatial Transcriptomics play in precision medicine?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Spatial Transcriptomics helps identify disease-associated cellular interactions, tissue-specific biomarkers, and patient-specific molecular signatures. These insights support precision medicine by improving disease classification, biomarker discovery, patient stratification, and therapeutic target identification.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What file formats are required for Spatial Transcriptomics analysis?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">We commonly support:<br>FASTQ Files<br>Feature Matrices<br>Count Matrices<br>Tissue Images<br>Histology Images<br>Spatial Coordinate Files<br>Single-Cell Reference Datasets<br>Metadata Files<br>Our team can also accommodate custom formats generated by specific platforms.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Which bioinformatics tools do you use for Spatial Transcriptomics analysis?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Our workflows utilize leading spatial biology and bioinformatics tools including:<br>Spatial Analysis<br>Seurat<br>Scanpy<br>Giotto<br>Squidpy<br>STUtility<br>Cell-Type Mapping<br>Cell2location<br>Tangram<br>SPOTlight<br>RCTD<br>Cell Communication<br>CellChat<br>NicheNet<br>CellPhoneDB<br>Workflow Infrastructure<br>Nextflow<br>Snakemake<br>Docker<br>AWS<br>Google Cloud</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>What deliverables are included in Spatial Transcriptomics projects?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">Typical deliverables include:<br>Spatial Gene Expression Maps<br>Tissue Annotation Reports<br>Spatial Clustering Visualizations<br>Cell-Type Distribution Maps<br>Differential Spatial Expression Results<br>Cell–Cell Communication Networks<br>Pathway Enrichment Reports<br>Biomarker Discovery Reports<br>Publication-Ready Figures<br>Comprehensive Scientific Reports<br>Deliverables can be customized according to project requirements.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="rasa-faq__item" style="background: #ffffff; border: 1px solid var(--border); border-radius: 0.5rem; overflow: hidden;">
+              <button class="rasa-faq__q" aria-expanded="false" style="width: 100%; border: none; background: transparent; padding: 1.25rem 1.5rem; text-align: left; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel = this.nextElementSibling; if (panel.style.maxHeight) { panel.style.maxHeight = null; } else { panel.style.maxHeight = panel.scrollHeight + 'px'; }">
+                <span>Why choose RASA for Spatial Transcriptomics analysis?</span>
+                <span class="rasa-faq__icon" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--leaf);">+</span>
+              </button>
+              <div class="rasa-faq__a" style="max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out;">
+                <div class="rasa-faq__a-inner" style="padding: 0 1.5rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--foreground-70); line-height: 1.6;">
+                  <p style="margin: 0;">RASA combines expertise in genomics, single-cell biology, spatial biology, bioinformatics, and AI-driven analytics to deliver robust and reproducible Spatial Transcriptomics solutions. Our scalable workflows, advanced analytical capabilities, publication-ready reporting, and experience across oncology, neuroscience, immunology, and precision medicine help researchers maximize the value of spatial omics data.<br>📧 support@rasalifesciences.com<br>🌐 www.rasalifesciences.com</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>  <!-- CTA -->
+  <section class="rasa-section rasa-section--ink" style="padding:6rem 0; text-align:center; background: var(--ink); border-top: 1px solid var(--border);">
     <div class="container" style="max-width:720px;">
-      <h2 class="rasa-h2" style="color:var(--cream); margin-bottom:1.25rem; max-width:24ch; margin-left:auto; margin-right:auto;">Ready to analyze your sequencing data?</h2>
-      <p style="color:rgba(248,249,250,0.7); max-width:56ch; margin:0 auto 2rem;">
-        Get in touch with our team in Pune to discuss sample sizes, platform details, and custom bioinformatics pipeline configurations.
+      <h2 class="rasa-h2" style="color:var(--cream); margin-bottom:1.25rem; max-width:28ch; margin-left:auto; margin-right:auto;">Ready to partner with a trusted bioinformatics company in India?</h2>
+      <p style="color:rgba(248,249,250,0.7); max-width:56ch; margin:0 auto 2rem; font-size:0.95rem; line-height:1.6;">
+        Get in touch with our team in Pune, India, to discuss sample sizes, platform details, and custom bioinformatics pipeline configurations for genomics, transcriptomics, or drug discovery campaigns.
       </p>
-      <a href="contact.html" class="rasa-btn rasa-btn--primary">
+      <a href="contact.html" class="rasa-btn rasa-btn--primary" style="background:var(--leaf); color:var(--cream);">
         Start a Project
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
@@ -284,46 +880,55 @@
     <div class="rasa-footer__grid">
       <div>
         <div class="rasa-footer__brand"><img src="logo.png" alt="RASA LSI Logo" style="height: 42px; width: auto; display: block; object-fit: contain;"></div>
+        <p class="rasa-footer__desc" style="font-size: 0.825rem; color: var(--foreground-60); line-height: 1.6; margin-top: 1rem;">
+          RASA Life Science Informatics is a leading bioinformatics company and CRO in India providing AI-powered NGS data analysis services, RNA-seq analysis, genomics consulting, transcriptomics, epigenomics, metagenomics, and precision medicine bioinformatics solutions for pharmaceutical, biotechnology, and academic research organizations globally.
+        </p>
       </div>
       <div>
-        <h4>Computational Genomics</h4>
+        <h4>Computational Genomics &amp; NGS</h4>
         <a href="services-ngs.html">NGS Overview</a>
         <a href="services-ngs-transcriptomics.html">Transcriptomics (RNA-Seq)</a>
+        <a href="services-ngs-single-cell.html">Single-Cell Omics</a>
         <a href="services-ngs-wgs-wes.html">WGS &amp; Exome (WES)</a>
         <a href="services-ngs-spatial.html">Spatial Transcriptomics</a>
-        <a href="services-ngs-metagenomics.html">Metagenomics Community</a>
-        <a href="services-ngs-epigenomics.html">Epigenomics (ChIP/ATAC-Seq)</a>
+        <a href="services-ngs-metagenomics.html">Metagenomics &amp; Microbiome</a>
+        <a href="services-ngs-epigenomics.html">Epigenomics</a>
         <a href="services-ngs-long-read.html">Long-Read Sequencing</a>
+        <a href="services-ngs-multi-omics.html">Multi-Omics Integration</a>
+        <a href="services-ngs-clinical.html">Clinical Genomics</a>
+        <a href="services-ngs-biomarker.html">Biomarker Discovery</a>
       </div>
       <div>
         <h4>In-Silico Drug Discovery</h4>
         <a href="services-drug-discovery.html">Discovery Overview</a>
         <a href="services-dd-target-id.html">Target ID &amp; Structure</a>
-        <a href="services-dd-virtual-screening.html">Virtual Screening Sim</a>
-        <a href="services-dd-lead-optimization.html">Lead Optimization Dynamics</a>
-        <a href="services-dd-de-novo.html">De Novo Drug Design</a>
-        <a href="services-dd-multi-target.html">Network Pharmacology</a>
+        <a href="services-dd-virtual-screening.html">Virtual Screening &amp; Docking</a>
+        <a href="services-dd-molecular-dynamics.html">Molecular Dynamics Simulation</a>
+        <a href="services-dd-protein-modeling.html">Protein Structure Modeling</a>
+        <a href="services-dd-de-novo.html">AI &amp; De Novo Drug Design</a>
+        <a href="services-dd-multi-target.html">Network Pharmacology &amp; Systems Biology</a>
       </div>
       <div>
-        <h4>Resources</h4>
+        <h4>QSAR &amp; Regulatory Toxicology</h4>
+        <a href="services-qsar-toxicology.html">QSAR Toxicology Overview</a>
+        <a href="services-qsar-toxicology.html">ICH M7 Impurity Assessment</a>
+      </div>
+      <div>
+        <h4>Resources &amp; Contact</h4>
         <a href="case-studies.html">Case Studies</a>
         <a href="about.html">About Corporate</a>
         <a href="faq.html">Technical FAQ</a>
+        <a href="industries-we-serve.html">Industries We Serve</a>
         <a href="contact.html">Partner Contact</a>
-      </div>
-      <div>
-        <h4>Headquarters</h4>
-        <p style="font-size: 0.875rem; color: var(--foreground-70); line-height: 1.65; margin: 0 0 1rem;">
-          Pashan-Sus Road<br>
-          Pune, Maharashtra 411021<br>
-          India
+        <p style="font-size: 0.8rem; color: var(--foreground-50); line-height: 1.5; margin-top: 1rem;">
+          <strong>Pune Office:</strong> Pashan-Sus Road, Pune, Maharashtra 411021, India<br>
+          <strong>Email:</strong> support@rasalifesciences.com
         </p>
-        <a href="contact.html" style="font-weight: 500; color: var(--leaf);">Get in touch →</a>
       </div>
     </div>
     <div class="rasa-footer__bottom">
       <span>© <span id="rasa-year">2026</span> Rasa Life Science Informatics. Engineered in Pune.</span>
-      <span><a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/terms">Terms</a></span>
+      <span><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></span>
     </div>
   </div>
 </footer>
