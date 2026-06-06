@@ -1515,6 +1515,61 @@ body.rasa {
   }
 }
 
+.rasa-workflow-row--1::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 130px !important;
+  left: 85px !important;
+  right: -27px !important;
+  height: 4px !important;
+  background: var(--leaf-soft) !important;
+  border-radius: 2px !important;
+  z-index: 1 !important;
+}
+
+.rasa-workflow-row--2::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 130px !important;
+  left: 85px !important;
+  right: -27px !important;
+  height: 4px !important;
+  background: var(--leaf-soft) !important;
+  border-radius: 2px !important;
+  z-index: 1 !important;
+}
+
+.rasa-workflow-flowchart.snaking::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 127px !important;
+  right: -30px !important;
+  width: 110px !important;
+  height: 346px !important;
+  border: 6px solid var(--leaf-soft) !important;
+  border-left: none !important;
+  border-top-right-radius: 55px !important;
+  border-bottom-right-radius: 55px !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+.rasa-workflow-loop-arrow {
+  position: absolute !important;
+  top: 288px !important;
+  right: -39px !important;
+  width: 24px !important;
+  height: 24px !important;
+  color: var(--leaf) !important;
+  background: var(--surface) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1) !important;
+  z-index: 10 !important;
+}
+
 .rasa {
   /* Brand palette */
   --cream: #f8fafc;
