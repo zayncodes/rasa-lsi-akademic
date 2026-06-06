@@ -544,279 +544,84 @@
     </div>
   </section>
 
-  <!-- 14-STEP OPERATIONS FLOWCHART -->
+  <!-- SCIENTIFIC WORKFLOW PIPELINE -->
   <section class="rasa-section" style="padding: 5.5rem 0; border-top: 1px solid var(--border); background: var(--surface);">
     <div class="container">
-      <div class="rasa-reveal" style="margin-bottom: 3.5rem; text-align: center;">
+      <div class="rasa-reveal" style="margin-bottom: 3.25rem; text-align: center;">
         <span class="rasa-eyebrow">Operational Execution System</span>
         <h2 class="rasa-h2" style="margin-top: 1.5rem;">Scientific Workflow Pipeline</h2>
-        <p class="rasa-lede" style="margin-top: 1rem; font-size: 1.025rem; line-height: 1.65; max-width: 80ch; margin-left: auto; margin-right: auto; color: var(--foreground-70); text-align: center;">
+        <p class="rasa-lede" style="margin-top: 1rem; font-size: 1.025rem; line-height: 1.65; max-width: 78ch; margin-left: auto; margin-right: auto; color: var(--foreground-70);">
           Our end-to-end operational workflow spans high-throughput genomics data analysis, structural modeling, computational drug discovery, and regulatory compliance.
         </p>
       </div>
-      
-          <div class="rasa-reveal rasa-workflow-flowchart snaking">
-            <div class="rasa-workflow-track"></div>
-            
-            <!-- Loop Direction Down Arrow -->
-            <div class="rasa-workflow-loop-arrow">
-              <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-            </div>
-            
-            <!-- Row 1: Steps 01 to 07 (Left to Right) -->
-            <div class="rasa-workflow-row rasa-workflow-row--1">
-              
-                  <div class="rasa-workflow-node rasa-workflow-node--even">
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">01</span>
-                      </div>
-                      
-                      <div class="rasa-workflow-arrow">
-                        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                      </div>
-                      
-                    </div>
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-connector-line"></div>
-                      <span class="rasa-workflow-step-tag">Step 01</span>
-                      <div class="rasa-workflow-title">Raw Sequence Ingestion (FASTQ/FASTA)</div>
-                    </div>
-                  </div>
-                  
-                  <div class="rasa-workflow-node rasa-workflow-node--odd">
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-title">Quality Control & Preprocessing (fastp/MultiQC)</div>
-                      <span class="rasa-workflow-step-tag">Step 02</span>
-                      <div class="rasa-workflow-connector-line"></div>
-                    </div>
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">02</span>
-                      </div>
-                      
-                      <div class="rasa-workflow-arrow">
-                        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                      </div>
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="rasa-workflow-node rasa-workflow-node--even">
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">03</span>
-                      </div>
-                      
-                      <div class="rasa-workflow-arrow">
-                        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                      </div>
-                      
-                    </div>
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-connector-line"></div>
-                      <span class="rasa-workflow-step-tag">Step 03</span>
-                      <div class="rasa-workflow-title">Genomic Alignment & Mapping (STAR/BWA)</div>
-                    </div>
-                  </div>
-                  
-                  <div class="rasa-workflow-node rasa-workflow-node--odd">
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-title">Quantification & Variant Calling (Salmon/GATK4)</div>
-                      <span class="rasa-workflow-step-tag">Step 04</span>
-                      <div class="rasa-workflow-connector-line"></div>
-                    </div>
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">04</span>
-                      </div>
-                      
-                      <div class="rasa-workflow-arrow">
-                        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                      </div>
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="rasa-workflow-node rasa-workflow-node--even">
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">05</span>
-                      </div>
-                      
-                      <div class="rasa-workflow-arrow">
-                        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                      </div>
-                      
-                    </div>
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-connector-line"></div>
-                      <span class="rasa-workflow-step-tag">Step 05</span>
-                      <div class="rasa-workflow-title">Statistical & Differential Expression (DESeq2/Seurat)</div>
-                    </div>
-                  </div>
-                  
-                  <div class="rasa-workflow-node rasa-workflow-node--odd">
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-title">Single-Cell & Spatial Trajectory Mapping (UMAP)</div>
-                      <span class="rasa-workflow-step-tag">Step 06</span>
-                      <div class="rasa-workflow-connector-line"></div>
-                    </div>
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">06</span>
-                      </div>
-                      
-                      <div class="rasa-workflow-arrow">
-                        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                      </div>
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="rasa-workflow-node rasa-workflow-node--even">
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">07</span>
-                      </div>
-                      
-                    </div>
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-connector-line"></div>
-                      <span class="rasa-workflow-step-tag">Step 07</span>
-                      <div class="rasa-workflow-title">Biological Interpretation & Annotation (Pathway)</div>
-                    </div>
-                  </div>
-                  
-            </div>
-            
-            <!-- Row 2: Steps 08 to End (Right to Left) -->
-            <div class="rasa-workflow-row rasa-workflow-row--2">
-              
-                  <div class="rasa-workflow-node rasa-workflow-node--odd">
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-title">In-Silico Target Identification & Structure Analysis</div>
-                      <span class="rasa-workflow-step-tag">Step 08</span>
-                      <div class="rasa-workflow-connector-line"></div>
-                    </div>
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">08</span>
-                      </div>
-                      
-                      <div class="rasa-workflow-arrow">
-                        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                      </div>
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="rasa-workflow-node rasa-workflow-node--even">
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">09</span>
-                      </div>
-                      
-                      <div class="rasa-workflow-arrow">
-                        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                      </div>
-                      
-                    </div>
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-connector-line"></div>
-                      <span class="rasa-workflow-step-tag">Step 09</span>
-                      <div class="rasa-workflow-title">High-Throughput Virtual Screening (SBVS)</div>
-                    </div>
-                  </div>
-                  
-                  <div class="rasa-workflow-node rasa-workflow-node--odd">
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-title">Molecular Docking Campaigns (AutoDock Vina)</div>
-                      <span class="rasa-workflow-step-tag">Step 10</span>
-                      <div class="rasa-workflow-connector-line"></div>
-                    </div>
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">10</span>
-                      </div>
-                      
-                      <div class="rasa-workflow-arrow">
-                        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                      </div>
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="rasa-workflow-node rasa-workflow-node--even">
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">11</span>
-                      </div>
-                      
-                      <div class="rasa-workflow-arrow">
-                        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                      </div>
-                      
-                    </div>
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-connector-line"></div>
-                      <span class="rasa-workflow-step-tag">Step 11</span>
-                      <div class="rasa-workflow-title">Molecular Dynamics (MD) Simulation (GROMACS)</div>
-                    </div>
-                  </div>
-                  
-                  <div class="rasa-workflow-node rasa-workflow-node--odd">
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-title">Lead Optimization & QSAR Predictive Modeling</div>
-                      <span class="rasa-workflow-step-tag">Step 12</span>
-                      <div class="rasa-workflow-connector-line"></div>
-                    </div>
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">12</span>
-                      </div>
-                      
-                      <div class="rasa-workflow-arrow">
-                        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                      </div>
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="rasa-workflow-node rasa-workflow-node--even">
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">13</span>
-                      </div>
-                      
-                      <div class="rasa-workflow-arrow">
-                        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                      </div>
-                      
-                    </div>
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-connector-line"></div>
-                      <span class="rasa-workflow-step-tag">Step 13</span>
-                      <div class="rasa-workflow-title">Regulatory Toxicology & ICH M7 Impurities</div>
-                    </div>
-                  </div>
-                  
-                  <div class="rasa-workflow-node rasa-workflow-node--odd">
-                    <div class="rasa-workflow-content">
-                      <div class="rasa-workflow-title">Scientific Dashboard & Report Delivery (Nextflow)</div>
-                      <span class="rasa-workflow-step-tag">Step 14</span>
-                      <div class="rasa-workflow-connector-line"></div>
-                    </div>
-                    <div class="rasa-workflow-circle-wrap">
-                      <div class="rasa-workflow-circle">
-                        <span class="rasa-workflow-num">14</span>
-                      </div>
-                      
-                    </div>
-                  </div>
-                  
-            </div>
+
+      <div class="rasa-reveal rasa-pipeline">
+        <div class="rasa-pipeline__label"><span class="rasa-pipeline__dot"></span>Genomics &amp; NGS Pipeline</div>
+        <div class="rasa-pipeline__track">
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">01</span>
+            <span class="rasa-pipe-step__t">Raw Sequence Ingestion (FASTQ/FASTA)</span>
           </div>
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">02</span>
+            <span class="rasa-pipe-step__t">Quality Control &amp; Preprocessing (fastp/MultiQC)</span>
+          </div>
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">03</span>
+            <span class="rasa-pipe-step__t">Genomic Alignment &amp; Mapping (STAR/BWA)</span>
+          </div>
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">04</span>
+            <span class="rasa-pipe-step__t">Quantification &amp; Variant Calling (Salmon/GATK4)</span>
+          </div>
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">05</span>
+            <span class="rasa-pipe-step__t">Statistical &amp; Differential Expression (DESeq2/Seurat)</span>
+          </div>
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">06</span>
+            <span class="rasa-pipe-step__t">Single-Cell &amp; Spatial Trajectory Mapping (UMAP)</span>
+          </div>
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">07</span>
+            <span class="rasa-pipe-step__t">Biological Interpretation &amp; Annotation (Pathway)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rasa-reveal rasa-pipeline">
+        <div class="rasa-pipeline__label"><span class="rasa-pipeline__dot"></span>Drug Discovery &amp; Regulatory Pipeline</div>
+        <div class="rasa-pipeline__track">
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">08</span>
+            <span class="rasa-pipe-step__t">In-Silico Target Identification &amp; Structure Analysis</span>
+          </div>
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">09</span>
+            <span class="rasa-pipe-step__t">High-Throughput Virtual Screening (SBVS)</span>
+          </div>
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">10</span>
+            <span class="rasa-pipe-step__t">Molecular Docking Campaigns (AutoDock Vina)</span>
+          </div>
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">11</span>
+            <span class="rasa-pipe-step__t">Molecular Dynamics (MD) Simulation (GROMACS)</span>
+          </div>
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">12</span>
+            <span class="rasa-pipe-step__t">Lead Optimization &amp; QSAR Predictive Modeling</span>
+          </div>
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">13</span>
+            <span class="rasa-pipe-step__t">Regulatory Toxicology &amp; ICH M7 Impurities</span>
+          </div>
+          <div class="rasa-pipe-step">
+            <span class="rasa-pipe-step__n">14</span>
+            <span class="rasa-pipe-step__t">Scientific Dashboard &amp; Report Delivery (Nextflow)</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   
