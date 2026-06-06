@@ -1401,6 +1401,120 @@ body.rasa {
   }
 }
 
+.rasa-workflow-flowchart.snaking::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 127px !important;
+  right: 47px !important;
+  width: 80px !important;
+  height: 346px !important;
+  border: 6px solid var(--leaf-soft) !important;
+  border-left: none !important;
+  border-top-right-radius: 40px !important;
+  border-bottom-right-radius: 40px !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+.rasa-workflow-loop-arrow {
+  position: absolute !important;
+  top: 288px !important;
+  right: 38px !important;
+  width: 24px !important;
+  height: 24px !important;
+  color: var(--leaf) !important;
+  background: var(--surface) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1) !important;
+  z-index: 10 !important;
+}
+
+.dark-mode .rasa-workflow-loop-arrow {
+  background: var(--surface) !important;
+}
+
+.rasa-workflow-loop-arrow svg {
+  width: 14px !important;
+  height: 14px !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 3 !important;
+}
+
+@media (max-width: 900px) {
+  .rasa-workflow-track {
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 45px !important;
+    width: 4px !important;
+    height: auto !important;
+  }
+  .rasa-workflow-flowchart.snaking .rasa-workflow-track {
+    display: block !important;
+    top: 25px !important;
+    bottom: 25px !important;
+    left: 45px !important;
+    width: 4px !important;
+    height: auto !important;
+  }
+  .rasa-workflow-steps {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2rem !important;
+    height: auto !important;
+    padding-left: 20px !important;
+  }
+  .rasa-workflow-row {
+    flex-direction: column !important;
+    height: auto !important;
+    gap: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+  .rasa-workflow-row--2 {
+    flex-direction: column !important;
+  }
+  .rasa-workflow-row::before {
+    display: none !important;
+  }
+  .rasa-workflow-flowchart.snaking::after {
+    display: none !important;
+  }
+  .rasa-workflow-loop-arrow {
+    display: none !important;
+  }
+  .rasa-workflow-node {
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
+    width: 100% !important;
+    height: auto !important;
+    position: relative !important;
+    justify-content: flex-start !important;
+    gap: 1.5rem !important;
+  }
+  .rasa-workflow-circle-wrap {
+    width: 50px !important;
+    height: 50px !important;
+    flex-shrink: 0 !important;
+  }
+  .rasa-workflow-content {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+  }
+  .rasa-workflow-connector-line {
+    display: none !important;
+  }
+  .rasa-workflow-arrow {
+    display: none !important;
+  }
+}
+
 .rasa {
   /* Brand palette */
   --cream: #f8fafc;
