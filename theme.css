@@ -3050,3 +3050,13 @@ body.dark-mode .rasa-top-bar {
 .rasa-pipe-step:hover { border-color:rgba(37,99,235,.4); box-shadow:0 12px 28px -18px rgba(37,99,235,.55); transform:translateY(-3px); }
 .rasa-pipe-step__n { display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:8px; background:var(--leaf-soft); color:var(--leaf-hover); font-family:'JetBrains Mono', ui-monospace, monospace; font-weight:700; font-size:0.82rem; }
 .rasa-pipe-step__t { font-size:0.83rem; line-height:1.4; color:var(--foreground); font-weight:500; }
+
+/* Nested nav submenu — Knowledge Base ▸ Case Studies flyout */
+.rasa-nav__subitem { position: relative; }
+.rasa-nav__subitem > a { display:flex !important; justify-content:space-between !important; align-items:center; gap:0.75rem; padding:0.5rem 1.25rem !important; font-size:0.825rem !important; color:var(--foreground-70) !important; font-weight:500 !important; width:100%; box-sizing:border-box; transition:color 0.15s, background-color 0.15s; }
+.rasa-nav__subitem > a:hover { color:var(--foreground) !important; background-color:var(--foreground-05); }
+.rasa-nav__arrow--right { font-size:0.9rem; opacity:0.55; }
+.rasa-nav__subdropdown { position:absolute; right:100%; left:auto; top:-0.5rem; background:var(--cream); border:1px solid var(--border); box-shadow:0 12px 32px -10px rgba(0,0,0,0.14); border-radius:0.5rem; padding:0.5rem 0; min-width:250px; opacity:0; visibility:hidden; transform:translateX(-6px); transition:opacity 0.18s ease, transform 0.18s ease, visibility 0.18s; z-index:120; }
+.rasa-nav__subitem:hover .rasa-nav__subdropdown { opacity:1; visibility:visible; transform:translateX(0); }
+.rasa-nav__subdropdown a { display:block !important; padding:0.5rem 1.25rem !important; font-size:0.825rem !important; color:var(--foreground-70) !important; font-weight:500 !important; text-decoration:none; transition:color 0.15s, background-color 0.15s; width:100%; box-sizing:border-box; white-space:nowrap; }
+.rasa-nav__subdropdown a:hover { color:var(--foreground) !important; background-color:var(--foreground-05); }
