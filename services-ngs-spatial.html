@@ -373,167 +373,167 @@
           </div>
           <div class="rasa-faq" style="display:flex; flex-direction:column; gap:1rem;">
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What is Spatial Transcriptomics?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Spatial Transcriptomics is an advanced genomics technology that measures gene expression while preserving the spatial location of cells within intact tissues. Unlike conventional RNA-Seq, which loses spatial information during sample processing, spatial transcriptomics enables researchers to understand where genes are expressed within tissue architecture. This approach provides valuable insights into cell–cell interactions, tissue organization, disease microenvironments, and molecular mechanisms underlying health and disease.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Spatial Transcriptomics is an advanced genomics technology that measures gene expression while preserving the spatial location of cells within intact tissues. Unlike conventional RNA-Seq, which loses spatial information during sample processing, spatial transcriptomics enables researchers to understand where genes are expressed within tissue architecture. This approach provides valuable insights into cell–cell interactions, tissue organization, disease microenvironments, and molecular mechanisms underlying health and disease.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>Why is Spatial Transcriptomics important for biomedical research?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Spatial Transcriptomics bridges the gap between molecular biology and tissue histology by linking gene expression patterns to physical tissue locations. This technology helps researchers investigate tumor microenvironments, immune cell infiltration, tissue heterogeneity, developmental processes, and disease progression. It has become a powerful tool for cancer research, neuroscience, immunology, regenerative medicine, and precision medicine applications.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Spatial Transcriptomics bridges the gap between molecular biology and tissue histology by linking gene expression patterns to physical tissue locations. This technology helps researchers investigate tumor microenvironments, immune cell infiltration, tissue heterogeneity, developmental processes, and disease progression. It has become a powerful tool for cancer research, neuroscience, immunology, regenerative medicine, and precision medicine applications.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What Spatial Transcriptomics services does RASA provide?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">RASA Life Science Informatics offers comprehensive Spatial Transcriptomics analysis services including:<br>Spatial Gene Expression Analysis<br>Tissue Region Identification<br>Spatial Clustering<br>Differential Spatial Expression Analysis<br>Cell-Type Mapping<br>Cell–Cell Interaction Analysis<br>Spatial Pathway Analysis<br>Single-Cell Integration<br>Biomarker Discovery<br>Disease Microenvironment Characterization<br>Multi-Omics Integration<br>Our workflows support pharmaceutical research, biotechnology innovation, translational medicine, and academic discovery programs.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">RASA Life Science Informatics offers comprehensive Spatial Transcriptomics analysis services including:<br>Spatial Gene Expression Analysis<br>Tissue Region Identification<br>Spatial Clustering<br>Differential Spatial Expression Analysis<br>Cell-Type Mapping<br>Cell–Cell Interaction Analysis<br>Spatial Pathway Analysis<br>Single-Cell Integration<br>Biomarker Discovery<br>Disease Microenvironment Characterization<br>Multi-Omics Integration<br>Our workflows support pharmaceutical research, biotechnology innovation, translational medicine, and academic discovery programs.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>Which Spatial Transcriptomics platforms do you support?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Our bioinformatics pipelines support data generated from leading spatial omics technologies including:<br>10x Genomics Visium<br>NanoString GeoMx DSP<br>NanoString CosMx SMI<br>MERFISH<br>Slide-seq<br>Slide-seqV2<br>Stereo-seq<br>Seq-Scope<br>DBiT-seq<br>We continuously update our workflows to support emerging spatial biology technologies.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Our bioinformatics pipelines support data generated from leading spatial omics technologies including:<br>10x Genomics Visium<br>NanoString GeoMx DSP<br>NanoString CosMx SMI<br>MERFISH<br>Slide-seq<br>Slide-seqV2<br>Stereo-seq<br>Seq-Scope<br>DBiT-seq<br>We continuously update our workflows to support emerging spatial biology technologies.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>Can Spatial Transcriptomics data be integrated with single-cell datasets?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Yes. We routinely integrate Spatial Transcriptomics with Single-Cell RNA Sequencing (scRNA-seq) datasets to accurately map cell types and cellular states back to their tissue locations. This integrated approach provides deeper biological insights into tissue organization, cellular communication, and disease-associated microenvironments.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. We routinely integrate Spatial Transcriptomics with Single-Cell RNA Sequencing (scRNA-seq) datasets to accurately map cell types and cellular states back to their tissue locations. This integrated approach provides deeper biological insights into tissue organization, cellular communication, and disease-associated microenvironments.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What analyses are included in a typical Spatial Transcriptomics project?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">A standard spatial transcriptomics workflow may include:<br>Data Quality Control<br>Tissue Image Processing<br>Spatial Clustering<br>Cell-Type Deconvolution<br>Differential Spatial Expression Analysis<br>Spatial Domain Identification<br>Cell–Cell Interaction Analysis<br>Pathway Enrichment Analysis<br>Single-Cell Integration<br>Biomarker Discovery<br>Biological Interpretation<br>Scientific Reporting<br>Workflows are customized according to project goals and platform specifications.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">A standard spatial transcriptomics workflow may include:<br>Data Quality Control<br>Tissue Image Processing<br>Spatial Clustering<br>Cell-Type Deconvolution<br>Differential Spatial Expression Analysis<br>Spatial Domain Identification<br>Cell–Cell Interaction Analysis<br>Pathway Enrichment Analysis<br>Single-Cell Integration<br>Biomarker Discovery<br>Biological Interpretation<br>Scientific Reporting<br>Workflows are customized according to project goals and platform specifications.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What is spatial clustering?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Spatial clustering identifies regions within a tissue that share similar gene expression profiles. This analysis helps researchers uncover biologically distinct tissue compartments, tumor niches, immune cell infiltration zones, and disease-associated spatial patterns.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Spatial clustering identifies regions within a tissue that share similar gene expression profiles. This analysis helps researchers uncover biologically distinct tissue compartments, tumor niches, immune cell infiltration zones, and disease-associated spatial patterns.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What is cell-type deconvolution in Spatial Transcriptomics?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Cell-type deconvolution uses computational algorithms and reference single-cell datasets to estimate the cellular composition of each spatial location. This allows researchers to determine which cell populations contribute to observed spatial gene expression patterns within tissues.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Cell-type deconvolution uses computational algorithms and reference single-cell datasets to estimate the cellular composition of each spatial location. This allows researchers to determine which cell populations contribute to observed spatial gene expression patterns within tissues.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What is spatial differential expression analysis?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Spatial differential expression analysis identifies genes that are enriched or depleted in specific tissue regions. This approach helps reveal region-specific biological processes, disease-associated molecular signatures, and potential therapeutic targets.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Spatial differential expression analysis identifies genes that are enriched or depleted in specific tissue regions. This approach helps reveal region-specific biological processes, disease-associated molecular signatures, and potential therapeutic targets.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>Can Spatial Transcriptomics be used for cancer research?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Yes. Spatial Transcriptomics has become a transformative technology in oncology research. It enables detailed characterization of:<br>Tumor Microenvironments<br>Immune Cell Infiltration<br>Tumor Heterogeneity<br>Cancer Biomarkers<br>Drug Resistance Mechanisms<br>Tumor–Stroma Interactions<br>These insights support precision oncology and therapeutic development.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. Spatial Transcriptomics has become a transformative technology in oncology research. It enables detailed characterization of:<br>Tumor Microenvironments<br>Immune Cell Infiltration<br>Tumor Heterogeneity<br>Cancer Biomarkers<br>Drug Resistance Mechanisms<br>Tumor–Stroma Interactions<br>These insights support precision oncology and therapeutic development.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What role does Spatial Transcriptomics play in precision medicine?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Spatial Transcriptomics helps identify disease-associated cellular interactions, tissue-specific biomarkers, and patient-specific molecular signatures. These insights support precision medicine by improving disease classification, biomarker discovery, patient stratification, and therapeutic target identification.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Spatial Transcriptomics helps identify disease-associated cellular interactions, tissue-specific biomarkers, and patient-specific molecular signatures. These insights support precision medicine by improving disease classification, biomarker discovery, patient stratification, and therapeutic target identification.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What file formats are required for Spatial Transcriptomics analysis?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">We commonly support:<br>FASTQ Files<br>Feature Matrices<br>Count Matrices<br>Tissue Images<br>Histology Images<br>Spatial Coordinate Files<br>Single-Cell Reference Datasets<br>Metadata Files<br>Our team can also accommodate custom formats generated by specific platforms.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">We commonly support:<br>FASTQ Files<br>Feature Matrices<br>Count Matrices<br>Tissue Images<br>Histology Images<br>Spatial Coordinate Files<br>Single-Cell Reference Datasets<br>Metadata Files<br>Our team can also accommodate custom formats generated by specific platforms.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>Which bioinformatics tools do you use for Spatial Transcriptomics analysis?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Our workflows utilize leading spatial biology and bioinformatics tools including:<br>Spatial Analysis<br>Seurat<br>Scanpy<br>Giotto<br>Squidpy<br>STUtility<br>Cell-Type Mapping<br>Cell2location<br>Tangram<br>SPOTlight<br>RCTD<br>Cell Communication<br>CellChat<br>NicheNet<br>CellPhoneDB<br>Workflow Infrastructure<br>Nextflow<br>Snakemake<br>Docker<br>AWS<br>Google Cloud</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Our workflows utilize leading spatial biology and bioinformatics tools including:<br>Spatial Analysis<br>Seurat<br>Scanpy<br>Giotto<br>Squidpy<br>STUtility<br>Cell-Type Mapping<br>Cell2location<br>Tangram<br>SPOTlight<br>RCTD<br>Cell Communication<br>CellChat<br>NicheNet<br>CellPhoneDB<br>Workflow Infrastructure<br>Nextflow<br>Snakemake<br>Docker<br>AWS<br>Google Cloud</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What deliverables are included in Spatial Transcriptomics projects?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Typical deliverables include:<br>Spatial Gene Expression Maps<br>Tissue Annotation Reports<br>Spatial Clustering Visualizations<br>Cell-Type Distribution Maps<br>Differential Spatial Expression Results<br>Cell–Cell Communication Networks<br>Pathway Enrichment Reports<br>Biomarker Discovery Reports<br>Publication-Ready Figures<br>Comprehensive Scientific Reports<br>Deliverables can be customized according to project requirements.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Typical deliverables include:<br>Spatial Gene Expression Maps<br>Tissue Annotation Reports<br>Spatial Clustering Visualizations<br>Cell-Type Distribution Maps<br>Differential Spatial Expression Results<br>Cell–Cell Communication Networks<br>Pathway Enrichment Reports<br>Biomarker Discovery Reports<br>Publication-Ready Figures<br>Comprehensive Scientific Reports<br>Deliverables can be customized according to project requirements.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>Why choose RASA for Spatial Transcriptomics analysis?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">RASA combines expertise in genomics, single-cell biology, spatial biology, bioinformatics, and AI-driven analytics to deliver robust and reproducible Spatial Transcriptomics solutions. Our scalable workflows, advanced analytical capabilities, publication-ready reporting, and experience across oncology, neuroscience, immunology, and precision medicine help researchers maximize the value of spatial omics data.<br>📧 support@rasalifesciences.com<br>🌐 www.rasalifesciences.com</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">RASA combines expertise in genomics, single-cell biology, spatial biology, bioinformatics, and AI-driven analytics to deliver robust and reproducible Spatial Transcriptomics solutions. Our scalable workflows, advanced analytical capabilities, publication-ready reporting, and experience across oncology, neuroscience, immunology, and precision medicine help researchers maximize the value of spatial omics data.<br>📧 support@rasalifesciences.com<br>🌐 www.rasalifesciences.com</p>
                 </div>
               </div>
             </div>
@@ -616,6 +616,7 @@
     </div>
   </div>
 </footer>
+
   <script>
 
 (function () {

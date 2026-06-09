@@ -3073,3 +3073,7 @@ body.dark-mode .rasa-top-bar {
     transform: translateY(-50%) rotate(45deg); opacity: 0.5; pointer-events: none;
   }
 }
+
+/* FAQ accordion: open on .active OR .is-open (robust across pages) */
+.rasa-faq__item.active .rasa-faq__a, .rasa-faq__item.is-open .rasa-faq__a { grid-template-rows: 1fr; }
+.rasa-faq__item.active .rasa-faq__icon, .rasa-faq__item.is-open .rasa-faq__icon { transform: rotate(45deg); }

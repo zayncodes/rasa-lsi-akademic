@@ -373,167 +373,167 @@
           </div>
           <div class="rasa-faq" style="display:flex; flex-direction:column; gap:1rem;">
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What is Long-Read Sequencing?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Long-Read Sequencing is an advanced genomic sequencing technology that generates significantly longer DNA or RNA reads compared to traditional short-read sequencing methods. These long reads enable researchers to accurately resolve complex genomic regions, repetitive sequences, structural variants, haplotypes, and full-length transcript isoforms that are often difficult to characterize using short-read technologies.<br>Long-read sequencing has become a critical tool for genome assembly, structural variant discovery, transcriptomics, epigenomics, and precision medicine research.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Long-Read Sequencing is an advanced genomic sequencing technology that generates significantly longer DNA or RNA reads compared to traditional short-read sequencing methods. These long reads enable researchers to accurately resolve complex genomic regions, repetitive sequences, structural variants, haplotypes, and full-length transcript isoforms that are often difficult to characterize using short-read technologies.<br>Long-read sequencing has become a critical tool for genome assembly, structural variant discovery, transcriptomics, epigenomics, and precision medicine research.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What are the advantages of Long-Read Sequencing compared to short-read sequencing?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Long-read sequencing offers several advantages over conventional short-read technologies, including:<br>Improved de novo genome assembly<br>Enhanced structural variant detection<br>Accurate haplotype phasing<br>Full-length transcript isoform identification<br>Better resolution of repetitive genomic regions<br>Detection of complex genomic rearrangements<br>Direct epigenetic modification analysis<br>Improved characterization of gene fusions and splice variants<br>These capabilities make long-read sequencing particularly valuable for complex genomic and transcriptomic studies.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Long-read sequencing offers several advantages over conventional short-read technologies, including:<br>Improved de novo genome assembly<br>Enhanced structural variant detection<br>Accurate haplotype phasing<br>Full-length transcript isoform identification<br>Better resolution of repetitive genomic regions<br>Detection of complex genomic rearrangements<br>Direct epigenetic modification analysis<br>Improved characterization of gene fusions and splice variants<br>These capabilities make long-read sequencing particularly valuable for complex genomic and transcriptomic studies.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What Long-Read Sequencing services does RASA provide?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">RASA Life Science Informatics provides comprehensive long-read sequencing bioinformatics services including:<br>Oxford Nanopore Data Analysis<br>PacBio HiFi Analysis<br>PacBio Iso-Seq Analysis<br>Genome Assembly<br>Hybrid Genome Assembly<br>Structural Variant Analysis<br>Haplotype Phasing<br>Long-Read Transcriptomics<br>Isoform Discovery<br>Epigenetic Modification Analysis<br>Functional Annotation<br>Biomarker Discovery<br>Our workflows support research, clinical genomics, agriculture, biotechnology, and pharmaceutical applications.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">RASA Life Science Informatics provides comprehensive long-read sequencing bioinformatics services including:<br>Oxford Nanopore Data Analysis<br>PacBio HiFi Analysis<br>PacBio Iso-Seq Analysis<br>Genome Assembly<br>Hybrid Genome Assembly<br>Structural Variant Analysis<br>Haplotype Phasing<br>Long-Read Transcriptomics<br>Isoform Discovery<br>Epigenetic Modification Analysis<br>Functional Annotation<br>Biomarker Discovery<br>Our workflows support research, clinical genomics, agriculture, biotechnology, and pharmaceutical applications.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>Do you analyze Oxford Nanopore and PacBio sequencing data?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Yes. We provide specialized analysis workflows for:<br>Oxford Nanopore Technologies (ONT)<br>Whole Genome Sequencing<br>Long-Read Transcriptomics<br>Direct RNA Sequencing<br>Methylation Analysis<br>Structural Variant Detection<br>PacBio HiFi<br>High-Accuracy Genome Sequencing<br>Variant Discovery<br>Genome Assembly<br>Haplotype Analysis<br>PacBio Iso-Seq<br>Full-Length Transcript Sequencing<br>Alternative Splicing Analysis<br>Isoform Discovery<br>Fusion Transcript Detection</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. We provide specialized analysis workflows for:<br>Oxford Nanopore Technologies (ONT)<br>Whole Genome Sequencing<br>Long-Read Transcriptomics<br>Direct RNA Sequencing<br>Methylation Analysis<br>Structural Variant Detection<br>PacBio HiFi<br>High-Accuracy Genome Sequencing<br>Variant Discovery<br>Genome Assembly<br>Haplotype Analysis<br>PacBio Iso-Seq<br>Full-Length Transcript Sequencing<br>Alternative Splicing Analysis<br>Isoform Discovery<br>Fusion Transcript Detection</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What applications are supported by Long-Read Sequencing?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Our long-read sequencing services support numerous research applications, including:<br>Genome Assembly<br>High-quality de novo and reference-guided genome assembly.<br>Structural Variant Analysis<br>Detection of insertions, deletions, inversions, duplications, and translocations.<br>Long-Read Transcriptomics<br>Comprehensive transcriptome characterization and gene expression analysis.<br>Isoform Discovery<br>Identification of novel transcripts and alternative splicing events.<br>Epigenetic Modification Analysis<br>Direct detection of DNA methylation and epigenetic signatures.<br>Clinical Genomics<br>Rare disease research, cancer genomics, and precision medicine studies.<br>Agricultural Genomics<br>Crop improvement, plant genomics, and livestock genetics research.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Our long-read sequencing services support numerous research applications, including:<br>Genome Assembly<br>High-quality de novo and reference-guided genome assembly.<br>Structural Variant Analysis<br>Detection of insertions, deletions, inversions, duplications, and translocations.<br>Long-Read Transcriptomics<br>Comprehensive transcriptome characterization and gene expression analysis.<br>Isoform Discovery<br>Identification of novel transcripts and alternative splicing events.<br>Epigenetic Modification Analysis<br>Direct detection of DNA methylation and epigenetic signatures.<br>Clinical Genomics<br>Rare disease research, cancer genomics, and precision medicine studies.<br>Agricultural Genomics<br>Crop improvement, plant genomics, and livestock genetics research.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What is de novo genome assembly?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">De novo genome assembly reconstructs an organism’s genome without relying on a reference genome. Long-read sequencing greatly improves assembly quality by spanning repetitive regions and resolving complex genomic structures.<br>This approach is particularly useful for:<br>Novel species characterization<br>Plant genomics<br>Microbial genomics<br>Comparative genomics<br>Agricultural research</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">De novo genome assembly reconstructs an organism’s genome without relying on a reference genome. Long-read sequencing greatly improves assembly quality by spanning repetitive regions and resolving complex genomic structures.<br>This approach is particularly useful for:<br>Novel species characterization<br>Plant genomics<br>Microbial genomics<br>Comparative genomics<br>Agricultural research</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What is structural variant analysis?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Structural Variant (SV) analysis identifies large-scale genomic alterations that may influence disease development and biological function.<br>Common structural variants include:<br>Insertions<br>Deletions<br>Inversions<br>Duplications<br>Translocations<br>Copy Number Variations (CNVs)<br>Long-read sequencing is considered one of the most effective approaches for detecting structural variants accurately.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Structural Variant (SV) analysis identifies large-scale genomic alterations that may influence disease development and biological function.<br>Common structural variants include:<br>Insertions<br>Deletions<br>Inversions<br>Duplications<br>Translocations<br>Copy Number Variations (CNVs)<br>Long-read sequencing is considered one of the most effective approaches for detecting structural variants accurately.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What is Iso-Seq analysis?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Iso-Seq is a PacBio long-read transcriptomics technology that sequences full-length RNA transcripts without assembly. This enables accurate characterization of:<br>Alternative Splicing Events<br>Novel Isoforms<br>Gene Fusions<br>Transcript Diversity<br>Long Non-Coding RNAs (lncRNAs)<br>Iso-Seq provides a more complete view of transcriptome complexity than short-read RNA sequencing.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Iso-Seq is a PacBio long-read transcriptomics technology that sequences full-length RNA transcripts without assembly. This enables accurate characterization of:<br>Alternative Splicing Events<br>Novel Isoforms<br>Gene Fusions<br>Transcript Diversity<br>Long Non-Coding RNAs (lncRNAs)<br>Iso-Seq provides a more complete view of transcriptome complexity than short-read RNA sequencing.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>Can long-read sequencing detect epigenetic modifications?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Yes. Oxford Nanopore sequencing can directly detect epigenetic modifications such as DNA methylation without requiring additional chemical treatment.<br>Applications include:<br>Epigenetic Biomarker Discovery<br>Cancer Epigenomics<br>Developmental Biology<br>Regulatory Genomics<br>Precision Medicine Research</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. Oxford Nanopore sequencing can directly detect epigenetic modifications such as DNA methylation without requiring additional chemical treatment.<br>Applications include:<br>Epigenetic Biomarker Discovery<br>Cancer Epigenomics<br>Developmental Biology<br>Regulatory Genomics<br>Precision Medicine Research</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What is haplotype phasing and why is it important?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Haplotype phasing determines which genetic variants are inherited together on the same chromosome. Long-read sequencing enables highly accurate phasing, which is important for:<br>Rare Disease Research<br>Pharmacogenomics<br>Population Genetics<br>Clinical Genomics<br>Precision Medicine</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Haplotype phasing determines which genetic variants are inherited together on the same chromosome. Long-read sequencing enables highly accurate phasing, which is important for:<br>Rare Disease Research<br>Pharmacogenomics<br>Population Genetics<br>Clinical Genomics<br>Precision Medicine</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>Which bioinformatics tools do you use for Long-Read Sequencing analysis?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Our workflows utilize industry-leading long-read bioinformatics tools, including:<br>Genome Assembly<br>Flye<br>Canu<br>Hifiasm<br>Shasta<br>SPAdes Hybrid Assembly<br>Structural Variant Analysis<br>Sniffles<br>SVIM<br>cuteSV<br>pbsv<br>Transcriptomics<br>IsoSeq3<br>FLAIR<br>TALON<br>StringTie2<br>Alignment &amp; Processing<br>Minimap2<br>SAMtools<br>Nanopolish<br>Workflow Infrastructure<br>Nextflow<br>Snakemake<br>Docker<br>AWS<br>Google Cloud<br>HPC Clusters</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Our workflows utilize industry-leading long-read bioinformatics tools, including:<br>Genome Assembly<br>Flye<br>Canu<br>Hifiasm<br>Shasta<br>SPAdes Hybrid Assembly<br>Structural Variant Analysis<br>Sniffles<br>SVIM<br>cuteSV<br>pbsv<br>Transcriptomics<br>IsoSeq3<br>FLAIR<br>TALON<br>StringTie2<br>Alignment &amp; Processing<br>Minimap2<br>SAMtools<br>Nanopolish<br>Workflow Infrastructure<br>Nextflow<br>Snakemake<br>Docker<br>AWS<br>Google Cloud<br>HPC Clusters</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What file formats are supported for Long-Read Sequencing projects?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">We commonly support:<br>FASTQ Files<br>FAST5 Files<br>BAM Files<br>CRAM Files<br>VCF Files<br>GFF/GTF Annotation Files<br>Transcriptome Assemblies<br>Metadata Files<br>Custom formats can also be accommodated.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">We commonly support:<br>FASTQ Files<br>FAST5 Files<br>BAM Files<br>CRAM Files<br>VCF Files<br>GFF/GTF Annotation Files<br>Transcriptome Assemblies<br>Metadata Files<br>Custom formats can also be accommodated.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What deliverables are included in Long-Read Sequencing projects?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Typical deliverables include:<br>Quality Control Reports<br>Genome Assembly Reports<br>Assembly Statistics<br>Structural Variant Reports<br>Variant Annotation Reports<br>Isoform Discovery Reports<br>Alternative Splicing Analysis<br>Epigenetic Analysis Reports<br>Functional Annotation Results<br>Publication-Ready Figures<br>Comprehensive Scientific Reports<br>Deliverables are customized according to project objectives.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Typical deliverables include:<br>Quality Control Reports<br>Genome Assembly Reports<br>Assembly Statistics<br>Structural Variant Reports<br>Variant Annotation Reports<br>Isoform Discovery Reports<br>Alternative Splicing Analysis<br>Epigenetic Analysis Reports<br>Functional Annotation Results<br>Publication-Ready Figures<br>Comprehensive Scientific Reports<br>Deliverables are customized according to project objectives.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>What research areas benefit from Long-Read Sequencing?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">Long-read sequencing is widely used in:<br>Human Genomics<br>Cancer Genomics<br>Rare Disease Research<br>Precision Medicine<br>Agricultural Genomics<br>Microbial Genomics<br>Evolutionary Biology<br>Transcriptomics<br>Epigenomics<br>Drug Discovery<br>These applications benefit from the improved accuracy and genomic resolution offered by long-read technologies.</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Long-read sequencing is widely used in:<br>Human Genomics<br>Cancer Genomics<br>Rare Disease Research<br>Precision Medicine<br>Agricultural Genomics<br>Microbial Genomics<br>Evolutionary Biology<br>Transcriptomics<br>Epigenomics<br>Drug Discovery<br>These applications benefit from the improved accuracy and genomic resolution offered by long-read technologies.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground);" onclick="this.parentNode.classList.toggle('active'); var panel=this.nextElementSibling; if(panel.style.maxHeight){panel.style.maxHeight=null;}else{panel.style.maxHeight=panel.scrollHeight+'px';}">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
                 <span>Why choose RASA for Long-Read Sequencing analysis?</span>
-                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.2rem; color:var(--leaf);">+</span>
+                <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a" style="max-height:0; overflow:hidden; transition:max-height 0.25s ease-out;">
-                <div class="rasa-faq__a-inner" style="padding:0 1.5rem 1.5rem 1.5rem; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">
-                  <p style="margin:0;">RASA combines expertise in genomics, bioinformatics, structural variant analysis, transcriptomics, and AI-assisted analytics to deliver scalable and reproducible long-read sequencing solutions. Our cloud-ready workflows, publication-ready reporting, and experience across healthcare, biotechnology, agriculture, and academic research help organizations unlock the full value of long-read sequencing data.<br>📧 support@rasalifesciences.com<br>🌐 www.rasalifesciences.com</p>
+              <div class="rasa-faq__a">
+                <div class="rasa-faq__a-inner">
+                  <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">RASA combines expertise in genomics, bioinformatics, structural variant analysis, transcriptomics, and AI-assisted analytics to deliver scalable and reproducible long-read sequencing solutions. Our cloud-ready workflows, publication-ready reporting, and experience across healthcare, biotechnology, agriculture, and academic research help organizations unlock the full value of long-read sequencing data.<br>📧 support@rasalifesciences.com<br>🌐 www.rasalifesciences.com</p>
                 </div>
               </div>
             </div>
@@ -616,6 +616,7 @@
     </div>
   </div>
 </footer>
+
   <script>
 
 (function () {
