@@ -2298,12 +2298,12 @@ body.rasa {
 
 .rasa-faq__icon svg { width: 18px; height: 18px; stroke: var(--leaf); stroke-width: 2.5; fill: none; }
 
-.rasa-faq__item.is-open .rasa-faq__icon { transform: rotate(45deg); }
+.rasa-faq__item.is-open .rasa-faq__icon { transform: rotate(45deg) !important; }
 
 /* Smooth height transition CSS Grid */
 .rasa-faq__a {
-  display: grid; grid-template-rows: 0fr;
-  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.45s ease;
 }
 
 .rasa-faq__a-inner { overflow: hidden; }
@@ -2317,7 +2317,7 @@ body.rasa {
 
 .rasa-faq__a li { margin-bottom: 0.35rem; }
 
-.rasa-faq__item.is-open .rasa-faq__a { grid-template-rows: 1fr; }
+.rasa-faq__item.is-open .rasa-faq__a { max-height: 1500px !important; }
 
 /* Buttons & Footer */
 .rasa-btn {
@@ -3075,5 +3075,5 @@ body.dark-mode .rasa-top-bar {
 }
 
 /* FAQ accordion: open on .active OR .is-open (robust across pages) */
-.rasa-faq__item.active .rasa-faq__a, .rasa-faq__item.is-open .rasa-faq__a { grid-template-rows: 1fr; }
-.rasa-faq__item.active .rasa-faq__icon, .rasa-faq__item.is-open .rasa-faq__icon { transform: rotate(45deg); }
+.rasa-faq__item.active .rasa-faq__a, .rasa-faq__item.is-open .rasa-faq__a { max-height: 1500px !important; }
+.rasa-faq__item.active .rasa-faq__icon, .rasa-faq__item.is-open .rasa-faq__icon { transform: rotate(45deg) !important; }
