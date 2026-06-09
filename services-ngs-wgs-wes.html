@@ -371,165 +371,165 @@
           </div>
           <div class="rasa-faq" style="display:flex; flex-direction:column; gap:1rem;">
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is the difference between Whole Genome Sequencing (WGS) and Whole Exome Sequencing (WES)?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Whole Genome Sequencing (WGS) analyzes the complete DNA sequence of an organism, including both coding and non-coding regions of the genome. In contrast, Whole Exome Sequencing (WES) focuses only on protein-coding regions (exons), which represent approximately 1–2% of the genome but contain the majority of known disease-causing mutations.<br>WGS provides a more comprehensive view of genomic variation, while WES offers a cost-effective approach for identifying clinically relevant variants associated with inherited disorders, rare diseases, and cancer.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What WGS and WES analysis services does RASA provide?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">RASA Life Science Informatics offers comprehensive WGS and WES bioinformatics services including:<br>Quality Control &amp; Data Processing<br>Read Alignment &amp; Mapping<br>Variant Calling<br>Variant Annotation<br>Clinical Variant Interpretation<br>Structural Variant Analysis<br>Copy Number Variation (CNV) Analysis<br>Rare Disease Genomics<br>Cancer Genomics<br>Pharmacogenomics<br>Precision Medicine Analytics<br>Biomarker Discovery<br>Our workflows support research, clinical genomics, and translational medicine projects.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What genomic variants can be detected using WGS and WES?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Our analysis pipelines can identify a wide range of genomic alterations, including:<br>Single Nucleotide Polymorphisms (SNPs)<br>Single Nucleotide Variants (SNVs)<br>Insertions and Deletions (InDels)<br>Copy Number Variations (CNVs)<br>Structural Variants (SVs)<br>Gene Fusions<br>Mobile Element Insertions<br>Regulatory Variants<br>Loss-of-Function Variants<br>Rare Disease-Causing Mutations<br>The specific variants detected depend on sequencing depth, platform, and study design.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Do you provide clinical variant interpretation?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. We perform comprehensive clinical variant interpretation using internationally recognized guidelines and databases. Variants are evaluated based on pathogenicity, population frequency, disease association, inheritance patterns, and published scientific evidence.<br>Our interpretation workflows support rare disease research, clinical genomics studies, cancer genomics projects, and precision medicine applications.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Do you follow ACMG guidelines for variant classification?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. Variant interpretation follows the recommendations of the American College of Medical Genetics and Genomics (ACMG) whenever appropriate. Variants may be classified as:<br>Pathogenic<br>Likely Pathogenic<br>Variant of Uncertain Significance (VUS)<br>Likely Benign<br>Benign<br>This classification framework helps prioritize clinically relevant variants for downstream investigation.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Which databases are used for variant annotation and interpretation?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Our annotation workflows integrate information from leading genomic and clinical databases, including:<br>ClinVar<br>OMIM<br>gnomAD<br>HGMD<br>Ensembl VEP<br>ANNOVAR<br>dbSNP<br>COSMIC<br>OncoKB<br>PharmGKB<br>These resources help improve variant prioritization and biological interpretation.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Can WGS and WES be used for rare disease research?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. Whole Genome Sequencing and Whole Exome Sequencing are widely used to identify disease-causing mutations associated with inherited and rare genetic disorders. Our workflows support:<br>Trio Analysis<br>Family-Based Sequencing Studies<br>Mendelian Disease Analysis<br>Candidate Gene Prioritization<br>Phenotype-Driven Variant Interpretation</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>How are WGS and WES used in cancer genomics?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">WGS and WES are commonly used in oncology research to identify:<br>Somatic Mutations<br>Driver Mutations<br>Tumor-Specific Variants<br>Actionable Biomarkers<br>Tumor Mutational Burden (TMB)<br>Mutational Signatures<br>These analyses support precision oncology and translational cancer research programs.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Can WGS identify variants that WES may miss?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. Because WGS covers the entire genome, it can identify variants located in non-coding regions, regulatory elements, structural variants, and complex genomic rearrangements that may not be captured by WES.<br>For comprehensive genomic characterization, WGS is often considered the most informative sequencing approach.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What file formats are required for WGS and WES analysis?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">We commonly support:<br>FASTQ Files<br>BAM Files<br>CRAM Files<br>VCF Files<br>gVCF Files<br>Phenotype Data<br>Clinical Metadata<br>Our team can also accommodate custom project-specific formats.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Which bioinformatics tools are used for WGS and WES analysis?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Our workflows utilize industry-standard tools including:<br>Alignment &amp; Processing<br>BWA-MEM<br>Bowtie2<br>SAMtools<br>Picard<br>Variant Calling<br>GATK<br>DeepVariant<br>FreeBayes<br>bcftools<br>Structural Variant Analysis<br>Manta<br>Delly<br>LUMPY<br>GRIDSS<br>Annotation &amp; Interpretation<br>ANNOVAR<br>Ensembl VEP<br>ClinVar<br>OMIM<br>Workflow Infrastructure<br>Nextflow<br>Snakemake<br>Docker<br>AWS<br>Google Cloud</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What deliverables are included in WGS and WES projects?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Typical project deliverables include:<br>Quality Control Reports<br>Variant Calling Reports<br>Annotated VCF Files<br>Candidate Variant Lists<br>Clinical Interpretation Reports<br>CNV Analysis Reports<br>Structural Variant Reports<br>Pathway Analysis Results<br>Publication-Ready Figures<br>Comprehensive Scientific Reports<br>Deliverables can be customized according to research objectives and regulatory requirements.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Can WGS and WES data be integrated with other omics datasets?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. We routinely integrate genomic data with:<br>RNA-Seq<br>Single-Cell Omics<br>Spatial Transcriptomics<br>Epigenomics<br>Proteomics<br>Metabolomics<br>Clinical Data<br>Multi-omics integration provides a more comprehensive understanding of disease biology and therapeutic response.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What are the advantages of WGS compared to targeted sequencing panels?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">While targeted sequencing panels focus on predefined genes, WGS provides an unbiased view of the entire genome. This enables the discovery of novel disease-associated variants, structural rearrangements, and regulatory mutations that may not be included in targeted panels.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Why choose RASA for WGS and WES analysis?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">RASA combines expertise in genomics, bioinformatics, clinical interpretation, and precision medicine to deliver high-quality WGS and WES analysis solutions. Our reproducible workflows, AI-assisted analytics, scalable cloud infrastructure, and publication-ready reporting help researchers and organizations maximize the value of genomic sequencing data.<br>📧 support@rasalifesciences.com<br>🌐 www.rasalifesciences.com</p>
                 </div>

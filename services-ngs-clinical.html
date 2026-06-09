@@ -373,165 +373,165 @@
           </div>
           <div class="rasa-faq" style="display:flex; flex-direction:column; gap:1rem;">
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is Clinical Genomics?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Clinical Genomics is the application of genomic sequencing technologies and bioinformatics analysis to understand the genetic basis of disease, support clinical research, and enable precision medicine. By analyzing DNA and RNA sequencing data, Clinical Genomics helps identify disease-associated variants, predict therapeutic response, discover biomarkers, and improve patient stratification.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What Clinical Genomics services does RASA provide?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Services include Whole Genome Sequencing (WGS) Analysis, Whole Exome Sequencing (WES) Analysis, Clinical Variant Interpretation, Rare Disease Genomics, Cancer Genomics, Pharmacogenomics Analysis, Precision Medicine Analytics, Biomarker Discovery, Multi-Omics Clinical Integration, and Patient Stratification Studies.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Do you support rare disease research?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. We provide advanced rare disease genomics analysis including trio analysis, family-based sequencing analysis, variant prioritization, phenotype-driven interpretation, candidate gene discovery, and clinical annotation.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is the difference between WGS and WES in clinical genomics?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">WGS analyzes the entire genome, including coding and non-coding regions, while WES focuses on protein-coding regions that contain most known disease-causing mutations.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Do you provide clinical variant interpretation?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. We perform comprehensive variant annotation and interpretation using internationally recognized databases and guidelines.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Which databases do you use for clinical variant annotation?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">ClinVar, OMIM, gnomAD, HGMD, Ensembl VEP, ANNOVAR, PharmGKB, COSMIC, TCGA, and OncoKB.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is pharmacogenomics and how can it improve patient outcomes?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Pharmacogenomics studies how genetic variation influences drug response, helping optimize treatment strategies and reduce adverse drug reactions.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Do you support cancer genomics analysis?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. Services include somatic variant analysis, tumor-normal comparison, driver mutation identification, tumor mutational burden analysis, mutational signature analysis, and precision oncology biomarker discovery.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Can Clinical Genomics be used for precision medicine?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. Clinical Genomics helps identify patient-specific molecular signatures, discover biomarkers, and support personalized treatment strategies.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>How can Clinical Genomics support rare disease diagnosis?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Clinical Genomics enables identification of disease-causing variants associated with inherited disorders using WGS, WES, and phenotype-driven interpretation.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is precision oncology and how does Clinical Genomics contribute?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Precision oncology uses genomic information to identify actionable mutations, biomarkers, and therapeutic targets for personalized cancer research and treatment.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Can Clinical Genomics identify biomarkers for drug response?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. Clinical genomics can identify predictive biomarkers associated with treatment response, drug resistance, toxicity, and disease progression.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is patient stratification in Clinical Genomics?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Patient stratification groups patients based on genomic and clinical characteristics to improve clinical trial design and personalized medicine strategies.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Can Clinical Genomics support clinical trial research?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. It is widely used to identify biomarkers, stratify patients, characterize disease subtypes, and support precision medicine-based clinical trial design.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Why choose RASA for Clinical Genomics projects?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">RASA combines expertise in genomics, bioinformatics, AI-driven analytics, biomarker discovery, precision medicine, and multi-omics integration to deliver scalable and publication-ready solutions.</p>
                 </div>

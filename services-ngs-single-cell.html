@@ -370,187 +370,187 @@
           </div>
           <div class="rasa-faq" style="display:flex; flex-direction:column; gap:1rem;">
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is Single-Cell Omics?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Single-Cell Omics is a powerful genomics approach that enables researchers to study biological systems at the resolution of individual cells. Unlike traditional bulk sequencing methods, which measure average signals across thousands or millions of cells, single-cell technologies reveal cellular heterogeneity, identify rare cell populations, characterize cellular states, and uncover complex biological interactions. Single-cell omics has become a critical tool in cancer research, immunology, neuroscience, developmental biology, regenerative medicine, and precision medicine.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is Single-Cell RNA Sequencing (scRNA-seq)?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Single-Cell RNA Sequencing (scRNA-seq) is a transcriptomics technology that measures gene expression in individual cells. It enables researchers to identify distinct cell types, investigate cellular heterogeneity, discover rare cell populations, and study dynamic biological processes such as differentiation, disease progression, and immune responses. scRNA-seq is widely used in oncology, immunology, neuroscience, stem cell biology, and drug discovery research.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What Single-Cell Omics services does RASA provide?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">RASA Life Science Informatics provides comprehensive single-cell bioinformatics services including:<br>Single-Cell RNA Sequencing (scRNA-seq)<br>Single-Cell ATAC-Seq (scATAC-seq)<br>Multiome Analysis (RNA + ATAC)<br>Cell-Type Annotation<br>Cell Clustering<br>Trajectory &amp; Pseudotime Analysis<br>RNA Velocity Analysis<br>Cell–Cell Communication Analysis<br>Spatial Single-Cell Integration<br>Multi-Omics Single-Cell Analysis<br>Biomarker Discovery<br>Disease Microenvironment Characterization</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What single-cell technologies do you support?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Our workflows support data generated from leading single-cell platforms, including:<br>10x Genomics Chromium<br>SMART-seq2<br>Parse Biosciences<br>Drop-seq<br>CEL-Seq<br>Seq-Well<br>BD Rhapsody<br>We also support integration with spatial transcriptomics and multiomic datasets.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is Single-Cell ATAC-Seq (scATAC-seq)?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Single-Cell ATAC-Seq is an epigenomics technology that measures chromatin accessibility at single-cell resolution. It enables researchers to identify regulatory elements, transcription factor activity, epigenetic states, and gene regulatory networks across different cell populations. scATAC-seq is commonly used alongside scRNA-seq to gain deeper insights into cellular regulation and disease biology.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is Multiome Analysis?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Multiome analysis simultaneously measures gene expression and chromatin accessibility within the same cell. By integrating scRNA-seq and scATAC-seq data, researchers can better understand how regulatory mechanisms influence gene expression and cellular behavior. Multiome technologies provide a comprehensive view of cellular identity, function, and disease-associated changes.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What analyses are included in a typical Single-Cell Omics project?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">A standard single-cell workflow may include:<br>Data Quality Control<br>Cell Filtering<br>Doublet Detection<br>Batch Correction<br>Dimensionality Reduction<br>Cell Clustering<br>Cell-Type Annotation<br>Differential Expression Analysis<br>Marker Gene Identification<br>Trajectory Analysis<br>RNA Velocity Analysis<br>Cell–Cell Communication Analysis<br>Functional Enrichment Analysis<br>Biological Interpretation<br>Workflows are customized based on project objectives and dataset complexity.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is cell clustering in single-cell analysis?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Cell clustering is the process of grouping cells with similar gene expression profiles into biologically meaningful populations. Clustering helps identify known cell types, discover novel cell populations, and characterize disease-associated cellular states. Popular visualization methods include UMAP and t-SNE projections.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is cell-type annotation?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Cell-type annotation assigns biological identities to cell clusters using known marker genes, reference datasets, and machine learning approaches. This process helps researchers determine which immune cells, stromal cells, tumor cells, neuronal cells, or other cellular populations are present within a sample.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is trajectory and pseudotime analysis?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Trajectory analysis reconstructs cellular developmental pathways and differentiation processes. Pseudotime analysis orders cells along a biological timeline based on gene expression changes, allowing researchers to study cell fate decisions, developmental transitions, and disease progression mechanisms.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is RNA velocity analysis?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">RNA velocity predicts the future transcriptional state of individual cells by analyzing spliced and unspliced RNA molecules. This technique helps researchers understand cellular dynamics, developmental trajectories, and cell-state transitions in complex biological systems.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is cell–cell communication analysis?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Cell–cell communication analysis identifies signaling interactions between different cell populations using ligand–receptor expression patterns. This approach helps researchers understand tissue organization, immune responses, tumor microenvironments, and cellular interactions driving disease progression.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Can single-cell data be integrated with spatial transcriptomics?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. We routinely integrate single-cell and spatial transcriptomics datasets to map cell populations back to their native tissue locations. This combined approach provides deeper insights into tissue architecture, cellular interactions, and disease-associated microenvironments.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What deliverables are included in Single-Cell Omics projects?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Typical deliverables include:<br>UMAP Visualizations<br>t-SNE Projections<br>Cell Clustering Reports<br>Cell-Type Annotation Results<br>Marker Gene Analysis<br>Differential Expression Reports<br>Trajectory &amp; Pseudotime Analysis<br>RNA Velocity Visualizations<br>Cell–Cell Communication Networks<br>Functional Enrichment Reports<br>Publication-Ready Figures<br>Comprehensive Scientific Reports<br>Deliverables can be customized according to project requirements.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Which bioinformatics tools do you use for Single-Cell Omics analysis?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Our pipelines utilize industry-leading tools including:<br>Single-Cell Analysis<br>Cell Ranger<br>Seurat<br>Scanpy<br>Harmony<br>SingleR<br>ArchR<br>Trajectory Analysis<br>Monocle<br>Slingshot<br>PAGA<br>RNA Velocity<br>scVelo<br>Velocyto<br>Cell Communication<br>CellChat<br>CellPhoneDB<br>NicheNet<br>LIANA<br>Workflow Infrastructure<br>Nextflow<br>Snakemake<br>Docker<br>AWS<br>Google Cloud</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What research applications benefit from Single-Cell Omics?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Single-cell technologies are widely used for:<br>Cancer Research<br>Immunology<br>Neuroscience<br>Developmental Biology<br>Stem Cell Research<br>Regenerative Medicine<br>Infectious Disease Research<br>Precision Medicine<br>Drug Discovery<br>Biomarker Discovery<br>These applications help researchers uncover cellular mechanisms that cannot be resolved using bulk sequencing approaches.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Why choose RASA for Single-Cell Omics analysis?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">RASA combines expertise in genomics, bioinformatics, machine learning, and systems biology to deliver high-quality single-cell analysis solutions. Our scalable workflows, advanced analytical capabilities, publication-ready reporting, and experience across diverse biological applications help researchers maximize the value of their single-cell datasets.<br>📧 support@rasalifesciences.com<br>🌐 www.rasalifesciences.com</p>
                 </div>

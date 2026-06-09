@@ -2317,7 +2317,7 @@ body.rasa {
 
 .rasa-faq__a li { margin-bottom: 0.35rem; }
 
-.rasa-faq__item.is-open .rasa-faq__a { max-height: 1500px !important; }
+.rasa-faq__item.is-open .rasa-faq__a { max-height: 1500px; }
 
 /* Buttons & Footer */
 .rasa-btn {
@@ -3075,5 +3075,5 @@ body.dark-mode .rasa-top-bar {
 }
 
 /* FAQ accordion: open on .active OR .is-open (robust across pages) */
-.rasa-faq__item.active .rasa-faq__a, .rasa-faq__item.is-open .rasa-faq__a { max-height: 1500px !important; }
+.rasa-faq__item.active .rasa-faq__a, .rasa-faq__item.is-open .rasa-faq__a { max-height: 1500px; }
 .rasa-faq__item.active .rasa-faq__icon, .rasa-faq__item.is-open .rasa-faq__icon { transform: rotate(45deg) !important; }

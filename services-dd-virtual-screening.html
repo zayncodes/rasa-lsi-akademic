@@ -364,176 +364,176 @@
           </div>
           <div class="rasa-faq" style="display:flex; flex-direction:column; gap:1rem;">
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is Molecular Docking?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Molecular Docking is a computational technique used to predict how a small molecule, peptide, or biomolecule binds to a target protein. Docking simulations estimate binding affinity, identify binding poses, and characterize molecular interactions between ligands and biological targets.<br>Molecular docking is widely used in structure-based drug design, virtual screening, lead optimization, drug repurposing, and therapeutic target validation.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What Molecular Docking services does RASA provide?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">RASA Life Science Informatics offers comprehensive molecular docking services, including:<br>Protein–Ligand Docking<br>Protein–Protein Docking<br>Peptide Docking<br>Antibody–Antigen Docking<br>Blind Docking<br>Covalent Docking<br>Fragment-Based Docking<br>Multi-Target Docking<br>Drug Repurposing Studies<br>Structure-Based Virtual Screening<br>Our workflows support pharmaceutical, biotechnology, CRO, and academic research projects.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is Virtual Screening?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Virtual Screening is a computational approach used to evaluate large chemical libraries against biological targets to identify potential hit compounds. By combining molecular docking, pharmacophore modeling, and AI-assisted filtering, virtual screening enables rapid prioritization of compounds before laboratory testing.<br>This significantly reduces experimental costs and accelerates early-stage drug discovery.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>How many compounds can be screened?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Our infrastructure supports virtual screening campaigns ranging from a few thousand compounds to millions of molecules.<br>We can screen compounds from:<br>ZINC Database<br>ChEMBL<br>DrugBank<br>Enamine Libraries<br>FDA-Approved Drug Libraries<br>Natural Product Libraries<br>Custom Compound Collections<br>Large-scale screening workflows can be deployed on cloud platforms and HPC clusters for maximum scalability.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is the difference between Molecular Docking and Virtual Screening?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Molecular Docking evaluates the interaction between a specific ligand and a target protein, while Virtual Screening applies docking and filtering techniques across thousands or millions of compounds to identify promising candidates.<br>In simple terms:<br>Docking = Detailed analysis of individual compounds<br>Virtual Screening = Large-scale compound discovery process<br>Most virtual screening workflows use molecular docking as a core component.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What types of biological targets can be screened?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Our virtual screening and docking workflows support:<br>Enzymes<br>Receptors<br>GPCRs<br>Kinases<br>Ion Channels<br>Nuclear Receptors<br>Viral Proteins<br>Bacterial Targets<br>Protein Complexes<br>Antibodies<br>Peptides<br>Workflows can be customized for specific therapeutic areas and target classes.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What docking software platforms do you use?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Depending on project requirements, we utilize industry-standard docking tools including:<br>Molecular Docking<br>AutoDock Vina<br>Smina<br>QuickVina2<br>GNINA<br>CB-Dock2<br>AutoDock-GPU<br>Protein–Protein Docking<br>HADDOCK<br>ClusPro<br>HDOCK<br>Peptide Docking<br>HPEPDOCK<br>HADDOCK<br>GalaxyPepDock<br>These tools are selected based on target type, project objectives, and computational requirements.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Do you perform blind docking?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. Blind docking is used when the binding site is unknown or when researchers want to identify potential binding pockets across the entire protein surface.<br>Blind docking helps:<br>Discover novel binding sites<br>Investigate allosteric pockets<br>Explore ligand binding mechanisms<br>Support target characterization studies</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What is covalent docking?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Covalent docking predicts interactions between ligands and proteins that form covalent bonds. This approach is particularly important for designing irreversible inhibitors and targeted covalent therapeutics.<br>Applications include:<br>Oncology Drug Discovery<br>Antiviral Drug Development<br>Enzyme Inhibitor Design<br>Covalent Lead Optimization</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Can Molecular Docking support drug repurposing studies?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. Molecular docking is widely used in drug repurposing programs to identify new therapeutic applications for approved or investigational compounds.<br>Our repurposing workflows combine:<br>Target Prediction<br>Virtual Screening<br>Molecular Docking<br>Pathway Analysis<br>Network Pharmacology<br>This integrated strategy helps accelerate therapeutic discovery while reducing development costs.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What analyses are included in a typical docking project?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">A standard molecular docking workflow may include:<br>Protein Preparation<br>Ligand Preparation<br>Binding Site Identification<br>Docking Simulations<br>Binding Affinity Estimation<br>Interaction Analysis<br>Hit Ranking<br>ADMET Filtering<br>Scientific Interpretation<br>Reporting &amp; Visualization<br>Workflows can be customized according to project goals.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What interaction analyses are provided?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Our docking reports typically include:<br>Hydrogen Bond Analysis<br>Hydrophobic Interactions<br>Salt Bridge Analysis<br>Pi–Pi Interactions<br>Pi–Cation Interactions<br>Binding Pocket Characterization<br>Interaction Fingerprints<br>These analyses help researchers understand ligand binding mechanisms and prioritize compounds.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Can docking results be validated using Molecular Dynamics simulations?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Yes. Molecular Dynamics (MD) simulations are frequently used to validate docking results by evaluating the stability of protein–ligand interactions over time.<br>Combining docking and MD simulations provides:<br>Improved confidence in hit selection<br>Binding stability assessment<br>Conformational flexibility analysis<br>More realistic interaction modeling</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What deliverables are included in Molecular Docking and Virtual Screening projects?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Typical project deliverables include:<br>Docking Score Reports<br>Ranked Hit Lists<br>Binding Affinity Results<br>Protein–Ligand Interaction Maps<br>2D Interaction Diagrams<br>3D Binding Visualizations<br>Virtual Screening Reports<br>ADMET Assessment Reports<br>Hit Prioritization Reports<br>Publication-Ready Figures<br>Comprehensive Scientific Reports<br>Deliverables can be customized according to project objectives.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>What therapeutic areas benefit from Molecular Docking and Virtual Screening?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">Our services support drug discovery programs across:<br>Oncology<br>Infectious Diseases<br>Neuroscience<br>Autoimmune Disorders<br>Cardiometabolic Diseases<br>Rare Diseases<br>Antimicrobial Research<br>Precision Medicine<br>Both small-molecule and biologics-based discovery programs can benefit from computational screening approaches.</p>
                 </div>
               </div>
             </div>
             <div class="rasa-faq__item" style="background:#ffffff; border:1px solid var(--border); border-radius:0.5rem; overflow:hidden;">
-              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); this.setAttribute('aria-expanded',open);">
+              <button class="rasa-faq__q" aria-expanded="false" style="width:100%; border:none; background:transparent; padding:1.25rem 1.5rem; text-align:left; font-size:1.05rem; font-weight:600; display:flex; justify-content:space-between; align-items:center; gap:1rem; color:var(--foreground); cursor:pointer;" onclick="var i=this.parentNode; var a=this.nextElementSibling; var open=!i.classList.contains('is-open'); i.classList.toggle('is-open',open); i.classList.toggle('active',open); a.style.maxHeight=open?a.scrollHeight+'px':'0px'; var ic=this.querySelector('.rasa-faq__icon'); if(ic)ic.style.transform=open?'rotate(45deg)':'none'; this.setAttribute('aria-expanded',open);">
                 <span>Why choose RASA for Molecular Docking and Virtual Screening?</span>
                 <span class="rasa-faq__icon" style="transition:transform 0.2s; font-size:1.3rem; line-height:1; color:var(--leaf); flex-shrink:0;">+</span>
               </button>
-              <div class="rasa-faq__a">
+              <div class="rasa-faq__a" style="display:block; max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
                 <div class="rasa-faq__a-inner">
                   <p style="padding:0 1.5rem 1.25rem 1.5rem; margin:0; font-size:0.95rem; color:var(--foreground-70); line-height:1.6;">RASA combines expertise in computational chemistry, structural biology, molecular modeling, cheminformatics, and AI-assisted drug discovery to deliver robust and reproducible virtual screening solutions. Our scalable cloud infrastructure, access to large compound libraries, publication-ready reporting, and integrated drug discovery workflows help researchers accelerate hit identification and lead optimization.<br>📧 support@rasalifesciences.com<br>🌐 www.rasalifesciences.com</p>
                 </div>
