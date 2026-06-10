@@ -276,19 +276,13 @@
       
       <!-- Static Universal Search Bar (Always visible below the sliding panel) -->
       <div class="rasa-hero-search-container" style="margin-top: 1.5rem; width: 100%; max-width: 55%; position: relative; z-index: 5;">
-        
-          <div class="rasa-hero-search-wrap rasa-reveal" data-delay="3" style="margin-top: 1rem; width: 100%; max-width: 500px;">
-            <div style="position: relative; display: flex; align-items: center;">
-              <input id="rasa-hero-search" type="text" placeholder="Search services &amp; FAQs…" onkeydown="if(event.key==='Enter'){var v=this.value.trim(); if(v){window.location.href='faq.html?q='+encodeURIComponent(v);}}" style="width: 100%; padding: 0.85rem 1rem 0.85rem 2.5rem; border-radius: 0.375rem; border: 1px solid rgba(15, 23, 42, 0.15); font-family: inherit; font-size: 0.9rem; background: #ffffff;">
-              <svg onclick="var i=document.getElementById('rasa-hero-search'); var v=i.value.trim(); if(v){window.location.href='faq.html?q='+encodeURIComponent(v);}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute; left: 0.85rem; width: 18px; height: 18px; color: #64748b; cursor: pointer;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-            </div>
-            <div style="margin-top: 0.75rem; font-size: 0.75rem; color: #64748b; display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
-              <span style="font-weight:600;">Popular Pipelines:</span>
-              <a href="services-ngs-transcriptomics.html" style="color: #2563eb; text-decoration: underline;">RNA-seq</a>
-              <a href="services-dd-virtual-screening.html" style="color: #2563eb; text-decoration: underline;">AutoDock Vina</a>
-              <a href="services-ngs-single-cell.html" style="color: #2563eb; text-decoration: underline;">10x Genomics</a>
-            </div>
-          </div>
+        <div class="rasa-reveal" data-delay="3" style="display:flex; flex-wrap:wrap; gap:1rem; padding-top:0.5rem;">
+          <a href="services-ngs.html" class="rasa-btn rasa-btn--primary">
+            Explore Services
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="contact.html" class="rasa-btn rasa-btn--ghost">Start a Project</a>
+        </div>
       </div>
       
     </div>
