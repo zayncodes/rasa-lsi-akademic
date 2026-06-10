@@ -15,6 +15,118 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Custom Premium Overrides for NGS Page */
+    .rasa-pagehero--premium {
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at 80% 20%, hsla(140, 40%, 12%, 0.15) 0%, transparent 50%),
+                  radial-gradient(circle at 20% 80%, hsla(140, 30%, 8%, 0.1) 0%, transparent 60%);
+    }
+    
+    .rasa-grid-bg {
+      background-image: radial-gradient(rgba(139, 195, 74, 0.08) 1px, transparent 1px) !important;
+      background-size: 24px 24px !important;
+      mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%) !important;
+      -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%) !important;
+    }
+
+    /* Glassmorphic Cards & Hover Glows */
+    .rasa-svc-card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.75) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(139, 195, 74, 0.15) !important;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02) !important;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .rasa-svc-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(139, 195, 74, 0.12), transparent 45%);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .rasa-svc-card:hover::before {
+      opacity: 1;
+    }
+    .rasa-svc-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(139, 195, 74, 0.4) !important;
+      box-shadow: 0 12px 40px rgba(139, 195, 74, 0.08) !important;
+    }
+
+    /* Technology Tool Badge styling */
+    .rasa-tool {
+      background: rgba(255, 255, 255, 0.85) !important;
+      border: 1px solid rgba(0, 0, 0, 0.06) !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .rasa-tool:hover {
+      background: #ffffff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(139, 195, 74, 0.15) !important;
+      border-color: rgba(139, 195, 74, 0.3) !important;
+    }
+    .rasa-tool__mono {
+      background: #ffffff !important;
+      border: 1px solid rgba(0,0,0,0.06) !important;
+      color: inherit !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      padding: 0 !important;
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
+      overflow: hidden;
+    }
+    .rasa-tool__mono svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+    
+    /* Scroll Reveal */
+    .rasa-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .rasa-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Interactive FAQ Grid-Based Auto Height transition */
+    .rasa-faq__item {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .rasa-faq__item.is-open {
+      border-color: rgba(139, 195, 74, 0.3) !important;
+      box-shadow: 0 8px 24px rgba(139, 195, 74, 0.06) !important;
+    }
+    .rasa-faq__a {
+      display: grid !important;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      max-height: none !important;
+    }
+    .rasa-faq__item.is-open .rasa-faq__a {
+      grid-template-rows: 1fr;
+    }
+    .rasa-faq__a-inner {
+      overflow: hidden;
+    }
+  </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"NGS Data Analysis","serviceType":"NGS Data Analysis","provider":{"@type":"Organization","name":"RASA Life Science Informatics","url":"https://www.rasalsi.com/","areaServed":"Worldwide","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"}},"description":"RASA Life Science Informatics provides comprehensive NGS Data Analysis Services for pharmaceutical companies, biotechnology organizations, hospitals, CROs, re"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What Computational Genomics services does RASA Life Science Informatics provide?","acceptedAnswer":{"@type":"Answer","text":"RASA Life Science Informatics provides comprehensive Computational Genomics services designed to transform complex sequencing and multi-omics datasets into actionable biological insights. Our expertise includes RNA-Seq analysis, Single-Cell Omics, Whole Genome Sequencing (WGS), Whole Exome Sequencing (WES), Spatial Transcriptomics, Metagenomics &amp; Microbiome Analysis, Epigenomics, Long-Read Sequencing, Multi-Omics Integration, Clinical Genomics, and Biomarker Discovery. These services support pharmaceutical research, biotechnology innovation, clinical genomics, precision medicine, and translational research programs."}},{"@type":"Question","name":"What is Computational Genomics and why is it important?","acceptedAnswer":{"@type":"Answer","text":"Computational Genomics combines genomics, bioinformatics, statistics, machine learning, and computational biology to analyze and interpret large-scale biological datasets. It enables researchers to identify disease-associated genes, discover biomarkers, understand molecular pathways, characterize cellular populations, and support precision medicine initiatives. Computational genomics plays a critical role in modern drug discovery, clinical research, cancer genomics, rare disease studies, and personalized healthcare."}},{"@type":"Question","name":"Which sequencing platforms and technologies are supported?","acceptedAnswer":{"@type":"Answer","text":"Our bioinformatics workflows support data generated from leading sequencing and omics platforms, including: Illumina Sequencing Oxford Nanopore Technologies (ONT) PacBio HiFi &amp; Iso-Seq 10x Genomics Chromium NanoString GeoMx DSP CosMx SMI MERFISH Slide-seq SMART-seq2 Parse Biosciences We continuously adapt our pipelines to support emerging genomics and spatial omics technologies."}},{"@type":"Question","name":"Can RASA analyze raw FASTQ sequencing files?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide complete end-to-end bioinformatics analysis starting from raw FASTQ files. Our workflows include quality control, adapter trimming, sequence alignment, transcript quantification, variant calling, statistical analysis, pathway enrichment, biological interpretation, and publication-ready reporting. We also support BAM, CRAM, VCF, count matrices, expression tables, and processed sequencing datasets."}},{"@type":"Question","name":"What NGS data analysis services do you provide?","acceptedAnswer":{"@type":"Answer","text":"Our NGS and Computational Genomics services include: Transcriptomics (RNA-Seq) Single-Cell Omics Whole Genome Sequencing (WGS) Whole Exome Sequencing (WES) Spatial Transcriptomics Metagenomics &amp; Microbiome Analysis Epigenomics (ATAC-Seq, ChIP-Seq, DNA Methylation) Long-Read Sequencing Analysis Multi-Omics Integration Clinical Genomics Biomarker Discovery Each workflow is customized to the biological question, sequencing platform, and project objectives."}},{"@type":"Question","name":"Do you provide customized bioinformatics pipelines?","acceptedAnswer":{"@type":"Answer","text":"Yes. We develop customized bioinformatics workflows based on: Organism type Sequencing technology Experimental design Research objectives Clinical applications Regulatory requirements Data volume and infrastructure requirements Our pipelines are designed to be reproducible, scalable, and suitable for both academic research and industry projects."}},{"@type":"Question","name":"What types of biological samples and organisms can be analyzed?","acceptedAnswer":{"@type":"Answer","text":"We support genomics projects across a wide range of organisms and sample types, including: Human samples Animal models Plant genomics Microbial genomes Environmental samples Cancer tissues Clinical specimens Single-cell datasets Metagenomic communities Our workflows can be adapted for both model and non-model organisms."}},{"@type":"Question","name":"Do you provide Multi-Omics Integration services?","acceptedAnswer":{"@type":"Answer","text":"Yes. We specialize in integrating multiple biological data types, including genomics, transcriptomics, epigenomics, proteomics, metabolomics, and clinical datasets. Multi-omics integration helps uncover complex biological mechanisms, identify biomarkers, prioritize therapeutic targets, and support precision medicine research."}},{"@type":"Question","name":"Can Computational Genomics support drug discovery and biomarker development?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. Computational genomics is widely used for: Therapeutic target identification Biomarker discovery Disease pathway analysis Precision medicine research Drug response prediction Patient stratification Translational medicine programs These insights help accelerate drug discovery and clinical development programs."}},{"@type":"Question","name":"What deliverables are included in Computational Genomics projects?","acceptedAnswer":{"@type":"Answer","text":"Project deliverables typically include: Quality Control Reports Statistical Analysis Reports Differential Expression Analysis Variant Calling Results Pathway Enrichment Analysis Network Biology Analysis Biomarker Discovery Reports Interactive Visualizations Publication-Ready Figures Comprehensive Scientific Reports Deliverables can be customized according to project requirements."}},{"@type":"Question","name":"Do you provide publication-ready figures and scientific reports?","acceptedAnswer":{"@type":"Answer","text":"Yes. All projects include high-quality scientific visualizations, biological interpretation, methodology documentation, and publication-ready figures suitable for journal manuscripts, grant applications, regulatory submissions, and presentations."}},{"@type":"Question","name":"Which bioinformatics tools and software platforms are used?","acceptedAnswer":{"@type":"Answer","text":"Depending on project requirements, we utilize industry-standard tools including: FASTQC MultiQC STAR HISAT2 Salmon GATK DeepVariant Seurat Scanpy Cell Ranger QIIME2 Kraken2 Bismark MACS2 Cytoscape DESeq2 edgeR Our workflows are continuously updated to incorporate the latest bioinformatics methodologies."}},{"@type":"Question","name":"Do you support cloud-based and high-performance computing environments?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our bioinformatics workflows are deployable on: Amazon Web Services (AWS) Google Cloud Platform (GCP) Microsoft Azure High-Performance Computing (HPC) Clusters On-Premise Servers We use technologies such as Nextflow, Snakemake, Docker, and Singularity to ensure reproducibility and scalability."}},{"@type":"Question","name":"How is data security and confidentiality handled?","acceptedAnswer":{"@type":"Answer","text":"We maintain strict confidentiality and data security standards. Client data is handled through secure storage, encrypted transfers, controlled access policies, and optional Non-Disclosure Agreements (NDAs). We follow best practices for data protection and project confidentiality throughout the engagement."}},{"@type":"Question","name":"Why choose RASA Life Science Informatics for Computational Genomics?","acceptedAnswer":{"@type":"Answer","text":"RASA combines expertise in genomics, bioinformatics, computational biology, and AI-driven analytics to deliver scalable, scientifically rigorous, and reproducible solutions. Our team supports pharmaceutical companies, biotechnology organizations, hospitals, CROs, and academic researchers through customized workflows, advanced analytical capabilities, publication-ready reporting, and collaborative scientific support."}},{"@type":"Question","name":"How can I start a Computational Genomics project with RASA?","acceptedAnswer":{"@type":"Answer","text":"Getting started is simple. Share your project objectives, study design, and available datasets with our team. We will assess your requirements, recommend the most suitable analytical workflow, provide a project proposal, and deliver a customized solution tailored to your research or business goals. 📧 support@rasalifesciences.com 🌐 www.rasalifesciences.com"}}]}]}</script>
 </head>
 <body class="rasa">
@@ -96,7 +208,8 @@
   <section class="rasa-pagehero rasa-pagehero--premium">
     <div class="rasa-grid-bg" aria-hidden="true"></div>
     <div class="rasa-hero-glow" aria-hidden="true"></div>
-    <div class="container">
+    <canvas id="ngs-hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.75;"></canvas>
+    <div class="container" style="position: relative; z-index: 2;">
       <div class="rasa-pagehero__grid">
         <div class="rasa-pagehero__copy">
           <div class="rasa-reveal"><span class="rasa-eyebrow">Computational Genomics &amp; NGS<span class="rasa-eyebrow__rule"></span></span></div>
@@ -237,45 +350,45 @@
     <div class="rasa-techcat rasa-reveal">
       <h3 class="rasa-techcat__h"><span class="rasa-techcat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3c0 5 14 6 14 14M19 3c0 5-14 6-14 14"/><path d="M7.5 6h9M8.5 10h7M8.5 14h7M7.5 18h9"/></svg></span>Sequence Analysis</h3>
       <div class="rasa-techcat__grid">
-        <div class="rasa-tool"><span class="rasa-tool__mono">FA</span><span class="rasa-tool__name">FASTQC</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">MQ</span><span class="rasa-tool__name">MultiQC</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">BW</span><span class="rasa-tool__name">BWA</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">ST</span><span class="rasa-tool__name">STAR</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">HI</span><span class="rasa-tool__name">HISAT2</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 12C20 7.58 16.42 4 12 4C7.58 4 4 7.58 4 12C4 14.5 5.15 16.74 6.95 18.24L8.4 16.8C7.22 15.68 6.5 14.1 6.5 12C6.5 8.96 8.96 6.5 12 6.5C15.04 6.5 17.5 8.96 17.5 12C17.5 13.2 17.1 14.3 16.45 15.2L17.9 16.65C19.2 15.35 20 13.6 20 12Z" fill="#00897B"/><path d="M12 9V12L14 14" stroke="#D81B60" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="1.5" fill="#37474F"/></svg></span><span class="rasa-tool__name">FASTQC</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" fill="#E0F2F1"/><path d="M12 3C16.97 3 21 7.03 21 12H12V3Z" fill="#00897B"/><path d="M12 12V21C7.03 21 3 16.97 3 12H12Z" fill="#00ACC1"/><path d="M12 12H21C21 16.97 16.97 21 12 21V12Z" fill="#FFB300"/></svg></span><span class="rasa-tool__name">MultiQC</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12C8 4 16 4 20 12C16 20 8 20 4 12Z" stroke="#43A047" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="#81C784"/><line x1="12" y1="4" x2="12" y2="20" stroke="#2E7D32" stroke-width="1.5"/></svg></span><span class="rasa-tool__name">BWA</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.8 8.6L22 9.2L16.5 13.8L18.2 20.8L12 17L5.8 20.8L7.5 13.8L2 9.2L9.2 8.6L12 2Z" fill="#FDD835" stroke="#F57F17" stroke-width="1"/><circle cx="12" cy="11" r="3.5" fill="#E53935"/><path d="M7.5 12H16.5" stroke="#FFF" stroke-width="1.5"/></svg></span><span class="rasa-tool__name">STAR</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8H11V16H3V8Z" fill="#90CAF9"/><path d="M13 8H21V16H13V8Z" fill="#90CAF9"/><path d="M8 12C10.5 12 11.5 6 14 6C16.5 6 17.5 12 20 12" stroke="#1565C0" stroke-width="2" fill="none"/></svg></span><span class="rasa-tool__name">HISAT2</span></div>
       </div>
     </div>
     <div class="rasa-techcat rasa-reveal">
       <h3 class="rasa-techcat__h"><span class="rasa-techcat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3c0 5 14 6 14 14M19 3c0 5-14 6-14 14"/><path d="M7.5 6h9M8.5 10h7M8.5 14h7M7.5 18h9"/></svg></span>Variant Analysis</h3>
       <div class="rasa-techcat__grid">
-        <div class="rasa-tool"><span class="rasa-tool__mono">GA</span><span class="rasa-tool__name">GATK</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">DV</span><span class="rasa-tool__name">DeepVariant</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">BC</span><span class="rasa-tool__name">bcftools</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">AN</span><span class="rasa-tool__name">ANNOVAR</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6C8 6 8 18 12 18C16 18 16 6 20 6" stroke="#E53935" stroke-width="2.5" stroke-linecap="round"/><path d="M4 18C8 18 8 6 12 6C16 6 16 18 20 18" stroke="#1E88E5" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 2"/><circle cx="12" cy="12" r="3.5" fill="#FFB300" stroke="#FFF" stroke-width="1"/></svg></span><span class="rasa-tool__name">GATK</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" fill="#E8EAF6" stroke="#3F51B5" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="#3F51B5"/><circle cx="16" cy="8" r="2" fill="#3F51B5"/><circle cx="12" cy="16" r="3" fill="#FF3D00"/><line x1="8" y1="8" x2="12" y2="16" stroke="#3F51B5" stroke-width="1"/><line x1="16" y1="8" x2="12" y2="16" stroke="#3F51B5" stroke-width="1"/></svg></span><span class="rasa-tool__name">DeepVariant</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="8" r="3" stroke="#E53935" stroke-width="2"/><circle cx="6" cy="16" r="3" stroke="#E53935" stroke-width="2"/><line x1="8.5" y1="9.5" x2="18" y2="15.5" stroke="#E53935" stroke-width="2"/><line x1="8.5" y1="14.5" x2="18" y2="8.5" stroke="#E53935" stroke-width="2"/></svg></span><span class="rasa-tool__name">bcftools</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 5C4 3.9 4.9 3 6 3H14L20 9V19C20 20.1 19.1 21 18 21H6C4.9 21 4 20.1 4 19V5Z" fill="#FFF8E1" stroke="#FFB300" stroke-width="2"/><path d="M14 3V9H20" stroke="#FFB300" stroke-width="2" fill="none"/><line x1="8" y1="13" x2="16" y2="13" stroke="#FF8F00" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="17" x2="13" y2="17" stroke="#FF8F00" stroke-width="2" stroke-linecap="round"/></svg></span><span class="rasa-tool__name">ANNOVAR</span></div>
       </div>
     </div>
     <div class="rasa-techcat rasa-reveal">
       <h3 class="rasa-techcat__h"><span class="rasa-techcat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="9" r="3.2"/><circle cx="16" cy="14.5" r="3.6"/><circle cx="9" cy="16.5" r="2"/></svg></span>Single-Cell Analysis</h3>
       <div class="rasa-techcat__grid">
-        <div class="rasa-tool"><span class="rasa-tool__mono">CR</span><span class="rasa-tool__name">Cell Ranger</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">SE</span><span class="rasa-tool__name">Seurat</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">SC</span><span class="rasa-tool__name">Scanpy</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#E91E63" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="#E91E63" stroke-width="1.5"/><circle cx="12" cy="12" r="2" fill="#E91E63"/><line x1="12" y1="1" x2="12" y2="23" stroke="#E91E63" stroke-width="1" stroke-dasharray="2 2"/><line x1="1" y1="12" x2="23" y2="12" stroke="#E91E63" stroke-width="1" stroke-dasharray="2 2"/></svg></span><span class="rasa-tool__name">Cell Ranger</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="15" r="2" fill="#FF5252"/><circle cx="9" cy="18" r="1.5" fill="#FF5252"/><circle cx="7" cy="11" r="2" fill="#448AFF"/><circle cx="12" cy="14" r="1.5" fill="#448AFF"/><circle cx="15" cy="9" r="2.5" fill="#4CAF50"/><circle cx="18" cy="6" r="2" fill="#4CAF50"/><circle cx="14" cy="6" r="1.5" fill="#4CAF50"/><circle cx="19" cy="11" r="1.5" fill="#4CAF50"/></svg></span><span class="rasa-tool__name">Seurat</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 18C4 18 8 6 12 6C16 6 20 18 20 18" stroke="#3776AB" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="6" r="3" fill="#FFD43B" stroke="#3776AB" stroke-width="1"/><circle cx="7" cy="13" r="1.5" fill="#3776AB"/><circle cx="17" cy="13" r="1.5" fill="#3776AB"/></svg></span><span class="rasa-tool__name">Scanpy</span></div>
       </div>
     </div>
     <div class="rasa-techcat rasa-reveal">
       <h3 class="rasa-techcat__h"><span class="rasa-techcat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 2.5 7 12 11.5 21.5 7z"/><path d="M2.5 12 12 16.5 21.5 12M2.5 16.5 12 21l9.5-4.5"/></svg></span>Multi-Omics &amp; Statistics</h3>
       <div class="rasa-techcat__grid">
-        <div class="rasa-tool"><span class="rasa-tool__mono">R</span><span class="rasa-tool__name">R</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">PY</span><span class="rasa-tool__name">Python</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">BI</span><span class="rasa-tool__name">Bioconductor</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="12" rx="11" ry="8" fill="#1F65B7" opacity="0.15"/><ellipse cx="11" cy="11" rx="10" ry="7.5" stroke="#1F65B7" stroke-width="1.5"/><path d="M7 15V7H11.5C13 7 14 7.8 14 9C14 10 13.2 10.7 12 11L14.5 15H11.8L9.5 11.5H8.5V15H7ZM8.5 10H11C11.8 10 12.2 9.7 12.2 9C12.2 8.3 11.8 8 11 8H8.5V10Z" fill="#276CB4"/></svg></span><span class="rasa-tool__name">R</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.7 2 8 2.6 8 5V7H12V7.5H6.5C4.6 7.5 4 8.7 4 11C4 13.8 5 14.5 7 14.5H8V13C8 10.2 9.8 9.5 12 9.5H16V8C16 4.7 15.3 4 12 4H10.5V5.5C10.5 6.1 10.9 6.5 11.5 6.5C12.1 6.5 12.5 6.1 12.5 5.5V3.5C12.5 2.7 12.8 2 12 2Z" fill="#3776AB"/><path d="M12 22C15.3 22 16 21.4 16 19V17H12V16.5H17.5C19.4 16.5 20 15.3 20 13C20 10.2 19 9.5 17 9.5H16V11C16 13.8 14.2 14.5 12 14.5H8V16C8 19.3 8.7 20 12 20H13.5V18.5C13.5 17.9 13.1 17.5 12.5 17.5C11.9 17.5 11.5 17.9 11.5 18.5V20.5C11.5 21.3 11.2 22 12 22Z" fill="#FFD43B"/></svg></span><span class="rasa-tool__name">Python</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="#87B13F" stroke-width="2" stroke-dasharray="4 2"/><path d="M8 12C8 9.8 9.8 8 12 8C14.2 8 16 9.8 16 12C16 14.2 14.2 16 12 16" stroke="#2D882D" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="2" fill="#D32F2F"/></svg></span><span class="rasa-tool__name">Bioconductor</span></div>
       </div>
     </div>
     <div class="rasa-techcat rasa-reveal">
       <h3 class="rasa-techcat__h"><span class="rasa-techcat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 2.5 7 12 11.5 21.5 7z"/><path d="M2.5 12 12 16.5 21.5 12M2.5 16.5 12 21l9.5-4.5"/></svg></span>Workflow Management</h3>
       <div class="rasa-techcat__grid">
-        <div class="rasa-tool"><span class="rasa-tool__mono">NE</span><span class="rasa-tool__name">Nextflow</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">SN</span><span class="rasa-tool__name">Snakemake</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">DO</span><span class="rasa-tool__name">Docker</span></div>
-        <div class="rasa-tool"><span class="rasa-tool__mono">SI</span><span class="rasa-tool__name">Singularity</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="18" r="3" fill="#29B6F6"/><circle cx="18" cy="18" r="3" fill="#66BB6A"/><circle cx="12" cy="6" r="4" fill="#00E676"/><path d="M12 10V14M6 15L10.5 8M18 15L13.5 8" stroke="#37474F" stroke-width="2" stroke-linecap="round"/></svg></span><span class="rasa-tool__name">Nextflow</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 19C6 19 8 13 12 13C16 13 18 19 18 19" stroke="#E53935" stroke-width="2" stroke-linecap="round"/><path d="M6 5C6 5 8 11 12 11C16 11 18 5 18 5" stroke="#E53935" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5" fill="#37474F"/></svg></span><span class="rasa-tool__name">Snakemake</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 13.5C2 17 5 18.5 9 18.5C15.5 18.5 19 16 21.5 13.5C22.2 12.8 22 12.5 21.2 12.5C19.5 12.5 18.5 13.5 17 13.5C16.5 11.5 14.5 10 12.5 10C11.5 10 10.5 10.5 10 11C9.5 10.5 8.5 10 7.5 10C5.5 10 3.5 11.5 3 13.5C2.5 13.5 2 13.5 2 13.5Z" fill="#0db7ed"/><rect x="5.5" y="7" width="2" height="2" rx="0.5" fill="#0db7ed"/><rect x="8" y="7" width="2" height="2" rx="0.5" fill="#0db7ed"/><rect x="10.5" y="7" width="2" height="2" rx="0.5" fill="#0db7ed"/><rect x="13" y="7" width="2" height="2" rx="0.5" fill="#0db7ed"/><rect x="6.75" y="4.5" width="2" height="2" rx="0.5" fill="#0db7ed"/><rect x="9.25" y="4.5" width="2" height="2" rx="0.5" fill="#0db7ed"/><rect x="11.75" y="4.5" width="2" height="2" rx="0.5" fill="#0db7ed"/></svg></span><span class="rasa-tool__name">Docker</span></div>
+        <div class="rasa-tool"><span class="rasa-tool__mono"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="#00BCD4" stroke-width="1.5"/><circle cx="12" cy="12" r="6" stroke="#00BCD4" stroke-width="1.5" stroke-dasharray="2 1"/><circle cx="12" cy="12" r="3" fill="#00E5FF"/></svg></span><span class="rasa-tool__name">Singularity</span></div>
       </div>
     </div>
   </div>
@@ -701,6 +814,149 @@
     });
   });
 
+  // Card hover radial light reflection tracking
+  document.querySelectorAll('.rasa-svc-card').forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      var rect = card.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', x + 'px');
+      card.style.setProperty('--mouse-y', y + 'px');
+    });
+  });
+
+  // DNA double-helix background canvas animation
+  (function () {
+    var canvas = document.getElementById('ngs-hero-canvas');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var dpr = window.devicePixelRatio || 1;
+    var width = 0, height = 0;
+
+    function resize() {
+      var rect = canvas.parentNode.getBoundingClientRect();
+      width = rect.width;
+      height = rect.height;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.scale(dpr, dpr);
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    var mouse = { x: null, y: null, radius: 150 };
+    window.addEventListener('mousemove', function (e) {
+      var rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+    window.addEventListener('mouseleave', function () {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    var rotation = 0;
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      // Draw subtle background grid lines
+      ctx.strokeStyle = 'rgba(139, 195, 74, 0.04)';
+      ctx.lineWidth = 1;
+      var step = 45;
+      for (var x = 0; x < width; x += step) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        ctx.stroke();
+      }
+      for (var y = 0; y < height; y += step) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(width, y);
+        ctx.stroke();
+      }
+
+      var centerX = width * 0.75;
+      if (width < 768) centerX = width * 0.5;
+
+      var amplitude = Math.min(width * 0.12, 80);
+      var frequency = 0.006;
+      var speed = 0.012;
+      rotation += speed;
+
+      var points1 = [];
+      var points2 = [];
+
+      for (var yVal = height * 0.02; yVal < height * 0.98; yVal += 16) {
+        var angle = yVal * frequency + rotation;
+        var sinVal = Math.sin(angle);
+        var cosVal = Math.cos(angle);
+        var sizeFactor = (cosVal + 1.2) / 2.2;
+
+        var x1 = centerX + sinVal * amplitude;
+        var x2 = centerX - sinVal * amplitude;
+
+        if (mouse.x !== null && mouse.y !== null) {
+          var dist1 = Math.hypot(x1 - mouse.x, yVal - mouse.y);
+          if (dist1 < mouse.radius) {
+            var force = (mouse.radius - dist1) / mouse.radius;
+            x1 += (x1 - mouse.x) * force * 0.25;
+          }
+          var dist2 = Math.hypot(x2 - mouse.x, yVal - mouse.y);
+          if (dist2 < mouse.radius) {
+            var force = (mouse.radius - dist2) / mouse.radius;
+            x2 += (x2 - mouse.x) * force * 0.25;
+          }
+        }
+
+        points1.push({ x: x1, y: yVal, z: cosVal, size: sizeFactor });
+        points2.push({ x: x2, y: yVal, z: -cosVal, size: (1.2 - cosVal) / 2.2 });
+
+        ctx.beginPath();
+        ctx.moveTo(x1, yVal);
+        ctx.lineTo(x2, yVal);
+        var alpha = Math.max(0.02, 0.22 * sizeFactor);
+        ctx.strokeStyle = 'rgba(139, 195, 74, ' + alpha + ')';
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc((x1 + x2) / 2, yVal, 1.5, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(139, 195, 74, ' + (alpha * 1.5) + ')';
+        ctx.fill();
+      }
+
+      function drawStrand(points, color, isFront) {
+        ctx.beginPath();
+        ctx.moveTo(points[0].x, points[0].y);
+        for (var i = 1; i < points.length; i++) {
+          var xc = (points[i].x + points[i - 1].x) / 2;
+          var yc = (points[i].y + points[i - 1].y) / 2;
+          ctx.quadraticCurveTo(points[i - 1].x, points[i - 1].y, xc, yc);
+        }
+        ctx.strokeStyle = color;
+        ctx.lineWidth = isFront ? 2 : 1;
+        ctx.stroke();
+
+        points.forEach(function (p) {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, 4.5 * p.size, 0, Math.PI * 2);
+          ctx.fillStyle = p.z > 0 ? '#8BC34A' : 'rgba(124, 179, 66, 0.6)';
+          if (p.z > 0) {
+            ctx.shadowColor = '#8BC34A';
+            ctx.shadowBlur = 8;
+          }
+          ctx.fill();
+          ctx.shadowBlur = 0;
+        });
+      }
+
+      drawStrand(points2, 'rgba(139, 195, 74, 0.2)', false);
+      drawStrand(points1, 'rgba(139, 195, 74, 0.45)', true);
+
+      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+  })();
 })();
 
   
