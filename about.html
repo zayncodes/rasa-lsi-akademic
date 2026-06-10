@@ -368,6 +368,9 @@
       <span>© <span id="rasa-year">2026</span> Rasa Life Science Informatics. Engineered in Pune.</span>
       <span><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></span>
     </div>
+    <div class="rasa-footer__wordmark-container">
+      <div class="rasa-footer__wordmark">RASA</div>
+    </div>
   </div>
 </footer>
   <script>
@@ -464,6 +467,34 @@
 })();
 
   
+
+  // Phase 2: Rippling-Style Footer Reveal
+  (function() {
+    var wordmark = document.querySelector('.rasa-footer__wordmark');
+    if (wordmark) {
+      var ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var distanceToBottom = docHeight - scrollY;
+            if (distanceToBottom < 600) {
+              var progress = Math.min(Math.max((600 - distanceToBottom) / 600, 0), 1);
+              var yVal = (1 - progress) * 80;
+              var scaleVal = 0.9 + progress * 0.1;
+              wordmark.style.transform = 'translate3d(0, ' + yVal + 'px, 0) scale(' + scaleVal + ')';
+              wordmark.style.opacity = progress.toString();
+            } else {
+              wordmark.style.transform = 'translate3d(0, 80px, 0) scale(0.9)';
+              wordmark.style.opacity = '0';
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    }
+  })();
 </script>
 </body>
 </html>
