@@ -3177,3 +3177,34 @@ body.dark-mode .rasa-top-bar {
   transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Phase 2: Rippling-Style Footer Logo Reveal */
+.rasa-footer__wordmark-container {
+  overflow: hidden;
+  margin-top: 3rem;
+  pointer-events: none;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.rasa-footer__wordmark {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(6rem, 24vw, 36rem);
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(22, 101, 52, 0.04);
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+  will-change: transform, opacity;
+  transform: translate3d(0, 80px, 0) scale(0.9);
+  opacity: 0;
+  transition: transform 0.1s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.dark-mode .rasa-footer__wordmark {
+  color: rgba(96, 165, 250, 0.02);
+}
+
