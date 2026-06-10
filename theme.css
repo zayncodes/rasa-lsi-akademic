@@ -3161,42 +3161,7 @@ body.dark-mode .rasa-top-bar {
   color: #60a5fa;
 }
 
-/* Vertical Flowline Path Tracer */
-.rasa-flowline-container {
-  position: absolute;
-  top: 15rem;
-  bottom: 15rem;
-  left: 3rem;
-  width: 4px;
-  pointer-events: none;
-  z-index: 1;
-}
 
-@media (max-width: 1200px) {
-  .rasa-flowline-container {
-    display: none;
-  }
-}
-
-.rasa-flowline-svg {
-  width: 4px;
-  height: 100%;
-}
-
-.rasa-flowline-path-bg {
-  stroke: var(--border);
-  stroke-width: 2;
-  stroke-dasharray: 6 6;
-  fill: none;
-}
-
-.rasa-flowline-path-active {
-  stroke: var(--leaf);
-  stroke-width: 2;
-  stroke-linecap: round;
-  fill: none;
-  transition: stroke-dashoffset 0.1s ease;
-}
 
 /* Stagger delay classes for reveals */
 .stagger-1 { transition-delay: 0.05s !important; }

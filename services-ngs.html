@@ -248,13 +248,7 @@
     </svg>
   </div>
 
-  <!-- Vertical Scroll-Driven Flowline Path Tracer -->
-  <div class="rasa-flowline-container" aria-hidden="true">
-    <svg class="rasa-flowline-svg" viewBox="0 0 4 1000" preserveAspectRatio="none">
-      <line x1="2" y1="0" x2="2" y2="1000" class="rasa-flowline-path-bg" />
-      <line x1="2" y1="0" x2="2" y2="1000" class="rasa-flowline-path-active" id="rasa-flowline-path" />
-    </svg>
-  </div>
+
 
   <section class="rasa-pagehero rasa-pagehero--premium">
     <div class="rasa-grid-bg" aria-hidden="true"></div>
@@ -865,27 +859,33 @@
     });
   });
 
-  // Card hover radial light reflection tracking
-  document.querySelectorAll('.rasa-svc-card').forEach(function (card) {
+  // Interactive 3D mouse tilt and glow shadow calculation for capability and service cards
+  var cards3d = document.querySelectorAll('.rasa-highlight, .rasa-svc-card, .rasa-capability');
+  cards3d.forEach(function (card) {
     card.addEventListener('mousemove', function (e) {
       var rect = card.getBoundingClientRect();
       var x = e.clientX - rect.left;
       var y = e.clientY - rect.top;
+      var xc = rect.width / 2;
+      var yc = rect.height / 2;
+      // Max tilt rotation 7 degrees
+      var rotX = ((yc - y) / yc) * 7;
+      var rotY = ((x - xc) / xc) * 7;
+      
+      card.style.transform = 'perspective(1000px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateY(-4px)';
       card.style.setProperty('--mouse-x', x + 'px');
       card.style.setProperty('--mouse-y', y + 'px');
     });
+    
+    card.addEventListener('mouseleave', function () {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
   });
 
-  // Phase 2: Parallax Scroll Elements & Flowline Tracer
+  // Phase 2: Parallax Scroll Elements
   (function() {
-    var flowline = document.getElementById('rasa-flowline-path');
     var parallaxShapes = document.querySelectorAll('.rasa-parallax-shape');
     var ticking = false;
-
-    if (flowline) {
-      flowline.style.strokeDasharray = '1000 1000';
-      flowline.style.strokeDashoffset = '1000';
-    }
 
     window.addEventListener('scroll', function() {
       if (!ticking) {
@@ -898,14 +898,6 @@
             var yVal = scrollY * speed;
             shape.style.transform = 'translate3d(0, ' + yVal + 'px, 0)';
           });
-          
-          // Update flowline path tracer
-          var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-          var scrollPercent = docHeight > 0 ? scrollY / docHeight : 0;
-          if (flowline) {
-            var activePercent = Math.min(Math.max(scrollPercent, 0), 1);
-            flowline.style.strokeDashoffset = (1000 - (1000 * activePercent)).toString();
-          }
           
           ticking = false;
         });
