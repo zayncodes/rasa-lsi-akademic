@@ -3223,7 +3223,7 @@ body.dark-mode .rasa-footer__reveal-section {
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;
-  color: rgba(37, 99, 235, 0.15) !important;
+  color: rgba(37, 99, 235, 0.24) !important;
   line-height: 0.8;
   letter-spacing: -0.04em;
   will-change: transform, opacity;
@@ -3233,7 +3233,7 @@ body.dark-mode .rasa-footer__reveal-section {
 }
 
 body.dark-mode .rasa-footer__wordmark {
-  color: rgba(96, 165, 250, 0.15) !important;
+  color: rgba(96, 165, 250, 0.24) !important;
 }
 
 /* Background video and parallax scroll for hero section */
