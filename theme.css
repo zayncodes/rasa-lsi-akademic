@@ -129,9 +129,9 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
 .rasa-btn svg { width: 16px; height: 16px; }
 
 /* Sections */
-.rasa-section { padding: 3.5rem 0; position: relative; }
+.rasa-section { padding: 2.25rem 0; position: relative; }
 
-.rasa-section--lg { padding: 4.5rem 0; }
+.rasa-section--lg { padding: 3rem 0; }
 
 .rasa-section--muted { background: var(--surface); }
 
@@ -207,7 +207,7 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
 
 @media (min-width: 1000px) { .rasa-hero__grid { grid-template-columns: 1.2fr 1fr; gap: 4rem; } }
 
-.rasa-hero__copy { display: flex; flex-direction: column; gap: 2rem; }
+.rasa-hero__copy { display: flex; flex-direction: column; gap: 1.25rem; }
 
 .rasa-hero__art {
   position: relative; aspect-ratio: 1/1; max-width: 480px; width: 100%; margin: 0 auto;
@@ -357,7 +357,7 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
 }
 
 /* Platforms strip */
-.rasa-platforms { padding: 2.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--background); }
+.rasa-platforms { padding: 1.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--background); }
 
 .rasa-platforms__label { text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--foreground-40); margin: 0 0 2rem; }
 
@@ -368,7 +368,7 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
 .rasa-platforms__item:hover { color: var(--leaf); }
 
 /* CTA */
-.rasa-cta { padding: 4.5rem 0; text-align: center; position: relative; overflow: hidden; }
+.rasa-cta { padding: 3rem 0 2rem; text-align: center; position: relative; overflow: hidden; }
 
 .rasa-cta__inner { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 1.75rem; }
 
@@ -2705,14 +2705,14 @@ body.rasa {
 
 .rasa-hero-slides {
   position: relative;
-  min-height: 380px;
+  min-height: 320px;
   display: grid;
   grid-template-columns: 1fr;
 }
 
 @media (max-width: 900px) {
   .rasa-hero-slides {
-    min-height: 480px;
+    min-height: 400px;
   }
 }
 
@@ -2828,11 +2828,11 @@ body.rasa {
 
 .rasa-hero__circle-frame {
   position: relative;
-  width: 260px;
-  height: 260px;
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid var(--leaf);
+  border: 2px solid var(--leaf);
   box-shadow: 0 15px 35px rgba(0,0,0,0.06);
   background: var(--cream);
   display: flex;
@@ -2842,15 +2842,15 @@ body.rasa {
 
 @media (max-width: 1100px) {
   .rasa-hero__circle-frame {
-    width: 230px;
-    height: 230px;
+    width: 300px;
+    height: 300px;
   }
 }
 
 @media (max-width: 900px) {
   .rasa-hero__circle-frame {
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 240px;
     margin: 1.5rem auto 0;
   }
 }
@@ -3182,7 +3182,7 @@ body.dark-mode .rasa-footer {
 
 .rasa-footer__content-wrapper {
   background: var(--background);
-  padding: 4.5rem 0 3.5rem;
+  padding: 2.5rem 0 2.25rem;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   position: relative;
@@ -3198,7 +3198,7 @@ body.dark-mode .rasa-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 0 1.5rem;
+  padding: 2rem 0 1rem;
   margin-top: -20px;
   overflow: hidden;
 }
@@ -3252,20 +3252,22 @@ body.dark-mode .rasa-footer__wordmark {
   width: 100%;
   height: 120%;
   object-fit: cover;
-  opacity: 0.06;
+  opacity: 0.22;
   transform: translate3d(0, 0, 0);
   will-change: transform;
-  filter: grayscale(20%) contrast(110%);
+  mix-blend-mode: multiply;
+  filter: contrast(105%);
 }
 
 body.dark-mode .rasa-hero__parallax-bg {
-  opacity: 0.12;
+  opacity: 0.35;
+  mix-blend-mode: screen;
 }
 
 .rasa-hero__bg-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, transparent 20%, var(--cream) 100%);
+  background: linear-gradient(to bottom, transparent 50%, var(--cream) 100%), radial-gradient(circle at center, transparent 40%, var(--cream) 100%);
   z-index: 2;
 }
 
