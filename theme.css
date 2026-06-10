@@ -3198,7 +3198,7 @@ body.dark-mode .rasa-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0 6rem;
+  padding: 3rem 0 1.5rem;
   margin-top: -20px;
   overflow: hidden;
 }
