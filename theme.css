@@ -961,7 +961,7 @@ body.rasa {
   display: flex !important;
   flex-direction: column !important;
   min-height: 100vh !important;
-  padding-top: 96px !important; /* Offset fixed header (64px) + top bar (32px) */
+  padding-top: 64px !important; /* Offset fixed header (64px) */
   padding-bottom: 0 !important;
 }
 
@@ -2925,25 +2925,14 @@ body.rasa {
 
 /* Theme 1 - Akademic Specific Style Overrides */
 .rasa-top-bar {
-  background: #0f172a;
-  color: #ffffff;
-  font-size: 0.75rem;
-  padding: 0.4rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 101;
-  height: 32px;
-  box-sizing: border-box;
+  display: none !important;
 }
 .rasa-header { 
-  top: 32px !important;
+  top: 0 !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05); 
 }
 body.rasa {
-  padding-top: 96px !important;
+  padding-top: 64px !important;
   padding-bottom: 0 !important;
 }
 .rasa-btn { font-weight: 600; letter-spacing: -0.01em; }
@@ -2952,15 +2941,15 @@ body.rasa {
 .rasa-modalities { border-radius: 0.5rem; background: rgba(15, 23, 42, 0.06); }
 .rasa-modality { background: #ffffff; }
 .rasa-modality:hover { background: var(--leaf-tint); }
-.rasa-anchor-nav { top: 96px !important; }
-.rasa-deep { scroll-margin-top: 155px !important; }
+.rasa-anchor-nav { top: 64px !important; }
+.rasa-deep { scroll-margin-top: 123px !important; }
 
 /* Sticky footer and layout robustness */
 body.rasa {
   display: flex !important;
   flex-direction: column !important;
   min-height: 100vh !important;
-  padding-top: 96px !important;
+  padding-top: 64px !important;
   padding-bottom: 0 !important;
 }
 .rasa-page {
@@ -3178,9 +3167,48 @@ body.dark-mode .rasa-top-bar {
 }
 
 /* Phase 2: Rippling-Style Footer Logo Reveal */
+.rasa-footer {
+  background: #0f172a !important;
+  padding: 0 !important;
+  border-top: none !important;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+body.dark-mode .rasa-footer {
+  background: #000000 !important;
+}
+
+.rasa-footer__content-wrapper {
+  background: var(--background);
+  padding: 4.5rem 0 3.5rem;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+}
+
+.rasa-footer__reveal-section {
+  width: 100%;
+  background: #0f172a;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0 6rem;
+  margin-top: -20px;
+  overflow: hidden;
+}
+
+body.dark-mode .rasa-footer__reveal-section {
+  background: #000000;
+}
+
 .rasa-footer__wordmark-container {
   overflow: hidden;
-  margin-top: 3rem;
   pointer-events: none;
   user-select: none;
   display: flex;
@@ -3191,11 +3219,11 @@ body.dark-mode .rasa-top-bar {
 
 .rasa-footer__wordmark {
   font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(6rem, 24vw, 36rem);
+  font-size: clamp(8rem, 24vw, 36rem);
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;
-  color: rgba(22, 101, 52, 0.04);
+  color: rgba(37, 99, 235, 0.15) !important;
   line-height: 0.8;
   letter-spacing: -0.04em;
   will-change: transform, opacity;
@@ -3204,7 +3232,7 @@ body.dark-mode .rasa-top-bar {
   transition: transform 0.1s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.dark-mode .rasa-footer__wordmark {
-  color: rgba(96, 165, 250, 0.02);
+body.dark-mode .rasa-footer__wordmark {
+  color: rgba(96, 165, 250, 0.15) !important;
 }
 
