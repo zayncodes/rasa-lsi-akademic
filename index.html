@@ -105,11 +105,11 @@
 <main class="rasa rasa-page">
 
   <!-- HERO -->
-  <!-- HERO -->
-  <section class="rasa-hero" style="position: relative; overflow: hidden; padding-top: 1.5rem; padding-bottom: 1.5rem; min-height: 420px;">
+  <section class="rasa-hero" style="position: relative; overflow: hidden; padding-top: 2.5rem; padding-bottom: 4.5rem; min-height: 460px;">
     <div class="rasa-grid-bg" aria-hidden="true"></div>
     <div class="rasa-hero__bg-container">
       <img src="images/hero_science_bg.png" class="rasa-hero__parallax-bg" alt="">
+      <canvas id="homepage-hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.8;"></canvas>
       <div class="rasa-hero__bg-overlay"></div>
     </div>
     
@@ -139,8 +139,10 @@
                   and in-silico drug discovery, transforming raw sequence data into therapeutic insights for pharmaceutical, biotechnology, and clinical R&amp;D.
                 </p>
               </div>
-              <div class="rasa-hero__art rasa-reveal" data-delay="2">
-                <svg id="rasa-hero-network" class="rasa-network-canvas" viewBox="0 0 400 400" aria-label="Interactive molecular network diagram"></svg>
+              <div class="rasa-hero__art rasa-reveal" style="display: flex; align-items: center; justify-content: center;" data-delay="2">
+                <div class="rasa-hero__circle-frame" style="background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.6) 100%);">
+                  <svg id="rasa-hero-network" class="rasa-network-canvas" viewBox="0 0 400 400" aria-label="Interactive molecular network diagram" style="width: 100%; height: 100%; border: none; box-shadow: inset 0 0 40px rgba(37, 99, 235, 0.08); background: transparent;"></svg>
+                </div>
               </div>
             </div>
           </div>
@@ -279,7 +281,7 @@
       </div>
       
       <!-- Static Universal Search Bar (Always visible below the sliding panel) -->
-      <div class="rasa-hero-search-container" style="margin-top: 0.75rem; width: 100%; max-width: 55%; position: relative; z-index: 5;">
+      <div class="rasa-hero-search-container" style="margin-top: 2.5rem; width: 100%; max-width: 55%; position: relative; z-index: 5;">
         <div class="rasa-reveal" data-delay="3" style="display:flex; flex-wrap:wrap; gap:1rem; padding-top:0.5rem;">
           <a href="services-ngs.html" class="rasa-btn rasa-btn--primary">
             Explore Services
@@ -1049,6 +1051,221 @@
         }
       });
     }
+  })();
+
+  // Homepage background canvas animation: DNA Double Helix + Molecular Networks
+  (function () {
+    var canvas = document.getElementById('homepage-hero-canvas');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var dpr = window.devicePixelRatio || 1;
+    var width = 0, height = 0;
+
+    function resize() {
+      var rect = canvas.parentNode.getBoundingClientRect();
+      width = rect.width;
+      height = rect.height;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.scale(dpr, dpr);
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Mouse coordinates tracking
+    var mouse = { x: null, y: null, radius: 160 };
+    window.addEventListener('mousemove', function (e) {
+      var rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+    window.addEventListener('mouseleave', function () {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    // Molecular network nodes (Left side)
+    var nodes = [];
+    var numNodes = 14;
+    for (var i = 0; i < numNodes; i++) {
+      nodes.push({
+        x: Math.random() * (width * 0.55), // Keep mostly on left/center-left
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.45,
+        vy: (Math.random() - 0.5) * 0.45,
+        radius: Math.random() * 3.5 + 2
+      });
+    }
+
+    // DNA helix rotation tracker
+    var rotation = 0;
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      // 1. Draw subtle background scientific grid lines
+      var isDark = document.body.classList.contains('dark-mode');
+      var gridColor = isDark ? 'rgba(59, 130, 246, 0.03)' : 'rgba(37, 99, 235, 0.03)';
+      ctx.strokeStyle = gridColor;
+      ctx.lineWidth = 1;
+      var step = 50;
+      for (var x = 0; x < width; x += step) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        ctx.stroke();
+      }
+      for (var y = 0; y < height; y += step) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(width, y);
+        ctx.stroke();
+      }
+
+      // 2. DNA Helix Animation (Right side)
+      var centerX = width * 0.82;
+      if (width < 900) centerX = width * 0.5; // Center on mobile/tablet
+
+      var amplitude = Math.min(width * 0.1, 75);
+      var frequency = 0.007;
+      var speed = 0.007;
+      rotation += speed;
+
+      var points1 = [];
+      var points2 = [];
+
+      for (var yVal = 20; yVal < height - 20; yVal += 16) {
+        var angle = yVal * frequency + rotation;
+        var sinVal = Math.sin(angle);
+        var cosVal = Math.cos(angle);
+        var sizeFactor = (cosVal + 1.2) / 2.2;
+
+        var x1 = centerX + sinVal * amplitude;
+        var x2 = centerX - sinVal * amplitude;
+
+        // Interaction with mouse for helix
+        if (mouse.x !== null && mouse.y !== null) {
+          var dist1 = Math.hypot(x1 - mouse.x, yVal - mouse.y);
+          if (dist1 < mouse.radius) {
+            var force = (mouse.radius - dist1) / mouse.radius;
+            x1 += (x1 - mouse.x) * force * 0.22;
+          }
+          var dist2 = Math.hypot(x2 - mouse.x, yVal - mouse.y);
+          if (dist2 < mouse.radius) {
+            var force = (mouse.radius - dist2) / mouse.radius;
+            x2 += (x2 - mouse.x) * force * 0.22;
+          }
+        }
+
+        points1.push({ x: x1, y: yVal, z: cosVal, size: sizeFactor });
+        points2.push({ x: x2, y: yVal, z: -cosVal, size: (1.2 - cosVal) / 2.2 });
+
+        // Connect rungs
+        ctx.beginPath();
+        ctx.moveTo(x1, yVal);
+        ctx.lineTo(x2, yVal);
+        var rungAlpha = Math.max(0.015, 0.16 * sizeFactor);
+        var rungColor = isDark ? 'rgba(96, 165, 250, ' + rungAlpha + ')' : 'rgba(37, 99, 235, ' + rungAlpha + ')';
+        ctx.strokeStyle = rungColor;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc((x1 + x2) / 2, yVal, 1.2, 0, Math.PI * 2);
+        ctx.fillStyle = isDark ? 'rgba(96, 165, 250, ' + (rungAlpha * 1.5) + ')' : 'rgba(37, 99, 235, ' + (rungAlpha * 1.5) + ')';
+        ctx.fill();
+      }
+
+      function drawStrand(points, color, dotColor, isFront) {
+        ctx.beginPath();
+        ctx.moveTo(points[0].x, points[0].y);
+        for (var i = 1; i < points.length; i++) {
+          var xc = (points[i].x + points[i - 1].x) / 2;
+          var yc = (points[i].y + points[i - 1].y) / 2;
+          ctx.quadraticCurveTo(points[i - 1].x, points[i - 1].y, xc, yc);
+        }
+        ctx.strokeStyle = color;
+        ctx.lineWidth = isFront ? 1.8 : 0.8;
+        ctx.stroke();
+
+        points.forEach(function (p) {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, 4 * p.size, 0, Math.PI * 2);
+          ctx.fillStyle = p.z > 0 ? dotColor : 'rgba(37, 99, 235, 0.38)';
+          if (p.z > 0 && !isDark) {
+            ctx.shadowColor = dotColor;
+            ctx.shadowBlur = 6;
+          }
+          ctx.fill();
+          ctx.shadowBlur = 0;
+        });
+      }
+
+      var strandColorBack = isDark ? 'rgba(59, 130, 246, 0.15)' : 'rgba(37, 99, 235, 0.15)';
+      var strandColorFront = isDark ? 'rgba(96, 165, 250, 0.4)' : 'rgba(37, 99, 235, 0.4)';
+      var nodeColorActive = isDark ? '#60a5fa' : '#2563eb';
+      
+      drawStrand(points2, strandColorBack, 'rgba(37, 99, 235, 0.4)', false);
+      drawStrand(points1, strandColorFront, nodeColorActive, true);
+
+      // 3. Molecular Network Particle Animation (Left/Center-left side)
+      // Update nodes
+      nodes.forEach(function (n) {
+        // Drift
+        n.x += n.vx;
+        n.y += n.vy;
+
+        // Bounce/Bounds
+        var maxX = Math.min(width - 15, width * 0.62);
+        if (n.x < 15 || n.x > maxX) {
+          n.vx *= -1;
+          n.x = Math.max(15, Math.min(maxX, n.x));
+        }
+        if (n.y < 15 || n.y > height - 15) {
+          n.vy *= -1;
+          n.y = Math.max(15, Math.min(height - 15, n.y));
+        }
+
+        // Mouse avoidance/attraction
+        if (mouse.x !== null && mouse.y !== null) {
+          var dx = mouse.x - n.x;
+          var dy = mouse.y - n.y;
+          var dist = Math.hypot(dx, dy);
+          if (dist < mouse.radius) {
+            // Push away gently
+            var force = (mouse.radius - dist) / mouse.radius;
+            n.x -= (dx / dist) * force * 1.8;
+            n.y -= (dy / dist) * force * 1.8;
+          }
+        }
+
+        // Draw particle node
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
+        ctx.fillStyle = isDark ? 'rgba(96, 165, 250, 0.35)' : 'rgba(37, 99, 235, 0.25)';
+        ctx.fill();
+      });
+
+      // Draw connections
+      for (var i = 0; i < nodes.length; i++) {
+        for (var j = i + 1; j < nodes.length; j++) {
+          var dx = nodes[i].x - nodes[j].x;
+          var dy = nodes[i].y - nodes[j].y;
+          var dist = Math.hypot(dx, dy);
+          if (dist < 130) {
+            var alpha = (130 - dist) / 130 * 0.15;
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.strokeStyle = isDark ? 'rgba(96, 165, 250, ' + alpha + ')' : 'rgba(37, 99, 235, ' + alpha + ')';
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
   })();
 </script>
 </body>
