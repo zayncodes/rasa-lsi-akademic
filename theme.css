@@ -3225,7 +3225,8 @@ body.dark-mode .rasa-footer__reveal-section {
   text-transform: uppercase;
   color: rgba(37, 99, 235, 0.24) !important;
   line-height: 0.8;
-  letter-spacing: -0.04em;
+  letter-spacing: 0.06em;
+  padding-left: 0.06em;
   will-change: transform, opacity;
   transform: translate3d(0, 80px, 0) scale(0.9);
   opacity: 0;
