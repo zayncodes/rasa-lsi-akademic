@@ -3220,7 +3220,7 @@ body.dark-mode .rasa-footer__reveal-section {
 .rasa-footer__wordmark {
   font-family: 'Instrument Serif', Georgia, serif;
   font-size: clamp(8rem, 24vw, 36rem);
-  font-weight: 800;
+  font-weight: 500;
   text-align: center;
   text-transform: uppercase;
   color: rgba(37, 99, 235, 0.24) !important;
