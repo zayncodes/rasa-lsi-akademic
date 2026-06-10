@@ -106,8 +106,14 @@
 
   <!-- HERO -->
   <!-- HERO -->
-  <section class="rasa-hero" style="position: relative; overflow: hidden; padding-bottom: 5.5rem; min-height: 640px;">
+  <section class="rasa-hero" style="position: relative; overflow: hidden; padding-top: 2.5rem; padding-bottom: 3.5rem; min-height: 500px;">
     <div class="rasa-grid-bg" aria-hidden="true"></div>
+    <div class="rasa-hero__bg-container">
+      <video class="rasa-hero__parallax-bg" autoplay loop muted playsinline poster="images/hero_science_bg.png">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-glowing-dna-helix-science-animation-40097-large.mp4" type="video/mp4">
+      </video>
+      <div class="rasa-hero__bg-overlay"></div>
+    </div>
     
     <div class="container" style="position: relative; z-index: 3;">
       
@@ -118,7 +124,7 @@
           <!-- Slide 1: Primary Overview -->
           <div class="rasa-hero-slide active" data-slide="0">
             <div class="rasa-hero__grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
-              <div class="rasa-hero__copy" style="min-height: 250px;">
+              <div class="rasa-hero__copy" style="min-height: 200px;">
                 <div class="rasa-reveal">
                   <span class="rasa-eyebrow">
                     <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
@@ -144,7 +150,7 @@
           <!-- Slide 2: Next-Gen Sequencing (NGS) -->
           <div class="rasa-hero-slide" data-slide="1">
             <div class="rasa-hero__grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
-              <div class="rasa-hero__copy" style="min-height: 250px;">
+              <div class="rasa-hero__copy" style="min-height: 200px;">
                 <div>
                   <span class="rasa-eyebrow">
                     <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
@@ -170,7 +176,7 @@
           <!-- Slide 3: In-Silico Drug Discovery -->
           <div class="rasa-hero-slide" data-slide="2">
             <div class="rasa-hero__grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
-              <div class="rasa-hero__copy" style="min-height: 250px;">
+              <div class="rasa-hero__copy" style="min-height: 200px;">
                 <div>
                   <span class="rasa-eyebrow">
                     <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
@@ -196,7 +202,7 @@
           <!-- Slide 4: Spatial Transcriptomics -->
           <div class="rasa-hero-slide" data-slide="3">
             <div class="rasa-hero__grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
-              <div class="rasa-hero__copy" style="min-height: 250px;">
+              <div class="rasa-hero__copy" style="min-height: 200px;">
                 <div>
                   <span class="rasa-eyebrow">
                     <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
@@ -222,7 +228,7 @@
           <!-- Slide 5: Metagenomics & Microbiome -->
           <div class="rasa-hero-slide" data-slide="4">
             <div class="rasa-hero__grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
-              <div class="rasa-hero__copy" style="min-height: 250px;">
+              <div class="rasa-hero__copy" style="min-height: 200px;">
                 <div>
                   <span class="rasa-eyebrow">
                     <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
@@ -248,7 +254,7 @@
           <!-- Slide 6: Proven R&D Success -->
           <div class="rasa-hero-slide" data-slide="5">
             <div class="rasa-hero__grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
-              <div class="rasa-hero__copy" style="min-height: 250px;">
+              <div class="rasa-hero__copy" style="min-height: 200px;">
                 <div>
                   <span class="rasa-eyebrow">
                     <span class="rasa-eyebrow__pulse" aria-hidden="true"></span>
@@ -1029,6 +1035,19 @@
             ticking = false;
           });
           ticking = true;
+        }
+      });
+    }
+  })();
+
+  // Background parallax scroll animation for hero
+  (function() {
+    var bg = document.querySelector('.rasa-hero__parallax-bg');
+    if (bg) {
+      window.addEventListener('scroll', function() {
+        var depth = window.pageYOffset;
+        if (depth < 800) {
+          bg.style.transform = 'translate3d(0, ' + (depth * 0.35) + 'px, 0)';
         }
       });
     }

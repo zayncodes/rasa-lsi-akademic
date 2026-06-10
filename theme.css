@@ -129,9 +129,9 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
 .rasa-btn svg { width: 16px; height: 16px; }
 
 /* Sections */
-.rasa-section { padding: 5.5rem 0; position: relative; }
+.rasa-section { padding: 3.5rem 0; position: relative; }
 
-.rasa-section--lg { padding: 8.5rem 0; }
+.rasa-section--lg { padding: 4.5rem 0; }
 
 .rasa-section--muted { background: var(--surface); }
 
@@ -201,7 +201,7 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
 .rasa-reveal[data-delay="4"] { transition-delay: 0.4s; }
 
 /* Hero */
-.rasa-hero { padding: 4.5rem 0 6rem; position: relative; overflow: hidden; }
+.rasa-hero { padding: 2.5rem 0 3.5rem; position: relative; overflow: hidden; }
 
 .rasa-hero__grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
 
@@ -357,7 +357,7 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
 }
 
 /* Platforms strip */
-.rasa-platforms { padding: 4rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--background); }
+.rasa-platforms { padding: 2.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--background); }
 
 .rasa-platforms__label { text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--foreground-40); margin: 0 0 2rem; }
 
@@ -368,7 +368,7 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
 .rasa-platforms__item:hover { color: var(--leaf); }
 
 /* CTA */
-.rasa-cta { padding: 8rem 0; text-align: center; position: relative; overflow: hidden; }
+.rasa-cta { padding: 4.5rem 0; text-align: center; position: relative; overflow: hidden; }
 
 .rasa-cta__inner { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 1.75rem; }
 
@@ -2705,14 +2705,14 @@ body.rasa {
 
 .rasa-hero-slides {
   position: relative;
-  min-height: 480px;
+  min-height: 380px;
   display: grid;
   grid-template-columns: 1fr;
 }
 
 @media (max-width: 900px) {
   .rasa-hero-slides {
-    min-height: 580px;
+    min-height: 480px;
   }
 }
 
@@ -2828,11 +2828,11 @@ body.rasa {
 
 .rasa-hero__circle-frame {
   position: relative;
-  width: 320px;
-  height: 320px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   overflow: hidden;
-  border: 5px solid var(--leaf);
+  border: 4px solid var(--leaf);
   box-shadow: 0 15px 35px rgba(0,0,0,0.06);
   background: var(--cream);
   display: flex;
@@ -2842,8 +2842,8 @@ body.rasa {
 
 @media (max-width: 1100px) {
   .rasa-hero__circle-frame {
-    width: 280px;
-    height: 280px;
+    width: 230px;
+    height: 230px;
   }
 }
 
@@ -3234,5 +3234,38 @@ body.dark-mode .rasa-footer__reveal-section {
 
 body.dark-mode .rasa-footer__wordmark {
   color: rgba(96, 165, 250, 0.15) !important;
+}
+
+/* Background video and parallax scroll for hero section */
+.rasa-hero__bg-container {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.rasa-hero__parallax-bg {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  opacity: 0.06;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  filter: grayscale(20%) contrast(110%);
+}
+
+body.dark-mode .rasa-hero__parallax-bg {
+  opacity: 0.12;
+}
+
+.rasa-hero__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 20%, var(--cream) 100%);
+  z-index: 2;
 }
 
