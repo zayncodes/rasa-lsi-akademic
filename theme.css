@@ -106,7 +106,7 @@ html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth
 
 .rasa-cta-btn svg { width: 16px; height: 16px; }
 
-@media (min-width: 900px) { .rasa-nav { display: inline-flex; } .rasa-header__inner { gap: 2rem; } .rasa-header__group { display: flex; gap: 2rem; align-items: center; } }
+@media (min-width: 900px) { .rasa-nav { display: inline-flex; margin-left: auto; } .rasa-header__inner { gap: 2rem; } .rasa-header__group { display: flex; gap: 2rem; align-items: center; flex: 1; margin-right: 2rem; } }
 
 @media (max-width: 899px) { .rasa-header__group { display: flex; gap: 0.5rem; align-items: center; } }
 
