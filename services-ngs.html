@@ -126,6 +126,258 @@
     .rasa-faq__a-inner {
       overflow: hidden;
     }
+    
+    /* Premium Interactive Service Showcase for NGS page */
+    .rasa-svc-showcase {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      margin-top: 2rem;
+      width: 100%;
+    }
+    
+    .rasa-svc-showcase__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .rasa-svc-showcase__btn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: rgba(255, 255, 255, 0.6) !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
+      border: 1px solid rgba(139, 195, 74, 0.1) !important;
+      border-radius: 12px !important;
+      cursor: pointer;
+      text-align: left;
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--foreground) !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01) !important;
+    }
+    
+    .rasa-svc-showcase__btn:hover {
+      background: rgba(255, 255, 255, 0.95) !important;
+      border-color: rgba(139, 195, 74, 0.3) !important;
+      transform: translateX(6px);
+      box-shadow: 0 4px 12px rgba(139, 195, 74, 0.06) !important;
+    }
+    
+    .rasa-svc-showcase__btn.is-active {
+      background: #ffffff !important;
+      border-color: #8bc34a !important;
+      color: #8bc34a !important;
+      box-shadow: 0 6px 20px rgba(139, 195, 74, 0.08) !important;
+    }
+    
+    .rasa-svc-showcase__btn-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: rgba(139, 195, 74, 0.08);
+      color: #8bc34a;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+    
+    .rasa-svc-showcase__btn-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.75;
+    }
+    
+    .rasa-svc-showcase__btn.is-active .rasa-svc-showcase__btn-icon {
+      background: #8bc34a;
+      color: #ffffff;
+    }
+    
+    .rasa-svc-showcase__content {
+      position: relative;
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(139, 195, 74, 0.12) !important;
+      border-radius: 20px !important;
+      padding: 2.5rem 3rem !important;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.02) !important;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .rasa-svc-showcase__panel {
+      display: none;
+      height: 100%;
+    }
+    
+    .rasa-svc-showcase__panel.is-active {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      animation: rasaShowcaseFadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    
+    @keyframes rasaShowcaseFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .rasa-svc-showcase__pane-header {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    
+    .rasa-svc-showcase__pane-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(139, 195, 74, 0.08);
+      color: #8bc34a;
+      flex-shrink: 0;
+    }
+    
+    .rasa-svc-showcase__pane-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.75;
+    }
+    
+    .rasa-svc-showcase__pane-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--foreground);
+      margin: 0;
+    }
+    
+    .rasa-svc-showcase__pane-desc {
+      font-size: 1.02rem;
+      line-height: 1.6;
+      color: var(--foreground-70);
+      margin: 0 0 1.75rem 0;
+    }
+    
+    .rasa-svc-showcase__pane-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem 1.5rem;
+      margin: 0 0 2rem 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    .rasa-svc-showcase__pane-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.92rem;
+      color: var(--foreground);
+      line-height: 1.4;
+    }
+    
+    .rasa-svc-showcase__pane-list .rasa-tick {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #8bc34a;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    
+    .rasa-svc-showcase__pane-more {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.6rem;
+      background: #8bc34a;
+      color: var(--cream) !important;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 12px rgba(139, 195, 74, 0.15);
+    }
+    
+    .rasa-svc-showcase__pane-more:hover {
+      background: #7cb342;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(139, 195, 74, 0.25);
+    }
+    
+    .rasa-svc-showcase__pane-more svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+    }
+    
+    @media (max-width: 992px) {
+      .rasa-svc-showcase {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .rasa-svc-showcase__nav {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 0.75rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      
+      .rasa-svc-showcase__nav::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .rasa-svc-showcase__btn {
+        flex-shrink: 0;
+        padding: 0.75rem 1.1rem !important;
+      }
+      
+      .rasa-svc-showcase__btn:hover {
+        transform: none;
+      }
+      
+      .rasa-svc-showcase__content {
+        padding: 2rem !important;
+        min-height: auto;
+      }
+      
+      .rasa-svc-showcase__pane-list {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+    }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"NGS Data Analysis","serviceType":"NGS Data Analysis","provider":{"@type":"Organization","name":"RASA Life Science Informatics","url":"https://www.rasalsi.com/","areaServed":"Worldwide","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"}},"description":"RASA Life Science Informatics provides comprehensive NGS Data Analysis Services for pharmaceutical companies, biotechnology organizations, hospitals, CROs, re"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What Computational Genomics services does RASA Life Science Informatics provide?","acceptedAnswer":{"@type":"Answer","text":"RASA Life Science Informatics provides comprehensive Computational Genomics services designed to transform complex sequencing and multi-omics datasets into actionable biological insights. Our expertise includes RNA-Seq analysis, Single-Cell Omics, Whole Genome Sequencing (WGS), Whole Exome Sequencing (WES), Spatial Transcriptomics, Metagenomics &amp; Microbiome Analysis, Epigenomics, Long-Read Sequencing, Multi-Omics Integration, Clinical Genomics, and Biomarker Discovery. These services support pharmaceutical research, biotechnology innovation, clinical genomics, precision medicine, and translational research programs."}},{"@type":"Question","name":"What is Computational Genomics and why is it important?","acceptedAnswer":{"@type":"Answer","text":"Computational Genomics combines genomics, bioinformatics, statistics, machine learning, and computational biology to analyze and interpret large-scale biological datasets. It enables researchers to identify disease-associated genes, discover biomarkers, understand molecular pathways, characterize cellular populations, and support precision medicine initiatives. Computational genomics plays a critical role in modern drug discovery, clinical research, cancer genomics, rare disease studies, and personalized healthcare."}},{"@type":"Question","name":"Which sequencing platforms and technologies are supported?","acceptedAnswer":{"@type":"Answer","text":"Our bioinformatics workflows support data generated from leading sequencing and omics platforms, including: Illumina Sequencing Oxford Nanopore Technologies (ONT) PacBio HiFi &amp; Iso-Seq 10x Genomics Chromium NanoString GeoMx DSP CosMx SMI MERFISH Slide-seq SMART-seq2 Parse Biosciences We continuously adapt our pipelines to support emerging genomics and spatial omics technologies."}},{"@type":"Question","name":"Can RASA analyze raw FASTQ sequencing files?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide complete end-to-end bioinformatics analysis starting from raw FASTQ files. Our workflows include quality control, adapter trimming, sequence alignment, transcript quantification, variant calling, statistical analysis, pathway enrichment, biological interpretation, and publication-ready reporting. We also support BAM, CRAM, VCF, count matrices, expression tables, and processed sequencing datasets."}},{"@type":"Question","name":"What NGS data analysis services do you provide?","acceptedAnswer":{"@type":"Answer","text":"Our NGS and Computational Genomics services include: Transcriptomics (RNA-Seq) Single-Cell Omics Whole Genome Sequencing (WGS) Whole Exome Sequencing (WES) Spatial Transcriptomics Metagenomics &amp; Microbiome Analysis Epigenomics (ATAC-Seq, ChIP-Seq, DNA Methylation) Long-Read Sequencing Analysis Multi-Omics Integration Clinical Genomics Biomarker Discovery Each workflow is customized to the biological question, sequencing platform, and project objectives."}},{"@type":"Question","name":"Do you provide customized bioinformatics pipelines?","acceptedAnswer":{"@type":"Answer","text":"Yes. We develop customized bioinformatics workflows based on: Organism type Sequencing technology Experimental design Research objectives Clinical applications Regulatory requirements Data volume and infrastructure requirements Our pipelines are designed to be reproducible, scalable, and suitable for both academic research and industry projects."}},{"@type":"Question","name":"What types of biological samples and organisms can be analyzed?","acceptedAnswer":{"@type":"Answer","text":"We support genomics projects across a wide range of organisms and sample types, including: Human samples Animal models Plant genomics Microbial genomes Environmental samples Cancer tissues Clinical specimens Single-cell datasets Metagenomic communities Our workflows can be adapted for both model and non-model organisms."}},{"@type":"Question","name":"Do you provide Multi-Omics Integration services?","acceptedAnswer":{"@type":"Answer","text":"Yes. We specialize in integrating multiple biological data types, including genomics, transcriptomics, epigenomics, proteomics, metabolomics, and clinical datasets. Multi-omics integration helps uncover complex biological mechanisms, identify biomarkers, prioritize therapeutic targets, and support precision medicine research."}},{"@type":"Question","name":"Can Computational Genomics support drug discovery and biomarker development?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. Computational genomics is widely used for: Therapeutic target identification Biomarker discovery Disease pathway analysis Precision medicine research Drug response prediction Patient stratification Translational medicine programs These insights help accelerate drug discovery and clinical development programs."}},{"@type":"Question","name":"What deliverables are included in Computational Genomics projects?","acceptedAnswer":{"@type":"Answer","text":"Project deliverables typically include: Quality Control Reports Statistical Analysis Reports Differential Expression Analysis Variant Calling Results Pathway Enrichment Analysis Network Biology Analysis Biomarker Discovery Reports Interactive Visualizations Publication-Ready Figures Comprehensive Scientific Reports Deliverables can be customized according to project requirements."}},{"@type":"Question","name":"Do you provide publication-ready figures and scientific reports?","acceptedAnswer":{"@type":"Answer","text":"Yes. All projects include high-quality scientific visualizations, biological interpretation, methodology documentation, and publication-ready figures suitable for journal manuscripts, grant applications, regulatory submissions, and presentations."}},{"@type":"Question","name":"Which bioinformatics tools and software platforms are used?","acceptedAnswer":{"@type":"Answer","text":"Depending on project requirements, we utilize industry-standard tools including: FASTQC MultiQC STAR HISAT2 Salmon GATK DeepVariant Seurat Scanpy Cell Ranger QIIME2 Kraken2 Bismark MACS2 Cytoscape DESeq2 edgeR Our workflows are continuously updated to incorporate the latest bioinformatics methodologies."}},{"@type":"Question","name":"Do you support cloud-based and high-performance computing environments?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our bioinformatics workflows are deployable on: Amazon Web Services (AWS) Google Cloud Platform (GCP) Microsoft Azure High-Performance Computing (HPC) Clusters On-Premise Servers We use technologies such as Nextflow, Snakemake, Docker, and Singularity to ensure reproducibility and scalability."}},{"@type":"Question","name":"How is data security and confidentiality handled?","acceptedAnswer":{"@type":"Answer","text":"We maintain strict confidentiality and data security standards. Client data is handled through secure storage, encrypted transfers, controlled access policies, and optional Non-Disclosure Agreements (NDAs). We follow best practices for data protection and project confidentiality throughout the engagement."}},{"@type":"Question","name":"Why choose RASA Life Science Informatics for Computational Genomics?","acceptedAnswer":{"@type":"Answer","text":"RASA combines expertise in genomics, bioinformatics, computational biology, and AI-driven analytics to deliver scalable, scientifically rigorous, and reproducible solutions. Our team supports pharmaceutical companies, biotechnology organizations, hospitals, CROs, and academic researchers through customized workflows, advanced analytical capabilities, publication-ready reporting, and collaborative scientific support."}},{"@type":"Question","name":"How can I start a Computational Genomics project with RASA?","acceptedAnswer":{"@type":"Answer","text":"Getting started is simple. Share your project objectives, study design, and available datasets with our team. We will assess your requirements, recommend the most suitable analytical workflow, provide a project proposal, and deliver a customized solution tailored to your research or business goals. 📧 support@rasalifesciences.com 🌐 www.rasalifesciences.com"}}]}]}</script>
 </head>
@@ -281,68 +533,245 @@
       <span class="rasa-eyebrow">Service Offerings</span>
       <h2 class="rasa-h2" style="margin-top:1.25rem;">NGS Analysis Services We Offer</h2>
     </div>
-    <div class="rasa-svc-grid">
-    <article class="rasa-svc-card rasa-reveal stagger-1">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3c0 5 14 6 14 14M19 3c0 5-14 6-14 14"/><path d="M7.5 6h9M8.5 10h7M8.5 14h7M7.5 18h9"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-ngs-transcriptomics.html" style="color:inherit;">Transcriptomics (RNA-Seq)</a></h3>
-      <p class="rasa-svc-card__b">Gene expression analysis, differential expression, pathway enrichment, fusion detection, and transcriptomics interpretation.</p>
-      <a href="services-ngs-transcriptomics.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-2">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="9" r="3.2"/><circle cx="16" cy="14.5" r="3.6"/><circle cx="9" cy="16.5" r="2"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-ngs-single-cell.html" style="color:inherit;">Single-Cell Omics</a></h3>
-      <p class="rasa-svc-card__b">Single-cell RNA-Seq, scATAC-Seq, cell type annotation, trajectory analysis, and cellular heterogeneity studies.</p>
-      <a href="services-ngs-single-cell.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-3">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3c0 5 14 6 14 14M19 3c0 5-14 6-14 14"/><path d="M7.5 6h9M8.5 10h7M8.5 14h7M7.5 18h9"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-ngs-wgs-wes.html" style="color:inherit;">Whole Genome &amp; Whole Exome Sequencing</a></h3>
-      <p class="rasa-svc-card__b">Variant calling, annotation, structural variant detection, CNV analysis, and rare disease genomics.</p>
-      <a href="services-ngs-wgs-wes.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-1">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1.4"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.4"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.4"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.4"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-ngs-transcriptomics.html" style="color:inherit;">Spatial Transcriptomics</a></h3>
-      <p class="rasa-svc-card__b">Spatial gene expression profiling, tissue architecture analysis, and cell–cell interaction studies.</p>
-      <a href="services-ngs-transcriptomics.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-2">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="6.2"/><path d="M12 1.8v2.2M12 20v2.2M1.8 12h2.2M20 12h2.2M5 5l1.6 1.6M17.4 17.4 19 19M19 5l-1.6 1.6M6.6 17.4 5 19"/><circle cx="10.3" cy="11" r="1.1"/><circle cx="14" cy="13.2" r="1.1"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-ngs-metagenomics.html" style="color:inherit;">Metagenomics &amp; Microbiome</a></h3>
-      <p class="rasa-svc-card__b">Taxonomic profiling, functional analysis, microbial diversity assessment, and host–microbiome interactions.</p>
-      <a href="services-ngs-metagenomics.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-3">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 2.5 7 12 11.5 21.5 7z"/><path d="M2.5 12 12 16.5 21.5 12M2.5 16.5 12 21l9.5-4.5"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-ngs-epigenomics.html" style="color:inherit;">Epigenomics</a></h3>
-      <p class="rasa-svc-card__b">ATAC-Seq, ChIP-Seq, DNA methylation analysis, chromatin accessibility, and regulatory genomics.</p>
-      <a href="services-ngs-epigenomics.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-1">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3c0 5 14 6 14 14M19 3c0 5-14 6-14 14"/><path d="M7.5 6h9M8.5 10h7M8.5 14h7M7.5 18h9"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-ngs-long-read.html" style="color:inherit;">Long-Read Sequencing</a></h3>
-      <p class="rasa-svc-card__b">Oxford Nanopore and PacBio HiFi analysis, isoform discovery, structural variants, and genome assembly.</p>
-      <a href="services-ngs-long-read.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-2">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 2.5 7 12 11.5 21.5 7z"/><path d="M2.5 12 12 16.5 21.5 12M2.5 16.5 12 21l9.5-4.5"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-ngs-multi-omics.html" style="color:inherit;">Multi-Omics Integration</a></h3>
-      <p class="rasa-svc-card__b">Integration of genomics, transcriptomics, proteomics, and metabolomics for systems-level biological insights.</p>
-      <a href="services-ngs-multi-omics.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-3">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2.2"/><path d="M9 2.5h6v2.4H9zM12 9v5M9.5 11.5h5"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-ngs-clinical.html" style="color:inherit;">Clinical Genomics</a></h3>
-      <p class="rasa-svc-card__b">Cancer genomics, rare disease analysis, variant interpretation, and precision medicine applications.</p>
-      <a href="services-ngs-clinical.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-1">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V4M4 19.5h16M8 16.5v-4.5M12 16.5V8M16 16.5v-7"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-ngs-biomarker.html" style="color:inherit;">Biomarker Discovery</a></h3>
-      <p class="rasa-svc-card__b">Identification of diagnostic, prognostic, predictive, and therapeutic biomarkers.</p>
-      <a href="services-ngs-biomarker.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-  </div>
+    <div class="rasa-svc-showcase">
+      <!-- Left navigation bar: 10 tabs -->
+      <div class="rasa-svc-showcase__nav" role="tablist">
+        <!-- Tab 1 -->
+        <button class="rasa-svc-showcase__btn is-active" id="showcase-tab-1" role="tab" aria-selected="true" aria-controls="showcase-panel-1">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3c0 5 14 6 14 14M19 3c0 5-14 6-14 14"/><path d="M7.5 6h9M8.5 10h7M8.5 14h7M7.5 18h9"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Transcriptomics (RNA-Seq)</span>
+        </button>
+        <!-- Tab 2 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-2" role="tab" aria-selected="false" aria-controls="showcase-panel-2">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="9" r="3.2"/><circle cx="16" cy="14.5" r="3.6"/><circle cx="9" cy="16.5" r="2"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Single-Cell Omics</span>
+        </button>
+        <!-- Tab 3 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-3" role="tab" aria-selected="false" aria-controls="showcase-panel-3">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3c0 5 14 6 14 14M19 3c0 5-14 6-14 14"/><path d="M7.5 6h9M8.5 10h7M8.5 14h7M7.5 18h9"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">WGS &amp; Exome (WES)</span>
+        </button>
+        <!-- Tab 4 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-4" role="tab" aria-selected="false" aria-controls="showcase-panel-4">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1.4"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.4"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.4"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.4"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Spatial Transcriptomics</span>
+        </button>
+        <!-- Tab 5 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-5" role="tab" aria-selected="false" aria-controls="showcase-panel-5">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="6.2"/><path d="M12 1.8v2.2M12 20v2.2M1.8 12h2.2M20 12h2.2M5 5l1.6 1.6M17.4 17.4 19 19M19 5l-1.6 1.6M6.6 17.4 5 19"/><circle cx="10.3" cy="11" r="1.1"/><circle cx="14" cy="13.2" r="1.1"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Metagenomics &amp; Microbiome</span>
+        </button>
+        <!-- Tab 6 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-6" role="tab" aria-selected="false" aria-controls="showcase-panel-6">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 2.5 7 12 11.5 21.5 7z"/><path d="M2.5 12 12 16.5 21.5 12M2.5 16.5 12 21l9.5-4.5"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Epigenomics</span>
+        </button>
+        <!-- Tab 7 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-7" role="tab" aria-selected="false" aria-controls="showcase-panel-7">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3c0 5 14 6 14 14M19 3c0 5-14 6-14 14"/><path d="M7.5 6h9M8.5 10h7M8.5 14h7M7.5 18h9"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Long-Read Sequencing</span>
+        </button>
+        <!-- Tab 8 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-8" role="tab" aria-selected="false" aria-controls="showcase-panel-8">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 2.5 7 12 11.5 21.5 7z"/><path d="M2.5 12 12 16.5 21.5 12M2.5 16.5 12 21l9.5-4.5"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Multi-Omics Integration</span>
+        </button>
+        <!-- Tab 9 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-9" role="tab" aria-selected="false" aria-controls="showcase-panel-9">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2.2"/><path d="M9 2.5h6v2.4H9zM12 9v5M9.5 11.5h5"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Clinical Genomics</span>
+        </button>
+        <!-- Tab 10 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-10" role="tab" aria-selected="false" aria-controls="showcase-panel-10">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V4M4 19.5h16M8 16.5v-4.5M12 16.5V8M16 16.5v-7"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Biomarker Discovery</span>
+        </button>
+      </div>
+      
+      <!-- Right details panel: 10 content panels -->
+      <div class="rasa-svc-showcase__content">
+        <!-- Panel 1 -->
+        <div class="rasa-svc-showcase__panel is-active" id="showcase-panel-1" role="tabpanel" aria-labelledby="showcase-tab-1">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3c0 5 14 6 14 14M19 3c0 5-14 6-14 14"/><path d="M7.5 6h9M8.5 10h7M8.5 14h7M7.5 18h9"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Transcriptomics (RNA-Seq)</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Gene expression analysis, differential expression, pathway enrichment, fusion detection, and transcriptomics interpretation.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>Gene expression analysis</span></li>
+              <li><span class="rasa-tick">✓</span><span>Differential expression</span></li>
+              <li><span class="rasa-tick">✓</span><span>Pathway enrichment</span></li>
+              <li><span class="rasa-tick">✓</span><span>Fusion detection</span></li>
+              <li><span class="rasa-tick">✓</span><span>Transcriptomics interpretation</span></li>
+            </ul>
+          </div>
+          <a href="services-ngs-transcriptomics.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 2 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-2" role="tabpanel" aria-labelledby="showcase-tab-2">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="9" r="3.2"/><circle cx="16" cy="14.5" r="3.6"/><circle cx="9" cy="16.5" r="2"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Single-Cell Omics</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Single-cell RNA-Seq, scATAC-Seq, cell type annotation, trajectory analysis, and cellular heterogeneity studies.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>Single-cell RNA-Seq</span></li>
+              <li><span class="rasa-tick">✓</span><span>scATAC-Seq profiling</span></li>
+              <li><span class="rasa-tick">✓</span><span>Cell type annotation</span></li>
+              <li><span class="rasa-tick">✓</span><span>Trajectory analysis</span></li>
+              <li><span class="rasa-tick">✓</span><span>Cellular heterogeneity studies</span></li>
+            </ul>
+          </div>
+          <a href="services-ngs-single-cell.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 3 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-3" role="tabpanel" aria-labelledby="showcase-tab-3">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3c0 5 14 6 14 14M19 3c0 5-14 6-14 14"/><path d="M7.5 6h9M8.5 10h7M8.5 14h7M7.5 18h9"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Whole Genome &amp; Whole Exome Sequencing</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Variant calling, annotation, structural variant detection, CNV analysis, and rare disease genomics.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>Variant calling &amp; annotation</span></li>
+              <li><span class="rasa-tick">✓</span><span>Structural variant detection</span></li>
+              <li><span class="rasa-tick">✓</span><span>Copy Number Variation (CNV)</span></li>
+              <li><span class="rasa-tick">✓</span><span>Rare disease genomics</span></li>
+            </ul>
+          </div>
+          <a href="services-ngs-wgs-wes.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 4 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-4" role="tabpanel" aria-labelledby="showcase-tab-4">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1.4"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.4"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.4"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.4"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Spatial Transcriptomics</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Spatial gene expression profiling, tissue architecture analysis, and cell–cell interaction studies.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>Spatial gene expression profiling</span></li>
+              <li><span class="rasa-tick">✓</span><span>Tissue architecture analysis</span></li>
+              <li><span class="rasa-tick">✓</span><span>Cell–cell interaction studies</span></li>
+            </ul>
+          </div>
+          <a href="services-ngs-spatial.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 5 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-5" role="tabpanel" aria-labelledby="showcase-tab-5">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="6.2"/><path d="M12 1.8v2.2M12 20v2.2M1.8 12h2.2M20 12h2.2M5 5l1.6 1.6M17.4 17.4 19 19M19 5l-1.6 1.6M6.6 17.4 5 19"/><circle cx="10.3" cy="11" r="1.1"/><circle cx="14" cy="13.2" r="1.1"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Metagenomics &amp; Microbiome</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Taxonomic profiling, functional analysis, microbial diversity assessment, and host–microbiome interactions.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>Taxonomic profiling</span></li>
+              <li><span class="rasa-tick">✓</span><span>Functional analysis</span></li>
+              <li><span class="rasa-tick">✓</span><span>Microbial diversity assessment</span></li>
+              <li><span class="rasa-tick">✓</span><span>Host–microbiome interactions</span></li>
+            </ul>
+          </div>
+          <a href="services-ngs-metagenomics.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 6 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-6" role="tabpanel" aria-labelledby="showcase-tab-6">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 2.5 7 12 11.5 21.5 7z"/><path d="M2.5 12 12 16.5 21.5 12M2.5 16.5 12 21l9.5-4.5"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Epigenomics</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">ATAC-Seq, ChIP-Seq, DNA methylation analysis, chromatin accessibility, and regulatory genomics.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>ATAC-Seq &amp; ChIP-Seq</span></li>
+              <li><span class="rasa-tick">✓</span><span>DNA methylation analysis</span></li>
+              <li><span class="rasa-tick">✓</span><span>Chromatin accessibility</span></li>
+              <li><span class="rasa-tick">✓</span><span>Regulatory genomics</span></li>
+            </ul>
+          </div>
+          <a href="services-ngs-epigenomics.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 7 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-7" role="tabpanel" aria-labelledby="showcase-tab-7">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3c0 5 14 6 14 14M19 3c0 5-14 6-14 14"/><path d="M7.5 6h9M8.5 10h7M8.5 14h7M7.5 18h9"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Long-Read Sequencing</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Oxford Nanopore and PacBio HiFi analysis, isoform discovery, structural variants, and genome assembly.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>Oxford Nanopore analysis</span></li>
+              <li><span class="rasa-tick">✓</span><span>PacBio HiFi &amp; Iso-Seq</span></li>
+              <li><span class="rasa-tick">✓</span><span>Isoform discovery</span></li>
+              <li><span class="rasa-tick">✓</span><span>Structural variant detection</span></li>
+              <li><span class="rasa-tick">✓</span><span>Genome assembly</span></li>
+            </ul>
+          </div>
+          <a href="services-ngs-long-read.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 8 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-8" role="tabpanel" aria-labelledby="showcase-tab-8">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 2.5 7 12 11.5 21.5 7z"/><path d="M2.5 12 12 16.5 21.5 12M2.5 16.5 12 21l9.5-4.5"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Multi-Omics Integration</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Integration of genomics, transcriptomics, proteomics, and metabolomics for systems-level biological insights.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>Genomics &amp; Transcriptomics integration</span></li>
+              <li><span class="rasa-tick">✓</span><span>Proteomics &amp; Metabolomics integration</span></li>
+              <li><span class="rasa-tick">✓</span><span>Systems-level biological insights</span></li>
+            </ul>
+          </div>
+          <a href="services-ngs-multi-omics.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 9 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-9" role="tabpanel" aria-labelledby="showcase-tab-9">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2.2"/><path d="M9 2.5h6v2.4H9zM12 9v5M9.5 11.5h5"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Clinical Genomics</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Cancer genomics, rare disease analysis, variant interpretation, and precision medicine applications.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>Cancer genomics</span></li>
+              <li><span class="rasa-tick">✓</span><span>Rare disease analysis</span></li>
+              <li><span class="rasa-tick">✓</span><span>Variant interpretation</span></li>
+              <li><span class="rasa-tick">✓</span><span>Precision medicine applications</span></li>
+            </ul>
+          </div>
+          <a href="services-ngs-clinical.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 10 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-10" role="tabpanel" aria-labelledby="showcase-tab-10">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V4M4 19.5h16M8 16.5v-4.5M12 16.5V8M16 16.5v-7"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Biomarker Discovery</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Identification of diagnostic, prognostic, predictive, and therapeutic biomarkers.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>Diagnostic biomarkers</span></li>
+              <li><span class="rasa-tick">✓</span><span>Prognostic biomarkers</span></li>
+              <li><span class="rasa-tick">✓</span><span>Predictive biomarkers</span></li>
+              <li><span class="rasa-tick">✓</span><span>Therapeutic biomarkers</span></li>
+            </ul>
+          </div>
+          <a href="services-ngs-biomarker.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border); background:var(--surface);">
@@ -812,6 +1241,25 @@
         b.setAttribute('aria-selected', 'false');
       });
       tabPanels.forEach(function (p) { p.classList.remove('is-active'); });
+
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected', 'true');
+      var controls = btn.getAttribute('aria-controls');
+      var targetPanel = document.getElementById(controls);
+      if (targetPanel) targetPanel.classList.add('is-active');
+    });
+  });
+
+  // Interactive Service Showcase Switcher
+  var showcaseButtons = document.querySelectorAll('.rasa-svc-showcase__btn');
+  var showcasePanels = document.querySelectorAll('.rasa-svc-showcase__panel');
+  showcaseButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      showcaseButtons.forEach(function (b) {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      showcasePanels.forEach(function (p) { p.classList.remove('is-active'); });
 
       btn.classList.add('is-active');
       btn.setAttribute('aria-selected', 'true');
