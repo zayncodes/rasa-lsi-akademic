@@ -125,6 +125,258 @@
     .rasa-faq__a-inner {
       overflow: hidden;
     }
+
+    /* Premium Interactive Service Showcase */
+    .rasa-svc-showcase {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      margin-top: 2rem;
+      width: 100%;
+    }
+    
+    .rasa-svc-showcase__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .rasa-svc-showcase__btn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: rgba(255, 255, 255, 0.6) !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
+      border: 1px solid rgba(37, 99, 235, 0.1) !important;
+      border-radius: 12px !important;
+      cursor: pointer;
+      text-align: left;
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--foreground) !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01) !important;
+    }
+    
+    .rasa-svc-showcase__btn:hover {
+      background: rgba(255, 255, 255, 0.95) !important;
+      border-color: rgba(37, 99, 235, 0.3) !important;
+      transform: translateX(6px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.06) !important;
+    }
+    
+    .rasa-svc-showcase__btn.is-active {
+      background: #ffffff !important;
+      border-color: var(--leaf) !important;
+      color: var(--leaf) !important;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.08) !important;
+    }
+    
+    .rasa-svc-showcase__btn-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--leaf-soft);
+      color: var(--leaf);
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+    
+    .rasa-svc-showcase__btn-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.75;
+    }
+    
+    .rasa-svc-showcase__btn.is-active .rasa-svc-showcase__btn-icon {
+      background: var(--leaf);
+      color: #ffffff;
+    }
+    
+    .rasa-svc-showcase__content {
+      position: relative;
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(37, 99, 235, 0.12) !important;
+      border-radius: 20px !important;
+      padding: 2.5rem 3rem !important;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.02) !important;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .rasa-svc-showcase__panel {
+      display: none;
+      height: 100%;
+    }
+    
+    .rasa-svc-showcase__panel.is-active {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      animation: rasaShowcaseFadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    
+    @keyframes rasaShowcaseFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .rasa-svc-showcase__pane-header {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    
+    .rasa-svc-showcase__pane-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--leaf-soft);
+      color: var(--leaf);
+      flex-shrink: 0;
+    }
+    
+    .rasa-svc-showcase__pane-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.75;
+    }
+    
+    .rasa-svc-showcase__pane-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--foreground);
+      margin: 0;
+    }
+    
+    .rasa-svc-showcase__pane-desc {
+      font-size: 1.02rem;
+      line-height: 1.6;
+      color: var(--foreground-70);
+      margin: 0 0 1.75rem 0;
+    }
+    
+    .rasa-svc-showcase__pane-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem 1.5rem;
+      margin: 0 0 2rem 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    .rasa-svc-showcase__pane-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.92rem;
+      color: var(--foreground);
+      line-height: 1.4;
+    }
+    
+    .rasa-svc-showcase__pane-list .rasa-tick {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--leaf);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    
+    .rasa-svc-showcase__pane-more {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.6rem;
+      background: var(--leaf);
+      color: var(--cream) !important;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+    }
+    
+    .rasa-svc-showcase__pane-more:hover {
+      background: var(--leaf-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+    }
+    
+    .rasa-svc-showcase__pane-more svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+    }
+    
+    @media (max-width: 992px) {
+      .rasa-svc-showcase {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .rasa-svc-showcase__nav {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 0.75rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      
+      .rasa-svc-showcase__nav::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .rasa-svc-showcase__btn {
+        flex-shrink: 0;
+        padding: 0.75rem 1.1rem !important;
+      }
+      
+      .rasa-svc-showcase__btn:hover {
+        transform: none;
+      }
+      
+      .rasa-svc-showcase__content {
+        padding: 2rem !important;
+        min-height: auto;
+      }
+      
+      .rasa-svc-showcase__pane-list {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+    }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"AI-Powered Computational Drug Discovery","serviceType":"AI-Powered Computational Drug Discovery","provider":{"@type":"Organization","name":"RASA Life Science Informatics","url":"https://www.rasalsi.com/","areaServed":"Worldwide","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"}},"description":"End-to-end computational drug discovery services — target identification, protein structure modeling, virtual screening, molecular docking, molecular dynamics, AI drug design, network pharmacology and QSAR toxicology."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is AI Drug Discovery?","acceptedAnswer":{"@type":"Answer","text":"AI Drug Discovery combines artificial intelligence, machine learning, deep learning, cheminformatics, structural biology, and bioinformatics to accelerate the identification and optimization of therapeutic candidates. By analyzing large-scale biological and chemical datasets, AI can help predict drug-target interactions, discover novel molecules, optimize lead compounds, and reduce the time and cost associated with traditional drug development. AI-powered approaches are increasingly used by pharmaceutical companies, biotechnology organizations, CROs, and academic researchers to improve decision-making across the drug discovery pipeline."}},{"@type":"Question","name":"What AI Drug Discovery services does RASA provide?","acceptedAnswer":{"@type":"Answer","text":"RASA Life Science Informatics offers end-to-end AI-powered drug discovery services, including: Target Identification &amp; Validation Protein Structure Modeling Structure-Based Drug Design (SBDD) Ligand-Based Drug Design (LBDD) Virtual Screening Molecular Docking Molecular Dynamics Simulations AI-Powered Lead Generation De Novo Molecule Design Lead Optimization Network Pharmacology Drug Repurposing QSAR Modeling Regulatory Toxicology Assessment Our integrated workflows support early-stage discovery through lead candidate prioritization."}},{"@type":"Question","name":"How does Artificial Intelligence accelerate drug discovery?","acceptedAnswer":{"@type":"Answer","text":"Artificial Intelligence can analyze massive biological and chemical datasets far more efficiently than traditional approaches. AI models can identify hidden patterns, predict molecular properties, prioritize compounds, and generate novel drug candidates. Key advantages include: Faster target identification Reduced screening costs Improved lead optimization Better ADMET prediction Enhanced drug repurposing opportunities Reduced experimental workload Accelerated candidate prioritization"}},{"@type":"Question","name":"Can AI generate entirely new drug molecules?","acceptedAnswer":{"@type":"Answer","text":"Yes. Modern generative AI models can design novel chemical structures optimized for biological activity, drug-likeness, selectivity, and safety profiles. These approaches support: De Novo Drug Design Scaffold Hopping Fragment-Based Design Multi-Parameter Optimization Lead Generation AI-generated molecules can then be evaluated using molecular docking, virtual screening, and molecular dynamics simulations."}},{"@type":"Question","name":"What is De Novo Drug Design?","acceptedAnswer":{"@type":"Answer","text":"De Novo Drug Design is the process of creating entirely new molecular structures computationally rather than screening existing compound libraries. AI-driven de novo design helps researchers generate novel therapeutic candidates tailored to specific biological targets while optimizing pharmacological and physicochemical properties."}},{"@type":"Question","name":"Do you support drug repurposing studies?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide AI-assisted drug repurposing services that identify new therapeutic applications for approved, investigational, or discontinued compounds. Our drug repurposing workflows may include: Target Prediction Disease Network Analysis Molecular Docking Virtual Screening Pathway Enrichment Analysis Network Pharmacology Mechanism-of-Action Studies Drug repurposing can significantly reduce development timelines and costs compared to traditional drug discovery programs."}},{"@type":"Question","name":"What therapeutic areas does RASA support?","acceptedAnswer":{"@type":"Answer","text":"Our AI Drug Discovery workflows support a wide range of disease areas, including: Oncology Neuroscience Infectious Diseases Autoimmune Disorders Cardiometabolic Diseases Rare Diseases Precision Medicine Programs Antimicrobial Drug Discovery Workflows are customized according to therapeutic objectives and target biology."}},{"@type":"Question","name":"What is AI-assisted Target Identification?","acceptedAnswer":{"@type":"Answer","text":"AI-assisted target identification combines multi-omics analytics, systems biology, literature mining, network biology, and machine learning to identify biologically relevant therapeutic targets. These workflows help researchers: Discover novel targets Prioritize disease-associated genes Identify pathway vulnerabilities Assess druggability Accelerate target validation"}},{"@type":"Question","name":"How does AI support lead optimization?","acceptedAnswer":{"@type":"Answer","text":"AI models can predict biological activity, pharmacokinetic properties, toxicity risks, and molecular interactions. This allows researchers to optimize lead compounds for: Potency Selectivity Solubility Bioavailability Metabolic Stability Toxicity Reduction Lead optimization helps improve the probability of downstream development success."}},{"@type":"Question","name":"What AI technologies and software platforms do you use?","acceptedAnswer":{"@type":"Answer","text":"Depending on project requirements, our workflows may utilize: Artificial Intelligence &amp; Machine Learning DeepChem TensorFlow PyTorch Scikit-Learn XGBoost Graph Neural Networks (GNNs) Cheminformatics RDKit Open Babel Mordred Structural Biology AlphaFold AutoDock Vina Smina GROMACS Systems Biology Cytoscape STRING Reactome"}},{"@type":"Question","name":"Can AI Drug Discovery be combined with molecular docking and molecular dynamics simulations?","acceptedAnswer":{"@type":"Answer","text":"Yes. AI-generated compounds are frequently evaluated using molecular docking and molecular dynamics simulations to validate binding interactions, assess stability, and prioritize candidates for further development. This integrated workflow improves confidence in lead selection and reduces false positives."}},{"@type":"Question","name":"What datasets are used in AI Drug Discovery projects?","acceptedAnswer":{"@type":"Answer","text":"Our AI workflows may integrate: Genomics Data Transcriptomics Data Proteomics Data Multi-Omics Datasets Chemical Libraries Drug Databases Clinical Data Scientific Literature Public Drug Discovery Repositories This data-driven approach improves model performance and biological relevance."}},{"@type":"Question","name":"What deliverables are included in AI Drug Discovery projects?","acceptedAnswer":{"@type":"Answer","text":"Typical project deliverables include: Target Discovery Reports AI Model Predictions Lead Compound Rankings Virtual Screening Results Molecular Docking Reports Molecular Dynamics Reports ADMET Predictions QSAR Analysis Drug Repurposing Reports Publication-Ready Figures Comprehensive Scientific Reports Deliverables are customized according to project requirements."}},{"@type":"Question","name":"What industries benefit from AI Drug Discovery?","acceptedAnswer":{"@type":"Answer","text":"Our services support: Pharmaceutical Companies Biotechnology Organizations Contract Research Organizations (CROs) Academic Research Institutions Government Research Centers Precision Medicine Programs AI-powered workflows can be applied across both small-molecule and biologics discovery programs."}},{"@type":"Question","name":"Why choose RASA for AI Drug Discovery projects?","acceptedAnswer":{"@type":"Answer","text":"RASA combines expertise in artificial intelligence, computational biology, bioinformatics, cheminformatics, molecular modeling, and systems biology to deliver scalable and scientifically rigorous drug discovery solutions. Our cloud-ready workflows, advanced analytical capabilities, publication-ready reporting, and integrated drug discovery platform help organizations accelerate therapeutic innovation while reducing research costs and development timelines. 📧 support@rasalifesciences.com 🌐 www.rasalifesciences.com"}}]}]}</script>
 </head>
@@ -291,57 +543,183 @@
       <span class="rasa-eyebrow">Service Offerings</span>
       <h2 class="rasa-h2" style="margin-top:1.25rem;">Our Core Drug Discovery Services</h2>
     </div>
-    <div class="rasa-svc-grid">
-    <article class="rasa-svc-card rasa-reveal stagger-1">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.4"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-dd-target-id.html" style="color:inherit;">Target Identification &amp; Structure-Based Design</a></h3>
-      <p class="rasa-svc-card__b">Identify biologically relevant therapeutic targets using genomics, transcriptomics, proteomics, systems biology, and AI-powered knowledge mining.</p>
-      <ul class="rasa-ticklist"><li><span class="rasa-tick">✓</span><span>Multi-omics target discovery</span></li><li><span class="rasa-tick">✓</span><span>Druggability assessment</span></li><li><span class="rasa-tick">✓</span><span>Disease pathway analysis</span></li><li><span class="rasa-tick">✓</span><span>Protein structure prediction</span></li><li><span class="rasa-tick">✓</span><span>Target prioritization</span></li></ul>
-      <a href="services-dd-target-id.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-2">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-4-4"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-dd-virtual-screening.html" style="color:inherit;">Virtual Screening &amp; Molecular Docking</a></h3>
-      <p class="rasa-svc-card__b">Accelerate hit identification using high-throughput virtual screening and molecular docking workflows.</p>
-      <ul class="rasa-ticklist"><li><span class="rasa-tick">✓</span><span>Structure-based virtual screening</span></li><li><span class="rasa-tick">✓</span><span>Ligand-based screening</span></li><li><span class="rasa-tick">✓</span><span>Pharmacophore modeling</span></li><li><span class="rasa-tick">✓</span><span>Molecular docking</span></li><li><span class="rasa-tick">✓</span><span>Binding interaction analysis</span></li><li><span class="rasa-tick">✓</span><span>Drug repurposing studies</span></li></ul>
-      <a href="services-dd-virtual-screening.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-3">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1.8"/><ellipse cx="12" cy="12" rx="10" ry="4.2"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-dd-molecular-dynamics.html" style="color:inherit;">Molecular Dynamics Simulation</a></h3>
-      <p class="rasa-svc-card__b">Investigate protein stability, conformational flexibility, and biomolecular interactions through advanced MD simulations.</p>
-      <ul class="rasa-ticklist"><li><span class="rasa-tick">✓</span><span>Protein structure simulations</span></li><li><span class="rasa-tick">✓</span><span>Protein–ligand complex simulations</span></li><li><span class="rasa-tick">✓</span><span>Protein–protein complex simulations</span></li><li><span class="rasa-tick">✓</span><span>100 ns – 1000 ns simulations</span></li><li><span class="rasa-tick">✓</span><span>MM-PBSA / MM-GBSA analysis</span></li></ul>
-      <a href="services-dd-molecular-dynamics.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-1">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="7" r="2.6"/><circle cx="17.5" cy="9" r="2.6"/><circle cx="10.5" cy="17.5" r="2.6"/><path d="M8.8 8.4l6.8 1.2M8.3 9.5l2.6 6"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-dd-protein-modeling.html" style="color:inherit;">Protein Structure Modeling</a></h3>
-      <p class="rasa-svc-card__b">Generate and refine protein structures for drug discovery and structural biology research.</p>
-      <ul class="rasa-ticklist"><li><span class="rasa-tick">✓</span><span>AlphaFold structure prediction</span></li><li><span class="rasa-tick">✓</span><span>Homology modeling</span></li><li><span class="rasa-tick">✓</span><span>Binding pocket prediction</span></li><li><span class="rasa-tick">✓</span><span>Active site identification</span></li><li><span class="rasa-tick">✓</span><span>Structure refinement &amp; validation</span></li></ul>
-      <a href="services-dd-protein-modeling.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-2">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2l1.9 4.4 4.4 1.9-4.4 1.9L12 15.8l-1.9-4.4L5.7 9.5l4.4-1.9z"/><circle cx="18.5" cy="17.5" r="1.4"/><circle cx="5.5" cy="17" r="1.2"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-dd-de-novo.html" style="color:inherit;">AI Drug Discovery &amp; De Novo Design</a></h3>
-      <p class="rasa-svc-card__b">Leverage machine learning and generative AI to design and optimize novel therapeutic candidates.</p>
-      <ul class="rasa-ticklist"><li><span class="rasa-tick">✓</span><span>AI-driven molecule generation</span></li><li><span class="rasa-tick">✓</span><span>De novo drug design</span></li><li><span class="rasa-tick">✓</span><span>Scaffold hopping</span></li><li><span class="rasa-tick">✓</span><span>Lead optimization</span></li><li><span class="rasa-tick">✓</span><span>Fragment-based drug design</span></li></ul>
-      <a href="services-dd-de-novo.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-3">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6.5" r="2.1"/><circle cx="19" cy="6.5" r="2.1"/><circle cx="12" cy="18" r="2.1"/><path d="M7 7.4l4 8.8M17 7.4l-4 8.8M7 6.5h10"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-dd-multi-target.html" style="color:inherit;">Network Pharmacology &amp; Systems Biology</a></h3>
-      <p class="rasa-svc-card__b">Explore biological pathways, disease networks, and multi-target therapeutic mechanisms.</p>
-      <ul class="rasa-ticklist"><li><span class="rasa-tick">✓</span><span>Protein–protein interaction analysis</span></li><li><span class="rasa-tick">✓</span><span>Disease network modeling</span></li><li><span class="rasa-tick">✓</span><span>Pathway enrichment analysis</span></li><li><span class="rasa-tick">✓</span><span>Polypharmacology prediction</span></li><li><span class="rasa-tick">✓</span><span>Systems biology analysis</span></li></ul>
-      <a href="services-dd-multi-target.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rasa-svc-card rasa-reveal stagger-1">
-      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.2l7.5 2.8v5.6c0 4.8-3.3 7.6-7.5 10.4-4.2-2.8-7.5-5.6-7.5-10.4V5z"/><path d="m9 12 2.2 2.2L15.2 10"/></svg></span>
-      <h3 class="rasa-svc-card__h"><a href="services-qsar-toxicology.html" style="color:inherit;">QSAR &amp; Regulatory Toxicology</a></h3>
-      <p class="rasa-svc-card__b">Support pharmaceutical development with computational toxicology and regulatory risk assessment.</p>
-      <ul class="rasa-ticklist"><li><span class="rasa-tick">✓</span><span>ICH M7 impurity assessment</span></li><li><span class="rasa-tick">✓</span><span>QSAR toxicological evaluation</span></li><li><span class="rasa-tick">✓</span><span>Nitrosamine risk assessment</span></li><li><span class="rasa-tick">✓</span><span>Computational safety profiling</span></li><li><span class="rasa-tick">✓</span><span>Regulatory toxicology reporting</span></li></ul>
-      <a href="services-qsar-toxicology.html" class="rasa-svc-card__more">Explore service<span aria-hidden="true">→</span></a>
-    </article>
-  </div>
+    <div class="rasa-svc-showcase">
+      <!-- Left navigation bar: 7 tabs -->
+      <div class="rasa-svc-showcase__nav" role="tablist">
+        <!-- Tab 1 -->
+        <button class="rasa-svc-showcase__btn is-active" id="showcase-tab-1" role="tab" aria-selected="true" aria-controls="showcase-panel-1">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.4"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Target ID &amp; Structure</span>
+        </button>
+        <!-- Tab 2 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-2" role="tab" aria-selected="false" aria-controls="showcase-panel-2">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-4-4"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Virtual Screening &amp; Docking</span>
+        </button>
+        <!-- Tab 3 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-3" role="tab" aria-selected="false" aria-controls="showcase-panel-3">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1.8"/><ellipse cx="12" cy="12" rx="10" ry="4.2"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Molecular Dynamics</span>
+        </button>
+        <!-- Tab 4 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-4" role="tab" aria-selected="false" aria-controls="showcase-panel-4">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="7" r="2.6"/><circle cx="17.5" cy="9" r="2.6"/><circle cx="10.5" cy="17.5" r="2.6"/><path d="M8.8 8.4l6.8 1.2M8.3 9.5l2.6 6"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Protein Modeling</span>
+        </button>
+        <!-- Tab 5 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-5" role="tab" aria-selected="false" aria-controls="showcase-panel-5">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2l1.9 4.4 4.4 1.9-4.4 1.9L12 15.8l-1.9-4.4L5.7 9.5l4.4-1.9z"/><circle cx="18.5" cy="17.5" r="1.4"/><circle cx="5.5" cy="17" r="1.2"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">AI &amp; De Novo Design</span>
+        </button>
+        <!-- Tab 6 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-6" role="tab" aria-selected="false" aria-controls="showcase-panel-6">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6.5" r="2.1"/><circle cx="19" cy="6.5" r="2.1"/><circle cx="12" cy="18" r="2.1"/><path d="M7 7.4l4 8.8M17 7.4l-4 8.8M7 6.5h10"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">Network Pharmacology</span>
+        </button>
+        <!-- Tab 7 -->
+        <button class="rasa-svc-showcase__btn" id="showcase-tab-7" role="tab" aria-selected="false" aria-controls="showcase-panel-7">
+          <span class="rasa-svc-showcase__btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.2l7.5 2.8v5.6c0 4.8-3.3 7.6-7.5 10.4-4.2-2.8-7.5-5.6-7.5-10.4V5z"/><path d="m9 12 2.2 2.2L15.2 10"/></svg></span>
+          <span class="rasa-svc-showcase__btn-text">QSAR &amp; Toxicology</span>
+        </button>
+      </div>
+      
+      <!-- Right details panel: 7 content panels -->
+      <div class="rasa-svc-showcase__content">
+        <!-- Panel 1 -->
+        <div class="rasa-svc-showcase__panel is-active" id="showcase-panel-1" role="tabpanel" aria-labelledby="showcase-tab-1">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.4"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Target Identification &amp; Structure-Based Design</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Identify biologically relevant therapeutic targets using genomics, transcriptomics, proteomics, systems biology, and AI-powered knowledge mining.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>Multi-omics target discovery</span></li>
+              <li><span class="rasa-tick">✓</span><span>Druggability assessment</span></li>
+              <li><span class="rasa-tick">✓</span><span>Disease pathway analysis</span></li>
+              <li><span class="rasa-tick">✓</span><span>Protein structure prediction</span></li>
+              <li><span class="rasa-tick">✓</span><span>Target prioritization</span></li>
+            </ul>
+          </div>
+          <a href="services-dd-target-id.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 2 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-2" role="tabpanel" aria-labelledby="showcase-tab-2">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-4-4"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Virtual Screening &amp; Molecular Docking</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Accelerate hit identification using high-throughput virtual screening and molecular docking workflows.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>Structure-based virtual screening</span></li>
+              <li><span class="rasa-tick">✓</span><span>Ligand-based screening</span></li>
+              <li><span class="rasa-tick">✓</span><span>Pharmacophore modeling</span></li>
+              <li><span class="rasa-tick">✓</span><span>Molecular docking</span></li>
+              <li><span class="rasa-tick">✓</span><span>Binding interaction analysis</span></li>
+              <li><span class="rasa-tick">✓</span><span>Drug repurposing studies</span></li>
+            </ul>
+          </div>
+          <a href="services-dd-virtual-screening.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 3 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-3" role="tabpanel" aria-labelledby="showcase-tab-3">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1.8"/><ellipse cx="12" cy="12" rx="10" ry="4.2"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Molecular Dynamics Simulation</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Investigate protein stability, conformational flexibility, and biomolecular interactions through advanced MD simulations.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>Protein structure simulations</span></li>
+              <li><span class="rasa-tick">✓</span><span>Protein–ligand complex simulations</span></li>
+              <li><span class="rasa-tick">✓</span><span>Protein–protein complex simulations</span></li>
+              <li><span class="rasa-tick">✓</span><span>100 ns – 1000 ns simulations</span></li>
+              <li><span class="rasa-tick">✓</span><span>MM-PBSA / MM-GBSA analysis</span></li>
+            </ul>
+          </div>
+          <a href="services-dd-molecular-dynamics.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 4 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-4" role="tabpanel" aria-labelledby="showcase-tab-4">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="7" r="2.6"/><circle cx="17.5" cy="9" r="2.6"/><circle cx="10.5" cy="17.5" r="2.6"/><path d="M8.8 8.4l6.8 1.2M8.3 9.5l2.6 6"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Protein Structure Modeling</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Generate and refine protein structures for drug discovery and structural biology research.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>AlphaFold structure prediction</span></li>
+              <li><span class="rasa-tick">✓</span><span>Homology modeling</span></li>
+              <li><span class="rasa-tick">✓</span><span>Binding pocket prediction</span></li>
+              <li><span class="rasa-tick">✓</span><span>Active site identification</span></li>
+              <li><span class="rasa-tick">✓</span><span>Structure refinement &amp; validation</span></li>
+            </ul>
+          </div>
+          <a href="services-dd-protein-modeling.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 5 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-5" role="tabpanel" aria-labelledby="showcase-tab-5">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2l1.9 4.4 4.4 1.9-4.4 1.9L12 15.8l-1.9-4.4L5.7 9.5l4.4-1.9z"/><circle cx="18.5" cy="17.5" r="1.4"/><circle cx="5.5" cy="17" r="1.2"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">AI Drug Discovery &amp; De Novo Design</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Leverage machine learning and generative AI to design and optimize novel therapeutic candidates.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>AI-driven molecule generation</span></li>
+              <li><span class="rasa-tick">✓</span><span>De novo drug design</span></li>
+              <li><span class="rasa-tick">✓</span><span>Scaffold hopping</span></li>
+              <li><span class="rasa-tick">✓</span><span>Lead optimization</span></li>
+              <li><span class="rasa-tick">✓</span><span>Fragment-based drug design</span></li>
+            </ul>
+          </div>
+          <a href="services-dd-de-novo.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 6 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-6" role="tabpanel" aria-labelledby="showcase-tab-6">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6.5" r="2.1"/><circle cx="19" cy="6.5" r="2.1"/><circle cx="12" cy="18" r="2.1"/><path d="M7 7.4l4 8.8M17 7.4l-4 8.8M7 6.5h10"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">Network Pharmacology &amp; Systems Biology</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Explore biological pathways, disease networks, and multi-target therapeutic mechanisms.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>Protein–protein interaction analysis</span></li>
+              <li><span class="rasa-tick">✓</span><span>Disease network modeling</span></li>
+              <li><span class="rasa-tick">✓</span><span>Pathway enrichment analysis</span></li>
+              <li><span class="rasa-tick">✓</span><span>Polypharmacology prediction</span></li>
+              <li><span class="rasa-tick">✓</span><span>Systems biology analysis</span></li>
+            </ul>
+          </div>
+          <a href="services-dd-multi-target.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+        
+        <!-- Panel 7 -->
+        <div class="rasa-svc-showcase__panel" id="showcase-panel-7" role="tabpanel" aria-labelledby="showcase-tab-7">
+          <div>
+            <div class="rasa-svc-showcase__pane-header">
+              <span class="rasa-svc-showcase__pane-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.2l7.5 2.8v5.6c0 4.8-3.3 7.6-7.5 10.4-4.2-2.8-7.5-5.6-7.5-10.4V5z"/><path d="m9 12 2.2 2.2L15.2 10"/></svg></span>
+              <h3 class="rasa-svc-showcase__pane-title">QSAR &amp; Regulatory Toxicology</h3>
+            </div>
+            <p class="rasa-svc-showcase__pane-desc">Support pharmaceutical development with computational toxicology and regulatory risk assessment.</p>
+            <ul class="rasa-svc-showcase__pane-list">
+              <li><span class="rasa-tick">✓</span><span>ICH M7 impurity assessment</span></li>
+              <li><span class="rasa-tick">✓</span><span>QSAR toxicological evaluation</span></li>
+              <li><span class="rasa-tick">✓</span><span>Nitrosamine risk assessment</span></li>
+              <li><span class="rasa-tick">✓</span><span>Computational safety profiling</span></li>
+              <li><span class="rasa-tick">✓</span><span>Regulatory toxicology reporting</span></li>
+            </ul>
+          </div>
+          <a href="services-qsar-toxicology.html" class="rasa-svc-showcase__pane-more">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
@@ -453,23 +831,39 @@
   </div>
   </div>
 </section>
-<section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
+<section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border); background:var(--surface);">
   <div class="container">
     <div class="rasa-reveal" style="margin-bottom:3rem;">
       <span class="rasa-eyebrow">Why RASA</span>
       <h2 class="rasa-h2" style="margin-top:1.25rem;">Why Choose RASA?</h2>
     </div>
-    
-  <div class="rasa-checkgrid">
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>AI-Native Computational Drug Discovery Workflows</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Molecular Docking &amp; Molecular Dynamics Expertise</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Multi-Omics &amp; Systems Biology Integration</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Protein Structure Modeling &amp; Structural Bioinformatics</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>QSAR Toxicology &amp; Regulatory Assessment Support</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Reproducible Cloud-Ready Infrastructure</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Publication-Ready Scientific Deliverables</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Flexible Collaboration Models for Pharma, Biotech, CROs &amp; Academia</span></div>
-  </div>
+    <div class="rasa-svc-grid">
+    <article class="rasa-svc-card rasa-reveal">
+      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2l1.9 4.4 4.4 1.9-4.4 1.9L12 15.8l-1.9-4.4L5.7 9.5l4.4-1.9z"/><circle cx="18.5" cy="17.5" r="1.4"/><circle cx="5.5" cy="17" r="1.2"/></svg></span>
+      <h3 class="rasa-svc-card__h">AI-Assisted Bioinformatics</h3>
+      <p class="rasa-svc-card__b">Machine learning-enabled workflows for biomarker discovery, variant prioritization, and predictive genomics.</p>
+    </article>
+    <article class="rasa-svc-card rasa-reveal">
+      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 2.5 7 12 11.5 21.5 7z"/><path d="M2.5 12 12 16.5 21.5 12M2.5 16.5 12 21l9.5-4.5"/></svg></span>
+      <h3 class="rasa-svc-card__h">Multi-Platform Expertise</h3>
+      <p class="rasa-svc-card__b">Support for Illumina, Oxford Nanopore, PacBio HiFi, and 10x Genomics platforms.</p>
+    </article>
+    <article class="rasa-svc-card rasa-reveal">
+      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 2.5 7 12 11.5 21.5 7z"/><path d="M2.5 12 12 16.5 21.5 12M2.5 16.5 12 21l9.5-4.5"/></svg></span>
+      <h3 class="rasa-svc-card__h">End-to-End Analysis</h3>
+      <p class="rasa-svc-card__b">From raw sequencing data to biological interpretation and publication-ready reports.</p>
+    </article>
+    <article class="rasa-svc-card rasa-reveal">
+      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="7" r="2.6"/><circle cx="17.5" cy="9" r="2.6"/><circle cx="10.5" cy="17.5" r="2.6"/><path d="M8.8 8.4l6.8 1.2M8.3 9.5l2.6 6"/></svg></span>
+      <h3 class="rasa-svc-card__h">Cloud-Ready Infrastructure</h3>
+      <p class="rasa-svc-card__b">Deployable on AWS, Google Cloud, HPC clusters, and secure on-premise environments.</p>
+    </article>
+    <article class="rasa-svc-card rasa-reveal">
+      <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 2.5 7 12 11.5 21.5 7z"/><path d="M2.5 12 12 16.5 21.5 12M2.5 16.5 12 21l9.5-4.5"/></svg></span>
+      <h3 class="rasa-svc-card__h">Reproducible Workflows</h3>
+      <p class="rasa-svc-card__b">Built using Nextflow, Snakemake, Docker, and Singularity for enterprise-grade bioinformatics operations.</p>
+    </article>
+    </div>
   </div>
 </section>
 <section class="rasa-section" style="padding:5rem 0; background:var(--surface); border-top:1px solid var(--border);">
@@ -774,6 +1168,25 @@
         b.setAttribute('aria-selected', 'false');
       });
       tabPanels.forEach(function (p) { p.classList.remove('is-active'); });
+
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected', 'true');
+      var controls = btn.getAttribute('aria-controls');
+      var targetPanel = document.getElementById(controls);
+      if (targetPanel) targetPanel.classList.add('is-active');
+    });
+  });
+
+  // Interactive Service Showcase Switcher
+  var showcaseButtons = document.querySelectorAll('.rasa-svc-showcase__btn');
+  var showcasePanels = document.querySelectorAll('.rasa-svc-showcase__panel');
+  showcaseButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      showcaseButtons.forEach(function (b) {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      showcasePanels.forEach(function (p) { p.classList.remove('is-active'); });
 
       btn.classList.add('is-active');
       btn.setAttribute('aria-selected', 'true');
