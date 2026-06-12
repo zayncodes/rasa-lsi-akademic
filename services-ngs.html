@@ -159,15 +159,32 @@
       font-size: 0.92rem;
       font-weight: 600;
       color: var(--foreground) !important;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      transition: background 0.3s, border-color 0.3s, box-shadow 0.3s, color 0.3s !important;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01) !important;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .rasa-svc-showcase__btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(200px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(139, 195, 74, 0.15), transparent 45%);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .rasa-svc-showcase__btn:hover::before {
+      opacity: 1;
     }
 
     .rasa-svc-showcase__btn:hover {
       background: rgba(255, 255, 255, 0.95) !important;
-      border-color: rgba(139, 195, 74, 0.3) !important;
-      transform: translateX(6px);
-      box-shadow: 0 4px 12px rgba(139, 195, 74, 0.06) !important;
+      border-color: rgba(139, 195, 74, 0.4) !important;
+      box-shadow: 0 12px 40px rgba(139, 195, 74, 0.08) !important;
     }
 
     .rasa-svc-showcase__btn.is-active {
@@ -1548,9 +1565,12 @@
   });
 
   // Interactive 3D mouse tilt and glow shadow calculation for capability and service cards
-  var cards3d = document.querySelectorAll('.rasa-highlight, .rasa-svc-card, .rasa-capability');
+  var cards3d = document.querySelectorAll('.rasa-highlight, .rasa-svc-card, .rasa-capability, .rasa-svc-showcase__btn');
   cards3d.forEach(function (card) {
     card.addEventListener('mousemove', function (e) {
+      if (card.classList.contains('rasa-svc-showcase__btn') && window.innerWidth <= 992) {
+        return;
+      }
       var rect = card.getBoundingClientRect();
       var x = e.clientX - rect.left;
       var y = e.clientY - rect.top;
@@ -1566,6 +1586,9 @@
     });
 
     card.addEventListener('mouseleave', function () {
+      if (card.classList.contains('rasa-svc-showcase__btn') && window.innerWidth <= 992) {
+        return;
+      }
       card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
     });
   });
