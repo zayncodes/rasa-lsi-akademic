@@ -10,7 +10,7 @@
 
 html, body { margin: 0; padding: 0; background: #f8f9fa; scroll-behavior: smooth; }
 
-.rasa-page { min-height: 100vh; }
+.rasa-page { min-height: auto; }
 
 .rasa,
 .rasa *,
@@ -491,7 +491,7 @@ body.rasa {
 
 .rasa-page {
   flex: 1 0 auto !important;
-  padding-bottom: 5rem !important; /* Ensure content never touches the footer */
+  padding-bottom: 1.5rem !important; /* Ensure content never touches the footer */
 }
 
 .rasa-footer {
@@ -2208,7 +2208,7 @@ body.rasa {
 
 .rasa-page {
   flex: 1 0 auto !important;
-  padding-bottom: 5rem !important; /* Ensure content never touches the footer */
+  padding-bottom: 1.5rem !important; /* Ensure content never touches the footer */
 }
 
 .rasa-footer {
@@ -2927,9 +2927,9 @@ body.rasa {
 .rasa-top-bar {
   display: none !important;
 }
-.rasa-header { 
+.rasa-header {
   top: 0 !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05); 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
 }
 body.rasa {
   padding-top: 64px !important;
@@ -2954,7 +2954,7 @@ body.rasa {
 }
 .rasa-page {
   flex: 1 0 auto !important;
-  padding-bottom: 5rem !important; /* Ensure content never touches the footer */
+  padding-bottom: 1.5rem !important; /* Ensure content never touches the footer */
 }
 .rasa-footer {
   flex-shrink: 0 !important;
@@ -3271,4 +3271,3 @@ body.dark-mode .rasa-hero__parallax-bg {
   background: linear-gradient(to bottom, transparent 60%, var(--cream) 100%), radial-gradient(circle at center, transparent 55%, var(--cream) 100%);
   z-index: 2;
 }
-
