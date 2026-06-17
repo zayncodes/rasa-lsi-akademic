@@ -3271,3 +3271,80 @@ body.dark-mode .rasa-hero__parallax-bg {
   background: linear-gradient(to bottom, transparent 60%, var(--cream) 100%), radial-gradient(circle at center, transparent 55%, var(--cream) 100%);
   z-index: 2;
 }
+
+/* ============================================================
+   FULL-IMAGE DISPLAY — show concept infographics uncropped
+   ------------------------------------------------------------
+   The concept images are detailed infographics: titles, legends
+   and charts run right to the edges. Frames therefore adapt to
+   each image's natural ratio and show it in full, instead of
+   cropping it with a fixed aspect-ratio + object-fit:cover.
+   Rounded corners, borders, shadows, palette, reveal/zoom and
+   the homepage network visual are all preserved.
+   ============================================================ */
+
+/* 1 — Feature image on detail, service-overview & case-study heroes.
+        height:auto lets the frame wrap the whole image; !important
+        also clears the inline 16/10 set on several case-study heroes
+        and covers the nested .rasa-hero-imgwrap on the overview pages. */
+.rasa-pagehero__art {
+  aspect-ratio: auto !important;
+  height: auto !important;
+  background: var(--surface);
+}
+.rasa-pagehero__art > img,
+.rasa-pagehero__art .rasa-hero-imgwrap,
+.rasa-pagehero__art .rasa-hero-imgwrap > img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+}
+
+/* 2 — Inline-ratio figure (about page "collaborators" image). */
+.rasa-page .zoom-parent[style*="aspect-ratio"] {
+  aspect-ratio: auto !important;
+  height: auto !important;
+}
+.rasa-page .zoom-parent[style*="aspect-ratio"] > img {
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* 3 — Homepage hero slides. The interactive molecular network (slide 1)
+        keeps its circular frame; image slides become a full rounded-rect
+        preview so nothing is cropped. :has() scopes the change to frames
+        that actually contain an <img>. */
+.rasa-hero__art:has(.rasa-hero__circle-img) {
+  aspect-ratio: auto !important;
+  height: auto !important;
+}
+.rasa-hero__circle-frame:has(.rasa-hero__circle-img) {
+  width: 100% !important;
+  max-width: 480px !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  border-radius: 18px !important;
+}
+.rasa-hero__circle-img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* 4 — Card thumbnails (home service cards + case-study cards): a uniform
+        3:2 tile that shows the whole image via contain on a clean ground. */
+.rasa-card__img-wrap {
+  height: auto !important;
+  aspect-ratio: 3 / 2 !important;
+  background: var(--surface) !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.rasa-card__img-wrap > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
