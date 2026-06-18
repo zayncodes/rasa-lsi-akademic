@@ -3361,17 +3361,106 @@ body.dark-mode .rasa-hero__parallax-bg {
 
 /* Green Theme (NGS & genomics) */
 .rasa-theme-ngs {
+  --leaf: #8bc34a !important;
+  --leaf-hover: #7cb342 !important;
+  --leaf-soft: rgba(139, 195, 74, 0.08) !important;
+  --leaf-tint: rgba(139, 195, 74, 0.04) !important;
   --glow-color: rgba(139, 195, 74, 0.12) !important;
   --glow-border: rgba(139, 195, 74, 0.4) !important;
   --glow-shadow: rgba(139, 195, 74, 0.08) !important;
 }
 
-/* Red/QSAR Theme */
-.rasa-theme-qsar {
-  --glow-color: rgba(220, 38, 38, 0.12) !important;
-  --glow-border: rgba(220, 38, 38, 0.4) !important;
-  --glow-shadow: rgba(220, 38, 38, 0.08) !important;
+/* Blue Theme (Drug Discovery) */
+.rasa-theme-dd {
+  --leaf: #2563eb !important;
+  --leaf-hover: #1e40af !important;
+  --leaf-soft: rgba(37, 99, 235, 0.08) !important;
+  --leaf-tint: rgba(37, 99, 235, 0.04) !important;
+  --glow-color: rgba(37, 99, 235, 0.12) !important;
+  --glow-border: rgba(37, 99, 235, 0.4) !important;
+  --glow-shadow: rgba(37, 99, 235, 0.08) !important;
 }
+
+/* Orange/QSAR Theme */
+.rasa-theme-qsar {
+  --leaf: #ea580c !important;
+  --leaf-hover: #c2410c !important;
+  --leaf-soft: rgba(234, 88, 12, 0.08) !important;
+  --leaf-tint: rgba(234, 88, 12, 0.04) !important;
+  --glow-color: rgba(234, 88, 12, 0.12) !important;
+  --glow-border: rgba(234, 88, 12, 0.4) !important;
+  --glow-shadow: rgba(234, 88, 12, 0.08) !important;
+}
+
+/* Purple/Knowledge Base Theme */
+.rasa-theme-kb {
+  --leaf: #7c3aed !important;
+  --leaf-hover: #6d28d9 !important;
+  --leaf-soft: rgba(124, 58, 237, 0.08) !important;
+  --leaf-tint: rgba(124, 58, 237, 0.04) !important;
+  --glow-color: rgba(124, 58, 237, 0.12) !important;
+  --glow-border: rgba(124, 58, 237, 0.4) !important;
+  --glow-shadow: rgba(124, 58, 237, 0.08) !important;
+}
+
+/* Parent Navigation Active Highlights based on Body Theme */
+body.rasa-theme-ngs .rasa-nav__item:nth-child(1) > a {
+  color: #8bc34a !important;
+  font-weight: 600 !important;
+}
+body.rasa-theme-dd .rasa-nav__item:nth-child(2) > a {
+  color: #2563eb !important;
+  font-weight: 600 !important;
+}
+body.rasa-theme-qsar .rasa-nav__item:nth-child(3) > a {
+  color: #ea580c !important;
+  font-weight: 600 !important;
+}
+body.rasa-theme-kb .rasa-nav__item:nth-child(4) > a {
+  color: #7c3aed !important;
+  font-weight: 600 !important;
+}
+
+/* Navigation Hover Colors */
+.rasa-nav__item:nth-child(1) > a:hover { color: #8bc34a !important; }
+.rasa-nav__item:nth-child(2) > a:hover { color: #2563eb !important; }
+.rasa-nav__item:nth-child(3) > a:hover { color: #ea580c !important; }
+.rasa-nav__item:nth-child(4) > a:hover { color: #7c3aed !important; }
+
+/* Dropdown link hover states scoped per category for consistency */
+.rasa-nav__item:nth-child(1) .rasa-nav__dropdown a:hover,
+.rasa-nav__item:nth-child(1) .rasa-nav__dropdown a.is-active {
+  color: #8bc34a !important;
+  background-color: rgba(139, 195, 74, 0.08) !important;
+}
+.rasa-nav__item:nth-child(2) .rasa-nav__dropdown a:hover,
+.rasa-nav__item:nth-child(2) .rasa-nav__dropdown a.is-active {
+  color: #2563eb !important;
+  background-color: rgba(37, 99, 235, 0.08) !important;
+}
+.rasa-nav__item:nth-child(4) .rasa-nav__dropdown a:hover,
+.rasa-nav__item:nth-child(4) .rasa-nav__dropdown a.is-active,
+.rasa-nav__item:nth-child(4) .rasa-nav__subitem > a:hover,
+.rasa-nav__item:nth-child(4) .rasa-nav__subdropdown a:hover {
+  color: #7c3aed !important;
+  background-color: rgba(124, 58, 237, 0.08) !important;
+}
+
+/* Subpage Hero typography and layout styling */
+.rasa-pagehero__h {
+  background: linear-gradient(135deg, var(--foreground) 30%, var(--leaf) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-fill-color: transparent !important;
+  letter-spacing: -0.02em !important;
+}
+.rasa-pagehero__copy {
+  border-left: 2px solid var(--leaf-soft) !important;
+  padding-left: 1.5rem !important;
+  margin-left: 0.25rem !important;
+}
+
 
 /* Interactive Card Styling */
 .rasa-svc-card, .rasa-capability, .rasa-check, .rasa-card, .rasa-tab-btn, .rasa-highlight {
