@@ -3427,6 +3427,16 @@ body.rasa-theme-kb .rasa-nav__item:nth-child(4) > a {
 .rasa-nav__item:nth-child(3) > a:hover { color: #ea580c !important; }
 .rasa-nav__item:nth-child(4) > a:hover { color: #7c3aed !important; }
 
+/* Dropdown subtopics themed by section (NGS green / DD blue / KB violet) */
+.rasa-nav__item:nth-child(1) .rasa-nav__dropdown a:hover { color: #8bc34a !important; background-color: rgba(139, 195, 74, 0.08) !important; }
+.rasa-nav__item:nth-child(1) .rasa-nav__dropdown a.is-active { color: #8bc34a !important; background-color: rgba(139, 195, 74, 0.12) !important; }
+.rasa-nav__item:nth-child(2) .rasa-nav__dropdown a:hover { color: #2563eb !important; background-color: rgba(37, 99, 235, 0.08) !important; }
+.rasa-nav__item:nth-child(2) .rasa-nav__dropdown a.is-active { color: #2563eb !important; background-color: rgba(37, 99, 235, 0.12) !important; }
+.rasa-nav__item:nth-child(4) .rasa-nav__dropdown a:hover,
+.rasa-nav__item:nth-child(4) .rasa-nav__subdropdown a:hover { color: #7c3aed !important; background-color: rgba(124, 58, 237, 0.08) !important; }
+.rasa-nav__item:nth-child(4) .rasa-nav__dropdown a.is-active,
+.rasa-nav__item:nth-child(4) .rasa-nav__subdropdown a.is-active { color: #7c3aed !important; background-color: rgba(124, 58, 237, 0.12) !important; }
+
 /* Dropdown link hover states scoped per category for consistency */
 .rasa-nav__item:nth-child(1) .rasa-nav__dropdown a:hover,
 .rasa-nav__item:nth-child(1) .rasa-nav__dropdown a.is-active {

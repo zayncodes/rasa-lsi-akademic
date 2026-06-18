@@ -93,84 +93,111 @@
 
 <!-- =============== MAIN =============== -->
 <main class="rasa rasa-page">
-  <section class="rasa-pagehero">
+  <section class="rasa-pagehero rasa-pagehero--premium">
     <div class="rasa-grid-bg" aria-hidden="true"></div>
+    <div class="rasa-hero-glow" aria-hidden="true"></div>
     <div class="container">
       <div class="rasa-pagehero__grid">
         <div class="rasa-pagehero__copy">
           <div class="rasa-reveal"><span class="rasa-eyebrow">In-Silico Drug Discovery<span class="rasa-eyebrow__rule"></span></span></div>
           <h1 class="rasa-pagehero__h rasa-reveal" data-delay="1" style="font-size:clamp(2rem,4.5vw,3.25rem); font-weight:500; line-height:1.1; margin:1.5rem 0 1.25rem;">Protein Structure Modeling</h1>
-          <p class="rasa-pagehero__lede rasa-reveal" data-delay="2" style="font-size:1.12rem; line-height:1.6; color:var(--foreground); font-weight:500;">AI-Powered Protein Structure Prediction, Structural Bioinformatics &amp; Drug Discovery Support</p>
-          <p class="rasa-pagehero__lede rasa-reveal" data-delay="2" style="font-size:1.02rem; line-height:1.7; color:var(--foreground-70); margin-top:1rem;">RASA Life Science Informatics provides advanced Protein Structure Modeling services to support drug discovery, structural biology, protein engineering, and functional genomics research. Our computational workflows combine artificial intelligence, homology modeling, and structural bioinformatics to generate accurate three-dimensional protein structures for therapeutic target characterization and downstream drug discovery applications.</p>
-          <p class="rasa-pagehero__lede rasa-reveal" data-delay="2" style="font-size:1.02rem; line-height:1.7; color:var(--foreground-70); margin-top:1rem;">Using industry-leading platforms such as AlphaFold, I-TASSER, SWISS-MODEL, and Protein Data Bank (PDB) resources, we predict, refine, validate, and analyze protein structures to provide biologically meaningful insights into protein function, molecular interactions, and druggability.</p>
-          <p class="rasa-pagehero__lede rasa-reveal" data-delay="2" style="font-size:1.02rem; line-height:1.7; color:var(--foreground-70); margin-top:1rem;">Our structure modeling services support pharmaceutical companies, biotechnology organizations, CROs, and academic researchers working in oncology, neuroscience, infectious diseases, rare diseases, and precision medicine programs.</p>
+          <p class="rasa-pagehero__lede rasa-reveal" data-delay="2" style="font-size:1.12rem; line-height:1.6; color:var(--foreground); font-weight:500;">AI-powered protein structure prediction, structural bioinformatics, and structure-based drug-discovery support.</p>
+          <div class="rasa-reveal" data-delay="3" style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.75rem;">
+            <a href="contact.html" class="rasa-btn rasa-btn--primary">Discuss your project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="#offerings" class="rasa-btn rasa-btn--ghost">Explore capabilities</a>
+          </div>
         </div>
-        <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2"><img src="images/protein_modeling.jpg" alt="Protein Structure Modeling"></div>
+        <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2"><div class="rasa-hero-imgwrap"><img src="images/protein_modeling.jpg" alt="Protein Structure Modeling"></div></div>
       </div>
     </div>
   </section>
-<section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
-  <div class="container">
-    <div class="rasa-reveal" style="margin-bottom:3rem;">
-      <span class="rasa-eyebrow">Service Offerings</span>
-      <h2 class="rasa-h2" style="margin-top:1.25rem;">What We Offer</h2>
+  <section class="rasa-introband">
+    <div class="container">
+      <div class="rasa-introband__inner rasa-reveal">
+        <p class="rasa-introband__p rasa-introband__p--lead">RASA Life Science Informatics delivers advanced Protein Structure Modeling that combines artificial intelligence, homology modeling, and structural bioinformatics to generate accurate three-dimensional protein structures for therapeutic target characterization and downstream drug discovery.</p>
+        <p class="rasa-introband__p">Using industry-leading platforms such as AlphaFold, I-TASSER, SWISS-MODEL, and Protein Data Bank (PDB) resources, we predict, refine, validate, and analyze structures to deliver biologically meaningful insight into protein function, molecular interactions, and druggability.</p>
+        <p class="rasa-introband__p">Our services support pharmaceutical companies, biotechnology organizations, CROs, and academic researchers across oncology, neuroscience, infectious diseases, rare diseases, and precision medicine.</p>
+      </div>
     </div>
-    <div class="rasa-capabilities">
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Protein Structure Prediction</h3>
-      
-      <ul class="rasa-ticklist"><li><span class="rasa-tick">✓</span><span>AlphaFold-based structure prediction</span></li><li><span class="rasa-tick">✓</span><span>Homology modeling</span></li><li><span class="rasa-tick">✓</span><span>Ab initio structure prediction</span></li><li><span class="rasa-tick">✓</span><span>Comparative modeling</span></li></ul>
-      
+  </section>
+  <section class="rasa-section" id="workflow" style="padding:5rem 0; border-top:1px solid var(--border); background:var(--surface);">
+    <div class="container">
+      <div class="rasa-reveal" style="margin-bottom:3rem;">
+        <span class="rasa-eyebrow">Workflow<span class="rasa-eyebrow__rule"></span></span>
+        <h2 class="rasa-h2" style="margin-top:1.25rem;">How We Model a Structure</h2>
+      </div>
+      <div class="rasa-flow rasa-reveal">
+        <div class="rasa-flow__step"><span class="rasa-flow__n">1</span><span>Target sequence &amp; QC</span></div>
+        <span class="rasa-flow__arrow">&rarr;</span>
+        <div class="rasa-flow__step"><span class="rasa-flow__n">2</span><span>Template search</span></div>
+        <span class="rasa-flow__arrow">&rarr;</span>
+        <div class="rasa-flow__step"><span class="rasa-flow__n">3</span><span>Model building</span></div>
+        <span class="rasa-flow__arrow">&rarr;</span>
+        <div class="rasa-flow__step"><span class="rasa-flow__n">4</span><span>Refinement</span></div>
+        <span class="rasa-flow__arrow">&rarr;</span>
+        <div class="rasa-flow__step"><span class="rasa-flow__n">5</span><span>Validation</span></div>
+        <span class="rasa-flow__arrow">&rarr;</span>
+        <div class="rasa-flow__step"><span class="rasa-flow__n">6</span><span>Docking-ready delivery</span></div>
+      </div>
     </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Structure Refinement &amp; Validation</h3>
-      
-      <ul class="rasa-ticklist"><li><span class="rasa-tick">✓</span><span>Model optimization</span></li><li><span class="rasa-tick">✓</span><span>Structural quality assessment</span></li><li><span class="rasa-tick">✓</span><span>Ramachandran analysis</span></li><li><span class="rasa-tick">✓</span><span>Model validation and benchmarking</span></li></ul>
-      
+  </section>
+<section class="rasa-section" id="offerings" style="padding:5rem 0; border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="rasa-reveal" style="margin-bottom:3rem;">
+        <span class="rasa-eyebrow">Service Offerings<span class="rasa-eyebrow__rule"></span></span>
+        <h2 class="rasa-h2" style="margin-top:1.25rem;">What We Offer</h2>
+        <p class="rasa-lede" style="margin-top:1rem;">From sequence to validated, docking-ready structures &mdash; the complete structural modeling stack.</p>
+      </div>
+      <div class="rasa-svc-grid">
+      <div class="rasa-svc-card rasa-reveal">
+        <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="m6.5 6.5 4 4M17.5 6.5l-4 4M6.5 17.5l4-4M17.5 17.5l-4-4"/></svg></span>
+        <h3 class="rasa-svc-card__h">Protein Structure Prediction</h3>
+        <p class="rasa-svc-card__b">Accurate 3D models built from sequence using AI and template-based methods.</p>
+        <ul class="rasa-ticklist"><li><span class="rasa-tick">&#10003;</span><span>AlphaFold-based prediction</span></li><li><span class="rasa-tick">&#10003;</span><span>Homology modeling</span></li><li><span class="rasa-tick">&#10003;</span><span>Ab initio prediction</span></li><li><span class="rasa-tick">&#10003;</span><span>Comparative modeling</span></li></ul>
+      </div>
+      <div class="rasa-svc-card rasa-reveal">
+        <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></span>
+        <h3 class="rasa-svc-card__h">Structure Refinement &amp; Validation</h3>
+        <p class="rasa-svc-card__b">Optimized, validated models ready for rigorous downstream science.</p>
+        <ul class="rasa-ticklist"><li><span class="rasa-tick">&#10003;</span><span>Model optimization</span></li><li><span class="rasa-tick">&#10003;</span><span>Structural quality assessment</span></li><li><span class="rasa-tick">&#10003;</span><span>Ramachandran analysis</span></li><li><span class="rasa-tick">&#10003;</span><span>Validation &amp; benchmarking</span></li></ul>
+      </div>
+      <div class="rasa-svc-card rasa-reveal">
+        <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span>
+        <h3 class="rasa-svc-card__h">Binding Pocket &amp; Active Site Analysis</h3>
+        <p class="rasa-svc-card__b">Locate and characterize druggable cavities across the surface.</p>
+        <ul class="rasa-ticklist"><li><span class="rasa-tick">&#10003;</span><span>Binding-site identification</span></li><li><span class="rasa-tick">&#10003;</span><span>Active-site characterization</span></li><li><span class="rasa-tick">&#10003;</span><span>Pocket volume analysis</span></li><li><span class="rasa-tick">&#10003;</span><span>Druggability assessment</span></li></ul>
+      </div>
+      <div class="rasa-svc-card rasa-reveal">
+        <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1.3"/></svg></span>
+        <h3 class="rasa-svc-card__h">Functional Structural Annotation</h3>
+        <p class="rasa-svc-card__b">Connect structure to biological function and disease impact.</p>
+        <ul class="rasa-ticklist"><li><span class="rasa-tick">&#10003;</span><span>Domain identification</span></li><li><span class="rasa-tick">&#10003;</span><span>Conserved-residue mapping</span></li><li><span class="rasa-tick">&#10003;</span><span>Mutation impact analysis</span></li><li><span class="rasa-tick">&#10003;</span><span>Structure&ndash;function interpretation</span></li></ul>
+      </div>
+      <div class="rasa-svc-card rasa-reveal">
+        <span class="rasa-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5l-4.8 8.5a2 2 0 0 0 1.8 3h12a2 2 0 0 0 1.8-3L15 8.5V2"/><path d="M8 2h8"/><path d="M7.5 14h9"/></svg></span>
+        <h3 class="rasa-svc-card__h">Structure Prep for Drug Discovery</h3>
+        <p class="rasa-svc-card__b">Production-ready structures for docking, screening and MD.</p>
+        <ul class="rasa-ticklist"><li><span class="rasa-tick">&#10003;</span><span>Molecular docking prep</span></li><li><span class="rasa-tick">&#10003;</span><span>Virtual screening support</span></li><li><span class="rasa-tick">&#10003;</span><span>MD simulation prep</span></li><li><span class="rasa-tick">&#10003;</span><span>Structure-based design</span></li></ul>
+      </div>
+      </div>
     </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Binding Pocket &amp; Active Site Analysis</h3>
-      
-      <ul class="rasa-ticklist"><li><span class="rasa-tick">✓</span><span>Binding site identification</span></li><li><span class="rasa-tick">✓</span><span>Active site characterization</span></li><li><span class="rasa-tick">✓</span><span>Pocket volume analysis</span></li><li><span class="rasa-tick">✓</span><span>Druggability assessment</span></li></ul>
-      
+  </section>
+<section class="rasa-section" id="features" style="padding:5rem 0; border-top:1px solid var(--border); background:var(--surface);">
+    <div class="container">
+      <div class="rasa-reveal" style="margin-bottom:3rem;">
+        <span class="rasa-eyebrow">Capabilities<span class="rasa-eyebrow__rule"></span></span>
+        <h2 class="rasa-h2" style="margin-top:1.25rem;">Key Features</h2>
+      </div>
+      <div class="rasa-highlights">
+        <div class="rasa-highlight rasa-reveal"><span class="rasa-highlight__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></span><span>AI-Powered Protein Structure Prediction</span></div>
+        <div class="rasa-highlight rasa-reveal"><span class="rasa-highlight__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="m6.5 6.5 4 4M17.5 6.5l-4 4M6.5 17.5l4-4M17.5 17.5l-4-4"/></svg></span><span>Advanced Structural Bioinformatics</span></div>
+        <div class="rasa-highlight rasa-reveal"><span class="rasa-highlight__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><span>Binding Pocket &amp; Active Site Analysis</span></div>
+        <div class="rasa-highlight rasa-reveal"><span class="rasa-highlight__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5l-4.8 8.5a2 2 0 0 0 1.8 3h12a2 2 0 0 0 1.8-3L15 8.5V2"/><path d="M8 2h8"/><path d="M7.5 14h9"/></svg></span><span>Structure-Based Drug Discovery Support</span></div>
+        <div class="rasa-highlight rasa-reveal"><span class="rasa-highlight__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.6 1.5A4 4 0 0 0 6.5 19z"/></svg></span><span>Cloud-Ready Reproducible Workflows</span></div>
+        <div class="rasa-highlight rasa-reveal"><span class="rasa-highlight__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg></span><span>Publication-Ready Reports &amp; Visualizations</span></div>
+      </div>
     </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Functional Structural Annotation</h3>
-      
-      <ul class="rasa-ticklist"><li><span class="rasa-tick">✓</span><span>Domain identification</span></li><li><span class="rasa-tick">✓</span><span>Conserved residue mapping</span></li><li><span class="rasa-tick">✓</span><span>Mutation impact analysis</span></li><li><span class="rasa-tick">✓</span><span>Structure-function interpretation</span></li></ul>
-      
-    </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Structure Preparation for Drug Discovery</h3>
-      
-      <ul class="rasa-ticklist"><li><span class="rasa-tick">✓</span><span>Molecular docking preparation</span></li><li><span class="rasa-tick">✓</span><span>Virtual screening support</span></li><li><span class="rasa-tick">✓</span><span>Molecular dynamics simulation preparation</span></li><li><span class="rasa-tick">✓</span><span>Structure-based drug design workflows</span></li></ul>
-      
-    </div>
-  </div>
-  </div>
-</section>
-<section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border); background:var(--surface);">
-  <div class="container">
-    <div class="rasa-reveal" style="margin-bottom:3rem;">
-      <span class="rasa-eyebrow">Capabilities</span>
-      <h2 class="rasa-h2" style="margin-top:1.25rem;">Key Features</h2>
-    </div>
-    
-  <div class="rasa-checkgrid">
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>AI-Powered Protein Structure Prediction</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Advanced Structural Bioinformatics</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Binding Pocket &amp; Active Site Analysis</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Structure-Based Drug Discovery Support</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Cloud-Ready Reproducible Workflows</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Publication-Ready Reports &amp; Visualizations</span></div>
-  </div>
-  </div>
-</section>
+  </section>
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
   <div class="container">
     <div class="rasa-reveal" style="margin-bottom:3rem;">
@@ -180,28 +207,28 @@
     <div class="rasa-chips rasa-chips--lg"><span class="rasa-chip">Structure-Based Drug Design</span><span class="rasa-chip">Target Validation</span><span class="rasa-chip">Molecular Docking Studies</span><span class="rasa-chip">Virtual Screening Campaigns</span><span class="rasa-chip">Protein Engineering</span><span class="rasa-chip">Mutation Analysis</span><span class="rasa-chip">Functional Genomics</span><span class="rasa-chip">Precision Medicine Research</span></div>
   </div>
 </section>
-<section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border); background:var(--surface);">
-  <div class="container">
-    <div class="rasa-reveal" style="margin-bottom:3rem;">
-      <span class="rasa-eyebrow">Technology</span>
-      <h2 class="rasa-h2" style="margin-top:1.25rem;">Technologies &amp; Platforms</h2>
+<section class="rasa-section" id="technology" style="padding:5rem 0; border-top:1px solid var(--border); background:var(--surface);">
+    <div class="container">
+      <div class="rasa-reveal" style="margin-bottom:3rem;">
+        <span class="rasa-eyebrow">Technology<span class="rasa-eyebrow__rule"></span></span>
+        <h2 class="rasa-h2" style="margin-top:1.25rem;">Technologies &amp; Platforms</h2>
+      </div>
+      <div class="rasa-techstack">
+        <div class="rasa-techcat rasa-reveal">
+          <h3 class="rasa-techcat__h"><span class="rasa-techcat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="m6.5 6.5 4 4M17.5 6.5l-4 4M6.5 17.5l4-4M17.5 17.5l-4-4"/></svg></span>Structure Prediction</h3>
+          <div class="rasa-techcat__grid"><div class="rasa-tool"><span class="rasa-tool__mono">AF</span><span class="rasa-tool__name">AlphaFold</span></div><div class="rasa-tool"><span class="rasa-tool__mono">CF</span><span class="rasa-tool__name">ColabFold</span></div><div class="rasa-tool"><span class="rasa-tool__mono">IT</span><span class="rasa-tool__name">I-TASSER</span></div><div class="rasa-tool"><span class="rasa-tool__mono">SM</span><span class="rasa-tool__name">SWISS-MODEL</span></div><div class="rasa-tool"><span class="rasa-tool__mono">MO</span><span class="rasa-tool__name">MODELLER</span></div></div>
+        </div>
+        <div class="rasa-techcat rasa-reveal">
+          <h3 class="rasa-techcat__h"><span class="rasa-techcat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>Structural Analysis</h3>
+          <div class="rasa-techcat__grid"><div class="rasa-tool"><span class="rasa-tool__mono">PM</span><span class="rasa-tool__name">PyMOL</span></div><div class="rasa-tool"><span class="rasa-tool__mono">CX</span><span class="rasa-tool__name">ChimeraX</span></div><div class="rasa-tool"><span class="rasa-tool__mono">DB</span><span class="rasa-tool__name">PDB</span></div><div class="rasa-tool"><span class="rasa-tool__mono">PS</span><span class="rasa-tool__name">ProSA</span></div><div class="rasa-tool"><span class="rasa-tool__mono">PC</span><span class="rasa-tool__name">PROCHECK</span></div></div>
+        </div>
+        <div class="rasa-techcat rasa-reveal">
+          <h3 class="rasa-techcat__h"><span class="rasa-techcat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>Infrastructure</h3>
+          <div class="rasa-techcat__grid"><div class="rasa-tool"><span class="rasa-tool__mono">DK</span><span class="rasa-tool__name">Docker</span></div><div class="rasa-tool"><span class="rasa-tool__mono">NF</span><span class="rasa-tool__name">Nextflow</span></div><div class="rasa-tool"><span class="rasa-tool__mono">AW</span><span class="rasa-tool__name">AWS</span></div><div class="rasa-tool"><span class="rasa-tool__mono">GC</span><span class="rasa-tool__name">Google Cloud</span></div><div class="rasa-tool"><span class="rasa-tool__mono">HP</span><span class="rasa-tool__name">HPC Clusters</span></div></div>
+        </div>
+      </div>
     </div>
-    <div class="rasa-techgrid">
-    <div class="rasa-techgroup">
-      <h3 class="rasa-techgroup__h">Structure Prediction</h3>
-      <div class="rasa-chips"><span class="rasa-chip">AlphaFold</span><span class="rasa-chip">I-TASSER</span><span class="rasa-chip">SWISS-MODEL</span><span class="rasa-chip">MODELLER</span></div>
-    </div>
-    <div class="rasa-techgroup">
-      <h3 class="rasa-techgroup__h">Structural Analysis</h3>
-      <div class="rasa-chips"><span class="rasa-chip">PyMOL</span><span class="rasa-chip">ChimeraX</span><span class="rasa-chip">PDB</span><span class="rasa-chip">ProSA</span><span class="rasa-chip">PROCHECK</span></div>
-    </div>
-    <div class="rasa-techgroup">
-      <h3 class="rasa-techgroup__h">Infrastructure</h3>
-      <div class="rasa-chips"><span class="rasa-chip">Docker</span><span class="rasa-chip">Nextflow</span><span class="rasa-chip">AWS</span><span class="rasa-chip">Google Cloud</span><span class="rasa-chip">HPC Clusters</span></div>
-    </div>
-  </div>
-  </div>
-</section>
+  </section>
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
   <div class="container">
     <div class="rasa-reveal" style="margin-bottom:3rem;">
