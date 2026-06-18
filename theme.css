@@ -3501,3 +3501,9 @@ body.rasa-theme-kb .rasa-nav__item:nth-child(4) > a {
   box-shadow: 0 12px 40px var(--glow-shadow) !important;
 }
 
+
+
+/* Prevent descender clipping on text gradient headings */
+.rasa-pagehero__h, .rasa-h1, .rasa-h2, .rasa-h3 {
+  padding-bottom: 0.12em !important;
+}
