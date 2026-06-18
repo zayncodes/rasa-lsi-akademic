@@ -3348,3 +3348,57 @@ body.dark-mode .rasa-hero__parallax-bg {
   object-fit: contain !important;
 }
 
+/* ==========================================================================
+   Premium Glassmorphic Cards & Interactive Glows (Global Design System)
+   ========================================================================== */
+
+/* Theme Variables (default is blue / Drug Discovery) */
+.rasa {
+  --glow-color: rgba(37, 99, 235, 0.12);
+  --glow-border: rgba(37, 99, 235, 0.4);
+  --glow-shadow: rgba(37, 99, 235, 0.08);
+}
+
+/* Green Theme (NGS & genomics) */
+.rasa-theme-ngs {
+  --glow-color: rgba(139, 195, 74, 0.12) !important;
+  --glow-border: rgba(139, 195, 74, 0.4) !important;
+  --glow-shadow: rgba(139, 195, 74, 0.08) !important;
+}
+
+/* Red/QSAR Theme */
+.rasa-theme-qsar {
+  --glow-color: rgba(220, 38, 38, 0.12) !important;
+  --glow-border: rgba(220, 38, 38, 0.4) !important;
+  --glow-shadow: rgba(220, 38, 38, 0.08) !important;
+}
+
+/* Interactive Card Styling */
+.rasa-svc-card, .rasa-capability, .rasa-check, .rasa-card, .rasa-tab-btn, .rasa-highlight {
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 2;
+  /* Make sure transition doesn't animate transform during mousemove to prevent lag */
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.rasa-svc-card::before, .rasa-capability::before, .rasa-check::before, .rasa-card::before, .rasa-tab-btn::before, .rasa-highlight::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), var(--glow-color), transparent 45%) !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  transition: opacity 0.4s ease !important;
+}
+
+.rasa-svc-card:hover::before, .rasa-capability:hover::before, .rasa-check:hover::before, .rasa-card:hover::before, .rasa-tab-btn:hover::before, .rasa-highlight:hover::before {
+  opacity: 1 !important;
+}
+
+.rasa-svc-card:hover, .rasa-capability:hover, .rasa-check:hover, .rasa-card:hover, .rasa-tab-btn:hover, .rasa-highlight:hover {
+  border-color: var(--glow-border) !important;
+  box-shadow: 0 12px 40px var(--glow-shadow) !important;
+}
+

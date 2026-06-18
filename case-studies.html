@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="theme.css">
 </head>
-<body class="rasa">
+<body class="rasa rasa-theme-ngs">
   
   <!--
 ================================================================
@@ -504,7 +504,7 @@
         <a href="contact.html">Partner Contact</a>
         <p style="font-size: 0.8rem; color: var(--foreground-50); line-height: 1.5; margin-top: 1rem;">
           <strong>Pune Office:</strong> Pashan-Sus Road, Pune, Maharashtra 411021, India<br>
-          <strong>Email:</strong> support@rasalifesciences.com
+          <strong>Email:</strong> info@rasalifesciences.com
         </p>
       </div>
     </div>
@@ -642,6 +642,38 @@
       });
     }
   })();
+</script>
+
+<!-- Interactive 3D mouse tilt and glow shadow calculation (Batch Injected) -->
+<script>
+(function() {
+  var cards3d = document.querySelectorAll('.rasa-highlight, .rasa-svc-card, .rasa-capability, .rasa-svc-showcase__btn, .rasa-check, .rasa-card, .rasa-tab-btn');
+  cards3d.forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      if ((card.classList.contains('rasa-svc-showcase__btn') || card.classList.contains('rasa-check')) && window.innerWidth <= 992) {
+        return;
+      }
+      var rect = card.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+      var xc = rect.width / 2;
+      var yc = rect.height / 2;
+      var rotX = ((yc - y) / yc) * 7;
+      var rotY = ((x - xc) / xc) * 7;
+
+      card.style.setProperty('transform', 'perspective(1000px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateY(-4px)', 'important');
+      card.style.setProperty('--mouse-x', x + 'px');
+      card.style.setProperty('--mouse-y', y + 'px');
+    });
+
+    card.addEventListener('mouseleave', function () {
+      if ((card.classList.contains('rasa-svc-showcase__btn') || card.classList.contains('rasa-check')) && window.innerWidth <= 992) {
+        return;
+      }
+      card.style.removeProperty('transform');
+    });
+  });
+})();
 </script>
 </body>
 </html>

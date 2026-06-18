@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="theme.css">
 </head>
-<body class="rasa">
+<body class="rasa rasa-theme-ngs">
   
   <!--
 ================================================================
@@ -182,7 +182,7 @@
         <div class="rasa-client-cell">
           <div class="rasa-client-cell__lbl">Sector 09</div>
           <h3 class="rasa-client-cell__h">AI, Multi-Omics & Translational Research Programs</h3>
-          <p class="rasa-client-cell__desc">RASA supports interdisciplinary genomics initiatives involving: AI-assisted bioinformatics Multi-omics data integration Systems biology Computational genomics Translational medicine Precision therapeutics Integrative omics analytics Our cloud-ready infrastructure enables scalable and reproducible computational research workflows. Trusted Bioinformatics Partner for Research & Innovation RASA Life Science Informatics is a trusted bioinformatics company in India providing scalable NGS data analysis services, RNA-seq analysis, genomics consulting, and AI-powered multi-omics solutions for pharmaceutical, biotechnology, healthcare, and academic organizations worldwide. 📧 Contact: support@rasalifesciences.com🌐 Website: www.rasalifesciences.com/services Top of Form Bottom of Form</p>
+          <p class="rasa-client-cell__desc">RASA supports interdisciplinary genomics initiatives involving: AI-assisted bioinformatics Multi-omics data integration Systems biology Computational genomics Translational medicine Precision therapeutics Integrative omics analytics Our cloud-ready infrastructure enables scalable and reproducible computational research workflows. Trusted Bioinformatics Partner for Research & Innovation RASA Life Science Informatics is a trusted bioinformatics company in India providing scalable NGS data analysis services, RNA-seq analysis, genomics consulting, and AI-powered multi-omics solutions for pharmaceutical, biotechnology, healthcare, and academic organizations worldwide. 📧 Contact: info@rasalifesciences.com🌐 Website: www.rasalifesciences.com/services Top of Form Bottom of Form</p>
         </div>
         
       </div>
@@ -260,7 +260,7 @@
         <a href="contact.html">Partner Contact</a>
         <p style="font-size: 0.8rem; color: var(--foreground-50); line-height: 1.5; margin-top: 1rem;">
           <strong>Pune Office:</strong> Pashan-Sus Road, Pune, Maharashtra 411021, India<br>
-          <strong>Email:</strong> support@rasalifesciences.com
+          <strong>Email:</strong> info@rasalifesciences.com
         </p>
       </div>
     </div>
@@ -398,6 +398,38 @@
       });
     }
   })();
+</script>
+
+<!-- Interactive 3D mouse tilt and glow shadow calculation (Batch Injected) -->
+<script>
+(function() {
+  var cards3d = document.querySelectorAll('.rasa-highlight, .rasa-svc-card, .rasa-capability, .rasa-svc-showcase__btn, .rasa-check, .rasa-card, .rasa-tab-btn');
+  cards3d.forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      if ((card.classList.contains('rasa-svc-showcase__btn') || card.classList.contains('rasa-check')) && window.innerWidth <= 992) {
+        return;
+      }
+      var rect = card.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+      var xc = rect.width / 2;
+      var yc = rect.height / 2;
+      var rotX = ((yc - y) / yc) * 7;
+      var rotY = ((x - xc) / xc) * 7;
+
+      card.style.setProperty('transform', 'perspective(1000px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateY(-4px)', 'important');
+      card.style.setProperty('--mouse-x', x + 'px');
+      card.style.setProperty('--mouse-y', y + 'px');
+    });
+
+    card.addEventListener('mouseleave', function () {
+      if ((card.classList.contains('rasa-svc-showcase__btn') || card.classList.contains('rasa-check')) && window.innerWidth <= 992) {
+        return;
+      }
+      card.style.removeProperty('transform');
+    });
+  });
+})();
 </script>
 </body>
 </html>
