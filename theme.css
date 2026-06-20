@@ -3092,7 +3092,7 @@ body.dark-mode .rasa-top-bar {
 @media (min-width:1040px){ .rasa-svc-grid { grid-template-columns:repeat(3,1fr); } }
 .rasa-svc-card { position:relative; background:#fff; border:1px solid var(--border); border-radius:0.9rem; padding:2rem 1.75rem; display:flex; flex-direction:column; overflow:hidden; transition:transform .28s cubic-bezier(.16,1,.3,1), box-shadow .28s, border-color .28s; }
 .rasa-svc-card::before { content:""; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, var(--leaf), var(--leaf-accent)); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
-.rasa-svc-card:hover { transform:translateY(-6px); box-shadow:0 26px 52px -28px rgba(37,99,235,0.45); border-color:rgba(37,99,235,0.3); }
+.rasa-svc-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px var(--glow-shadow) !important; border-color:var(--glow-border) !important; }
 .rasa-svc-card:hover::before { transform:scaleX(1); }
 .rasa-svc-card__icon { width:54px; height:54px; border-radius:14px; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, var(--leaf-soft), var(--leaf-accent-soft)); color:var(--leaf); margin-bottom:1.1rem; transition:transform .28s, background .28s, color .28s; }
 .rasa-svc-card__icon svg { width:26px; height:26px; }
@@ -3477,6 +3477,72 @@ body.rasa-theme-kb .rasa-nav__item:nth-child(4) > a {
 }
 .rasa-pagehero__copy {
   border-left: 2px solid var(--leaf-soft) !important;
+}
+
+/* Parent Navigation Active Highlights based on Body Theme */
+body.rasa-theme-ngs .rasa-nav__item:nth-child(1) > a {
+  color: #8bc34a !important;
+  font-weight: 600 !important;
+}
+body.rasa-theme-dd .rasa-nav__item:nth-child(2) > a {
+  color: #2563eb !important;
+  font-weight: 600 !important;
+}
+body.rasa-theme-qsar .rasa-nav__item:nth-child(3) > a {
+  color: #ea580c !important;
+  font-weight: 600 !important;
+}
+body.rasa-theme-kb .rasa-nav__item:nth-child(4) > a {
+  color: #7c3aed !important;
+  font-weight: 600 !important;
+}
+
+/* Navigation Hover Colors */
+.rasa-nav__item:nth-child(1) > a:hover { color: #8bc34a !important; }
+.rasa-nav__item:nth-child(2) > a:hover { color: #2563eb !important; }
+.rasa-nav__item:nth-child(3) > a:hover { color: #ea580c !important; }
+.rasa-nav__item:nth-child(4) > a:hover { color: #7c3aed !important; }
+
+/* Dropdown subtopics themed by section (NGS green / DD blue / KB violet) */
+.rasa-nav__item:nth-child(1) .rasa-nav__dropdown a:hover { color: #8bc34a !important; background-color: rgba(139, 195, 74, 0.08) !important; }
+.rasa-nav__item:nth-child(1) .rasa-nav__dropdown a.is-active { color: #8bc34a !important; background-color: rgba(139, 195, 74, 0.12) !important; }
+.rasa-nav__item:nth-child(2) .rasa-nav__dropdown a:hover { color: #2563eb !important; background-color: rgba(37, 99, 235, 0.08) !important; }
+.rasa-nav__item:nth-child(2) .rasa-nav__dropdown a.is-active { color: #2563eb !important; background-color: rgba(37, 99, 235, 0.12) !important; }
+.rasa-nav__item:nth-child(4) .rasa-nav__dropdown a:hover,
+.rasa-nav__item:nth-child(4) .rasa-nav__subdropdown a:hover { color: #7c3aed !important; background-color: rgba(124, 58, 237, 0.08) !important; }
+.rasa-nav__item:nth-child(4) .rasa-nav__dropdown a.is-active,
+.rasa-nav__item:nth-child(4) .rasa-nav__subdropdown a.is-active { color: #7c3aed !important; background-color: rgba(124, 58, 237, 0.12) !important; }
+
+/* Dropdown link hover states scoped per category for consistency */
+.rasa-nav__item:nth-child(1) .rasa-nav__dropdown a:hover,
+.rasa-nav__item:nth-child(1) .rasa-nav__dropdown a.is-active {
+  color: #8bc34a !important;
+  background-color: rgba(139, 195, 74, 0.08) !important;
+}
+.rasa-nav__item:nth-child(2) .rasa-nav__dropdown a:hover,
+.rasa-nav__item:nth-child(2) .rasa-nav__dropdown a.is-active {
+  color: #2563eb !important;
+  background-color: rgba(37, 99, 235, 0.08) !important;
+}
+.rasa-nav__item:nth-child(4) .rasa-nav__dropdown a:hover,
+.rasa-nav__item:nth-child(4) .rasa-nav__dropdown a.is-active,
+.rasa-nav__item:nth-child(4) .rasa-nav__subitem > a:hover,
+.rasa-nav__item:nth-child(4) .rasa-nav__subdropdown a:hover {
+  color: #7c3aed !important;
+  background-color: rgba(124, 58, 237, 0.08) !important;
+}
+
+/* Subpage Hero typography and layout styling */
+.rasa-pagehero__h {
+  background: linear-gradient(135deg, var(--foreground) 30%, var(--leaf) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-fill-color: transparent !important;
+  letter-spacing: -0.02em !important;
+}
+.rasa-pagehero__copy {
+  border-left: 2px solid var(--leaf-soft) !important;
   padding-left: 1.5rem !important;
   margin-left: 0.25rem !important;
 }
@@ -3487,8 +3553,8 @@ body.rasa-theme-kb .rasa-nav__item:nth-child(4) > a {
   position: relative !important;
   overflow: hidden !important;
   z-index: 2;
-  /* Make sure transition doesn't animate transform during mousemove to prevent lag */
-  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  /* Make sure base state has transform transition to reset smoothly on mouseleave */
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .rasa-svc-card::before, .rasa-capability::before, .rasa-check::before, .rasa-card::before, .rasa-tab-btn::before, .rasa-highlight::before {
@@ -3509,6 +3575,8 @@ body.rasa-theme-kb .rasa-nav__item:nth-child(4) > a {
 .rasa-svc-card:hover, .rasa-capability:hover, .rasa-check:hover, .rasa-card:hover, .rasa-tab-btn:hover, .rasa-highlight:hover {
   border-color: var(--glow-border) !important;
   box-shadow: 0 12px 40px var(--glow-shadow) !important;
+  /* Exclude transform transition during hover to prevent 3D tilt tracking lag */
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 

@@ -10,6 +10,101 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Knowledge Base Grid Redesign */
+    .rasa-kb-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.25rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      .rasa-kb-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    .rasa-kb-grid .rasa-svc-card {
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(124, 58, 237, 0.12) !important;
+      border-radius: 16px;
+      padding: 2.25rem 2rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02) !important;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease !important;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .rasa-kb-grid .rasa-svc-card::before {
+      content: '' !important;
+      position: absolute !important;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(124, 58, 237, 0.12), transparent 45%) !important;
+      z-index: -1 !important;
+      pointer-events: none !important;
+      opacity: 0 !important;
+      transition: opacity 0.4s ease !important;
+    }
+    .rasa-kb-grid .rasa-svc-card:hover::before {
+      opacity: 1 !important;
+    }
+    .rasa-kb-grid .rasa-svc-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(124, 58, 237, 0.45) !important;
+      box-shadow: 0 12px 40px rgba(124, 58, 237, 0.08) !important;
+      transition: border-color 0.4s ease, box-shadow 0.4s ease !important;
+    }
+    .rasa-kb-grid .rasa-svc-card__icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background: rgba(124, 58, 237, 0.08);
+      color: #7c3aed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      transition: all 0.3s ease;
+    }
+    .rasa-kb-grid .rasa-svc-card:hover .rasa-svc-card__icon {
+      background: #7c3aed;
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+    .rasa-kb-grid .rasa-svc-card__h {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--foreground);
+    }
+    .rasa-kb-grid .rasa-svc-card__b {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--foreground-70);
+      margin-bottom: 1.5rem;
+    }
+    .rasa-kb-grid .rasa-svc-card__more {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #7c3aed;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: auto;
+      text-decoration: none;
+    }
+    .rasa-kb-grid .rasa-svc-card__more span {
+      transition: transform 0.25s ease;
+    }
+    .rasa-kb-grid .rasa-svc-card:hover .rasa-svc-card__more span {
+      transform: translateX(4px);
+    }
+  </style>
 </head>
 <body class="rasa rasa-theme-kb">
 

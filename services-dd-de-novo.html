@@ -93,15 +93,17 @@
 
 <!-- =============== MAIN =============== -->
 <main class="rasa rasa-page">
-  <section class="rasa-pagehero">
+  <section class="rasa-pagehero rasa-pagehero--premium">
     <div class="rasa-grid-bg" aria-hidden="true"></div>
+    <div class="rasa-hero-glow" aria-hidden="true"></div>
+    <canvas id="dd-hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.75;"></canvas>
     <div class="container">
       <div class="rasa-pagehero__grid">
         <div class="rasa-pagehero__copy">
           <div class="rasa-reveal"><span class="rasa-eyebrow">In-Silico Drug Discovery<span class="rasa-eyebrow__rule"></span></span></div>
           <h1 class="rasa-pagehero__h rasa-reveal" data-delay="1" style="font-size:clamp(2rem,4.5vw,3.25rem); font-weight:500; line-height:1.1; margin:1.5rem 0 1.25rem;">AI Drug Discovery &amp; De Novo Design</h1>
           <p class="rasa-pagehero__lede rasa-reveal" data-delay="2" style="font-size:1.12rem; line-height:1.6; color:var(--foreground); font-weight:500;">Accelerating Novel Therapeutic Discovery Through Artificial Intelligence, Machine Learning &amp; Generative Molecular Design</p></div>
-        <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2"><img src="images/de_novo_design.jpg" alt="AI Drug Discovery &amp; De Novo Design"></div>
+        <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2"><div class="rasa-hero-imgwrap"><img src="images/de_novo_design.jpg" alt="AI Drug Discovery &amp; De Novo Design"></div></div>
       </div>
     </div>
   </section>
@@ -727,6 +729,242 @@
 <!-- Interactive 3D mouse tilt, glow shadow, dynamic icons, and staggered animations (Batch Injected) -->
 <script>
 (function() {
+  // Interactive Molecular Docking Canvas animation
+  (function () {
+    var canvas = document.getElementById('dd-hero-canvas');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var dpr = window.devicePixelRatio || 1;
+    var width = 0, height = 0;
+
+    function resize() {
+      var rect = canvas.parentNode.getBoundingClientRect();
+      width = rect.width;
+      height = rect.height;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.scale(dpr, dpr);
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Central binding pocket coordinates
+    var pocketX = width * 0.75;
+    var pocketY = height * 0.55;
+
+    var proteinNodes = [];
+    var nodeCount = 18;
+    for (var i = 0; i < nodeCount; i++) {
+      var angle = (i / nodeCount) * Math.PI * 2;
+      var radius = 60 + Math.random() * 40;
+      proteinNodes.push({
+        baseX: Math.cos(angle) * radius,
+        baseY: Math.sin(angle) * radius,
+        x: 0, y: 0,
+        size: 3.5 + Math.random() * 3,
+        angleOffset: Math.random() * Math.PI * 2,
+        speed: 0.015 + Math.random() * 0.02
+      });
+    }
+
+    var ligands = [];
+    var ligandCount = 6;
+    for (var i = 0; i < ligandCount; i++) {
+       ligands.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.7,
+        vy: (Math.random() - 0.5) * 0.7,
+        size: 4 + Math.random() * 3,
+        dockState: 'free', // 'free', 'homing', 'docked', 'undocking'
+        dockTimer: 0,
+        rot: Math.random() * Math.PI * 2,
+        rotSpeed: (Math.random() - 0.5) * 0.025
+      });
+    }
+
+    var mouse = { x: null, y: null, radius: 140 };
+    window.addEventListener('mousemove', function (e) {
+      var rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+    window.addEventListener('mouseleave', function () {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    var ticks = 0;
+    function animate() {
+      ticks++;
+      ctx.clearRect(0, 0, width, height);
+
+      // Draw background grid lines
+      ctx.strokeStyle = 'rgba(37, 99, 235, 0.04)';
+      ctx.lineWidth = 1;
+      var step = 45;
+      for (var x = 0; x < width; x += step) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        ctx.stroke();
+      }
+      for (var y = 0; y < height; y += step) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(width, y);
+        ctx.stroke();
+      }
+
+      // Re-calculate pocket position based on layout width
+      pocketX = width * 0.75;
+      pocketY = height * 0.55;
+      if (width < 768) {
+        pocketX = width * 0.5;
+        pocketY = height * 0.6;
+      }
+
+      // 1. Draw target protein binding site
+      proteinNodes.forEach(function (node) {
+        var offset = Math.sin(ticks * node.speed + node.angleOffset) * 6;
+        node.x = pocketX + node.baseX + Math.cos(node.angleOffset) * offset;
+        node.y = pocketY + node.baseY + Math.sin(node.angleOffset) * offset;
+      });
+
+      ctx.strokeStyle = 'rgba(37, 99, 235, 0.07)';
+      ctx.lineWidth = 1;
+      for (var i = 0; i < proteinNodes.length; i++) {
+        for (var j = i + 1; j < proteinNodes.length; j++) {
+          var dist = Math.hypot(proteinNodes[i].x - proteinNodes[j].x, proteinNodes[i].y - proteinNodes[j].y);
+          if (dist < 110) {
+            ctx.beginPath();
+            ctx.moveTo(proteinNodes[i].x, proteinNodes[i].y);
+            ctx.lineTo(proteinNodes[j].x, proteinNodes[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      proteinNodes.forEach(function (node) {
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.size, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(15, 23, 42, 0.15)';
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(37, 99, 235, 0.25)';
+        ctx.stroke();
+      });
+
+      // Target core
+      ctx.beginPath();
+      ctx.arc(pocketX, pocketY, 25, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(37, 99, 235, 0.02)';
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(37, 99, 235, 0.12)';
+      ctx.setLineDash([4, 4]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // 2. Draw Ligands
+      ligands.forEach(function (lig) {
+        lig.rot += lig.rotSpeed;
+
+        if (lig.dockState === 'free') {
+          lig.x += lig.vx;
+          lig.y += lig.vy;
+
+          if (lig.x < 0 || lig.x > width) lig.vx *= -1;
+          if (lig.y < 0 || lig.y > height) lig.vy *= -1;
+
+          if (mouse.x !== null && mouse.y !== null) {
+            var mDist = Math.hypot(lig.x - mouse.x, lig.y - mouse.y);
+            if (mDist < mouse.radius) {
+              var force = (mouse.radius - mDist) / mouse.radius;
+              lig.vx += (lig.x - mouse.x) * force * 0.015;
+              lig.vy += (lig.y - mouse.y) * force * 0.015;
+            }
+          }
+
+          if (Math.random() < 0.003 && Math.hypot(lig.x - pocketX, lig.y - pocketY) > 130) {
+            lig.dockState = 'homing';
+          }
+        } else if (lig.dockState === 'homing') {
+          var dx = pocketX - lig.x;
+          var dy = pocketY - lig.y;
+          var dist = Math.hypot(dx, dy);
+
+          if (dist < 8) {
+            lig.dockState = 'docked';
+            lig.dockTimer = 160 + Math.random() * 100;
+          } else {
+            lig.x += (dx / dist) * 1.6;
+            lig.y += (dy / dist) * 1.6;
+            lig.rot += 0.035;
+          }
+        } else if (lig.dockState === 'docked') {
+          lig.x = pocketX + Math.sin(ticks * 0.04) * 2;
+          lig.y = pocketY + Math.cos(ticks * 0.04) * 2;
+          lig.dockTimer--;
+
+          ctx.beginPath();
+          ctx.arc(pocketX, pocketY, 32 + Math.sin(ticks * 0.07) * 4, 0, Math.PI * 2);
+          ctx.strokeStyle = 'rgba(76, 175, 80, 0.35)';
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+
+          if (lig.dockTimer <= 0) {
+            lig.dockState = 'undocking';
+            var pushAngle = Math.random() * Math.PI * 2;
+            lig.vx = Math.cos(pushAngle) * 1.0;
+            lig.vy = Math.sin(pushAngle) * 1.0;
+          }
+        } else if (lig.dockState === 'undocking') {
+          lig.x += lig.vx;
+          lig.y += lig.vy;
+          if (Math.hypot(pocketX - lig.x, pocketY - lig.y) > 130) {
+            lig.dockState = 'free';
+            lig.vx *= 0.65;
+            lig.vy *= 0.65;
+          }
+        }
+
+        ctx.save();
+        ctx.translate(lig.x, lig.y);
+        ctx.rotate(lig.rot);
+
+        ctx.strokeStyle = lig.dockState === 'docked' ? 'rgba(76, 175, 80, 0.7)' : 'rgba(37, 99, 235, 0.45)';
+        ctx.lineWidth = 1.8;
+        var branches = 3;
+        var branchLen = 11;
+        for (var b = 0; b < branches; b++) {
+          var bAngle = (b / branches) * Math.PI * 2;
+          var bx = Math.cos(bAngle) * branchLen;
+          var by = Math.sin(bAngle) * branchLen;
+          ctx.beginPath();
+          ctx.moveTo(0, 0);
+          ctx.lineTo(bx, by);
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.arc(bx, by, 2.5, 0, Math.PI * 2);
+          ctx.fillStyle = lig.dockState === 'docked' ? '#4CAF50' : '#2563eb';
+          ctx.fill();
+        }
+
+        ctx.beginPath();
+        ctx.arc(0, 0, 4, 0, Math.PI * 2);
+        ctx.fillStyle = lig.dockState === 'docked' ? '#81C784' : '#60a5fa';
+        ctx.shadowColor = lig.dockState === 'docked' ? '#4CAF50' : '#2563eb';
+        ctx.shadowBlur = lig.dockState === 'docked' ? 10 : 0;
+        ctx.fill();
+        ctx.restore();
+        ctx.shadowBlur = 0;
+      });
+
+      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+  })();
+
   // 1. Interactive 3D mouse tilt and dynamic glow coordinate tracking
   var cards3d = document.querySelectorAll('.rasa-highlight, .rasa-svc-card, .rasa-capability, .rasa-svc-showcase__btn, .rasa-check, .rasa-card, .rasa-tab-btn');
   cards3d.forEach(function (card) {
