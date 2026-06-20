@@ -15,6 +15,106 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Custom Premium Overrides for QSAR Page */
+    .rasa-pagehero--premium {
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at 80% 20%, hsla(20, 40%, 12%, 0.15) 0%, transparent 50%),
+                  radial-gradient(circle at 20% 80%, hsla(20, 30%, 8%, 0.1) 0%, transparent 60%);
+    }
+
+    .rasa-grid-bg {
+      background-image: radial-gradient(rgba(234, 88, 12, 0.08) 1px, transparent 1px) !important;
+      background-size: 24px 24px !important;
+      mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%) !important;
+      -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%) !important;
+    }
+
+    /* Glassmorphic Cards & Hover Glows */
+    .rasa-capability, .rasa-techcat {
+      position: relative;
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(234, 88, 12, 0.12) !important;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02) !important;
+      transition: border-color 0.4s ease, box-shadow 0.4s ease !important;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .rasa-capability::before, .rasa-techcat::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(234, 88, 12, 0.12), transparent 45%);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .rasa-capability:hover::before, .rasa-techcat:hover::before {
+      opacity: 1;
+    }
+    .rasa-capability:hover, .rasa-techcat:hover {
+      border-color: rgba(234, 88, 12, 0.4) !important;
+      box-shadow: 0 12px 40px rgba(234, 88, 12, 0.08) !important;
+    }
+
+    /* Technology Tool Badge styling */
+    .rasa-tool {
+      background: rgba(255, 255, 255, 0.85) !important;
+      border: 1px solid rgba(0, 0, 0, 0.06) !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .rasa-tool:hover {
+      background: #ffffff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(234, 88, 12, 0.15) !important;
+      border-color: rgba(234, 88, 12, 0.3) !important;
+    }
+    .rasa-tool__mono {
+      background: linear-gradient(135deg, var(--leaf), var(--leaf-accent)) !important;
+      color: #ffffff !important;
+    }
+
+    /* Scroll Reveal */
+    .rasa-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .rasa-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Deliverables Checkbox Interactive Glow & 3D Tilt */
+    .rasa-check {
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      transition: background 0.3s, border-color 0.3s, box-shadow 0.3s, color 0.3s !important;
+    }
+    .rasa-check::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(250px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(234, 88, 12, 0.15), transparent 45%);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .rasa-check:hover::before {
+      opacity: 1;
+    }
+    .rasa-check:hover {
+      border-color: rgba(234, 88, 12, 0.4) !important;
+      box-shadow: 0 12px 40px rgba(234, 88, 12, 0.08) !important;
+    }
+  </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"QSAR Toxicology & ICH M7 Impurity Assessment","serviceType":"QSAR Toxicology & ICH M7 Impurity Assessment","provider":{"@type":"Organization","name":"RASA Life Science Informatics","url":"https://www.rasalsi.com/","areaServed":"Worldwide","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"}},"description":"QSAR modeling, ICH M7 mutagenic impurity assessment, nitrosamine risk evaluation, extractables & leachables, and regulatory toxicology reporting for pharma, biotech, API manufacturers, CDMOs and CROs worldwide."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is QSAR and how is it used in drug discovery?","acceptedAnswer":{"@type":"Answer","text":"Quantitative Structure–Activity Relationship (QSAR) modeling is a computational approach that predicts the biological activity, toxicity, and physicochemical properties of chemical compounds based on their molecular structure. QSAR models help researchers evaluate compound safety and efficacy before experimental testing, reducing development costs and accelerating drug discovery. QSAR is widely used in pharmaceutical research, chemical safety assessment, regulatory submissions, impurity evaluation, and environmental risk assessment."}},{"@type":"Question","name":"What QSAR and Regulatory Toxicology services does RASA provide?","acceptedAnswer":{"@type":"Answer","text":"RASA Life Science Informatics offers comprehensive computational toxicology and regulatory assessment services, including: QSAR Modeling Mutagenicity Prediction Carcinogenicity Assessment Skin Sensitization Analysis Genotoxicity Evaluation Reproductive Toxicity Prediction Developmental Toxicity Assessment Environmental Toxicity Prediction Endocrine Disruption Screening ADMET Prediction Regulatory Risk Assessment ICH M7 Compliance Support Nitrosamine Risk Assessment Our workflows support pharmaceutical companies, biotechnology organizations, CROs, chemical manufacturers, and regulatory research programs."}},{"@type":"Question","name":"What is Computational Toxicology?","acceptedAnswer":{"@type":"Answer","text":"Computational Toxicology uses bioinformatics, cheminformatics, machine learning, and predictive modeling to evaluate the safety profile of chemicals, pharmaceutical compounds, impurities, and metabolites. By predicting toxicological endpoints before laboratory testing, computational toxicology helps organizations: Reduce experimental costs Accelerate safety assessments Support regulatory submissions Prioritize safer compounds Improve decision-making in drug development"}},{"@type":"Question","name":"What is QSAR Modeling?","acceptedAnswer":{"@type":"Answer","text":"QSAR Modeling establishes mathematical relationships between chemical structure and biological activity. These models use molecular descriptors, fingerprints, and machine learning algorithms to predict: Toxicity Mutagenicity Carcinogenicity Bioavailability Environmental Impact Drug-Likeness QSAR models are recognized by regulatory agencies worldwide and are commonly used in pharmaceutical and chemical safety evaluations."}},{"@type":"Question","name":"What is Mutagenicity Assessment?","acceptedAnswer":{"@type":"Answer","text":"Mutagenicity assessment evaluates the likelihood that a chemical compound may cause genetic mutations. Computational mutagenicity prediction is particularly important for pharmaceutical impurities, degradation products, metabolites, and new chemical entities. These analyses help support regulatory compliance and early-stage safety evaluation."}},{"@type":"Question","name":"What is Carcinogenicity Assessment?","acceptedAnswer":{"@type":"Answer","text":"Carcinogenicity assessment predicts whether a compound has the potential to contribute to cancer development through long-term exposure. Computational carcinogenicity models help researchers identify high-risk compounds before advancing them into costly experimental studies."}},{"@type":"Question","name":"What is Skin Sensitization Analysis?","acceptedAnswer":{"@type":"Answer","text":"Skin sensitization analysis evaluates the potential of a compound to trigger allergic skin reactions after repeated exposure. This assessment is widely used in pharmaceutical development, cosmetics research, personal care products, and chemical safety programs."}},{"@type":"Question","name":"What is Environmental Toxicity Prediction?","acceptedAnswer":{"@type":"Answer","text":"Environmental toxicity prediction evaluates the potential ecological impact of chemicals and pharmaceutical compounds on aquatic and terrestrial ecosystems. Common endpoints include: Aquatic Toxicity Fish Toxicity Algae Toxicity Daphnia Toxicity Bioaccumulation Potential Environmental Persistence These analyses support environmental risk assessments and regulatory submissions."}},{"@type":"Question","name":"Do you support ICH M7 assessments?","acceptedAnswer":{"@type":"Answer","text":"Yes. RASA provides comprehensive ICH M7 compliance support for pharmaceutical organizations. Our services include: ICH M7 Impurity Evaluation Mutagenic Impurity Assessment Structure–Activity Relationship Analysis Nitrosamine Risk Assessment Regulatory Toxicological Assessment Impurity Qualification Support Expert Review Documentation These assessments help pharmaceutical companies meet global regulatory requirements."}},{"@type":"Question","name":"What is ICH M7?","acceptedAnswer":{"@type":"Answer","text":"ICH M7 is an internationally recognized regulatory guideline that addresses the assessment and control of DNA-reactive (mutagenic) impurities in pharmaceutical products. The guideline recommends the use of computational toxicology methods, including QSAR modeling, to evaluate impurity-related mutagenic risks. ICH M7 compliance is required by many regulatory agencies worldwide, including the FDA, EMA, MHRA, and PMDA."}},{"@type":"Question","name":"What is Nitrosamine Risk Assessment?","acceptedAnswer":{"@type":"Answer","text":"Nitrosamine Risk Assessment evaluates the potential presence and toxicity of nitrosamine impurities in pharmaceutical products. Due to recent global regulatory concerns, nitrosamine evaluation has become a critical component of pharmaceutical quality and safety programs. Our workflows support: Nitrosamine Identification Risk Ranking Structural Assessment Regulatory Documentation Toxicological Evaluation"}},{"@type":"Question","name":"What is ADMET prediction?","acceptedAnswer":{"@type":"Answer","text":"ADMET stands for: Absorption Distribution Metabolism Excretion Toxicity ADMET prediction helps researchers evaluate drug-like properties and safety risks early in the discovery process. Computational ADMET assessment can significantly reduce late-stage failures by identifying compounds with unfavorable pharmacokinetic or toxicological profiles."}},{"@type":"Question","name":"Which software platforms and tools do you use?","acceptedAnswer":{"@type":"Answer","text":"Our toxicology workflows utilize industry-leading platforms including: Regulatory Toxicology OECD QSAR Toolbox VEGA Toxtree Lazar ADMET Prediction SwissADME pkCSM ADMETlab ProTox-II Cheminformatics RDKit Open Babel KNIME Machine Learning &amp; AI Scikit-Learn TensorFlow DeepChem"}},{"@type":"Question","name":"What data is required for QSAR and Toxicology assessment?","acceptedAnswer":{"@type":"Answer","text":"We commonly work with: Chemical Structures (SMILES) SDF Files MOL Files Drug Candidates Pharmaceutical Impurities Metabolites Degradation Products Environmental Chemicals Our team can assist in preparing and standardizing chemical structures before analysis."}},{"@type":"Question","name":"What deliverables are included in QSAR and Regulatory Toxicology projects?","acceptedAnswer":{"@type":"Answer","text":"Typical project deliverables include: QSAR Prediction Reports Mutagenicity Assessments Carcinogenicity Evaluations Skin Sensitization Reports ADMET Profiles Environmental Toxicity Reports ICH M7 Assessment Reports Nitrosamine Risk Assessments Regulatory Documentation Support Publication-Ready Figures Comprehensive Scientific Reports Deliverables can be customized according to project objectives and regulatory requirements."}},{"@type":"Question","name":"Which industries benefit from QSAR and Regulatory Toxicology services?","acceptedAnswer":{"@type":"Answer","text":"Our services support: Pharmaceutical Companies Biotechnology Organizations CROs Chemical Manufacturers Cosmetic Companies Agrochemical Companies Regulatory Research Programs Environmental Safety Organizations These industries rely on predictive toxicology to improve safety assessments and accelerate regulatory decision-making."}},{"@type":"Question","name":"Why choose RASA for QSAR and Regulatory Toxicology?","acceptedAnswer":{"@type":"Answer","text":"RASA combines expertise in computational toxicology, cheminformatics, regulatory science, machine learning, and drug discovery to deliver scientifically rigorous and regulatory-ready toxicological assessments. Our workflows support global regulatory compliance, early safety evaluation, impurity qualification, and risk assessment programs while reducing reliance on costly experimental testing. 📧 info@rasalifesciences.com 🌐 www.rasalifesciences.com"}}]}]}</script>
 </head>
 <body class="rasa rasa-theme-qsar">
@@ -92,27 +192,73 @@
 </header>
 
 <!-- =============== MAIN =============== -->
-<main class="rasa rasa-page">
-  <section class="rasa-pagehero">
+<main class="rasa rasa-page rasa-premium" style="position: relative;">
+  <!-- Parallax Floating Biological Shapes -->
+  <div class="rasa-parallax-container" aria-hidden="true">
+    <!-- DNA Helix Shape 1 -->
+    <svg class="rasa-parallax-shape" data-speed="-0.15" style="top: 12%; left: 82%; width: 120px; height: 120px;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M20,20 C40,40 60,40 80,20 M20,80 C40,60 60,60 80,80" />
+      <line x1="32" y1="32" x2="32" y2="68" stroke-dasharray="2 2" />
+      <line x1="44" y1="38" x2="44" y2="62" stroke-dasharray="2 2" />
+      <line x1="56" y1="38" x2="56" y2="62" stroke-dasharray="2 2" />
+      <line x1="68" y1="32" x2="68" y2="68" stroke-dasharray="2 2" />
+    </svg>
+    <!-- Chromosome Shape 2 -->
+    <svg class="rasa-parallax-shape" data-speed="0.08" style="top: 28%; left: 4%; width: 90px; height: 90px;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M35,10 Q50,45 35,90 M65,10 Q50,45 65,90" />
+      <circle cx="50" cy="48" r="5" fill="currentColor" />
+    </svg>
+    <!-- DNA Base Pair Shape 3 -->
+    <svg class="rasa-parallax-shape" data-speed="-0.08" style="top: 48%; left: 86%; width: 80px; height: 80px;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="20" cy="50" r="10" />
+      <circle cx="80" cy="50" r="10" />
+      <line x1="30" y1="50" x2="70" y2="50" stroke-width="3" stroke-dasharray="4 4" />
+      <text x="17" y="54" font-size="12" font-family="JetBrains Mono" fill="currentColor" stroke="none" font-weight="bold">A</text>
+      <text x="77" y="54" font-size="12" font-family="JetBrains Mono" fill="currentColor" stroke="none" font-weight="bold">T</text>
+    </svg>
+    <!-- Cellular Cluster Shape 4 -->
+    <svg class="rasa-parallax-shape" data-speed="0.14" style="top: 68%; left: 3%; width: 100px; height: 100px;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+      <circle cx="50" cy="50" r="12" />
+      <circle cx="25" cy="35" r="8" />
+      <circle cx="75" cy="35" r="9" />
+      <circle cx="35" cy="70" r="7" />
+      <circle cx="65" cy="70" r="8" />
+      <line x1="50" y1="38" x2="25" y2="35" />
+      <line x1="50" y1="38" x2="75" y2="35" />
+      <line x1="50" y1="62" x2="35" y2="70" />
+      <line x1="50" y1="62" x2="65" y2="70" />
+    </svg>
+    <!-- DNA Helix Shape 5 -->
+    <svg class="rasa-parallax-shape" data-speed="-0.12" style="top: 84%; left: 82%; width: 110px; height: 110px;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M20,20 C40,40 60,40 80,20 M20,80 C40,60 60,60 80,80" transform="rotate(45 50 50)" />
+      <line x1="30" y1="30" x2="70" y2="70" stroke-dasharray="2 2" />
+      <line x1="70" y1="30" x2="30" y2="70" stroke-dasharray="2 2" />
+    </svg>
+  </div>
+
+  <section class="rasa-pagehero rasa-pagehero--premium">
     <div class="rasa-grid-bg" aria-hidden="true"></div>
-    <div class="container">
+    <div class="rasa-hero-glow" aria-hidden="true"></div>
+    <canvas id="qsar-hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.75;"></canvas>
+    <div class="container" style="position: relative; z-index: 2;">
       <div class="rasa-pagehero__grid">
         <div class="rasa-pagehero__copy">
           <div class="rasa-reveal"><span class="rasa-eyebrow">QSAR &amp; Regulatory Toxicology<span class="rasa-eyebrow__rule"></span></span></div>
           <h1 class="rasa-pagehero__h rasa-reveal" data-delay="1" style="font-size:clamp(2rem,4.5vw,3.25rem); font-weight:500; line-height:1.1; margin:1.5rem 0 1.25rem;">QSAR Toxicology &amp; ICH M7 Impurity Assessment</h1>
           <p class="rasa-pagehero__lede rasa-reveal" data-delay="2" style="font-size:1.12rem; line-height:1.6; color:var(--foreground); font-weight:500;">Global Regulatory Toxicology Solutions for Pharmaceutical, Biotechnology &amp; API Manufacturers</p></div>
-        <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2"><img src="images/qsar_assessment.jpg" alt="QSAR Toxicology &amp; ICH M7 Impurity Assessment"></div>
+        <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2"><div class="rasa-hero-imgwrap"><img src="images/qsar_assessment.jpg" alt="QSAR Toxicology &amp; ICH M7 Impurity Assessment"></div></div>
       </div>
     </div>
   </section>
-<section class="rasa-introband">
-  <div class="container">
-    <div class="rasa-introband__inner">
-      <p class="rasa-introband__p--lead">RASA Life Science Informatics provides comprehensive QSAR (Quantitative Structure–Activity Relationship) modeling, computational toxicology, impurity qualification, and ICH M7-compliant mutagenic risk assessment services for pharmaceutical companies, biotechnology organizations, API manufacturers, CDMOs, CROs, and regulatory affairs teams worldwide.</p>
-      <p class="rasa-introband__p">Our scientific experts combine computational toxicology, cheminformatics, regulatory science, and AI-driven predictive modeling to support impurity qualification, genotoxic impurity assessment, nitrosamine risk evaluation, extractables and leachables studies, and regulatory submissions across global markets.</p>
+
+  <section class="rasa-introband">
+    <div class="container">
+      <div class="rasa-introband__inner rasa-reveal">
+        <p class="rasa-introband__p rasa-introband__p--lead">RASA Life Science Informatics provides comprehensive QSAR (Quantitative Structure–Activity Relationship) modeling, computational toxicology, impurity qualification, and ICH M7-compliant mutagenic risk assessment services for pharmaceutical companies, biotechnology organizations, API manufacturers, CDMOs, CROs, and regulatory affairs teams worldwide.</p>
+        <p class="rasa-introband__p">Our scientific experts combine computational toxicology, cheminformatics, regulatory science, and AI-driven predictive modeling to support impurity qualification, genotoxic impurity assessment, nitrosamine risk evaluation, extractables and leachables studies, and regulatory submissions across global markets.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
   <div class="container">
     <div class="rasa-reveal" style="margin-bottom:3rem;">
@@ -847,6 +993,126 @@
 <!-- Interactive 3D mouse tilt, glow shadow, dynamic icons, and staggered animations (Batch Injected) -->
 <script>
 (function() {
+  // QSAR molecular network canvas animation
+  (function () {
+    var canvas = document.getElementById('qsar-hero-canvas');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var dpr = window.devicePixelRatio || 1;
+    var width = 0, height = 0;
+
+    function resize() {
+      var rect = canvas.parentNode.getBoundingClientRect();
+      width = rect.width;
+      height = rect.height;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.scale(dpr, dpr);
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    var mouse = { x: null, y: null, radius: 150 };
+    window.addEventListener('mousemove', function (e) {
+      var rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+    window.addEventListener('mouseleave', function () {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    var nodes = [];
+    var nodeCount = 40;
+    for (var i = 0; i < nodeCount; i++) {
+      nodes.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        radius: 2 + Math.random() * 2.5
+      });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      // Draw subtle background grid lines
+      ctx.strokeStyle = 'rgba(234, 88, 12, 0.03)';
+      ctx.lineWidth = 1;
+      var step = 45;
+      for (var x = 0; x < width; x += step) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        ctx.stroke();
+      }
+      for (var y = 0; y < height; y += step) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(width, y);
+        ctx.stroke();
+      }
+
+      // Update and draw nodes
+      nodes.forEach(function (node) {
+        node.x += node.vx;
+        node.y += node.vy;
+
+        // Boundary collision
+        if (node.x < 0 || node.x > width) node.vx *= -1;
+        if (node.y < 0 || node.y > height) node.vy *= -1;
+
+        // Mouse interaction
+        if (mouse.x !== null && mouse.y !== null) {
+          var dx = mouse.x - node.x;
+          var dy = mouse.y - node.y;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < mouse.radius) {
+            var force = (mouse.radius - dist) / mouse.radius;
+            node.x -= (dx / dist) * force * 0.5;
+            node.y -= (dy / dist) * force * 0.5;
+          }
+        }
+
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(234, 88, 12, 0.25)';
+        ctx.fill();
+      });
+
+      // Draw edges between close nodes
+      ctx.lineWidth = 1;
+      for (var i = 0; i < nodeCount; i++) {
+        for (var j = i + 1; j < nodeCount; j++) {
+          var dx = nodes[i].x - nodes[j].x;
+          var dy = nodes[i].y - nodes[j].y;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 110) {
+            var alpha = (110 - dist) / 110 * 0.15;
+            ctx.strokeStyle = 'rgba(234, 88, 12, ' + alpha + ')';
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    // Initialize node positions after width/height are set
+    setTimeout(function() {
+      nodes.forEach(function(node) {
+        node.x = Math.random() * width;
+        node.y = Math.random() * height;
+      });
+      animate();
+    }, 100);
+  })();
+
   // 1. Interactive 3D mouse tilt and dynamic glow coordinate tracking
   var cards3d = document.querySelectorAll('.rasa-highlight, .rasa-svc-card, .rasa-capability, .rasa-svc-showcase__btn, .rasa-check, .rasa-card, .rasa-tab-btn');
   cards3d.forEach(function (card) {
