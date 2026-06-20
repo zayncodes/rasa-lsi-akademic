@@ -3546,3 +3546,365 @@ body.dark-mode .rasa-footer {
 .rasa-footer__reveal-section {
   display: none !important;
 }
+
+/* ============================================================
+   RASA SIGNATURE WORKFLOW DIAGRAM (6-STEP CURVED ZIGZAG)
+   ============================================================ */
+:root {
+  --wf-blue: #2563eb;
+  --wf-sky: #0ea5e9;
+  --wf-pink: #ec4899;
+  --wf-purple: #8b5cf6;
+  --wf-slate-900: #0f172a;
+  --wf-slate-600: #475569;
+}
+
+.rasa-workflow-container {
+  position: relative;
+  width: 100%;
+  height: 520px; /* height to accommodate text above and below */
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.rasa-workflow-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.rasa-workflow-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 100%;
+}
+
+.rasa-workflow-col {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Absolute vertical placement of elements */
+.rasa-workflow-col--top .rasa-workflow-content-wrap {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.rasa-workflow-col--top .rasa-workflow-chevron {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--chevron-color);
+  animation: bounceUp 2.5s infinite ease-in-out;
+}
+
+.rasa-workflow-col--top .rasa-workflow-circle {
+  position: absolute;
+  top: 175px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rasa-workflow-col--bottom .rasa-workflow-circle {
+  position: absolute;
+  top: 265px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rasa-workflow-col--bottom .rasa-workflow-chevron {
+  position: absolute;
+  top: 355px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--chevron-color);
+  animation: bounceDown 2.5s infinite ease-in-out;
+}
+
+.rasa-workflow-col--bottom .rasa-workflow-content-wrap {
+  position: absolute;
+  top: 385px;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Circle Nodes */
+.rasa-workflow-circle {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08), 0 8px 16px -6px rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+  z-index: 10;
+}
+
+.rasa-workflow-circle:hover {
+  transform: translateX(-50%) scale(1.1);
+  border-color: var(--circle-hover-border);
+  box-shadow: 0 20px 40px -10px var(--circle-hover-shadow), 0 12px 20px -8px var(--circle-hover-shadow);
+}
+
+.rasa-workflow-circle svg {
+  width: 32px;
+  height: 32px;
+  color: #64748b;
+  transition: color 0.4s ease;
+}
+
+.rasa-workflow-circle:hover svg {
+  color: var(--circle-hover-border);
+}
+
+/* Chevron Styling & Keyframes */
+.rasa-workflow-chevron svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2.5;
+}
+
+.rasa-workflow-chevron--blue-up, .rasa-workflow-chevron--blue-down {
+  --chevron-color: var(--wf-sky);
+}
+
+.rasa-workflow-chevron--pink-up, .rasa-workflow-chevron--pink-down {
+  --chevron-color: var(--wf-pink);
+}
+
+@keyframes bounceUp {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -6px); }
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 6px); }
+}
+
+/* Titles and Bullets */
+.rasa-workflow-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--wf-slate-900);
+  margin-bottom: 0.6rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+.rasa-workflow-bullets {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.rasa-workflow-bullets li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--wf-slate-600);
+  font-weight: 500;
+}
+
+.rasa-workflow-bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.rasa-workflow-col--top .rasa-workflow-bullets li::before {
+  color: var(--wf-sky);
+}
+
+.rasa-workflow-col--bottom .rasa-workflow-bullets li::before {
+  color: var(--wf-purple);
+}
+
+/* Specific step bullet colors */
+.rasa-workflow-col:nth-child(1) .rasa-workflow-bullets li::before { color: var(--wf-sky); }
+.rasa-workflow-col:nth-child(2) .rasa-workflow-bullets li::before { color: var(--wf-sky); }
+.rasa-workflow-col:nth-child(3) .rasa-workflow-bullets li::before { color: var(--wf-pink); }
+.rasa-workflow-col:nth-child(4) .rasa-workflow-bullets li::before { color: var(--wf-purple); }
+.rasa-workflow-col:nth-child(5) .rasa-workflow-bullets li::before { color: var(--wf-pink); }
+.rasa-workflow-col:nth-child(6) .rasa-workflow-bullets li::before { color: var(--wf-pink); }
+
+/* Circle Individual Hover Rules */
+.rasa-workflow-col:nth-child(1) .rasa-workflow-circle { --circle-hover-border: var(--wf-blue); --circle-hover-shadow: rgba(37, 99, 215, 0.2); }
+.rasa-workflow-col:nth-child(2) .rasa-workflow-circle { --circle-hover-border: var(--wf-sky); --circle-hover-shadow: rgba(14, 165, 233, 0.2); }
+.rasa-workflow-col:nth-child(3) .rasa-workflow-circle { --circle-hover-border: var(--wf-pink); --circle-hover-shadow: rgba(236, 72, 153, 0.2); }
+.rasa-workflow-col:nth-child(4) .rasa-workflow-circle { --circle-hover-border: var(--wf-purple); --circle-hover-shadow: rgba(139, 92, 246, 0.2); }
+.rasa-workflow-col:nth-child(5) .rasa-workflow-circle { --circle-hover-border: var(--wf-pink); --circle-hover-shadow: rgba(236, 72, 153, 0.2); }
+.rasa-workflow-col:nth-child(6) .rasa-workflow-circle { --circle-hover-border: var(--wf-blue); --circle-hover-shadow: rgba(37, 99, 215, 0.2); }
+
+/* Resource Chips */
+.rasa-workflow-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  max-width: 220px;
+}
+
+.rasa-wf-chip {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 99px;
+  background: #ffffff;
+  color: var(--wf-slate-600);
+  border: 1px solid #e2e8f0;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.rasa-wf-chip--comp-bio { border-color: var(--wf-pink); color: var(--wf-pink); background: rgba(236, 72, 153, 0.02); }
+.rasa-wf-chip--sme { border-color: #ec4899; color: #ec4899; background: rgba(236, 72, 153, 0.02); }
+.rasa-wf-chip--data-sci { border-color: var(--wf-sky); color: #0284c7; background: rgba(14, 165, 233, 0.02); }
+.rasa-wf-chip--it { border-color: var(--wf-purple); color: #6d28d9; background: rgba(139, 92, 246, 0.02); }
+
+.rasa-wf-chip:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN (MOBILE & TABLET TIMELINE)
+   ============================================================ */
+@media (max-width: 1000px) {
+  .rasa-workflow-container {
+    height: auto;
+    margin-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 0.5rem;
+    box-sizing: border-box;
+  }
+
+  .rasa-workflow-svg {
+    display: none;
+  }
+
+  .rasa-workflow-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    height: auto;
+    position: relative;
+    padding-left: 0;
+  }
+
+  .rasa-workflow-grid::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 24px;
+    width: 2px;
+    border-left: 2px dashed rgba(139, 92, 246, 0.25);
+    z-index: 1;
+  }
+
+  .rasa-workflow-col {
+    height: auto !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Reset absolute positions */
+  .rasa-workflow-col--top .rasa-workflow-content-wrap,
+  .rasa-workflow-col--bottom .rasa-workflow-content-wrap {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 3.5rem;
+    box-sizing: border-box;
+  }
+
+  .rasa-workflow-col--top .rasa-workflow-circle,
+  .rasa-workflow-col--bottom .rasa-workflow-circle {
+    position: absolute;
+    left: 0 !important;
+    top: 0;
+    transform: none !important;
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 !important;
+  }
+
+  .rasa-workflow-circle:hover {
+    transform: scale(1.08) !important;
+  }
+
+  .rasa-workflow-circle svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .rasa-workflow-chevron {
+    display: none !important;
+  }
+
+  .rasa-workflow-title {
+    text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .rasa-workflow-bullets {
+    text-align: left;
+    display: block;
+    width: 100%;
+  }
+
+  .rasa-workflow-bullets li {
+    font-size: 0.85rem;
+    padding-left: 1.1rem;
+  }
+
+  .rasa-workflow-chips {
+    justify-content: flex-start;
+    max-width: 100%;
+    margin-top: 0.6rem;
+  }
+}
