@@ -10,6 +10,225 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="theme.css">
+
+  <!-- Page-specific publications search and filter styles -->
+  <style>
+    .rasa-pub-search-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.04);
+    }
+    
+    .rasa-pub-search-box {
+      position: relative;
+      width: 100%;
+    }
+
+    .rasa-pub-search-box svg {
+      position: absolute;
+      left: 1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      color: var(--foreground-40);
+      pointer-events: none;
+    }
+
+    .rasa-pub-search-input {
+      width: 100%;
+      padding: 1.1rem 1.25rem 1.1rem 3.25rem;
+      font-family: inherit;
+      font-size: 1rem;
+      color: var(--foreground);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      box-sizing: border-box;
+      transition: all 0.2s ease;
+    }
+
+    .rasa-pub-search-input:focus {
+      outline: none;
+      background: #ffffff;
+      border-color: var(--leaf);
+      box-shadow: 0 0 0 4px var(--leaf-soft);
+    }
+
+    .rasa-pub-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .rasa-pub-filter-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.5rem 1.1rem;
+      border-radius: 99px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--foreground-70);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .rasa-pub-filter-btn:hover {
+      border-color: var(--leaf-hover);
+      color: var(--leaf-hover);
+    }
+
+    .rasa-pub-filter-btn.active {
+      background: var(--leaf);
+      border-color: var(--leaf);
+      color: var(--cream);
+      box-shadow: 0 4px 12px var(--leaf-soft);
+    }
+
+    .rasa-pub-meta-info {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.825rem;
+      color: var(--foreground-60);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .rasa-pub-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .rasa-pub-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .rasa-pub-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 8px 24px -10px rgba(0,0,0,0.03);
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .rasa-pub-card.is-hidden {
+      display: none !important;
+    }
+
+    .rasa-pub-card:hover {
+      border-color: var(--leaf-hover);
+      box-shadow: 0 16px 36px -12px rgba(124, 58, 237, 0.18);
+      transform: translateY(-4px);
+    }
+
+    .rasa-pub-card__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      gap: 1rem;
+    }
+
+    .rasa-pub-card__year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--cream);
+      background: linear-gradient(135deg, var(--leaf) 30%, #a855f7 100%);
+      padding: 0.25rem 0.75rem;
+      border-radius: 99px;
+      box-shadow: 0 2px 8px var(--leaf-soft);
+      flex-shrink: 0;
+    }
+
+    .rasa-pub-card__journal {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--foreground-60);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: right;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .rasa-pub-card__title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--foreground);
+      margin: 0 0 1rem 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .rasa-pub-card__authors {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--foreground-70);
+      margin-bottom: 1.75rem;
+    }
+
+    .rasa-pub-card__authors strong {
+      color: var(--foreground);
+      font-weight: 600;
+    }
+
+    .rasa-pub-card__footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .rasa-pub-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--leaf);
+      text-decoration: none;
+      transition: color 0.2s ease, gap 0.2s ease;
+    }
+
+    .rasa-pub-card__link:hover {
+      color: var(--leaf-hover);
+      gap: 0.75rem;
+    }
+
+    .rasa-pub-card__link svg {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s ease;
+    }
+  </style>
 </head>
 <body class="rasa rasa-theme-kb">
 
@@ -100,18 +319,603 @@
       </div>
     </div>
   </section>
-  <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
-    <div class="container" style="max-width:760px; text-align:center;">
-      <span class="rasa-chip" style="margin-bottom:1.25rem;">Coming Soon</span>
-      <h2 class="rasa-h2" style="margin:0.5rem 0 1.25rem;">Our publications are on the way</h2>
-      <p style="color:var(--foreground-70); line-height:1.75; font-size:1.05rem; margin:0 auto 2rem; max-width:62ch;">A curated list of our peer-reviewed publications and scientific contributions is being compiled. Check back soon, or get in touch to discuss collaborative research and co-authored studies.</p>
-      <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
-        <a href="case-studies.html" class="rasa-btn rasa-btn--primary" style="background:var(--leaf); color:var(--cream);">Browse Case Studies
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-        <a href="contact.html" class="rasa-btn rasa-btn--ghost">Talk to our team</a>
+  
+  
+  <!-- SCIENTIFIC PUBLICATIONS SECTION -->
+  <section class="rasa-section" style="padding: 5rem 0; border-top: 1px solid var(--border); background: var(--surface);">
+    <div class="container">
+      
+      <!-- Interactive Search & Filters wrapper -->
+      <div class="rasa-pub-search-wrap rasa-reveal">
+        <div class="rasa-pub-search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="pub-search" class="rasa-pub-search-input" placeholder="Search publications by title, journal, or author name...">
+        </div>
+        
+        <div class="rasa-pub-filters">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 600; color: var(--foreground-50); margin-right: 0.5rem;">FILTER BY YEAR:</span>
+          <button class="rasa-pub-filter-btn active" data-filter="all">ALL</button>
+          <button class="rasa-pub-filter-btn" data-filter="2025">2025</button>
+          <button class="rasa-pub-filter-btn" data-filter="2023">2023</button>
+          <button class="rasa-pub-filter-btn" data-filter="2022">2022</button>
+          <button class="rasa-pub-filter-btn" data-filter="2021">2021</button>
+          <button class="rasa-pub-filter-btn" data-filter="2020">2020</button>
+          <button class="rasa-pub-filter-btn" data-filter="2019">2019</button>
+          <button class="rasa-pub-filter-btn" data-filter="2017">2017</button>
+          <button class="rasa-pub-filter-btn" data-filter="2016">2016</button>
+          <button class="rasa-pub-filter-btn" data-filter="2015">2015</button>
+          <button class="rasa-pub-filter-btn" data-filter="2014">2014</button>
+          <button class="rasa-pub-filter-btn" data-filter="2013">2013</button>
+        </div>
+      </div>
+
+      <!-- Meta Info bar -->
+      <div class="rasa-pub-meta-info rasa-reveal" data-delay="1">
+        <span id="pub-count-display">Showing 25 of 25 publications</span>
+        <span>PEER-REVIEWED CONTRIBUTION</span>
+      </div>
+
+      <!-- Publications Grid -->
+      <div class="rasa-pub-grid">
+
+        <!-- Card 1 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="1" data-year="2025" data-search-text="understanding parkinson’s disease: current trends and its multifaceted complications sameer a. chaudhary, sapana s. chaudhary, sakshi rawat frontiers in aging neuroscience">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2025</span>
+              <span class="rasa-pub-card__journal" title="Frontiers in Aging Neuroscience">Frontiers in Aging Neuroscience</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Understanding Parkinson’s disease: current trends and its multifaceted complications">Understanding Parkinson’s disease: current trends and its multifaceted complications</h3>
+            <p class="rasa-pub-card__authors"><strong>Sameer A. Chaudhary</strong>, <strong>Sapana S. Chaudhary</strong>, <strong>Sakshi Rawat</strong></p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://doi.org/10.3389/fnagi.2025.1617106" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="2" data-year="2025" data-search-text="to compare transcriptome profiling (rna-seq) between two wheat cultivars with different antioxidant activities and to clarify the differences between these two wheat cultivars. sameer a. chaudhary, sapana s. chaudhary, sakshi rawat journal of crop science and biotechnology">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2025</span>
+              <span class="rasa-pub-card__journal" title="Journal of Crop Science and Biotechnology">Journal of Crop Science and Biotechnology</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="To compare transcriptome profiling (RNA-seq) between two wheat cultivars with different antioxidant activities and to clarify the differences between these two wheat cultivars.">To compare transcriptome profiling (RNA-seq) between two wheat cultivars with different antioxidant activities and to clarify the differences between these two wheat cultivars.</h3>
+            <p class="rasa-pub-card__authors"><strong>Sameer A. Chaudhary</strong>, <strong>Sapana S. Chaudhary</strong>, <strong>Sakshi Rawat</strong></p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://doi.org/10.1007/s12892-025-00317-z" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="1" data-year="2025" data-search-text="recent developments in the etiology, treatment, and potential therapeutic targets for parkinson's disease: a focus on biochemistry. sapana sameer chaudhary, sameer chaudhary, sakshi rawat, saieswari natesan , tanvee pardeshi , athanasios alexiou, ghulam mdashraf diagnosis and management in parkinson’s disease">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2025</span>
+              <span class="rasa-pub-card__journal" title="Diagnosis and Management in Parkinson’s Disease">Diagnosis and Management in Parkinson’s Disease</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Recent developments in the etiology, treatment, and potential therapeutic targets for Parkinson's disease: a focus on biochemistry.">Recent developments in the etiology, treatment, and potential therapeutic targets for Parkinson's disease: a focus on biochemistry.</h3>
+            <p class="rasa-pub-card__authors">Sapana <strong>Sameer Chaudhary</strong>, <strong>Sameer Chaudhary</strong>, <strong>Sakshi Rawat</strong>, Saieswari Natesan , <strong>Tanvee Pardeshi</strong> , Athanasios Alexiou, Ghulam MdAshraf</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://www.sciencedirect.com/science/article/pii/B9780128159460000053?via%3Dihub" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="2" data-year="2023" data-search-text="computational deciphering of blast resistance genes in rice sameer akhtar chaudhary, malik m. ahmad, sapana chaudhary, sakshi rawat, and jayashri prasanan appleacademicpress">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2023</span>
+              <span class="rasa-pub-card__journal" title="AppleAcademicPress">AppleAcademicPress</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Computational Deciphering of Blast Resistance Genes in Rice">Computational Deciphering of Blast Resistance Genes in Rice</h3>
+            <p class="rasa-pub-card__authors"><strong>Sameer Akhtar Chaudhary</strong>, Malik M. Ahmad, <strong>Sapana Chaudhary</strong>, <strong>Sakshi Rawat</strong>, and Jayashri Prasanan</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://appleacademicpress.com/fungal-diseases-of-rice-and-their-management-/9781774912478" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="1" data-year="2022" data-search-text="next generation sequencing: a promising tool to explore the personalized medicine in understanding the neurodegenerative diseases gayatri gawade, sameer a chaudhary, sapana chaudhary, sakshi rawat, anwar l bilgrami, meghana padwal international journal of clinical biochemistry and research">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2022</span>
+              <span class="rasa-pub-card__journal" title="International Journal of Clinical Biochemistry and Research">International Journal of Clinical Biochemistry and Research</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Next generation sequencing: A promising tool to explore the personalized medicine in understanding the neurodegenerative diseases">Next generation sequencing: A promising tool to explore the personalized medicine in understanding the neurodegenerative diseases</h3>
+            <p class="rasa-pub-card__authors"><strong>Gayatri Gawade</strong>, Sameer A Chaudhary, <strong>Sapana Chaudhary</strong>, <strong>Sakshi Rawat</strong>, Anwar L Bilgrami, Meghana Padwal</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://www.ijcbr.in/article-details/14923" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="2" data-year="2022" data-search-text="proteo-molecular investigation of cultivated rice, wild rice, and barley provides clues of defense responses against rhizoctonia solani infection md. shamim, divakar sharma, deepa bisht, rashmi maurya, mayank kaashyap, deepti srivastava, anurag mishra, deepak kumar, mahesh kumar, vijaya naresh juturu, n. a. khan, sameer chaudhary, raja hussain , k. n. singh bioengineering">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2022</span>
+              <span class="rasa-pub-card__journal" title="Bioengineering">Bioengineering</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Proteo-Molecular Investigation of Cultivated Rice, Wild Rice, and Barley Provides Clues of Defense Responses against Rhizoctonia solani Infection">Proteo-Molecular Investigation of Cultivated Rice, Wild Rice, and Barley Provides Clues of Defense Responses against Rhizoctonia solani Infection</h3>
+            <p class="rasa-pub-card__authors">Md. Shamim, Divakar Sharma, Deepa Bisht, Rashmi Maurya, Mayank Kaashyap, Deepti Srivastava, Anurag Mishra, Deepak Kumar, Mahesh Kumar, Vijaya Naresh Juturu, N. A. Khan, <strong>Sameer Chaudhary</strong>, Raja Hussain , K. N. Singh</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://www.mdpi.com/2306-5354/9/10/589" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="1" data-year="2022" data-search-text="galectins—potential therapeutic targets for neurodegenerative disorders sapana chaudhary, sameer chaudhary, sakshi rawat, archana kulkarni, anwar l. bilgrami, asma perveen, badrah s.alghamdi, torki al zughaibi, ghulam md ashraf, mohammad zubair alam, tabish hussain international journal of molecular sciences">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2022</span>
+              <span class="rasa-pub-card__journal" title="International Journal of Molecular Sciences">International Journal of Molecular Sciences</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Galectins—Potential Therapeutic Targets for Neurodegenerative Disorders">Galectins—Potential Therapeutic Targets for Neurodegenerative Disorders</h3>
+            <p class="rasa-pub-card__authors"><strong>Sapana Chaudhary</strong>, <strong>Sameer Chaudhary</strong>, <strong>Sakshi Rawat</strong>, Archana Kulkarni, Anwar L. Bilgrami, Asma Perveen, Badrah S.Alghamdi, Torki Al Zughaibi, Ghulam Md Ashraf, Mohammad Zubair Alam, Tabish Hussain</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://www.mdpi.com/1422-0067/23/19/11012" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="2" data-year="2021" data-search-text="mechanistic understanding of ptyronetm: a plant based natural anti diabetic product yogesh arun dound, sameer chaudhary , sapana sameer chaudhary , sakshi rawat,mohammed h alqarni,malik m ahmad,mohammed h. geesi,ravej alam journal of king saud university – science">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2021</span>
+              <span class="rasa-pub-card__journal" title="Journal of King Saud University – Science">Journal of King Saud University – Science</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Mechanistic Understanding of PtyroneTM: A Plant based Natural Anti Diabetic Product">Mechanistic Understanding of PtyroneTM: A Plant based Natural Anti Diabetic Product</h3>
+            <p class="rasa-pub-card__authors"><strong>Yogesh Arun Dound</strong>, <strong>Sameer Chaudhary</strong> , Sapana <strong>Sameer Chaudhary</strong> , <strong>Sakshi Rawat</strong>,Mohammed H Alqarni,Malik M Ahmad,Mohammed H. Geesi,Ravej Alam</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://www.sciencedirect.com/science/article/pii/S1018364721001154" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="1" data-year="2021" data-search-text="molecular mechanism and role of translational values of heat shock protein (hsp27) in various disease sameer chaudhary, sapana sameer chaudhary, sakshi rawat , savneet kaur , bogireddy devi , malik m ahmad , zia arshad , m. mustafa, manie m. al jedaie , parvej alam journal of pharmaceutical research international">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2021</span>
+              <span class="rasa-pub-card__journal" title="Journal of Pharmaceutical Research International">Journal of Pharmaceutical Research International</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Molecular Mechanism and Role of Translational Values of Heat Shock Protein (HSP27) in Various Disease">Molecular Mechanism and Role of Translational Values of Heat Shock Protein (HSP27) in Various Disease</h3>
+            <p class="rasa-pub-card__authors"><strong>Sameer Chaudhary</strong>, Sapana <strong>Sameer Chaudhary</strong>, <strong>Sakshi Rawat</strong> , Savneet Kaur , Bogireddy Devi , Malik M Ahmad , Zia Arshad , M. Mustafa, Manie M. Al Jedaie , Parvej Alam</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://journaljpri.com/index.php/JPRI/article/view/1656" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="2" data-year="2020" data-search-text="preventive strategies for management of covid-19 using natural molecules yogesh arun dound , sameer chaudhary ,sapana sameer chaudhary, malik m ahmad , mohammed h geesi , pravej alam research sqare">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2020</span>
+              <span class="rasa-pub-card__journal" title="Research Sqare">Research Sqare</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Preventive Strategies for Management of COVID-19 Using Natural Molecules">Preventive Strategies for Management of COVID-19 Using Natural Molecules</h3>
+            <p class="rasa-pub-card__authors"><strong>Yogesh Arun Dound</strong> , <strong>Sameer Chaudhary</strong> ,Sapana <strong>Sameer Chaudhary</strong>, Malik M Ahmad , Mohammed H Geesi , Pravej Alam</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://www.researchsquare.com/article/rs-24587/v1" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="1" data-year="2020" data-search-text="c-met as a potential therapeutic target in triple negative breast cancer sapana sameer chaudhary , sameerchoudhary ,sakshirawat , gouriahir , anwar l. bilgrami , ghulam md ashraf cancer leading proteases">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2020</span>
+              <span class="rasa-pub-card__journal" title="Cancer Leading Proteases">Cancer Leading Proteases</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="c-Met as a potential therapeutic target in triple negative breast cancer">c-Met as a potential therapeutic target in triple negative breast cancer</h3>
+            <p class="rasa-pub-card__authors">Sapana <strong>Sameer Chaudhary</strong> , SameerChoudhary ,<strong>SakshiRawat</strong> , GouriAhir , Anwar L. Bilgrami , Ghulam Md Ashraf</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="http://10.0.3.248/B978-0-12-818168-3.00011-5" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="2" data-year="2019" data-search-text="sox2: a regulatory factor in tumorigenesis and metastasis sameer chaudhary, zeyaul islam, vijaya mishra, sakshi rawat, ghulam md ashraf, prasanna r kolatkar current protein and peptide science">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2019</span>
+              <span class="rasa-pub-card__journal" title="Current Protein and Peptide Science">Current Protein and Peptide Science</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Sox2: A Regulatory Factor in Tumorigenesis and Metastasis">Sox2: A Regulatory Factor in Tumorigenesis and Metastasis</h3>
+            <p class="rasa-pub-card__authors"><strong>Sameer Chaudhary</strong>, Zeyaul Islam, Vijaya Mishra, <strong>Sakshi Rawat</strong>, Ghulam Md Ashraf, Prasanna R Kolatkar</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30907312/" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 13 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="1" data-year="2016" data-search-text="researching novel variants involved in alzheimer’s disease via next generation sequencing variant analysis on rna sequence data files bhagwat, b. joshi, sameer chaudhary, t. pardeshi, shama mujawar, s. talware, s. chakraborty, v. kandale sciencesinternational journal of bioassays">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2016</span>
+              <span class="rasa-pub-card__journal" title="SciencesInternational Journal of Bioassays">SciencesInternational Journal of Bioassays</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Researching novel variants involved in Alzheimer’s disease via next generation sequencing variant analysis on RNA sequence data files">Researching novel variants involved in Alzheimer’s disease via next generation sequencing variant analysis on RNA sequence data files</h3>
+            <p class="rasa-pub-card__authors">Bhagwat, B. Joshi, <strong>Sameer Chaudhary</strong>, T. Pardeshi, <strong>Shama Mujawar</strong>, S. Talware, S. Chakraborty, V. Kandale</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="http://10.0.84.242/ijbio.2016.01.009" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 14 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="2" data-year="2016" data-search-text="exploring the pre-erythrocytic stage of the malaria parasite for possible target proteins to develop an effective vaccine and looking into available preventive measures against malaria: can spect and spect2 act as potential targets for an effective vaccine? manas joshi , shama mujawar international journal for computational biology">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2016</span>
+              <span class="rasa-pub-card__journal" title="International Journal for Computational Biology">International Journal for Computational Biology</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Exploring The Pre-erythrocytic Stage Of The Malaria Parasite For Possible Target Proteins To Develop An Effective Vaccine And Looking Into Available Preventive Measures Against Malaria: Can SPECT And SPECT2 Act As Potential Targets For An Effective Vaccine?">Exploring The Pre-erythrocytic Stage Of The Malaria Parasite For Possible Target Proteins To Develop An Effective Vaccine And Looking Into Available Preventive Measures Against Malaria: Can SPECT And SPECT2 Act As Potential Targets For An Effective Vaccine?</h3>
+            <p class="rasa-pub-card__authors">Manas Joshi , <strong>Shama Mujawar</strong></p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://www.researchgate.net/publication/308984623_Exploring_The_Pre-erythrocytic_Stage_Of_The_Malaria_Parasite_For_Possible_Target_Proteins_To_Develop_An_Effective_Vaccine_And_Looking_Into_Available_Preventive_Measures_Against_Malaria_Can_SPECT_And_S" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 15 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="1" data-year="2016" data-search-text="terminalia arjuna: alternative treatment for cardiovascular diseases isha zafar, r.k. sharma, shama mujawar* , sameer choudhary jyoti vidyapeeth women’s university, jaipur and rasa life science informatics, pune. international journal of pharmaceutical sciences review and research">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2016</span>
+              <span class="rasa-pub-card__journal" title="International Journal of Pharmaceutical Sciences Review and Research">International Journal of Pharmaceutical Sciences Review and Research</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Terminalia arjuna: Alternative Treatment for Cardiovascular Diseases">Terminalia arjuna: Alternative Treatment for Cardiovascular Diseases</h3>
+            <p class="rasa-pub-card__authors">Isha Zafar, R.K. Sharma, <strong>Shama Mujawar</strong>* , <strong>Sameer Choudhary</strong> Jyoti Vidyapeeth Women’s University, Jaipur and RASA Life Science Informatics, Pune.</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://globalresearchonline.net/journalcontents/v35-2/11.pdf" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 16 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="2" data-year="2015" data-search-text="in-silico study of small cell lung cancer based on protein structure and function: a new approach to mimic biological system nidhi sood1, sameer chaudhary1, tanvee pardeshi1, shama mujawar1, krishna balaji deshmukh1, saba afrin sheikh1, preety sharma1 journal of advanced pharmaceutical technology &amp; research">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2015</span>
+              <span class="rasa-pub-card__journal" title="Journal of Advanced Pharmaceutical Technology &amp; Research">Journal of Advanced Pharmaceutical Technology &amp; Research</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="In-silico study of small cell lung cancer based on protein structure and function: A new approach to mimic biological system">In-silico study of small cell lung cancer based on protein structure and function: A new approach to mimic biological system</h3>
+            <p class="rasa-pub-card__authors">Nidhi Sood1, Sameer Chaudhary1, Tanvee Pardeshi1, Shama Mujawar1, Krishna Balaji Deshmukh1, Saba Afrin Sheikh1, Preety Sharma1</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="http://10.0.16.7/2231-4040.161513" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 17 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="1" data-year="2015" data-search-text="docking studies of hiv-1 gp120 with natural compounds for prevention of hiv-1 entry akhil jobby,sameer choudhary,tanvee ajit pardeshi international journal of computational biology">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2015</span>
+              <span class="rasa-pub-card__journal" title="International Journal Of Computational Biology">International Journal Of Computational Biology</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Docking studies of HIV-1 gp120 with natural compounds for prevention of HIV-1 entry">Docking studies of HIV-1 gp120 with natural compounds for prevention of HIV-1 entry</h3>
+            <p class="rasa-pub-card__authors"><strong>Akhil Jobby</strong>,<strong>Sameer Choudhary</strong>,<strong>Tanvee Ajit Pardeshi</strong></p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="http://10.0.132.248/IJCB.4.2.2015.62" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 18 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="2" data-year="2015" data-search-text="rt-pcr more sensitive to nested pcr for fast detection tuberculosis infection arwind kumar shukala , hemant patil , amol raut, sameer chaudhary annals of clinical microbiology and antimicrobials">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2015</span>
+              <span class="rasa-pub-card__journal" title="Annals of Clinical Microbiology and Antimicrobials">Annals of Clinical Microbiology and Antimicrobials</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="RT-PCR More Sensitive to Nested PCR for Fast Detection Tuberculosis Infection">RT-PCR More Sensitive to Nested PCR for Fast Detection Tuberculosis Infection</h3>
+            <p class="rasa-pub-card__authors"><strong>Arwind Kumar Shukala</strong> , <strong>Hemant Patil</strong> , <strong>Amol Raut</strong>, <strong>Sameer Chaudhary</strong></p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://www.researchgate.net/publication/282657035_RT-PCR_More_Sensitive_to_Nested_PCR_for_Fast_Detection_Tuberculosis_Infection" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 19 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="1" data-year="2015" data-search-text="identification of novel inhibitors for systemic lupus erythematosus by targeting ifn-α and fcγr2a: a structure based pharmacophore approach shama mujawar, tanvee pardeshi, sameer chaudhary , menka batra ,krishna balaji deshmukh , sameer raje , ib thobias ,swetha pavani rao international journal of pharmaceutical sciences review and research">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2015</span>
+              <span class="rasa-pub-card__journal" title="International Journal of Pharmaceutical Sciences Review and Research">International Journal of Pharmaceutical Sciences Review and Research</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Identification of Novel Inhibitors for Systemic Lupus Erythematosus by Targeting IFN-α and FCγR2A: A Structure Based pharmacophore Approach">Identification of Novel Inhibitors for Systemic Lupus Erythematosus by Targeting IFN-α and FCγR2A: A Structure Based pharmacophore Approach</h3>
+            <p class="rasa-pub-card__authors"><strong>Shama Mujawar</strong>, <strong>Tanvee Pardeshi</strong>, <strong>Sameer Chaudhary</strong> , Menka Batra ,<strong>Krishna Balaji Deshmukh</strong> , Sameer Raje , Ib Thobias ,Swetha pavani Rao</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://support.google.com/google-ads/answer/6372658?hl=en" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 20 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="2" data-year="2015" data-search-text="in-silico discovery of novel inhibitors against prp protein (e196k, v203i and e211q): creutzfeldt jakob disease swetha pavani rao*shama mujawar, sameer chaudhary, inigo benze thobias, rasa life science informatics international journal of pharmaceutical sciences review and research">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2015</span>
+              <span class="rasa-pub-card__journal" title="International Journal of Pharmaceutical Sciences Review and Research">International Journal of Pharmaceutical Sciences Review and Research</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="In-Silico Discovery of Novel Inhibitors Against PrP Protein (E196K, V203I and E211Q): Creutzfeldt Jakob Disease">In-Silico Discovery of Novel Inhibitors Against PrP Protein (E196K, V203I and E211Q): Creutzfeldt Jakob Disease</h3>
+            <p class="rasa-pub-card__authors">Swetha Pavani Rao*<strong>Shama Mujawar</strong>, <strong>Sameer Chaudhary</strong>, Inigo Benze Thobias, RASA Life Science Informatics</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://globalresearchonline.net/journalcontents/v32-1/49.pdf" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 21 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="1" data-year="2015" data-search-text="a novel, selective inhibitor of hepatitis c virus targeted against the viral rna-dependent rna-polymerase krishna balaji deshmukh , shama mujawar , tanvee ajit pardeshi, sameer chaudhary , preety sharma, ib thobias, saba sheikh , nidhi sood international journal of pharmaceutical sciences review and research">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2015</span>
+              <span class="rasa-pub-card__journal" title="International Journal of Pharmaceutical Sciences Review and Research">International Journal of Pharmaceutical Sciences Review and Research</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="A Novel, Selective Inhibitor of Hepatitis C Virus Targeted against the Viral RNA-Dependent RNA-Polymerase">A Novel, Selective Inhibitor of Hepatitis C Virus Targeted against the Viral RNA-Dependent RNA-Polymerase</h3>
+            <p class="rasa-pub-card__authors"><strong>Krishna Balaji Deshmukh</strong> , <strong>Shama Mujawar</strong> , <strong>Tanvee Ajit Pardeshi</strong>, <strong>Sameer Chaudhary</strong> , <strong>Preety Sharma</strong>, Ib Thobias, <strong>Saba Sheikh</strong> , Nidhi Sood</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://www.researchgate.net/publication/279191426_A_Novel_Selective_Inhibitor_of_Hepatitis_C_Virus_Targeted_against_the_Viral_RNA-Dependent_RNA-Polymerase" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 22 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="2" data-year="2015" data-search-text="study of interaction between wild type and mutant hiv-1 protease and cyclic urea inhibitor using in silico techniques pardeshi international journal of computational bioinformatics and in silico modeling">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2015</span>
+              <span class="rasa-pub-card__journal" title="International Journal of Computational Bioinformatics and In Silico Modeling">International Journal of Computational Bioinformatics and In Silico Modeling</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Study of Interaction between Wild type and Mutant HIV-1 protease and Cyclic Urea Inhibitor Using In Silico Techniques">Study of Interaction between Wild type and Mutant HIV-1 protease and Cyclic Urea Inhibitor Using In Silico Techniques</h3>
+            <p class="rasa-pub-card__authors">Pardeshi</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://www.researchgate.net/publication/280737093_Study_of_Interaction_between_Wild_type_and_Mutant_HIV-1_protease_and_Cyclic_Urea_Inhibitor_Using_In_Silico_Techniques" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 23 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="1" data-year="2014" data-search-text="bioinformatics to help understand intrinsically disordered proteins sameer a. chaudhary, sapana s. chaudhary, sakshi rawat read more">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2014</span>
+              <span class="rasa-pub-card__journal" title="Read more">Read more</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Bioinformatics to Help Understand Intrinsically Disordered Proteins">Bioinformatics to Help Understand Intrinsically Disordered Proteins</h3>
+            <p class="rasa-pub-card__authors"><strong>Sameer A. Chaudhary</strong>, <strong>Sapana S. Chaudhary</strong>, <strong>Sakshi Rawat</strong></p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://www.technologynetworks.com/informatics/news/bioinformatics-to-help-understand-intrinsically-disordered-proteins-290697" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 24 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="2" data-year="2014" data-search-text="dsd: a database of snp associated disease tanvee ajit pardeshi, akhil jobby, sameer chaudhary, sapana mehendale , shweta metkar , vaibhav kandale , shama mujawar , apurva patange international journal of bioassays">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2014</span>
+              <span class="rasa-pub-card__journal" title="International Journal of Bioassays">International Journal of Bioassays</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="DSD: A Database Of SNP Associated Disease">DSD: A Database Of SNP Associated Disease</h3>
+            <p class="rasa-pub-card__authors"><strong>Tanvee Ajit Pardeshi</strong>, <strong>Akhil Jobby</strong>, <strong>Sameer Chaudhary</strong>, <strong>Sapana Mehendale</strong> , Shweta Metkar , Vaibhav Kandale , <strong>Shama Mujawar</strong> , Apurva Patange</p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://www.researchgate.net/publication/265476056_DSD_A_DATABASE_OF_SNP_ASSOCIATED_DISEASES" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 25 -->
+        <div class="rasa-pub-card rasa-reveal" data-delay="1" data-year="2013" data-search-text="insilico identification of molecular targets for ajoene [garlic component] and their binding mode analysis dr savita deshmukh , shivakumar b madagi,sameer chaudhary ijpbs">
+          <div>
+            <div class="rasa-pub-card__header">
+              <span class="rasa-pub-card__year">2013</span>
+              <span class="rasa-pub-card__journal" title="IJPBS">IJPBS</span>
+            </div>
+            <h3 class="rasa-pub-card__title" title="Insilico Identification Of Molecular Targets For Ajoene [Garlic Component] And Their Binding Mode Analysis">Insilico Identification Of Molecular Targets For Ajoene [Garlic Component] And Their Binding Mode Analysis</h3>
+            <p class="rasa-pub-card__authors">Dr Savita Deshmukh , Shivakumar B Madagi,<strong>Sameer Chaudhary</strong></p>
+          </div>
+          <div class="rasa-pub-card__footer">
+            <a href="https://www.researchgate.net/publication/258218189_INSILICO_IDENTIFICATION_OF_MOLECULAR_TARGETS_FOR_AJOENE_GARLIC_COMPONENT_AND_THEIR_BINDING_MODE_ANALYSIS" target="_blank" rel="noopener" class="rasa-pub-card__link">
+              View Publication 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <!-- Live JavaScript Filters -->
+  <script>
+  (function() {
+    var searchInput = document.getElementById('pub-search');
+    var filterBtns = document.querySelectorAll('.rasa-pub-filter-btn');
+    var pubCards = document.querySelectorAll('.rasa-pub-card');
+    var countDisplay = document.getElementById('pub-count-display');
+    
+    var activeYear = 'all';
+    var activeSearch = '';
+
+    function updateFilters() {
+      var visibleCount = 0;
+      var totalCount = pubCards.length;
+
+      pubCards.forEach(function(card) {
+        var cardYear = card.getAttribute('data-year');
+        var cardText = card.getAttribute('data-search-text');
+        
+        var matchesYear = (activeYear === 'all' || cardYear === activeYear);
+        var matchesSearch = (activeSearch === '' || cardText.indexOf(activeSearch) !== -1);
+
+        if (matchesYear && matchesSearch) {
+          card.classList.remove('is-hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('is-hidden');
+        }
+      });
+
+      countDisplay.textContent = 'Showing ' + visibleCount + ' of ' + totalCount + ' publications';
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', function(e) {
+        activeSearch = e.target.value.toLowerCase().trim();
+        updateFilters();
+      });
+    }
+
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        activeYear = btn.getAttribute('data-filter');
+        updateFilters();
+      });
+    });
+  })();
+  </script>
+
+
   <section class="rasa-section rasa-section--ink" style="padding:6rem 0; text-align:center; background:var(--ink); border-top:1px solid var(--border);">
     <div class="container" style="max-width:720px;">
       <h2 class="rasa-h2" style="color:var(--cream); margin-bottom:1.25rem; max-width:28ch; margin-left:auto; margin-right:auto;">Need scientific guidance for your program?</h2>
