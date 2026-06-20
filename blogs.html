@@ -99,16 +99,95 @@
         <div class="rasa-reveal zoom-parent rasa-pagehero__art" data-delay="2"><img src="images/lab_collaboration.jpg" alt="Blog"></div>
       </div>
     </div>
-  </section>
+   <style>
+    @media (max-width: 992px) {
+      .rasa-featured-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+    }
+  </style>
   <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
-    <div class="container" style="max-width:760px; text-align:center;">
-      <span class="rasa-chip" style="margin-bottom:1.25rem;">Coming Soon</span>
-      <h2 class="rasa-h2" style="margin:0.5rem 0 1.25rem;">Our articles are on the way</h2>
-      <p style="color:var(--foreground-70); line-height:1.75; font-size:1.05rem; margin:0 auto 2rem; max-width:62ch;">We are putting together a blog with practical insights on bioinformatics workflows, sequencing technologies, in-silico drug discovery, and translational research. New articles are coming soon — explore our case studies while you wait.</p>
-      <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
-        <a href="case-studies.html" class="rasa-btn rasa-btn--primary" style="background:var(--leaf); color:var(--cream);">Browse Case Studies
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-        <a href="contact.html" class="rasa-btn rasa-btn--ghost">Talk to our team</a>
+    <div class="container">
+      <div class="rasa-reveal" style="margin-bottom:3rem;">
+        <span class="rasa-eyebrow">Featured Article</span>
+        <h2 class="rasa-h2" style="margin-top:1.25rem;">Latest Insights</h2>
+      </div>
+
+      <!-- Featured Blog Card -->
+      <div class="rasa-reveal" style="margin-bottom:5rem;">
+        <div class="rasa-featured-grid" style="display:grid; grid-template-columns:1.2fr 1fr; gap:3rem; background:var(--surface); border:1px solid var(--border); border-radius:1.25rem; overflow:hidden; box-shadow:var(--shadow-sm); transition:transform 0.3s, box-shadow 0.3s;">
+          <div style="position:relative; overflow:hidden; min-height:350px; background:#000;">
+            <img src="images/de_novo_design.jpg" alt="AI Drug Discovery" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.85;">
+          </div>
+          <div style="padding:3.5rem 2.5rem; display:flex; flex-direction:column; justify-content:center;">
+            <div style="display:flex; gap:0.75rem; align-items:center; margin-bottom:1.25rem; flex-wrap:wrap;">
+              <span class="rasa-chip" style="background:var(--leaf-soft); color:var(--leaf); margin:0;">AI Drug Discovery</span>
+              <span style="font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:var(--foreground-60);">June 20, 2026</span>
+              <span style="font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:var(--foreground-60);">· 8 min read</span>
+            </div>
+            <h3 class="rasa-h3" style="font-size:1.75rem; line-height:1.25; margin:0 0 1.25rem; font-weight:500; font-family:'Inter', sans-serif;">
+              <a href="blog-future-of-ai-in-drug-discovery.html" style="color:inherit; text-decoration:none; transition:color 0.2s;">AI-Powered Drug Discovery: Transforming Target Identification, Lead Discovery, and De Novo Drug Design</a>
+            </h3>
+            <p style="color:var(--foreground-70); line-height:1.7; font-size:0.95rem; margin:0 0 2rem;">
+              Developing a new therapeutic molecule typically requires more than a decade of research and billions of dollars in investment. Learn how artificial intelligence is transforming drug target identification, virtual screening, molecular docking, molecular dynamics, and generative de novo design.
+            </p>
+            <a href="blog-future-of-ai-in-drug-discovery.html" class="rasa-btn rasa-btn--primary" style="align-self:flex-start; background:var(--leaf); color:var(--cream); display:inline-flex; align-items:center; gap:0.5rem; padding:0.8rem 1.6rem; border-radius:8px; font-weight:600; font-size:0.9rem; text-decoration:none; transition:background-color 0.2s, transform 0.2s;">
+              Read Full Article
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="width:16px; height:16px; transition:transform 0.2s;"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upcoming Insights Section -->
+      <div class="rasa-reveal" style="margin-bottom:2.5rem;">
+        <span class="rasa-eyebrow">Coming Soon</span>
+        <h3 class="rasa-h2" style="margin-top:1rem; font-size:1.75rem;">Upcoming Research Topics</h3>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2rem;">
+        <!-- Card 1 -->
+        <div class="rasa-card rasa-reveal stagger-1" style="background:var(--surface); border:1px solid var(--border); border-radius:1rem; padding:2.25rem 2rem; display:flex; flex-direction:column;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.25rem;">
+            <span class="rasa-chip" style="background:rgba(139,195,74,0.08); color:rgb(139,195,74); margin:0;">Genomics &amp; NGS</span>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:0.7rem; color:var(--foreground-50); text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Coming Soon</span>
+          </div>
+          <h4 style="font-size:1.15rem; font-weight:600; line-height:1.35; margin:0 0 0.75rem; color:var(--foreground); font-family:'Inter', sans-serif;">Next-Generation Sequencing Data Quality Control: Best Practices for High-Throughput Pipelines</h4>
+          <p style="color:var(--foreground-60); font-size:0.9rem; line-height:1.6; margin:0 0 1.5rem;">A technical overview of quality assessment, adapter trimming, alignment statistics, and artifact filtering for DNA and RNA sequencing datasets.</p>
+          <span style="margin-top:auto; font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:var(--foreground-40); display:flex; align-items:center; gap:0.35rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px; height:14px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            July 2026 Release
+          </span>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="rasa-card rasa-reveal stagger-2" style="background:var(--surface); border:1px solid var(--border); border-radius:1rem; padding:2.25rem 2rem; display:flex; flex-direction:column;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.25rem;">
+            <span class="rasa-chip" style="background:var(--leaf-soft); color:var(--leaf); margin:0;">Drug Discovery</span>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:0.7rem; color:var(--foreground-50); text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Coming Soon</span>
+          </div>
+          <h4 style="font-size:1.15rem; font-weight:600; line-height:1.35; margin:0 0 0.75rem; color:var(--foreground); font-family:'Inter', sans-serif;">Network Pharmacology &amp; Systems Biology: Unravelling Multi-Target Mechanisms</h4>
+          <p style="color:var(--foreground-60); font-size:0.9rem; line-height:1.6; margin:0 0 1.5rem;">How systems biology networks help identify synergistic drug combinations and predict off-target toxicities in complex disease modules.</p>
+          <span style="margin-top:auto; font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:var(--foreground-40); display:flex; align-items:center; gap:0.35rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px; height:14px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            August 2026 Release
+          </span>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="rasa-card rasa-reveal stagger-3" style="background:var(--surface); border:1px solid var(--border); border-radius:1rem; padding:2.25rem 2rem; display:flex; flex-direction:column;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.25rem;">
+            <span class="rasa-chip" style="background:rgba(233,30,99,0.08); color:rgb(233,30,99); margin:0;">QSAR &amp; Toxicology</span>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:0.7rem; color:var(--foreground-50); text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Coming Soon</span>
+          </div>
+          <h4 style="font-size:1.15rem; font-weight:600; line-height:1.35; margin:0 0 0.75rem; color:var(--foreground); font-family:'Inter', sans-serif;">QSAR Modeling &amp; ICH M7 Qualification: Computational Toxicology Workflows</h4>
+          <p style="color:var(--foreground-60); font-size:0.9rem; line-height:1.6; margin:0 0 1.5rem;">Regulatory frameworks, consensus model predictions, and structural alerts evaluation for DNA-reactive mutagenic impurities.</p>
+          <span style="margin-top:auto; font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:var(--foreground-40); display:flex; align-items:center; gap:0.35rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px; height:14px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            September 2026 Release
+          </span>
+        </div>
       </div>
     </div>
   </section>
