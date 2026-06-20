@@ -339,10 +339,7 @@
       a.classList.remove('is-active');
       var href = a.getAttribute('href').split('#')[0].split('/').pop();
       if (href === page) a.classList.add('is-active');
-      if (page.indexOf('services-ngs-') === 0 && href === 'services-ngs.html') a.classList.add('is-active');
-      if (page.indexOf('services-dd-') === 0 && href === 'services-drug-discovery.html') a.classList.add('is-active');
-      if (page.indexOf('case-study-') === 0 && href === 'case-studies.html') a.classList.add('is-active');
-    });
+                      });
   } catch (e) {}
 
   // Reveal animations on scroll
