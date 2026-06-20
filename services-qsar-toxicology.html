@@ -114,6 +114,799 @@
       border-color: rgba(234, 88, 12, 0.4) !important;
       box-shadow: 0 12px 40px rgba(234, 88, 12, 0.08) !important;
     }
+
+    /* Fix descenders (like "g") clipping by ensuring proper line-height and bottom padding */
+    h1, h2, h3, h4, h5, h6, 
+    .rasa-h2, .rasa-pagehero__h, .rasa-class-title, .rasa-endpoint-title, 
+    .rasa-dual-title, .rasa-platform-title, .rasa-spec-title, 
+    .rasa-reg-card-title, .rasa-industry-title {
+      padding-bottom: 0.12em !important;
+      line-height: 1.25 !important;
+    }
+
+    /* Redesigned Regulatory Frameworks */
+    .rasa-frameworks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .rasa-framework-card {
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(234, 88, 12, 0.12) !important;
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01) !important;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .rasa-framework-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(200px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(234, 88, 12, 0.15), transparent 45%);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .rasa-framework-card:hover::before {
+      opacity: 1;
+    }
+    .rasa-framework-card:hover {
+      border-color: rgba(234, 88, 12, 0.45) !important;
+      box-shadow: 0 12px 30px rgba(234, 88, 12, 0.1) !important;
+    }
+    .rasa-framework-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: rgba(234, 88, 12, 0.08);
+      color: var(--leaf);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+    .rasa-framework-card:hover .rasa-framework-icon {
+      background: var(--leaf);
+      color: #ffffff;
+    }
+    .rasa-framework-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--foreground);
+      line-height: 1.35;
+    }
+
+    /* Redesigned Impurity Assessment Workflow */
+    .rasa-assessment-process {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .rasa-process-step {
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(234, 88, 12, 0.12) !important;
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .rasa-process-step::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(220px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(234, 88, 12, 0.15), transparent 45%);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .rasa-process-step:hover::before {
+      opacity: 1;
+    }
+    .rasa-process-step:hover {
+      border-color: rgba(234, 88, 12, 0.45) !important;
+      box-shadow: 0 12px 30px rgba(234, 88, 12, 0.08) !important;
+    }
+    .rasa-step-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2.25rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--leaf), var(--leaf-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.8;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+    .rasa-step-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--foreground);
+      margin-bottom: 0.5rem;
+    }
+    .rasa-step-desc {
+      font-size: 0.9rem;
+      color: var(--foreground-70);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Redesigned Classification Row */
+    .rasa-classification-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 992px) {
+      .rasa-classification-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .rasa-classification-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .rasa-classification-card {
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(234, 88, 12, 0.12) !important;
+      border-radius: 12px;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .rasa-classification-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(150px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(234, 88, 12, 0.15), transparent 45%);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .rasa-classification-card:hover::before {
+      opacity: 1;
+    }
+    .rasa-classification-card:hover {
+      border-color: rgba(234, 88, 12, 0.45) !important;
+      box-shadow: 0 12px 30px rgba(234, 88, 12, 0.1) !important;
+    }
+    .rasa-class-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--leaf-soft), rgba(234, 88, 12, 0.15)) !important;
+      border: 1.5px solid rgba(234, 88, 12, 0.3) !important;
+      color: var(--leaf) !important;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.35rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+    .rasa-classification-card:hover .rasa-class-badge {
+      background: linear-gradient(135deg, var(--leaf), var(--leaf-accent)) !important;
+      border-color: var(--leaf) !important;
+      color: #ffffff !important;
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
+    }
+    .rasa-class-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--foreground);
+      margin-bottom: 0.5rem;
+    }
+    .rasa-class-desc {
+      font-size: 0.85rem;
+      color: var(--foreground-70);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* Redesigned Endpoints Grouping */
+    .rasa-endpoints-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .rasa-endpoints-card {
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(234, 88, 12, 0.12) !important;
+      border-radius: 14px;
+      padding: 1.75rem 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .rasa-endpoints-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(200px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(234, 88, 12, 0.15), transparent 45%);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .rasa-endpoints-card:hover::before {
+      opacity: 1;
+    }
+    .rasa-endpoints-card:hover {
+      border-color: rgba(234, 88, 12, 0.45) !important;
+      box-shadow: 0 12px 30px rgba(234, 88, 12, 0.08) !important;
+    }
+    .rasa-endpoint-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid rgba(234, 88, 12, 0.1);
+      padding-bottom: 0.75rem;
+    }
+    .rasa-endpoint-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: rgba(234, 88, 12, 0.08);
+      color: var(--leaf);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+    .rasa-endpoints-card:hover .rasa-endpoint-icon {
+      background: var(--leaf);
+      color: #ffffff;
+    }
+    .rasa-endpoint-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--foreground);
+      margin: 0;
+    }
+    .rasa-endpoint-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .rasa-endpoint-list li {
+      font-size: 0.9rem;
+      color: var(--foreground-70);
+      position: relative;
+      padding-left: 1.25rem;
+      line-height: 1.45;
+    }
+    .rasa-endpoint-list li::before {
+      content: '•';
+      color: var(--leaf);
+      font-size: 1.1rem;
+      position: absolute;
+      left: 0.25rem;
+      top: -0.1rem;
+    }
+
+    /* Redesigned Dual QSAR Strategy */
+    .rasa-dual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      .rasa-dual-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .rasa-dual-card {
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(234, 88, 12, 0.12) !important;
+      border-radius: 16px;
+      padding: 2.25rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02) !important;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+    }
+    .rasa-dual-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(234, 88, 12, 0.15), transparent 45%);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .rasa-dual-card:hover::before {
+      opacity: 1;
+    }
+    .rasa-dual-card:hover {
+      border-color: rgba(234, 88, 12, 0.45) !important;
+      box-shadow: 0 16px 40px rgba(234, 88, 12, 0.1) !important;
+    }
+    .rasa-dual-icon-wrap {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      background: rgba(234, 88, 12, 0.08);
+      color: var(--leaf);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .rasa-dual-card:hover .rasa-dual-icon-wrap {
+      background: var(--leaf);
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+    .rasa-dual-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--foreground);
+      margin-bottom: 0.75rem;
+    }
+    .rasa-dual-desc {
+      font-size: 0.95rem;
+      color: var(--foreground-70);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    .rasa-dual-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .rasa-dual-feat-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--leaf);
+      background: var(--leaf-soft);
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      border: 1px solid rgba(234, 88, 12, 0.15);
+    }
+
+    /* Redesigned Platforms Display */
+    .rasa-platforms-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 992px) {
+      .rasa-platforms-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .rasa-platform-card {
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(234, 88, 12, 0.12) !important;
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+    }
+    .rasa-platform-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(250px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(234, 88, 12, 0.15), transparent 45%);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .rasa-platform-card:hover::before {
+      opacity: 1;
+    }
+    .rasa-platform-card:hover {
+      border-color: rgba(234, 88, 12, 0.45) !important;
+      box-shadow: 0 12px 30px rgba(234, 88, 12, 0.08) !important;
+    }
+    .rasa-platform-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--foreground);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .rasa-platform-title-icon {
+      color: var(--leaf);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .rasa-platform-tools {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .rasa-platform-tool-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .rasa-platform-tool-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, var(--leaf), var(--leaf-accent));
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(234, 88, 12, 0.2);
+    }
+    .rasa-platform-tool-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+    .rasa-platform-tool-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--foreground);
+      line-height: 1.2;
+    }
+    .rasa-platform-tool-desc {
+      font-size: 0.8rem;
+      color: var(--foreground-60);
+      line-height: 1.35;
+    }
+
+    /* Redesigned Specialized Combined Assessments */
+    .rasa-specialized-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 992px) {
+      .rasa-specialized-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .rasa-specialized-card {
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(234, 88, 12, 0.12) !important;
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02) !important;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+    }
+    .rasa-specialized-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(350px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(234, 88, 12, 0.15), transparent 45%);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .rasa-specialized-card:hover::before {
+      opacity: 1;
+    }
+    .rasa-specialized-card:hover {
+      border-color: rgba(234, 88, 12, 0.45) !important;
+      box-shadow: 0 16px 40px rgba(234, 88, 12, 0.1) !important;
+    }
+    .rasa-spec-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid rgba(234, 88, 12, 0.1);
+      padding-bottom: 1rem;
+    }
+    .rasa-spec-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: rgba(234, 88, 12, 0.08);
+      color: var(--leaf);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+    .rasa-specialized-card:hover .rasa-spec-icon {
+      background: var(--leaf);
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+    .rasa-spec-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--foreground);
+      margin: 0;
+    }
+    .rasa-spec-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .rasa-spec-subgroup h4 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--leaf);
+      margin: 0 0 0.75rem 0;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .rasa-spec-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .rasa-spec-list li {
+      font-size: 0.925rem;
+      color: var(--foreground-80);
+      position: relative;
+      padding-left: 1.5rem;
+      line-height: 1.45;
+    }
+    .rasa-spec-list li::before {
+      content: '✓';
+      color: var(--leaf);
+      font-weight: bold;
+      position: absolute;
+      left: 0.1rem;
+      top: 0;
+    }
+
+    /* Redesigned Regulatory Documentation & Agency Grid */
+    .rasa-reg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      .rasa-reg-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .rasa-reg-card {
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(234, 88, 12, 0.12) !important;
+      border-radius: 16px;
+      padding: 2.25rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02) !important;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .rasa-reg-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(280px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(234, 88, 12, 0.15), transparent 45%);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .rasa-reg-card:hover::before {
+      opacity: 1;
+    }
+    .rasa-reg-card:hover {
+      border-color: rgba(234, 88, 12, 0.45) !important;
+      box-shadow: 0 14px 35px rgba(234, 88, 12, 0.09) !important;
+    }
+    .rasa-reg-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(234, 88, 12, 0.1);
+      padding-bottom: 1rem;
+    }
+    .rasa-reg-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: rgba(234, 88, 12, 0.08);
+      color: var(--leaf);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+    .rasa-reg-card:hover .rasa-reg-card-icon {
+      background: var(--leaf);
+      color: #ffffff;
+    }
+    .rasa-reg-card-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--foreground);
+      margin: 0;
+    }
+    .rasa-reg-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .rasa-reg-chip {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--foreground-80);
+      background: rgba(255, 255, 255, 0.9) !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .rasa-reg-card:hover .rasa-reg-chip {
+      border-color: rgba(234, 88, 12, 0.18) !important;
+      background: #ffffff !important;
+    }
+    .rasa-reg-chip:hover {
+      background: var(--leaf-soft) !important;
+      color: var(--leaf) !important;
+      border-color: var(--leaf) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(234, 88, 12, 0.12) !important;
+    }
+
+    /* Redesigned Industries Grid */
+    .rasa-industries-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 992px) {
+      .rasa-industries-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .rasa-industries-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .rasa-industry-card {
+      background: rgba(255, 255, 255, 0.72) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(234, 88, 12, 0.12) !important;
+      border-radius: 14px;
+      padding: 2.25rem 1.75rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .rasa-industry-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(220px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(234, 88, 12, 0.15), transparent 45%);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .rasa-industry-card:hover::before {
+      opacity: 1;
+    }
+    .rasa-industry-card:hover {
+      border-color: rgba(234, 88, 12, 0.45) !important;
+      box-shadow: 0 12px 30px rgba(234, 88, 12, 0.08) !important;
+    }
+    .rasa-industry-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background: rgba(234, 88, 12, 0.08);
+      color: var(--leaf);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .rasa-industry-card:hover .rasa-industry-icon {
+      background: var(--leaf);
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+    .rasa-industry-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--foreground);
+      margin-bottom: 0.75rem;
+    }
+    .rasa-industry-desc {
+      font-size: 0.9rem;
+      color: var(--foreground-70);
+      line-height: 1.5;
+      margin: 0;
+    }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"QSAR Toxicology & ICH M7 Impurity Assessment","serviceType":"QSAR Toxicology & ICH M7 Impurity Assessment","provider":{"@type":"Organization","name":"RASA Life Science Informatics","url":"https://www.rasalsi.com/","areaServed":"Worldwide","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"}},"description":"QSAR modeling, ICH M7 mutagenic impurity assessment, nitrosamine risk evaluation, extractables & leachables, and regulatory toxicology reporting for pharma, biotech, API manufacturers, CDMOs and CROs worldwide."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is QSAR and how is it used in drug discovery?","acceptedAnswer":{"@type":"Answer","text":"Quantitative Structure–Activity Relationship (QSAR) modeling is a computational approach that predicts the biological activity, toxicity, and physicochemical properties of chemical compounds based on their molecular structure. QSAR models help researchers evaluate compound safety and efficacy before experimental testing, reducing development costs and accelerating drug discovery. QSAR is widely used in pharmaceutical research, chemical safety assessment, regulatory submissions, impurity evaluation, and environmental risk assessment."}},{"@type":"Question","name":"What QSAR and Regulatory Toxicology services does RASA provide?","acceptedAnswer":{"@type":"Answer","text":"RASA Life Science Informatics offers comprehensive computational toxicology and regulatory assessment services, including: QSAR Modeling Mutagenicity Prediction Carcinogenicity Assessment Skin Sensitization Analysis Genotoxicity Evaluation Reproductive Toxicity Prediction Developmental Toxicity Assessment Environmental Toxicity Prediction Endocrine Disruption Screening ADMET Prediction Regulatory Risk Assessment ICH M7 Compliance Support Nitrosamine Risk Assessment Our workflows support pharmaceutical companies, biotechnology organizations, CROs, chemical manufacturers, and regulatory research programs."}},{"@type":"Question","name":"What is Computational Toxicology?","acceptedAnswer":{"@type":"Answer","text":"Computational Toxicology uses bioinformatics, cheminformatics, machine learning, and predictive modeling to evaluate the safety profile of chemicals, pharmaceutical compounds, impurities, and metabolites. By predicting toxicological endpoints before laboratory testing, computational toxicology helps organizations: Reduce experimental costs Accelerate safety assessments Support regulatory submissions Prioritize safer compounds Improve decision-making in drug development"}},{"@type":"Question","name":"What is QSAR Modeling?","acceptedAnswer":{"@type":"Answer","text":"QSAR Modeling establishes mathematical relationships between chemical structure and biological activity. These models use molecular descriptors, fingerprints, and machine learning algorithms to predict: Toxicity Mutagenicity Carcinogenicity Bioavailability Environmental Impact Drug-Likeness QSAR models are recognized by regulatory agencies worldwide and are commonly used in pharmaceutical and chemical safety evaluations."}},{"@type":"Question","name":"What is Mutagenicity Assessment?","acceptedAnswer":{"@type":"Answer","text":"Mutagenicity assessment evaluates the likelihood that a chemical compound may cause genetic mutations. Computational mutagenicity prediction is particularly important for pharmaceutical impurities, degradation products, metabolites, and new chemical entities. These analyses help support regulatory compliance and early-stage safety evaluation."}},{"@type":"Question","name":"What is Carcinogenicity Assessment?","acceptedAnswer":{"@type":"Answer","text":"Carcinogenicity assessment predicts whether a compound has the potential to contribute to cancer development through long-term exposure. Computational carcinogenicity models help researchers identify high-risk compounds before advancing them into costly experimental studies."}},{"@type":"Question","name":"What is Skin Sensitization Analysis?","acceptedAnswer":{"@type":"Answer","text":"Skin sensitization analysis evaluates the potential of a compound to trigger allergic skin reactions after repeated exposure. This assessment is widely used in pharmaceutical development, cosmetics research, personal care products, and chemical safety programs."}},{"@type":"Question","name":"What is Environmental Toxicity Prediction?","acceptedAnswer":{"@type":"Answer","text":"Environmental toxicity prediction evaluates the potential ecological impact of chemicals and pharmaceutical compounds on aquatic and terrestrial ecosystems. Common endpoints include: Aquatic Toxicity Fish Toxicity Algae Toxicity Daphnia Toxicity Bioaccumulation Potential Environmental Persistence These analyses support environmental risk assessments and regulatory submissions."}},{"@type":"Question","name":"Do you support ICH M7 assessments?","acceptedAnswer":{"@type":"Answer","text":"Yes. RASA provides comprehensive ICH M7 compliance support for pharmaceutical organizations. Our services include: ICH M7 Impurity Evaluation Mutagenic Impurity Assessment Structure–Activity Relationship Analysis Nitrosamine Risk Assessment Regulatory Toxicological Assessment Impurity Qualification Support Expert Review Documentation These assessments help pharmaceutical companies meet global regulatory requirements."}},{"@type":"Question","name":"What is ICH M7?","acceptedAnswer":{"@type":"Answer","text":"ICH M7 is an internationally recognized regulatory guideline that addresses the assessment and control of DNA-reactive (mutagenic) impurities in pharmaceutical products. The guideline recommends the use of computational toxicology methods, including QSAR modeling, to evaluate impurity-related mutagenic risks. ICH M7 compliance is required by many regulatory agencies worldwide, including the FDA, EMA, MHRA, and PMDA."}},{"@type":"Question","name":"What is Nitrosamine Risk Assessment?","acceptedAnswer":{"@type":"Answer","text":"Nitrosamine Risk Assessment evaluates the potential presence and toxicity of nitrosamine impurities in pharmaceutical products. Due to recent global regulatory concerns, nitrosamine evaluation has become a critical component of pharmaceutical quality and safety programs. Our workflows support: Nitrosamine Identification Risk Ranking Structural Assessment Regulatory Documentation Toxicological Evaluation"}},{"@type":"Question","name":"What is ADMET prediction?","acceptedAnswer":{"@type":"Answer","text":"ADMET stands for: Absorption Distribution Metabolism Excretion Toxicity ADMET prediction helps researchers evaluate drug-like properties and safety risks early in the discovery process. Computational ADMET assessment can significantly reduce late-stage failures by identifying compounds with unfavorable pharmacokinetic or toxicological profiles."}},{"@type":"Question","name":"Which software platforms and tools do you use?","acceptedAnswer":{"@type":"Answer","text":"Our toxicology workflows utilize industry-leading platforms including: Regulatory Toxicology OECD QSAR Toolbox VEGA Toxtree Lazar ADMET Prediction SwissADME pkCSM ADMETlab ProTox-II Cheminformatics RDKit Open Babel KNIME Machine Learning &amp; AI Scikit-Learn TensorFlow DeepChem"}},{"@type":"Question","name":"What data is required for QSAR and Toxicology assessment?","acceptedAnswer":{"@type":"Answer","text":"We commonly work with: Chemical Structures (SMILES) SDF Files MOL Files Drug Candidates Pharmaceutical Impurities Metabolites Degradation Products Environmental Chemicals Our team can assist in preparing and standardizing chemical structures before analysis."}},{"@type":"Question","name":"What deliverables are included in QSAR and Regulatory Toxicology projects?","acceptedAnswer":{"@type":"Answer","text":"Typical project deliverables include: QSAR Prediction Reports Mutagenicity Assessments Carcinogenicity Evaluations Skin Sensitization Reports ADMET Profiles Environmental Toxicity Reports ICH M7 Assessment Reports Nitrosamine Risk Assessments Regulatory Documentation Support Publication-Ready Figures Comprehensive Scientific Reports Deliverables can be customized according to project objectives and regulatory requirements."}},{"@type":"Question","name":"Which industries benefit from QSAR and Regulatory Toxicology services?","acceptedAnswer":{"@type":"Answer","text":"Our services support: Pharmaceutical Companies Biotechnology Organizations CROs Chemical Manufacturers Cosmetic Companies Agrochemical Companies Regulatory Research Programs Environmental Safety Organizations These industries rely on predictive toxicology to improve safety assessments and accelerate regulatory decision-making."}},{"@type":"Question","name":"Why choose RASA for QSAR and Regulatory Toxicology?","acceptedAnswer":{"@type":"Answer","text":"RASA combines expertise in computational toxicology, cheminformatics, regulatory science, machine learning, and drug discovery to deliver scientifically rigorous and regulatory-ready toxicological assessments. Our workflows support global regulatory compliance, early safety evaluation, impurity qualification, and risk assessment programs while reducing reliance on costly experimental testing. 📧 info@rasalifesciences.com 🌐 www.rasalifesciences.com"}}]}]}</script>
 </head>
@@ -259,32 +1052,46 @@
       </div>
     </div>
   </section>
-<section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
-  <div class="container">
-    <div class="rasa-reveal" style="margin-bottom:3rem;">
-      <span class="rasa-eyebrow">Compliance</span>
-      <h2 class="rasa-h2" style="margin-top:1.25rem;">Regulatory Frameworks We Support</h2>
-    </div>
-    <div class="rasa-chips rasa-chips--lg"><span class="rasa-chip">ICH Guidelines</span><span class="rasa-chip">US FDA Regulations</span><span class="rasa-chip">EMA Requirements</span><span class="rasa-chip">MHRA Expectations</span><span class="rasa-chip">PMDA Standards</span><span class="rasa-chip">WHO Guidelines</span><span class="rasa-chip">Global GMP Compliance</span></div>
-  </div>
-</section>
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border); background:var(--surface);">
   <div class="container">
     <div class="rasa-reveal" style="margin-bottom:3rem;">
-      <span class="rasa-eyebrow">Service Offerings</span>
+      <span class="rasa-eyebrow">Service Workflow</span>
       <h2 class="rasa-h2" style="margin-top:1.25rem;">ICH M7 Mutagenic Impurity Assessment</h2>
+      <p style="color:var(--foreground-70); max-width:65ch; margin:1rem 0 0 0; font-size:1rem; line-height:1.6;">A structured computational toxicology workflow to identify, evaluate, and classify mutagenic impurities in drug substances.</p>
     </div>
     
-  <div class="rasa-checkgrid">
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Structural alert identification</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Expert review of mutagenic potential</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Dual QSAR assessment</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Weight-of-evidence analysis</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Impurity classification (Class 1–5)</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>TTC-based risk assessment</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Control strategy recommendations</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Regulatory-ready documentation</span></div>
-  </div>
+    <div class="rasa-assessment-process">
+      <div class="rasa-process-step rasa-reveal" data-delay="1">
+        <span class="rasa-step-num">01</span>
+        <h3 class="rasa-step-title">Structural Alert Identification</h3>
+        <p class="rasa-step-desc">Advanced screening of chemical structures to identify molecular alerts associated with DNA reactivity.</p>
+      </div>
+      <div class="rasa-process-step rasa-reveal" data-delay="2">
+        <span class="rasa-step-num">02</span>
+        <h3 class="rasa-step-title">Dual QSAR Assessment</h3>
+        <p class="rasa-step-desc">Parallel evaluation using complementary expert rule-based and machine-learning statistical models.</p>
+      </div>
+      <div class="rasa-process-step rasa-reveal" data-delay="3">
+        <span class="rasa-step-num">03</span>
+        <h3 class="rasa-step-title">Weight-of-Evidence &amp; Expert Review</h3>
+        <p class="rasa-step-desc">Rigorous scientific analysis to resolve conflicting predictions and finalize toxicological safety conclusions.</p>
+      </div>
+      <div class="rasa-process-step rasa-reveal" data-delay="1">
+        <span class="rasa-step-num">04</span>
+        <h3 class="rasa-step-title">Impurity Classification (Class 1–5)</h3>
+        <p class="rasa-step-desc">Categorization of impurities according to the established ICH M7 toxicity classes.</p>
+      </div>
+      <div class="rasa-process-step rasa-reveal" data-delay="2">
+        <span class="rasa-step-num">05</span>
+        <h3 class="rasa-step-title">TTC-Based Risk Assessment</h3>
+        <p class="rasa-step-desc">Determining Threshold of Toxicological Concern (TTC) exposure levels and acceptable daily intake limits.</p>
+      </div>
+      <div class="rasa-process-step rasa-reveal" data-delay="3">
+        <span class="rasa-step-num">06</span>
+        <h3 class="rasa-step-title">Control Strategy &amp; Support</h3>
+        <p class="rasa-step-desc">Formulating audit-ready regulatory reports and mitigation strategies for submission packages.</p>
+      </div>
+    </div>
   </div>
 </section>
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
@@ -292,39 +1099,35 @@
     <div class="rasa-reveal" style="margin-bottom:3rem;">
       <span class="rasa-eyebrow">Classification</span>
       <h2 class="rasa-h2" style="margin-top:1.25rem;">ICH M7 Impurity Classification</h2>
+      <p style="color:var(--foreground-70); max-width:65ch; margin:1rem 0 0 0; font-size:1rem; line-height:1.6;">A structured grouping of impurities to determine appropriate threshold limits for toxicological control.</p>
     </div>
-    <div class="rasa-capabilities">
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Class 1</h3>
-      <p class="rasa-capability__b">Known mutagenic carcinogens.</p>
-      
+    <div class="rasa-classification-grid">
+      <div class="rasa-classification-card rasa-reveal" data-delay="1">
+        <div class="rasa-class-badge">1</div>
+        <h3 class="rasa-class-title">Class 1</h3>
+        <p class="rasa-class-desc">Known mutagenic carcinogens.</p>
+      </div>
+      <div class="rasa-classification-card rasa-reveal" data-delay="2">
+        <div class="rasa-class-badge">2</div>
+        <h3 class="rasa-class-title">Class 2</h3>
+        <p class="rasa-class-desc">Known mutagens with unknown carcinogenicity.</p>
+      </div>
+      <div class="rasa-classification-card rasa-reveal" data-delay="3">
+        <div class="rasa-class-badge">3</div>
+        <h3 class="rasa-class-title">Class 3</h3>
+        <p class="rasa-class-desc">Alerting structures structurally unrelated to the API.</p>
+      </div>
+      <div class="rasa-classification-card rasa-reveal" data-delay="4">
+        <div class="rasa-class-badge">4</div>
+        <h3 class="rasa-class-title">Class 4</h3>
+        <p class="rasa-class-desc">Alerting structures with evidence of non-mutagenicity.</p>
+      </div>
+      <div class="rasa-classification-card rasa-reveal" data-delay="5">
+        <div class="rasa-class-badge">5</div>
+        <h3 class="rasa-class-title">Class 5</h3>
+        <p class="rasa-class-desc">No structural alerts or sufficient evidence of safety.</p>
+      </div>
     </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Class 2</h3>
-      <p class="rasa-capability__b">Known mutagens with unknown carcinogenicity.</p>
-      
-    </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Class 3</h3>
-      <p class="rasa-capability__b">Alerting structures, structurally unrelated to the API, with insufficient data.</p>
-      
-    </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Class 4</h3>
-      <p class="rasa-capability__b">Alerting structures with sufficient evidence of non-mutagenicity.</p>
-      
-    </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Class 5</h3>
-      <p class="rasa-capability__b">No structural alerts or sufficient evidence of safety.</p>
-      
-    </div>
-  </div>
   </div>
 </section>
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border); background:var(--surface);">
@@ -332,8 +1135,66 @@
     <div class="rasa-reveal" style="margin-bottom:3rem;">
       <span class="rasa-eyebrow">Endpoints</span>
       <h2 class="rasa-h2" style="margin-top:1.25rem;">QSAR Toxicology Endpoints Evaluated</h2>
+      <p style="color:var(--foreground-70); max-width:65ch; margin:1rem 0 0 0; font-size:1rem; line-height:1.6;">Key endpoints assessed through our computational pipelines to establish chemical and drug safety profiles.</p>
     </div>
-    <div class="rasa-chips rasa-chips--lg"><span class="rasa-chip">Ames mutagenicity</span><span class="rasa-chip">Genotoxicity</span><span class="rasa-chip">Carcinogenicity</span><span class="rasa-chip">Hepatotoxicity</span><span class="rasa-chip">Developmental toxicity</span><span class="rasa-chip">Reproductive toxicity</span><span class="rasa-chip">Skin sensitization</span><span class="rasa-chip">Organ toxicity</span><span class="rasa-chip">Endocrine disruption</span><span class="rasa-chip">Ecotoxicity screening</span></div>
+    
+    <div class="rasa-endpoints-grid">
+      <div class="rasa-endpoints-card rasa-reveal" data-delay="1">
+        <div class="rasa-endpoint-header">
+          <span class="rasa-endpoint-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px;"><path d="m8 8 8 8"/><path d="m9 12 6-6"/><path d="m12 15 3-3"/><path d="m15 6 1-1"/><path d="M18 3a2.2 2.2 0 0 0-3 0l-9 9a4.2 4.2 0 0 0 0 6 2.2 2.2 0 0 0 3 0l9-9a4.2 4.2 0 0 0 0-6Z"/><path d="m3 18 1-1"/><path d="m6 15 3-3"/></svg>
+          </span>
+          <h3 class="rasa-endpoint-title">Genotoxicity &amp; Mutagenicity</h3>
+        </div>
+        <ul class="rasa-endpoint-list">
+          <li>Ames Mutagenicity Alert</li>
+          <li>In Vitro Genotoxicity</li>
+          <li>In Vivo Genotoxicity</li>
+        </ul>
+      </div>
+
+      <div class="rasa-endpoints-card rasa-reveal" data-delay="2">
+        <div class="rasa-endpoint-header">
+          <span class="rasa-endpoint-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <h3 class="rasa-endpoint-title">Systemic &amp; Organ Toxicity</h3>
+        </div>
+        <ul class="rasa-endpoint-list">
+          <li>Hepatotoxicity Assessment</li>
+          <li>Organ-Specific Toxicity</li>
+          <li>Endocrine Disruption Screening</li>
+        </ul>
+      </div>
+
+      <div class="rasa-endpoints-card rasa-reveal" data-delay="3">
+        <div class="rasa-endpoint-header">
+          <span class="rasa-endpoint-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </span>
+          <h3 class="rasa-endpoint-title">Developmental &amp; Skin</h3>
+        </div>
+        <ul class="rasa-endpoint-list">
+          <li>Developmental Toxicity</li>
+          <li>Reproductive Toxicity</li>
+          <li>Skin Sensitization</li>
+        </ul>
+      </div>
+
+      <div class="rasa-endpoints-card rasa-reveal" data-delay="4">
+        <div class="rasa-endpoint-header">
+          <span class="rasa-endpoint-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px;"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+          </span>
+          <h3 class="rasa-endpoint-title">Environmental &amp; Other</h3>
+        </div>
+        <ul class="rasa-endpoint-list">
+          <li>Carcinogenicity Potential</li>
+          <li>Ecotoxicity Screening</li>
+          <li>Aquatic &amp; Soil Toxicity</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
@@ -341,108 +1202,339 @@
     <div class="rasa-reveal" style="margin-bottom:3rem;">
       <span class="rasa-eyebrow">Methodology</span>
       <h2 class="rasa-h2" style="margin-top:1.25rem;">Dual QSAR Assessment Strategy</h2>
+      <p style="color:var(--foreground-70); max-width:65ch; margin:1rem 0 0 0; font-size:1rem; line-height:1.6;">Our dual-methodology framework utilizes parallel prediction models to increase accuracy and meet regulatory requirements.</p>
     </div>
-    <div class="rasa-capabilities">
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Rule-Based Modeling</h3>
-      <p class="rasa-capability__b">Expert knowledge systems to identify structural alerts and mechanistic toxicological concerns.</p>
-      
+    <div class="rasa-dual-grid">
+      <div class="rasa-dual-card rasa-reveal" data-delay="1">
+        <div class="rasa-dual-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:26px; height:26px;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="rasa-dual-title">Rule-Based Modeling</h3>
+        <p class="rasa-dual-desc">Expert knowledge-based systems (e.g., Derek Nexus, Toxtree) that scan chemical structures to identify molecular alerts associated with specific toxicological reactivities and endpoints.</p>
+        <div class="rasa-dual-features">
+          <span class="rasa-dual-feat-tag">Structural Alerts</span>
+          <span class="rasa-dual-feat-tag">Organic Chemistry Rules</span>
+          <span class="rasa-dual-feat-tag">Mechanistic Explanations</span>
+        </div>
+      </div>
+      <div class="rasa-dual-card rasa-reveal" data-delay="2">
+        <div class="rasa-dual-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:26px; height:26px;"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        </div>
+        <h3 class="rasa-dual-title">Statistical-Based Modeling</h3>
+        <p class="rasa-dual-desc">Machine learning algorithms (e.g., Leadscope, Sarah Nexus) trained on large, standardized datasets that predict toxicological outcomes by quantifying structural similarities.</p>
+        <div class="rasa-dual-features">
+          <span class="rasa-dual-feat-tag">Machine Learning</span>
+          <span class="rasa-dual-feat-tag">Similarity Metrics</span>
+          <span class="rasa-dual-feat-tag">Quantitative Predictions</span>
+        </div>
+      </div>
     </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Statistical-Based Modeling</h3>
-      <p class="rasa-capability__b">Machine learning and data-driven predictive toxicology models for risk estimation.</p>
-      
-    </div>
-  </div>
   </div>
 </section>
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border); background:var(--surface);">
   <div class="container">
     <div class="rasa-reveal" style="margin-bottom:3rem;">
-      <span class="rasa-eyebrow">Technology</span>
+      <span class="rasa-eyebrow">Technology Suite</span>
       <h2 class="rasa-h2" style="margin-top:1.25rem;">Supported Toxicology Platforms</h2>
+      <p style="color:var(--foreground-70); max-width:65ch; margin:1rem 0 0 0; font-size:1rem; line-height:1.6;">Our workflows integrate industry-leading computational platforms and algorithms to deliver robust, compliant assessments.</p>
     </div>
-    <div class="rasa-techstack">
-        <div class="rasa-techcat rasa-reveal">
-          <h3 class="rasa-techcat__h"><span class="rasa-techcat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>Regulatory QSAR Platforms</h3>
-          <div class="rasa-techcat__grid"><div class="rasa-tool"><span class="rasa-tool__mono">OQ</span><span class="rasa-tool__name">OECD QSAR Toolbox</span></div><div class="rasa-tool"><span class="rasa-tool__mono">VE</span><span class="rasa-tool__name">VEGA</span></div><div class="rasa-tool"><span class="rasa-tool__mono">TO</span><span class="rasa-tool__name">Toxtree</span></div><div class="rasa-tool"><span class="rasa-tool__mono">LA</span><span class="rasa-tool__name">Lazar</span></div><div class="rasa-tool"><span class="rasa-tool__mono">DS</span><span class="rasa-tool__name">Danish (Q)SAR Database</span></div></div>
-        </div>
-        <div class="rasa-techcat rasa-reveal">
-          <h3 class="rasa-techcat__h"><span class="rasa-techcat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>Commercial Toxicology Platforms</h3>
-          <div class="rasa-techcat__grid"><div class="rasa-tool"><span class="rasa-tool__mono">LE</span><span class="rasa-tool__name">Leadscope</span></div><div class="rasa-tool"><span class="rasa-tool__mono">CU</span><span class="rasa-tool__name">CASE Ultra</span></div><div class="rasa-tool"><span class="rasa-tool__mono">DN</span><span class="rasa-tool__name">Derek Nexus</span></div><div class="rasa-tool"><span class="rasa-tool__mono">SN</span><span class="rasa-tool__name">Sarah Nexus</span></div></div>
-        </div>
-        <div class="rasa-techcat rasa-reveal">
-          <h3 class="rasa-techcat__h"><span class="rasa-techcat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>AI-Assisted Frameworks</h3>
-          <div class="rasa-techcat__grid"><div class="rasa-tool"><span class="rasa-tool__mono">ML</span><span class="rasa-tool__name">Machine learning toxicity prediction</span></div><div class="rasa-tool"><span class="rasa-tool__mono">RA</span><span class="rasa-tool__name">Read-across modeling</span></div><div class="rasa-tool"><span class="rasa-tool__mono">SS</span><span class="rasa-tool__name">Structural similarity analysis</span></div><div class="rasa-tool"><span class="rasa-tool__mono">PT</span><span class="rasa-tool__name">Predictive toxicology workflows</span></div></div>
+    <div class="rasa-platforms-grid">
+      <div class="rasa-platform-card rasa-reveal" data-delay="1">
+        <h3 class="rasa-platform-title">
+          <span class="rasa-platform-title-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px;"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </span>
+          Regulatory QSAR
+        </h3>
+        <div class="rasa-platform-tools">
+          <div class="rasa-platform-tool-row">
+            <span class="rasa-platform-tool-badge">OQ</span>
+            <div class="rasa-platform-tool-info">
+              <span class="rasa-platform-tool-name">OECD QSAR Toolbox</span>
+              <span class="rasa-platform-tool-desc">Standard for chemical hazard screening and read-across.</span>
+            </div>
+          </div>
+          <div class="rasa-platform-tool-row">
+            <span class="rasa-platform-tool-badge">VE</span>
+            <div class="rasa-platform-tool-info">
+              <span class="rasa-platform-tool-name">VEGA</span>
+              <span class="rasa-platform-tool-desc">Consensus predictions based on international data sets.</span>
+            </div>
+          </div>
+          <div class="rasa-platform-tool-row">
+            <span class="rasa-platform-tool-badge">TO</span>
+            <div class="rasa-platform-tool-info">
+              <span class="rasa-platform-tool-name">Toxtree</span>
+              <span class="rasa-platform-tool-desc">Rule-based decision tree alerts for toxic hazards.</span>
+            </div>
+          </div>
+          <div class="rasa-platform-tool-row">
+            <span class="rasa-platform-tool-badge">LA</span>
+            <div class="rasa-platform-tool-info">
+              <span class="rasa-platform-tool-name">Lazar</span>
+              <span class="rasa-platform-tool-desc">Statistical models with clear explanation paths.</span>
+            </div>
+          </div>
+          <div class="rasa-platform-tool-row">
+            <span class="rasa-platform-tool-badge">DS</span>
+            <div class="rasa-platform-tool-info">
+              <span class="rasa-platform-tool-name">Danish (Q)SAR DB</span>
+              <span class="rasa-platform-tool-desc">Toxicity predictions for 600k+ chemicals.</span>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div class="rasa-platform-card rasa-reveal" data-delay="2">
+        <h3 class="rasa-platform-title">
+          <span class="rasa-platform-title-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px;"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </span>
+          Commercial QSAR
+        </h3>
+        <div class="rasa-platform-tools">
+          <div class="rasa-platform-tool-row">
+            <span class="rasa-platform-tool-badge">LE</span>
+            <div class="rasa-platform-tool-info">
+              <span class="rasa-platform-tool-name">Leadscope</span>
+              <span class="rasa-platform-tool-desc">Integrated databases and model suites for compliance.</span>
+            </div>
+          </div>
+          <div class="rasa-platform-tool-row">
+            <span class="rasa-platform-tool-badge">CU</span>
+            <div class="rasa-platform-tool-info">
+              <span class="rasa-platform-tool-name">CASE Ultra</span>
+              <span class="rasa-platform-tool-desc">Optimized statistical modeling for mutagenicity.</span>
+            </div>
+          </div>
+          <div class="rasa-platform-tool-row">
+            <span class="rasa-platform-tool-badge">DN</span>
+            <div class="rasa-platform-tool-info">
+              <span class="rasa-platform-tool-name">Derek Nexus</span>
+              <span class="rasa-platform-tool-desc">Rule-based expert system for predicting toxicity.</span>
+            </div>
+          </div>
+          <div class="rasa-platform-tool-row">
+            <span class="rasa-platform-tool-badge">SN</span>
+            <div class="rasa-platform-tool-info">
+              <span class="rasa-platform-tool-name">Sarah Nexus</span>
+              <span class="rasa-platform-tool-desc">Expert-validated statistical Ames mutagenicity model.</span>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="rasa-platform-card rasa-reveal" data-delay="3">
+        <h3 class="rasa-platform-title">
+          <span class="rasa-platform-title-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </span>
+          AI &amp; Frameworks
+        </h3>
+        <div class="rasa-platform-tools">
+          <div class="rasa-platform-tool-row">
+            <span class="rasa-platform-tool-badge">ML</span>
+            <div class="rasa-platform-tool-info">
+              <span class="rasa-platform-tool-name">Deep Learning</span>
+              <span class="rasa-platform-tool-desc">Custom neural network models trained on chemical sets.</span>
+            </div>
+          </div>
+          <div class="rasa-platform-tool-row">
+            <span class="rasa-platform-tool-badge">RA</span>
+            <div class="rasa-platform-tool-info">
+              <span class="rasa-platform-tool-name">Read-Across</span>
+              <span class="rasa-platform-tool-desc">Endpoint filling using chemically grouped analog data.</span>
+            </div>
+          </div>
+          <div class="rasa-platform-tool-row">
+            <span class="rasa-platform-tool-badge">SS</span>
+            <div class="rasa-platform-tool-info">
+              <span class="rasa-platform-tool-name">Similarity Analysis</span>
+              <span class="rasa-platform-tool-desc">Molecular fingerprint comparisons for risk mapping.</span>
+            </div>
+          </div>
+          <div class="rasa-platform-tool-row">
+            <span class="rasa-platform-tool-badge">PT</span>
+            <div class="rasa-platform-tool-info">
+              <span class="rasa-platform-tool-name">Predictive Pipelines</span>
+              <span class="rasa-platform-tool-desc">High-throughput automated toxicology workflows.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
   <div class="container">
-    <div class="rasa-reveal" style="margin-bottom:3rem;">
-      <span class="rasa-eyebrow">Specialized Services</span>
-      <h2 class="rasa-h2" style="margin-top:1.25rem;">Nitrosamine Risk Assessment</h2>
+    <div class="rasa-reveal" style="margin-bottom:3.5rem; text-align:center;">
+      <span class="rasa-eyebrow">Specialized Assessments</span>
+      <h2 class="rasa-h2" style="margin-top:1.25rem;">Computational Risk &amp; Impurity Assessments</h2>
+      <p style="color:var(--foreground-70); max-width:65ch; margin:1rem auto 0; font-size:1rem; line-height:1.6;">Parallel expert workflows for identifying, quantifying, and mitigating toxicological risks in drug substances and packaging systems.</p>
     </div>
-    <h3 class="rasa-subhead">Scope of Evaluation</h3>
-  <div class="rasa-checkgrid">
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Nitrosamine impurities</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Nitrosamine Drug Substance Related Impurities (NDSRIs)</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Process-generated nitrosamines</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Degradation-related nitrosamines</span></div>
-  </div>
-<h3 class="rasa-subhead">Deliverables Include</h3>
-  <div class="rasa-checkgrid">
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Structure assessment</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Mutagenicity evaluation</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Potency categorization</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Acceptable intake determination</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Regulatory justification reports</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Risk mitigation recommendations</span></div>
-  </div>
+
+    <div class="rasa-specialized-grid">
+      <!-- Nitrosamine Card -->
+      <div class="rasa-specialized-card rasa-reveal" data-delay="1">
+        <div class="rasa-spec-header">
+          <span class="rasa-spec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px; height:24px;"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          </span>
+          <h3 class="rasa-spec-title">Nitrosamine Risk Assessment</h3>
+        </div>
+        <div class="rasa-spec-content">
+          <div class="rasa-spec-subgroup">
+            <h4>Scope of Evaluation</h4>
+            <ul class="rasa-spec-list">
+              <li>Nitrosamine Impurities &amp; NDSRIs</li>
+              <li>Process-Generated Nitrosamines</li>
+              <li>Degradation-Related Nitrosamines</li>
+            </ul>
+          </div>
+          <div class="rasa-spec-subgroup">
+            <h4>Deliverables Include</h4>
+            <ul class="rasa-spec-list">
+              <li>Molecular Structure Assessment</li>
+              <li>Mutagenicity &amp; Potency Categorization</li>
+              <li>Acceptable Daily Intake (AI) Calculation</li>
+              <li>Regulatory Justification Reports</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- E&L Card -->
+      <div class="rasa-specialized-card rasa-reveal" data-delay="2">
+        <div class="rasa-spec-header">
+          <span class="rasa-spec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px; height:24px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </span>
+          <h3 class="rasa-spec-title">Extractables &amp; Leachables</h3>
+        </div>
+        <div class="rasa-spec-content">
+          <div class="rasa-spec-subgroup">
+            <h4>Materials Supported</h4>
+            <ul class="rasa-spec-list">
+              <li>Packaging Materials &amp; Container Closures</li>
+              <li>Single-Use Manufacturing Systems</li>
+              <li>Process Equipment Components</li>
+            </ul>
+          </div>
+          <div class="rasa-spec-subgroup">
+            <h4>Assessment Parameters</h4>
+            <ul class="rasa-spec-list">
+              <li>Chemical Identification Review</li>
+              <li>TTC (Threshold of Toxicological Concern)</li>
+              <li>PDE (Permitted Daily Exposure) Derivation</li>
+              <li>Safety Margin &amp; Regulatory Risk Reporting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="rasa-reveal" style="margin-bottom:3rem; text-align:center;">
+      <span class="rasa-eyebrow">Compliance</span>
+      <h2 class="rasa-h2" style="margin-top:1.25rem;">Regulatory Frameworks We Support</h2>
+      <p style="color:var(--foreground-70); max-width:65ch; margin:1rem auto 0; font-size:1rem; line-height:1.6;">Our analyses are designed to meet or exceed toxicological guidelines established by major international regulatory agencies.</p>
+    </div>
+    
+    <div class="rasa-frameworks-grid">
+      <div class="rasa-framework-card rasa-reveal" data-delay="1">
+        <span class="rasa-framework-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </span>
+        <span class="rasa-framework-name">ICH Guidelines</span>
+      </div>
+      <div class="rasa-framework-card rasa-reveal" data-delay="2">
+        <span class="rasa-framework-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </span>
+        <span class="rasa-framework-name">US FDA Regulations</span>
+      </div>
+      <div class="rasa-framework-card rasa-reveal" data-delay="3">
+        <span class="rasa-framework-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px;"><ellipse cx="12" cy="12" rx="10" ry="4"/><path d="M12 2v20M17 19.8A10 10 0 0 0 17 4.2M7 19.8A10 10 0 0 1 7 4.2"/></svg>
+        </span>
+        <span class="rasa-framework-name">EMA Requirements</span>
+      </div>
+      <div class="rasa-framework-card rasa-reveal" data-delay="4">
+        <span class="rasa-framework-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </span>
+        <span class="rasa-framework-name">MHRA Expectations</span>
+      </div>
+      <div class="rasa-framework-card rasa-reveal" data-delay="1">
+        <span class="rasa-framework-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px;"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
+        </span>
+        <span class="rasa-framework-name">PMDA Standards</span>
+      </div>
+      <div class="rasa-framework-card rasa-reveal" data-delay="2">
+        <span class="rasa-framework-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px;"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+        </span>
+        <span class="rasa-framework-name">WHO Guidelines</span>
+      </div>
+      <div class="rasa-framework-card rasa-reveal" data-delay="3">
+        <span class="rasa-framework-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </span>
+        <span class="rasa-framework-name">Global GMP Compliance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border); background:var(--surface);">
-  <div class="container">
-    <div class="rasa-reveal" style="margin-bottom:3rem;">
-      <span class="rasa-eyebrow">Specialized Services</span>
-      <h2 class="rasa-h2" style="margin-top:1.25rem;">Extractables &amp; Leachables (E&amp;L) Assessment</h2>
-    </div>
-    <h3 class="rasa-subhead">Materials Supported</h3>
-  <div class="rasa-checkgrid">
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Packaging materials</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Single-use systems</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Manufacturing equipment</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Container closure systems</span></div>
-  </div>
-<h3 class="rasa-subhead">Assessment Includes</h3>
-  <div class="rasa-checkgrid">
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Chemical identification review</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>TTC evaluation</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>PDE derivation</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Safety margin calculations</span></div>
-    <div class="rasa-check"><span class="rasa-tick">✓</span><span>Regulatory risk assessment</span></div>
-  </div>
-  </div>
-</section>
-<section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border);">
   <div class="container">
     <div class="rasa-reveal" style="margin-bottom:3rem;">
       <span class="rasa-eyebrow">Submissions</span>
       <h2 class="rasa-h2" style="margin-top:1.25rem;">Regulatory Documentation Support</h2>
+      <p style="color:var(--foreground-70); max-width:65ch; margin:1rem 0 0 0; font-size:1rem; line-height:1.6;">Audit-ready documentation prepared in standard formats to support global regulatory filings.</p>
     </div>
-    <div class="rasa-techgrid">
-    <div class="rasa-techgroup">
-      <h3 class="rasa-techgroup__h">Pharmaceutical Submissions</h3>
-      <div class="rasa-chips"><span class="rasa-chip">IND</span><span class="rasa-chip">NDA</span><span class="rasa-chip">ANDA</span><span class="rasa-chip">DMF</span><span class="rasa-chip">CEP</span><span class="rasa-chip">Marketing Authorization Applications</span></div>
+    
+    <div class="rasa-reg-grid">
+      <div class="rasa-reg-card rasa-reveal" data-delay="1">
+        <div class="rasa-reg-card-header">
+          <span class="rasa-reg-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </span>
+          <h3 class="rasa-reg-card-title">Pharmaceutical Submissions</h3>
+        </div>
+        <div class="rasa-reg-chips">
+          <span class="rasa-reg-chip">IND</span>
+          <span class="rasa-reg-chip">NDA</span>
+          <span class="rasa-reg-chip">ANDA</span>
+          <span class="rasa-reg-chip">DMF</span>
+          <span class="rasa-reg-chip">CEP</span>
+          <span class="rasa-reg-chip">Marketing Authorization (MAA)</span>
+        </div>
+      </div>
+
+      <div class="rasa-reg-card rasa-reveal" data-delay="2">
+        <div class="rasa-reg-card-header">
+          <span class="rasa-reg-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px;"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+          </span>
+          <h3 class="rasa-reg-card-title">Global Regulatory Agencies</h3>
+        </div>
+        <div class="rasa-reg-chips">
+          <span class="rasa-reg-chip">US FDA</span>
+          <span class="rasa-reg-chip">EMA</span>
+          <span class="rasa-reg-chip">MHRA</span>
+          <span class="rasa-reg-chip">PMDA</span>
+          <span class="rasa-reg-chip">TGA</span>
+          <span class="rasa-reg-chip">Health Canada</span>
+        </div>
+      </div>
     </div>
-    <div class="rasa-techgroup">
-      <h3 class="rasa-techgroup__h">Global Regulatory Agencies</h3>
-      <div class="rasa-chips"><span class="rasa-chip">US FDA</span><span class="rasa-chip">EMA</span><span class="rasa-chip">MHRA</span><span class="rasa-chip">PMDA</span><span class="rasa-chip">TGA</span><span class="rasa-chip">Health Canada</span></div>
-    </div>
-  </div>
   </div>
 </section>
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border); background:var(--surface);">
@@ -480,45 +1572,58 @@
     <div class="rasa-reveal" style="margin-bottom:3rem;">
       <span class="rasa-eyebrow">Sectors</span>
       <h2 class="rasa-h2" style="margin-top:1.25rem;">Industries We Serve</h2>
+      <p style="color:var(--foreground-70); max-width:65ch; margin:1rem 0 0 0; font-size:1rem; line-height:1.6;">We deliver customized computational toxicology solutions and regulatory packages to a wide range of global sectors.</p>
     </div>
-    <div class="rasa-capabilities">
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Pharmaceutical Companies</h3>
-      <p class="rasa-capability__b">Impurity qualification, nitrosamine assessment, and regulatory toxicology support.</p>
-      
+    
+    <div class="rasa-industries-grid">
+      <div class="rasa-industry-card rasa-reveal" data-delay="1">
+        <div class="rasa-industry-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px; height:24px;"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
+        </div>
+        <h3 class="rasa-industry-title">Pharmaceutical Companies</h3>
+        <p class="rasa-industry-desc">Comprehensive impurity qualification, nitrosamine risk assessments, and compliance reports to support global filings.</p>
+      </div>
+
+      <div class="rasa-industry-card rasa-reveal" data-delay="2">
+        <div class="rasa-industry-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px; height:24px;"><path d="M2 22h20"/><path d="M20 12v10H4V3l8 4v5l4-2v2Z"/></svg>
+        </div>
+        <h3 class="rasa-industry-title">API Manufacturers</h3>
+        <p class="rasa-industry-desc">Rapid process impurity screening, structural alert analysis, and mutagenic risk evaluation profiles.</p>
+      </div>
+
+      <div class="rasa-industry-card rasa-reveal" data-delay="3">
+        <div class="rasa-industry-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px; height:24px;"><path d="M4.5 10.5C4.5 5 12 3 12 3s7.5 2 7.5 7.5c0 5-7.5 10.5-7.5 10.5s-7.5-5.5-7.5-10.5Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="rasa-industry-title">Biotechnology Organizations</h3>
+        <p class="rasa-industry-desc">Computational toxicity profiles for early-stage screening of novel molecules and therapeutic candidates.</p>
+      </div>
+
+      <div class="rasa-industry-card rasa-reveal" data-delay="1">
+        <div class="rasa-industry-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px; height:24px;"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+        </div>
+        <h3 class="rasa-industry-title">CROs &amp; CDMOs</h3>
+        <p class="rasa-industry-desc">Independent, high-throughput computational toxicology reviews to augment external research services.</p>
+      </div>
+
+      <div class="rasa-industry-card rasa-reveal" data-delay="2">
+        <div class="rasa-industry-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px; height:24px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+        </div>
+        <h3 class="rasa-industry-title">Medical Device &amp; Packaging</h3>
+        <p class="rasa-industry-desc">Extractables and leachables (E&amp;L) evaluations, container closure analyses, and material safety documentation.</p>
+      </div>
+
+      <div class="rasa-industry-card rasa-reveal" data-delay="3">
+        <div class="rasa-industry-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px; height:24px;"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="rasa-industry-title">Chemical &amp; Specialty Materials</h3>
+        <p class="rasa-industry-desc">In silico hazard profiling, ecotoxicity screenings, and occupational safety endpoint predictions.</p>
+      </div>
     </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">API Manufacturers</h3>
-      <p class="rasa-capability__b">Process impurity assessment and mutagenic risk evaluation.</p>
-      
-    </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Biotechnology Organizations</h3>
-      <p class="rasa-capability__b">Regulatory toxicology support for novel therapeutic candidates.</p>
-      
-    </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">CROs &amp; CDMOs</h3>
-      <p class="rasa-capability__b">Independent toxicological review and QSAR assessment services.</p>
-      
-    </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Medical Device &amp; Packaging</h3>
-      <p class="rasa-capability__b">Extractables and leachables toxicological risk assessments.</p>
-      
-    </div>
-    <div class="rasa-capability zoom-parent">
-      <span class="rasa-capability__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-      <h3 class="rasa-capability__h">Chemical &amp; Specialty Materials</h3>
-      <p class="rasa-capability__b">Predictive toxicology and hazard assessment support.</p>
-      
-    </div>
-  </div>
   </div>
 </section>
 <section class="rasa-section" style="padding:5rem 0; border-top:1px solid var(--border); background:var(--surface);">
@@ -1114,7 +2219,7 @@
   })();
 
   // 1. Interactive 3D mouse tilt and dynamic glow coordinate tracking
-  var cards3d = document.querySelectorAll('.rasa-highlight, .rasa-svc-card, .rasa-capability, .rasa-svc-showcase__btn, .rasa-check, .rasa-card, .rasa-tab-btn');
+  var cards3d = document.querySelectorAll('.rasa-highlight, .rasa-svc-card, .rasa-capability, .rasa-svc-showcase__btn, .rasa-check, .rasa-card, .rasa-tab-btn, .rasa-framework-card, .rasa-process-step, .rasa-classification-card, .rasa-endpoints-card, .rasa-dual-card, .rasa-platform-card, .rasa-specialized-card, .rasa-reg-card, .rasa-industry-card');
   cards3d.forEach(function (card) {
     card.addEventListener('mousemove', function (e) {
       if ((card.classList.contains('rasa-svc-showcase__btn') || card.classList.contains('rasa-check')) && window.innerWidth <= 992) {
