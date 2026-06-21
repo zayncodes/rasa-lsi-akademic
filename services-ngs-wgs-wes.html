@@ -609,17 +609,18 @@
 (function () {
   var y = document.getElementById('rasa-year');
   if (y) y.textContent = new Date().getFullYear();
-
-    // Active navigation link detection
+  // Active navigation link detection
   try {
     var path = window.location.pathname;
     var page = path.split('/').pop();
     if (!page || page === '') page = 'index.html';
     document.querySelectorAll('.rasa-nav a').forEach(function (a) {
       a.classList.remove('is-active');
-      var href = a.getAttribute('href').split('#')[0].split('/').pop();
-      if (href === page) a.classList.add('is-active');
-                      });
+      var href = (a.getAttribute('href') || '').split('#')[0].split('/').pop();
+      var pageClean = page.replace(/\.html$/, '');
+      var hrefClean = href.replace(/\.html$/, '');
+      if (hrefClean === pageClean) a.classList.add('is-active');
+    });
   } catch (e) {}
 
   // Reveal animations on scroll
