@@ -3033,17 +3033,21 @@ body.dark-mode .rasa-top-bar {
   gap: 0.75rem;
   align-items: center;
   background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  padding: 0.45rem 0 !important;
+  border: 1px solid transparent !important;
+  border-radius: 0.5rem !important;
+  padding: 0.45rem 0.6rem !important;
+  margin-left: -0.6rem;
   font-size: 0.94rem;
   color: var(--foreground-70);
   line-height: 1.45;
-  transition: transform 0.22s ease, color 0.22s ease;
+  transition: transform 0.22s ease, color 0.22s ease, background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
   box-shadow: none !important;
 }
 .rasa-check:hover {
-  transform: translateX(4px);
+  transform: translateX(6px);
+  background: var(--leaf-soft) !important;
+  border-color: var(--glow-border) !important;
+  box-shadow: 0 6px 16px var(--glow-shadow) !important;
   color: var(--foreground);
 }
 .rasa-check:hover .rasa-tick {
