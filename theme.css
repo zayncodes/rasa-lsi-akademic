@@ -2450,7 +2450,7 @@ body.rasa {
   z-index: 100; font-weight: 400; text-transform: none; letter-spacing: normal;
 }
 
-.rasa-tool:hover .rasa-tooltip { opacity: 1; transform: translateX(-50%) translateY(0); }
+.rasa-tool-cloud .rasa-tool:hover .rasa-tooltip { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 /* Aside panels */
 .rasa-side { background: var(--surface); border-radius: 0.85rem; padding: 2rem; box-shadow: inset 0 0 0 1px var(--border); height: fit-content; display: flex; flex-direction: column; gap: 1.25rem; }
@@ -2995,16 +2995,64 @@ body.dark-mode .rasa-top-bar {
 .rasa-capability__b { color:var(--foreground-70); line-height:1.6; margin:0.6rem 0 0; font-size:0.95rem; }
 .rasa-ticklist { list-style:none; padding:0; margin:0.9rem 0 0; display:flex; flex-direction:column; gap:0.5rem; width:100%; }
 .rasa-ticklist li { display:flex; gap:0.55rem; align-items:flex-start; font-size:0.9rem; color:var(--foreground-70); line-height:1.45; text-align:left; }
-.rasa-tick { color:var(--leaf); font-weight:700; flex-shrink:0; }
+.rasa-tick {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: var(--leaf-soft) !important;
+  color: var(--leaf) !important;
+  border-radius: 50%;
+  font-size: 0 !important; /* Hides literal text checkmark */
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.rasa-tick::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 9px;
+  border: solid var(--leaf);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  top: 3.5px;
+  left: 7.5px;
+}
 
 .rasa-subhead { font-family:'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; font-weight:600; font-size:1.15rem; color:var(--foreground); margin:2.25rem 0 1.1rem; }
 .rasa-subhead:first-child { margin-top:0; }
 
-.rasa-checkgrid { display:grid; grid-template-columns:1fr; gap:0.85rem; }
+.rasa-checkgrid { display:grid; grid-template-columns:1fr; gap:0.6rem 1.5rem; }
 @media (min-width:680px){ .rasa-checkgrid { grid-template-columns:repeat(2,1fr); } }
 @media (min-width:1024px){ .rasa-checkgrid { grid-template-columns:repeat(3,1fr); } }
-.rasa-check { display:flex; gap:0.65rem; align-items:flex-start; background:#ffffff; border:1px solid var(--border); border-radius:0.55rem; padding:0.9rem 1.05rem; font-size:0.92rem; color:var(--foreground-70); line-height:1.45; transition:border-color 0.18s, box-shadow 0.18s; }
-.rasa-check:hover { border-color:rgba(37,99,235,0.35); box-shadow:0 6px 20px -12px rgba(37,99,235,0.4); }
+.rasa-check {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0.45rem 0 !important;
+  font-size: 0.94rem;
+  color: var(--foreground-70);
+  line-height: 1.45;
+  transition: transform 0.22s ease, color 0.22s ease;
+  box-shadow: none !important;
+}
+.rasa-check:hover {
+  transform: translateX(4px);
+  color: var(--foreground);
+}
+.rasa-check:hover .rasa-tick {
+  transform: scale(1.1);
+  background: var(--leaf) !important;
+}
+.rasa-check:hover .rasa-tick::after {
+  border-color: #ffffff;
+}
 
 .rasa-techgrid { display:grid; grid-template-columns:1fr; gap:1.25rem; }
 @media (min-width:680px){ .rasa-techgrid { grid-template-columns:repeat(2,1fr); } }
