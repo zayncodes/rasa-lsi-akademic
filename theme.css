@@ -4198,3 +4198,73 @@ body.menu-is-open .line-bot {
     height: 32px !important;
   }
 }
+
+/* ==========================================================================
+   Mobile Fixes: Disable Stuck Hover Transforms & Enable CSS Dropdowns
+   ========================================================================== */
+@media (max-width: 899px) {
+  /* Prevent horizontal overflow scrolling globally on mobile */
+  html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Disable hover transform transitions and lifts on mobile to prevent cards getting stuck */
+  .rasa-svc-card:hover,
+  .rasa-capability:hover,
+  .rasa-check:hover,
+  .rasa-card:hover,
+  .rasa-tab-btn:hover,
+  .rasa-highlight:hover,
+  .rasa-tool:hover,
+  .rasa-techcat:hover,
+  .rasa-workflow-circle:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: var(--border) !important;
+  }
+  
+  /* Disable hover glow on mobile */
+  .rasa-svc-card:hover::before,
+  .rasa-capability:hover::before,
+  .rasa-check:hover::before,
+  .rasa-card:hover::before,
+  .rasa-tab-btn:hover::before,
+  .rasa-highlight:hover::before {
+    opacity: 0 !important;
+  }
+  
+  /* Expand dropdowns when active */
+  .rasa-nav__item.is-active .rasa-nav__dropdown {
+    display: flex !important;
+  }
+  .rasa-nav__subitem.is-active .rasa-nav__subdropdown {
+    display: flex !important;
+  }
+  
+  /* Prevent browser focus outlines on mobile buttons and links */
+  .rasa-nav a:focus,
+  .rasa-nav__item > a:focus,
+  .rasa-nav__dropdown a:focus,
+  .rasa-menu-toggle:focus {
+    outline: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  /* Fix Workflow dotted line crossing circles on mobile */
+  .rasa-workflow-col {
+    z-index: 2 !important;
+  }
+  .rasa-workflow-circle {
+    z-index: 2 !important;
+    background: #ffffff !important;
+  }
+  .rasa-workflow-col--top .rasa-workflow-circle,
+  .rasa-workflow-col--bottom .rasa-workflow-circle {
+    z-index: 2 !important;
+    background: #ffffff !important;
+  }
+}

@@ -909,6 +909,9 @@
   var cards3d = document.querySelectorAll('.rasa-highlight, .rasa-svc-card, .rasa-capability, .rasa-svc-showcase__btn, .rasa-check, .rasa-card, .rasa-tab-btn');
   cards3d.forEach(function (card) {
     card.addEventListener('mousemove', function (e) {
+      if (window.innerWidth < 900) {
+        return;
+      }
       if ((card.classList.contains('rasa-svc-showcase__btn') || card.classList.contains('rasa-check')) && window.innerWidth <= 992) {
         return;
       }
@@ -926,6 +929,9 @@
     });
 
     card.addEventListener('mouseleave', function () {
+      if (window.innerWidth < 900) {
+        return;
+      }
       if ((card.classList.contains('rasa-svc-showcase__btn') || card.classList.contains('rasa-check')) && window.innerWidth <= 992) {
         return;
       }
@@ -1014,12 +1020,6 @@
             e.preventDefault();
             var parent = link.parentElement;
             parent.classList.toggle('is-active');
-            var dropdown = link.nextElementSibling;
-            if (dropdown.style.display === 'flex') {
-              dropdown.style.display = 'none';
-            } else {
-              dropdown.style.display = 'flex';
-            }
           }
         });
       });
@@ -1030,12 +1030,6 @@
             e.preventDefault();
             var parent = link.parentElement;
             parent.classList.toggle('is-active');
-            var dropdown = link.nextElementSibling;
-            if (dropdown.style.display === 'flex') {
-              dropdown.style.display = 'none';
-            } else {
-              dropdown.style.display = 'flex';
-            }
           }
         });
       });
