@@ -907,6 +907,18 @@
       line-height: 1.5;
       margin: 0;
     }
+    /* Exclude transform transition during hover to prevent 3D tilt lag */
+    .rasa-framework-card:hover,
+    .rasa-endpoint-card:hover,
+    .rasa-model-card:hover,
+    .rasa-assay-card:hover,
+    .rasa-toxicology-card:hover,
+    .rasa-software-card:hover,
+    .rasa-validation-card:hover,
+    .rasa-workflow-step:hover,
+    .rasa-service-vertical:hover {
+      transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"QSAR Toxicology & ICH M7 Impurity Assessment","serviceType":"QSAR Toxicology & ICH M7 Impurity Assessment","provider":{"@type":"Organization","name":"RASA Life Science Informatics","url":"https://www.rasalsi.com/","areaServed":"Worldwide","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"}},"description":"QSAR modeling, ICH M7 mutagenic impurity assessment, nitrosamine risk evaluation, extractables & leachables, and regulatory toxicology reporting for pharma, biotech, API manufacturers, CDMOs and CROs worldwide."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is QSAR and how is it used in drug discovery?","acceptedAnswer":{"@type":"Answer","text":"Quantitative Structure–Activity Relationship (QSAR) modeling is a computational approach that predicts the biological activity, toxicity, and physicochemical properties of chemical compounds based on their molecular structure. QSAR models help researchers evaluate compound safety and efficacy before experimental testing, reducing development costs and accelerating drug discovery. QSAR is widely used in pharmaceutical research, chemical safety assessment, regulatory submissions, impurity evaluation, and environmental risk assessment."}},{"@type":"Question","name":"What QSAR and Regulatory Toxicology services does RASA provide?","acceptedAnswer":{"@type":"Answer","text":"RASA Life Science Informatics offers comprehensive computational toxicology and regulatory assessment services, including: QSAR Modeling Mutagenicity Prediction Carcinogenicity Assessment Skin Sensitization Analysis Genotoxicity Evaluation Reproductive Toxicity Prediction Developmental Toxicity Assessment Environmental Toxicity Prediction Endocrine Disruption Screening ADMET Prediction Regulatory Risk Assessment ICH M7 Compliance Support Nitrosamine Risk Assessment Our workflows support pharmaceutical companies, biotechnology organizations, CROs, chemical manufacturers, and regulatory research programs."}},{"@type":"Question","name":"What is Computational Toxicology?","acceptedAnswer":{"@type":"Answer","text":"Computational Toxicology uses bioinformatics, cheminformatics, machine learning, and predictive modeling to evaluate the safety profile of chemicals, pharmaceutical compounds, impurities, and metabolites. By predicting toxicological endpoints before laboratory testing, computational toxicology helps organizations: Reduce experimental costs Accelerate safety assessments Support regulatory submissions Prioritize safer compounds Improve decision-making in drug development"}},{"@type":"Question","name":"What is QSAR Modeling?","acceptedAnswer":{"@type":"Answer","text":"QSAR Modeling establishes mathematical relationships between chemical structure and biological activity. These models use molecular descriptors, fingerprints, and machine learning algorithms to predict: Toxicity Mutagenicity Carcinogenicity Bioavailability Environmental Impact Drug-Likeness QSAR models are recognized by regulatory agencies worldwide and are commonly used in pharmaceutical and chemical safety evaluations."}},{"@type":"Question","name":"What is Mutagenicity Assessment?","acceptedAnswer":{"@type":"Answer","text":"Mutagenicity assessment evaluates the likelihood that a chemical compound may cause genetic mutations. Computational mutagenicity prediction is particularly important for pharmaceutical impurities, degradation products, metabolites, and new chemical entities. These analyses help support regulatory compliance and early-stage safety evaluation."}},{"@type":"Question","name":"What is Carcinogenicity Assessment?","acceptedAnswer":{"@type":"Answer","text":"Carcinogenicity assessment predicts whether a compound has the potential to contribute to cancer development through long-term exposure. Computational carcinogenicity models help researchers identify high-risk compounds before advancing them into costly experimental studies."}},{"@type":"Question","name":"What is Skin Sensitization Analysis?","acceptedAnswer":{"@type":"Answer","text":"Skin sensitization analysis evaluates the potential of a compound to trigger allergic skin reactions after repeated exposure. This assessment is widely used in pharmaceutical development, cosmetics research, personal care products, and chemical safety programs."}},{"@type":"Question","name":"What is Environmental Toxicity Prediction?","acceptedAnswer":{"@type":"Answer","text":"Environmental toxicity prediction evaluates the potential ecological impact of chemicals and pharmaceutical compounds on aquatic and terrestrial ecosystems. Common endpoints include: Aquatic Toxicity Fish Toxicity Algae Toxicity Daphnia Toxicity Bioaccumulation Potential Environmental Persistence These analyses support environmental risk assessments and regulatory submissions."}},{"@type":"Question","name":"Do you support ICH M7 assessments?","acceptedAnswer":{"@type":"Answer","text":"Yes. RASA provides comprehensive ICH M7 compliance support for pharmaceutical organizations. Our services include: ICH M7 Impurity Evaluation Mutagenic Impurity Assessment Structure–Activity Relationship Analysis Nitrosamine Risk Assessment Regulatory Toxicological Assessment Impurity Qualification Support Expert Review Documentation These assessments help pharmaceutical companies meet global regulatory requirements."}},{"@type":"Question","name":"What is ICH M7?","acceptedAnswer":{"@type":"Answer","text":"ICH M7 is an internationally recognized regulatory guideline that addresses the assessment and control of DNA-reactive (mutagenic) impurities in pharmaceutical products. The guideline recommends the use of computational toxicology methods, including QSAR modeling, to evaluate impurity-related mutagenic risks. ICH M7 compliance is required by many regulatory agencies worldwide, including the FDA, EMA, MHRA, and PMDA."}},{"@type":"Question","name":"What is Nitrosamine Risk Assessment?","acceptedAnswer":{"@type":"Answer","text":"Nitrosamine Risk Assessment evaluates the potential presence and toxicity of nitrosamine impurities in pharmaceutical products. Due to recent global regulatory concerns, nitrosamine evaluation has become a critical component of pharmaceutical quality and safety programs. Our workflows support: Nitrosamine Identification Risk Ranking Structural Assessment Regulatory Documentation Toxicological Evaluation"}},{"@type":"Question","name":"What is ADMET prediction?","acceptedAnswer":{"@type":"Answer","text":"ADMET stands for: Absorption Distribution Metabolism Excretion Toxicity ADMET prediction helps researchers evaluate drug-like properties and safety risks early in the discovery process. Computational ADMET assessment can significantly reduce late-stage failures by identifying compounds with unfavorable pharmacokinetic or toxicological profiles."}},{"@type":"Question","name":"Which software platforms and tools do you use?","acceptedAnswer":{"@type":"Answer","text":"Our toxicology workflows utilize industry-leading platforms including: Regulatory Toxicology OECD QSAR Toolbox VEGA Toxtree Lazar ADMET Prediction SwissADME pkCSM ADMETlab ProTox-II Cheminformatics RDKit Open Babel KNIME Machine Learning &amp; AI Scikit-Learn TensorFlow DeepChem"}},{"@type":"Question","name":"What data is required for QSAR and Toxicology assessment?","acceptedAnswer":{"@type":"Answer","text":"We commonly work with: Chemical Structures (SMILES) SDF Files MOL Files Drug Candidates Pharmaceutical Impurities Metabolites Degradation Products Environmental Chemicals Our team can assist in preparing and standardizing chemical structures before analysis."}},{"@type":"Question","name":"What deliverables are included in QSAR and Regulatory Toxicology projects?","acceptedAnswer":{"@type":"Answer","text":"Typical project deliverables include: QSAR Prediction Reports Mutagenicity Assessments Carcinogenicity Evaluations Skin Sensitization Reports ADMET Profiles Environmental Toxicity Reports ICH M7 Assessment Reports Nitrosamine Risk Assessments Regulatory Documentation Support Publication-Ready Figures Comprehensive Scientific Reports Deliverables can be customized according to project objectives and regulatory requirements."}},{"@type":"Question","name":"Which industries benefit from QSAR and Regulatory Toxicology services?","acceptedAnswer":{"@type":"Answer","text":"Our services support: Pharmaceutical Companies Biotechnology Organizations CROs Chemical Manufacturers Cosmetic Companies Agrochemical Companies Regulatory Research Programs Environmental Safety Organizations These industries rely on predictive toxicology to improve safety assessments and accelerate regulatory decision-making."}},{"@type":"Question","name":"Why choose RASA for QSAR and Regulatory Toxicology?","acceptedAnswer":{"@type":"Answer","text":"RASA combines expertise in computational toxicology, cheminformatics, regulatory science, machine learning, and drug discovery to deliver scientifically rigorous and regulatory-ready toxicological assessments. Our workflows support global regulatory compliance, early safety evaluation, impurity qualification, and risk assessment programs while reducing reliance on costly experimental testing. 📧 info@rasalifesciences.com 🌐 www.rasalifesciences.com"}}]}]}</script>
 </head>
@@ -980,6 +992,9 @@
         Partner with us
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
+          <button class="rasa-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="rasa-menu-toggle__icon"><line x1="3" y1="12" x2="21" y2="12" class="line-mid"/><line x1="3" y1="6" x2="21" y2="6" class="line-top"/><line x1="3" y1="18" x2="21" y2="18" class="line-bot"/></svg>
+      </button>
     </div>
   </div>
 </header>
@@ -1910,11 +1925,11 @@
         <a href="services-dd-de-novo.html">AI &amp; De Novo Drug Design</a>
         <a href="services-dd-multi-target.html">Network Pharmacology &amp; Systems Biology</a>
         <a href="services-dd-lead-optimization.html">Lead Optimization</a>
-        <h4 style="margin-top:1.75rem;">QSAR &amp; Regulatory Toxicology</h4>
-        <a href="services-qsar-toxicology.html">QSAR Toxicology &amp; ICH M7</a>
-      </div>
+              </div>
       <div>
-        <h4>Knowledge Base</h4>
+        <h4>QSAR &amp; Regulatory Toxicology</h4>
+        <a href="services-qsar-toxicology.html">QSAR Toxicology &amp; ICH M7</a>
+        <h4 style="margin-top:1.75rem;">Knowledge Base</h4>
         <a href="knowledge-base.html">Knowledge Base Overview</a>
         <a href="whitepapers.html">Whitepapers</a>
         <a href="blogs.html">Blogs</a>
@@ -2306,6 +2321,53 @@
     ioReveal.observe(card);
   });
 })();
+
+  // Mobile menu toggle logic
+  (function() {
+    try {
+      var toggle = document.querySelector('.rasa-menu-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', function() {
+          var expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', !expanded);
+          document.body.classList.toggle('menu-is-open');
+        });
+      }
+      // Expand/collapse dropdowns on mobile
+      document.querySelectorAll('.rasa-nav__item > a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          if (window.innerWidth < 900 && link.nextElementSibling && link.nextElementSibling.classList.contains('rasa-nav__dropdown')) {
+            e.preventDefault();
+            var parent = link.parentElement;
+            parent.classList.toggle('is-active');
+            var dropdown = link.nextElementSibling;
+            if (dropdown.style.display === 'flex') {
+              dropdown.style.display = 'none';
+            } else {
+              dropdown.style.display = 'flex';
+            }
+          }
+        });
+      });
+      // Expand/collapse sub-dropdowns on mobile
+      document.querySelectorAll('.rasa-nav__subitem > a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          if (window.innerWidth < 900 && link.nextElementSibling && link.nextElementSibling.classList.contains('rasa-nav__subdropdown')) {
+            e.preventDefault();
+            var parent = link.parentElement;
+            parent.classList.toggle('is-active');
+            var dropdown = link.nextElementSibling;
+            if (dropdown.style.display === 'flex') {
+              dropdown.style.display = 'none';
+            } else {
+              dropdown.style.display = 'flex';
+            }
+          }
+        });
+      });
+    } catch(e) {}
+  })();
 </script>
+
 </body>
 </html>

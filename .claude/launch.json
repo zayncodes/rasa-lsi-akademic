@@ -6,6 +6,12 @@
       "runtimeExecutable": "py",
       "runtimeArgs": ["-m", "http.server", "4321"],
       "port": 4321
+    },
+    {
+      "name": "rasa-wp",
+      "runtimeExecutable": "py",
+      "runtimeArgs": ["-m", "http.server", "4399", "--directory", "C:/Users/Nilesh/Desktop/RASALSI/RasaWP/rasa-lsi-static"],
+      "port": 4399
     }
   ]
 }
