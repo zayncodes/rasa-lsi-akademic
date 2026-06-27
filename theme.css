@@ -97,14 +97,14 @@ body.rasa {
 
 .rasa-cta-btn {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  background: var(--leaf); color: var(--cream);
+  background: #2563eb !important; color: #f8fafc !important;
   font-size: 0.875rem; font-weight: 500;
   padding: 0.5rem 0.5rem 0.5rem 0.75rem; border-radius: 0.4rem;
-  box-shadow: inset 0 0 0 1px rgba(37, 99, 235,0.8);
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.8) !important;
   transition: background 0.2s, transform 0.2s;
 }
 
-.rasa-cta-btn:hover { background: var(--leaf-hover); transform: translateY(-1px); }
+.rasa-cta-btn:hover { background: #1d4ed8 !important; transform: translateY(-1px); }
 
 .rasa-cta-btn svg { width: 16px; height: 16px; }
 
@@ -608,13 +608,13 @@ body.rasa {
 }
 
 .rasa-capability::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 0 !important; left: 0 !important;
-  width: 100% !important; height: 3px !important;
-  background: linear-gradient(90deg, var(--leaf-soft), var(--leaf)) !important;
-  opacity: 0 !important;
-  transition: opacity 0.3s ease !important;
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, var(--leaf-soft), var(--leaf));
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .rasa-capability:hover::before {
@@ -1976,10 +1976,10 @@ body.rasa {
 
 .rasa-cta-btn {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  background: var(--leaf); color: var(--cream);
+  background: #2563eb !important; color: #f8fafc !important;
   font-size: 0.875rem; font-weight: 500;
   padding: 0.5rem 0.5rem 0.5rem 0.75rem; border-radius: 0.4rem;
-  box-shadow: inset 0 0 0 1px rgba(37, 99, 235,0.8);
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.8) !important;
   transition: background 0.2s, transform 0.2s;
 }
 
@@ -3612,7 +3612,7 @@ body.rasa-theme-kb .rasa-nav__item:nth-child(4) > a {
 .rasa-svc-card::before, .rasa-capability::before, .rasa-check::before, .rasa-card::before, .rasa-tab-btn::before, .rasa-highlight::before {
   content: '' !important;
   position: absolute !important;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important;
   background: radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), var(--glow-color), transparent 45%) !important;
   z-index: -1 !important;
   pointer-events: none !important;
@@ -3743,14 +3743,14 @@ body.dark-mode .rasa-footer {
 
 .rasa-workflow-col--bottom .rasa-workflow-circle {
   position: absolute;
-  top: 265px;
+  top: 285px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .rasa-workflow-col--bottom .rasa-workflow-chevron {
   position: absolute;
-  top: 200px;
+  top: 220px;
   left: 50%;
   transform: translateX(-50%);
   color: var(--chevron-color);
